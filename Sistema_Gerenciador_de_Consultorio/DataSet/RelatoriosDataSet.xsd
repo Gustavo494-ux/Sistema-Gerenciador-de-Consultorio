@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RelatoriosDataSet" targetNamespace="http://tempuri.org/RelatoriosDataSet.xsd" xmlns:mstns="http://tempuri.org/RelatoriosDataSet.xsd" xmlns="http://tempuri.org/RelatoriosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sistema_Gerenciador_de_Consultorio_Nova_Conexão" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" PropertyReference="ApplicationSettings.Sistema_Gerenciador_de_Consultorio.Properties.Settings.GlobalReference.Default.Sistema_Gerenciador_de_Consultorio_Nova_Conexão" Provider="Npgsql" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProfissionalRelatorioTableAdapter" GeneratorDataComponentClassName="ProfissionalRelatorioTableAdapter" Name="ProfissionalRelatorio" UserDataComponentName="ProfissionalRelatorioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select profissional.idProfissional,profissional.nomeProfissional,profissional.especialidade,profissional.croo,usuario.loginUsuario 
+from profissional inner join usuario on usuario.idUsuario = profissional.idUsuario where profissional.deletar = false and 
+usuario.deletar = false</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idprofissional" DataSetColumn="idprofissional" />
+              <Mapping SourceColumn="nomeprofissional" DataSetColumn="nomeprofissional" />
+              <Mapping SourceColumn="especialidade" DataSetColumn="especialidade" />
+              <Mapping SourceColumn="croo" DataSetColumn="croo" />
+              <Mapping SourceColumn="loginusuario" DataSetColumn="loginusuario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PacienteRelatorioTableAdapter" GeneratorDataComponentClassName="PacienteRelatorioTableAdapter" Name="PacienteRelatorio" UserDataComponentName="PacienteRelatorioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT paciente.idPaciente,paciente.nomePaciente,paciente.cpf,paciente.dataNascimento,usuario.loginUsuario FROM paciente 
+INNER JOIN usuario ON usuario.idUsuario = paciente.idUsuario 
+WHERE paciente.deletar = false and usuario.deletar = false</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idpaciente" DataSetColumn="idpaciente" />
+              <Mapping SourceColumn="nomepaciente" DataSetColumn="nomepaciente" />
+              <Mapping SourceColumn="cpf" DataSetColumn="cpf" />
+              <Mapping SourceColumn="datanascimento" DataSetColumn="datanascimento" />
+              <Mapping SourceColumn="loginusuario" DataSetColumn="loginusuario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RelatorioConsultaTableAdapter" GeneratorDataComponentClassName="RelatorioConsultaTableAdapter" Name="RelatorioConsulta" UserDataComponentName="RelatorioConsultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select consulta.idConsulta, paciente.nomePaciente,consulta.dataConsulta,consulta.statusConsulta,usuario.loginUsuario from consulta inner join paciente on 
+paciente.idPaciente = consulta.idPaciente inner join usuario on usuario.idUsuario = consulta.idUsuario inner join profissional on profissional.idProfissional = consulta.idProfissional 
+where consulta.deletar = false and profissional.deletar = false and  paciente.deletar = false and usuario.deletar = false </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idconsulta" DataSetColumn="idconsulta" />
+              <Mapping SourceColumn="nomepaciente" DataSetColumn="nomepaciente" />
+              <Mapping SourceColumn="dataconsulta" DataSetColumn="dataconsulta" />
+              <Mapping SourceColumn="statusconsulta" DataSetColumn="statusconsulta" />
+              <Mapping SourceColumn="loginusuario" DataSetColumn="loginusuario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RelatorioUsuarioTableAdapter" GeneratorDataComponentClassName="RelatorioUsuarioTableAdapter" Name="RelatorioUsuario" UserDataComponentName="RelatorioUsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectName="Sistema_Gerenciador_de_Consultorio.&quot;public&quot;.usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM "Sistema_Gerenciador_de_Consultorio"."public"."usuario" WHERE (("idusuario" = @Original_idusuario) AND ((@IsNull_nomeusuario = 1 AND "nomeusuario" IS NULL) OR ("nomeusuario" = @Original_nomeusuario)) AND ((@IsNull_loginusuario = 1 AND "loginusuario" IS NULL) OR ("loginusuario" = @Original_loginusuario)) AND ((@IsNull_datacadastro = 1 AND "datacadastro" IS NULL) OR ("datacadastro" = @Original_datacadastro)) AND ((@IsNull_statususuario = 1 AND "statususuario" IS NULL) OR ("statususuario" = @Original_statususuario)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nomeusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nomeusuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_nomeusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="nomeusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loginusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="loginusuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_loginusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="loginusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_datacadastro" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="datacadastro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_datacadastro" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="datacadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_statususuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="statususuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_statususuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="statususuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select usuario.idUsuario,usuario.nomeUsuario,usuario.loginUsuario,usuario.dataCadastro,usuario.statusUsuario 
+from usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE "Sistema_Gerenciador_de_Consultorio"."public"."usuario" SET "nomeusuario" = @nomeusuario, "loginusuario" = @loginusuario, "datacadastro" = @datacadastro, "statususuario" = @statususuario WHERE (("idusuario" = @Original_idusuario) AND ((@IsNull_nomeusuario = 1 AND "nomeusuario" IS NULL) OR ("nomeusuario" = @Original_nomeusuario)) AND ((@IsNull_loginusuario = 1 AND "loginusuario" IS NULL) OR ("loginusuario" = @Original_loginusuario)) AND ((@IsNull_datacadastro = 1 AND "datacadastro" IS NULL) OR ("datacadastro" = @Original_datacadastro)) AND ((@IsNull_statususuario = 1 AND "statususuario" IS NULL) OR ("statususuario" = @Original_statususuario)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nomeusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="nomeusuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@loginusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="loginusuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@datacadastro" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="datacadastro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@statususuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="statususuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nomeusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nomeusuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_nomeusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="nomeusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_loginusuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="loginusuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_loginusuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="loginusuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_datacadastro" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="datacadastro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_datacadastro" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="datacadastro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_statususuario" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="statususuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_statususuario" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="statususuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idusuario" DataSetColumn="idusuario" />
+              <Mapping SourceColumn="nomeusuario" DataSetColumn="nomeusuario" />
+              <Mapping SourceColumn="loginusuario" DataSetColumn="loginusuario" />
+              <Mapping SourceColumn="datacadastro" DataSetColumn="datacadastro" />
+              <Mapping SourceColumn="statususuario" DataSetColumn="statususuario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RelatoriosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RelatoriosDataSet" msprop:Generator_UserDSName="RelatoriosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProfissionalRelatorio" msprop:Generator_TableClassName="ProfissionalRelatorioDataTable" msprop:Generator_TableVarName="tableProfissionalRelatorio" msprop:Generator_TablePropName="ProfissionalRelatorio" msprop:Generator_RowDeletingName="ProfissionalRelatorioRowDeleting" msprop:Generator_RowChangingName="ProfissionalRelatorioRowChanging" msprop:Generator_RowEvHandlerName="ProfissionalRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfissionalRelatorioRowDeleted" msprop:Generator_UserTableName="ProfissionalRelatorio" msprop:Generator_RowChangedName="ProfissionalRelatorioRowChanged" msprop:Generator_RowEvArgName="ProfissionalRelatorioRowChangeEvent" msprop:Generator_RowClassName="ProfissionalRelatorioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idprofissional" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidprofissional" msprop:Generator_ColumnPropNameInRow="idprofissional" msprop:Generator_ColumnPropNameInTable="idprofissionalColumn" msprop:Generator_UserColumnName="idprofissional" type="xs:int" />
+              <xs:element name="nomeprofissional" msprop:Generator_ColumnVarNameInTable="columnnomeprofissional" msprop:Generator_ColumnPropNameInRow="nomeprofissional" msprop:Generator_ColumnPropNameInTable="nomeprofissionalColumn" msprop:Generator_UserColumnName="nomeprofissional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="especialidade" msprop:Generator_ColumnVarNameInTable="columnespecialidade" msprop:Generator_ColumnPropNameInRow="especialidade" msprop:Generator_ColumnPropNameInTable="especialidadeColumn" msprop:Generator_UserColumnName="especialidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="croo" msprop:Generator_ColumnVarNameInTable="columncroo" msprop:Generator_ColumnPropNameInRow="croo" msprop:Generator_ColumnPropNameInTable="crooColumn" msprop:Generator_UserColumnName="croo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loginusuario" msprop:Generator_ColumnVarNameInTable="columnloginusuario" msprop:Generator_ColumnPropNameInRow="loginusuario" msprop:Generator_ColumnPropNameInTable="loginusuarioColumn" msprop:Generator_UserColumnName="loginusuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PacienteRelatorio" msprop:Generator_TableClassName="PacienteRelatorioDataTable" msprop:Generator_TableVarName="tablePacienteRelatorio" msprop:Generator_RowChangedName="PacienteRelatorioRowChanged" msprop:Generator_TablePropName="PacienteRelatorio" msprop:Generator_RowDeletingName="PacienteRelatorioRowDeleting" msprop:Generator_RowChangingName="PacienteRelatorioRowChanging" msprop:Generator_RowEvHandlerName="PacienteRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteRelatorioRowDeleted" msprop:Generator_RowClassName="PacienteRelatorioRow" msprop:Generator_UserTableName="PacienteRelatorio" msprop:Generator_RowEvArgName="PacienteRelatorioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idpaciente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidpaciente" msprop:Generator_ColumnPropNameInRow="idpaciente" msprop:Generator_ColumnPropNameInTable="idpacienteColumn" msprop:Generator_UserColumnName="idpaciente" type="xs:int" />
+              <xs:element name="nomepaciente" msprop:Generator_ColumnVarNameInTable="columnnomepaciente" msprop:Generator_ColumnPropNameInRow="nomepaciente" msprop:Generator_ColumnPropNameInTable="nomepacienteColumn" msprop:Generator_UserColumnName="nomepaciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datanascimento" msprop:Generator_ColumnVarNameInTable="columndatanascimento" msprop:Generator_ColumnPropNameInRow="datanascimento" msprop:Generator_ColumnPropNameInTable="datanascimentoColumn" msprop:Generator_UserColumnName="datanascimento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="loginusuario" msprop:Generator_ColumnVarNameInTable="columnloginusuario" msprop:Generator_ColumnPropNameInRow="loginusuario" msprop:Generator_ColumnPropNameInTable="loginusuarioColumn" msprop:Generator_UserColumnName="loginusuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RelatorioConsulta" msprop:Generator_TableClassName="RelatorioConsultaDataTable" msprop:Generator_TableVarName="tableRelatorioConsulta" msprop:Generator_RowChangedName="RelatorioConsultaRowChanged" msprop:Generator_TablePropName="RelatorioConsulta" msprop:Generator_RowDeletingName="RelatorioConsultaRowDeleting" msprop:Generator_RowChangingName="RelatorioConsultaRowChanging" msprop:Generator_RowEvHandlerName="RelatorioConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="RelatorioConsultaRowDeleted" msprop:Generator_RowClassName="RelatorioConsultaRow" msprop:Generator_UserTableName="RelatorioConsulta" msprop:Generator_RowEvArgName="RelatorioConsultaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idconsulta" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidconsulta" msprop:Generator_ColumnPropNameInRow="idconsulta" msprop:Generator_ColumnPropNameInTable="idconsultaColumn" msprop:Generator_UserColumnName="idconsulta" type="xs:int" />
+              <xs:element name="nomepaciente" msprop:Generator_ColumnVarNameInTable="columnnomepaciente" msprop:Generator_ColumnPropNameInRow="nomepaciente" msprop:Generator_ColumnPropNameInTable="nomepacienteColumn" msprop:Generator_UserColumnName="nomepaciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dataconsulta" msprop:Generator_ColumnVarNameInTable="columndataconsulta" msprop:Generator_ColumnPropNameInRow="dataconsulta" msprop:Generator_ColumnPropNameInTable="dataconsultaColumn" msprop:Generator_UserColumnName="dataconsulta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="statusconsulta" msprop:Generator_ColumnVarNameInTable="columnstatusconsulta" msprop:Generator_ColumnPropNameInRow="statusconsulta" msprop:Generator_ColumnPropNameInTable="statusconsultaColumn" msprop:Generator_UserColumnName="statusconsulta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loginusuario" msprop:Generator_ColumnVarNameInTable="columnloginusuario" msprop:Generator_ColumnPropNameInRow="loginusuario" msprop:Generator_ColumnPropNameInTable="loginusuarioColumn" msprop:Generator_UserColumnName="loginusuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RelatorioUsuario" msprop:Generator_TableClassName="RelatorioUsuarioDataTable" msprop:Generator_TableVarName="tableRelatorioUsuario" msprop:Generator_TablePropName="RelatorioUsuario" msprop:Generator_RowDeletingName="RelatorioUsuarioRowDeleting" msprop:Generator_RowChangingName="RelatorioUsuarioRowChanging" msprop:Generator_RowEvHandlerName="RelatorioUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="RelatorioUsuarioRowDeleted" msprop:Generator_UserTableName="RelatorioUsuario" msprop:Generator_RowChangedName="RelatorioUsuarioRowChanged" msprop:Generator_RowEvArgName="RelatorioUsuarioRowChangeEvent" msprop:Generator_RowClassName="RelatorioUsuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idusuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidusuario" msprop:Generator_ColumnPropNameInRow="idusuario" msprop:Generator_ColumnPropNameInTable="idusuarioColumn" msprop:Generator_UserColumnName="idusuario" type="xs:int" />
+              <xs:element name="nomeusuario" msprop:Generator_ColumnVarNameInTable="columnnomeusuario" msprop:Generator_ColumnPropNameInRow="nomeusuario" msprop:Generator_ColumnPropNameInTable="nomeusuarioColumn" msprop:Generator_UserColumnName="nomeusuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loginusuario" msprop:Generator_ColumnVarNameInTable="columnloginusuario" msprop:Generator_ColumnPropNameInRow="loginusuario" msprop:Generator_ColumnPropNameInTable="loginusuarioColumn" msprop:Generator_UserColumnName="loginusuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datacadastro" msprop:Generator_ColumnVarNameInTable="columndatacadastro" msprop:Generator_ColumnPropNameInRow="datacadastro" msprop:Generator_ColumnPropNameInTable="datacadastroColumn" msprop:Generator_UserColumnName="datacadastro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="statususuario" msprop:Generator_ColumnVarNameInTable="columnstatususuario" msprop:Generator_ColumnPropNameInRow="statususuario" msprop:Generator_ColumnPropNameInTable="statususuarioColumn" msprop:Generator_UserColumnName="statususuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProfissionalRelatorio" />
+      <xs:field xpath="mstns:idprofissional" />
+    </xs:unique>
+    <xs:unique name="PacienteRelatorio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PacienteRelatorio" />
+      <xs:field xpath="mstns:idpaciente" />
+    </xs:unique>
+    <xs:unique name="RelatorioConsulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RelatorioConsulta" />
+      <xs:field xpath="mstns:idconsulta" />
+    </xs:unique>
+    <xs:unique name="RelatorioUsuario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RelatorioUsuario" />
+      <xs:field xpath="mstns:idusuario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

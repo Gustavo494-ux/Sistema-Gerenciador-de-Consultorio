@@ -1,0 +1,619 @@
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.core.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Projetos\Sistema Gerenciador de Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.core.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE80.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Build.Tasks.Core.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\VSLangProj.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\VSLangProj80.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Newtonsoft.Json.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Build.Utilities.Core.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Build.Framework.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\VSLangProj2.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
+D:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\Projetos\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Arquivos Compactados\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\arquivos ssd\Projetos\SistemaGerenciador de consultorio\Arquivos Compactados\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\Projetos\SistemaGerenciador de consultorio\Arquivos Compactados\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\Projetos\SistemaGerenciador de consultorio\Arquivos Compactados\Sistema_Gerenciador_de_Consultorio_versao_postgre\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\Projetos\Desenvolvimento\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll.config
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\AcessoDados.pdb
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.SqlServer.Types.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\EnvDTE.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\stdole.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.MSXML.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.pdb
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\Npgsql.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Buffers.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Memory.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Numerics.Vectors.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Encodings.Web.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Text.Json.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\System.ValueTuple.xml
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.dll
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.pdb
+G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache

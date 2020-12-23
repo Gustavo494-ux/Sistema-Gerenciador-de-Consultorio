@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3030D2FD-B20A-494B-82E0-C73D9A5BF4B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcessoDados</RootNamespace>
+    <AssemblyName>AcessoDados</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.3.1, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.3.1\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agendamento\AgendarConsultaAcesso.cs" />
+    <Compile Include="Agendamento\ConsultarPacienteAgendadoAcesso.cs" />
+    <Compile Include="Agendamento\EditarAgendamentoAcesso.cs" />
+    <Compile Include="Agendamento\LocalizarConsultaAgendadaAcesso.cs" />
+    <Compile Include="Banco\Banco.cs" />
+    <Compile Include="Dados Deletados\ConsultasDeletadasAcesso.cs" />
+    <Compile Include="Contato\CadastraContatoAcesso.cs" />
+    <Compile Include="Contato\DeletarContatoAcesso.cs" />
+    <Compile Include="Contato\EditarContatoAcesso.cs" />
+    <Compile Include="Dados Deletados\UsuariosDeletadoAcesso.cs" />
+    <Compile Include="Usuario\DeletarUsuarioAcesso.cs" />
+    <Compile Include="Endereco\CadastrarEnderecoAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesGerais\CadastrarAntecedentesGeraisAcesso.cs" />
+    <Compile Include="Consulta\AcuidadeVisual\CadastrarAcuidadeVisualAcesso.cs" />
+    <Compile Include="Consulta\Oftalmoscopia\CadastrarOftalmoscopiaAcesso.cs" />
+    <Compile Include="Consulta\RxFinal\CadastrarRxFinalAcesso.cs" />
+    <Compile Include="Consulta\RxInicial\CadastrarRxInicialAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesOculares\CadastrarAntedecentesOcularesAcesso.cs" />
+    <Compile Include="Consulta\SintomasReferidos\CadastrarSintomasReferidosAcesso.cs" />
+    <Compile Include="Consulta\Anamnese\CadastrarAnamneseAcesso.cs" />
+    <Compile Include="Consulta\EditarConsultaAcesso.cs" />
+    <Compile Include="Consulta\DeletarConsultaAcesso.cs" />
+    <Compile Include="Consulta\Anamnese\EditarAnamneseAcesso.cs" />
+    <Compile Include="Consulta\SintomasReferidos\EditarSintomasReferidosAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesOculares\EditarAntecendentesOcularesAcesso.cs" />
+    <Compile Include="Consulta\RxInicial\EditarRxInicialAcesso.cs" />
+    <Compile Include="Consulta\RxFinal\EditarRxFinalAcesso.cs" />
+    <Compile Include="Consulta\Oftalmoscopia\EditarOftalmoscopiaAcesso.cs" />
+    <Compile Include="Consulta\AcuidadeVisual\EditarAcuidadeVisualAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesGerais\EditarAntecedentesGeraisAcesso.cs" />
+    <Compile Include="Consulta\AcuidadeVisual\LocalizarAcuidadeVisualAcesso.cs" />
+    <Compile Include="Consulta\Anamnese\LocalizarAnamneseAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesGerais\LocalizarAntecedentesGeraisAcesso.cs" />
+    <Compile Include="Consulta\AntecedentesOculares\LocalizarAntecedentesOcularesAcesso.cs" />
+    <Compile Include="Consulta\Oftalmoscopia\LocalizarOftalmoscopiaAcesso.cs" />
+    <Compile Include="Consulta\SintomasReferidos\LocalizarSintomasReferidosAcesso.cs" />
+    <Compile Include="Consulta\RxFinal\LocalizarRxFinalAcesso.cs" />
+    <Compile Include="Consulta\RxInicial\LocalizarRxInicialAcesso.cs" />
+    <Compile Include="Endereco\DeletarEnderecoAcesso.cs" />
+    <Compile Include="Endereco\EditarEnderecoAcesso.cs" />
+    <Compile Include="Impressão\ImpressaoProfissionalAcesso.cs" />
+    <Compile Include="Impressão\ImpressaoPacienteAcesso.cs" />
+    <Compile Include="Impressão\ImpressaoReceitaAcesso.cs" />
+    <Compile Include="Impressão\ImprimirUsuarioAcesso.cs" />
+    <Compile Include="Impressão\imprimirConsultaAcesso.cs" />
+    <Compile Include="Dados Deletados\PacientesDeletadosAcesso.cs" />
+    <Compile Include="Login\loginAcesso.cs" />
+    <Compile Include="Dados Deletados\ProfissionaisDeletadosAcesso.cs" />
+    <Compile Include="Profissional\RetornarIdProfissionalAcesso.cs" />
+    <Compile Include="Relatorios\RelatorioBasicoConsultaAcesso.cs" />
+    <Compile Include="Relatorios\RelatorioBasicoUsuarioAcesso.cs" />
+    <Compile Include="Relatorios\RelatorioProfissionalBasicoAcesso.cs" />
+    <Compile Include="Relatorios\RelatoriosPacienteAcesso.cs" />
+    <Compile Include="Status\LocalizarStatusAgendamentoAcesso.cs" />
+    <Compile Include="Usuario\EditarUsuarioAcesso.cs" />
+    <Compile Include="Profissional\EditarProfissionalAcesso.cs" />
+    <Compile Include="Profissional\DeletarProfissionalAcesso.cs" />
+    <Compile Include="Paciente\DeletarPacienteAcesso.cs" />
+    <Compile Include="Paciente\EditarPacienteAcesso.cs" />
+    <Compile Include="Status\LocalizarstatusUsuarioAcesso.cs" />
+    <Compile Include="Usuario\LocalizarUsuarioAcesso.cs" />
+    <Compile Include="Nivel Acesso\localizarNivelAcesso.cs" />
+    <Compile Include="Usuario\CadastrarUsuarioAcesso.cs" />
+    <Compile Include="Consulta\LocalizarConsultaAcesso.cs" />
+    <Compile Include="Banco\ConexaoAcesso.cs" />
+    <Compile Include="Consulta\CadastrarConsultaAcesso.cs" />
+    <Compile Include="Paciente\LocalizarPacienteAcesso.cs" />
+    <Compile Include="Profissional\LocalizarProfissionalAcesso.cs" />
+    <Compile Include="Paciente\CadastrarPacienteAcesso.cs" />
+    <Compile Include="Profissional\CadastrarProfissionalAcesso.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

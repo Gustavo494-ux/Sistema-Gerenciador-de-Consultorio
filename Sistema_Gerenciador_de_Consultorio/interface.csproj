@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D5EA9CD-27F6-4A13-9363-E59346A4D26D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_Gerenciador_de_Consultorio</RootNamespace>
+    <AssemblyName>Sistema_Gerenciador_de_Consultorio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\gusta\Desktop\SGC\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>Sistema_Gerenciador_de_Consultorio</ProductName>
+    <PublisherName>Gustavo Gama Dos Santos</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>754419D72244CCE2A0F7361BEE46121175DC57AC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.3.1, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.3.1\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consulta\frmCadastrarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\frmCadastrarConsulta.designer.cs">
+      <DependentUpon>frmCadastrarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\frmPesquisarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\frmPesquisarConsulta.designer.cs">
+      <DependentUpon>frmPesquisarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agendamento\frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agendamento\frmAgendamento.Designer.cs">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetImpressao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetImpressao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\RelatoriosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatoriosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Agendamento\frmEditarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agendamento\frmEditarAgendamento.Designer.cs">
+      <DependentUpon>frmEditarAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dados Deletados\frmDadosDeletados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dados Deletados\frmDadosDeletados.Designer.cs">
+      <DependentUpon>frmDadosDeletados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\frmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmRelatorio.Designer.cs">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impressão\frmImpressao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impressão\frmImpressao.Designer.cs">
+      <DependentUpon>frmImpressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\frmPrincipal.designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente\frmCadastrarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paciente\frmCadastrarPaciente.designer.cs">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente\frmLocalizarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paciente\frmLocalizarPaciente.designer.cs">
+      <DependentUpon>frmLocalizarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profissional\frmCadastrarProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profissional\frmCadastrarProfissional.designer.cs">
+      <DependentUpon>frmCadastrarProfissional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profissional\frmLocalizarProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profissional\frmLocalizarProfissional.designer.cs">
+      <DependentUpon>frmLocalizarProfissional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agendamento\frmAgendamento.resx">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\frmCadastrarConsulta.resx">
+      <DependentUpon>frmCadastrarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\frmPesquisarConsulta.resx">
+      <DependentUpon>frmPesquisarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agendamento\frmEditarAgendamento.resx">
+      <DependentUpon>frmEditarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dados Deletados\frmDadosDeletados.resx">
+      <DependentUpon>frmDadosDeletados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impressão\ImprimirProfissionalCompleto.rdlc" />
+    <EmbeddedResource Include="Outros\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impressão\ImprimirUsuarioCompleto.rdlc" />
+    <EmbeddedResource Include="Impressão\ImprimirReceita.rdlc" />
+    <EmbeddedResource Include="Impressão\ImprimirConsultaCompleta.rdlc" />
+    <EmbeddedResource Include="Relatorios\frmRelatorio.resx">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impressão\frmImpressao.resx">
+      <DependentUpon>frmImpressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RelatorioBasicoConsulta.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioBasicoUsuario.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioProfissionalBasico.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioPacienteBasico.rdlc" />
+    <EmbeddedResource Include="Impressão\ImprimirPacienteCompleto.rdlc" />
+    <EmbeddedResource Include="Usuario\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outros\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paciente\frmCadastrarPaciente.resx">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paciente\frmLocalizarPaciente.resx">
+      <DependentUpon>frmLocalizarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profissional\frmCadastrarProfissional.resx">
+      <DependentUpon>frmCadastrarProfissional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profissional\frmLocalizarProfissional.resx">
+      <DependentUpon>frmLocalizarProfissional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet\DataSetImpressao.xsc">
+      <DependentUpon>DataSetImpressao.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetImpressao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetImpressao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetImpressao.xss">
+      <DependentUpon>DataSetImpressao.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcessoDados\AcessoDados.csproj">
+      <Project>{3030D2FD-B20A-494B-82E0-C73D9A5BF4B3}</Project>
+      <Name>AcessoDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RegraNegocio\RegraNegocio.csproj">
+      <Project>{80fda58f-c5db-466e-a136-8206d201c029}</Project>
+      <Name>RegraNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet\RelatoriosDataSet.xsc">
+      <DependentUpon>RelatoriosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RelatoriosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RelatoriosDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\RelatoriosDataSet.xss">
+      <DependentUpon>RelatoriosDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Restauraçaõ1.png" />
+    <None Include="Resources\Restauraçaõ.png" />
+    <None Include="Resources\receitaimprimiricon.png" />
+    <None Include="Resources\imprimirIcon %281%291.png" />
+    <None Include="Resources\imprimirIcon %281%29.png" />
+    <None Include="Resources\imprimirIcon.png" />
+    <None Include="Resources\impressao.png" />
+    <None Include="Resources\pesquisar1.png" />
+    <None Include="Resources\limpar.png" />
+    <None Include="Resources\Salvar.png" />
+    <None Include="Resources\profissional1.png" />
+    <None Include="Resources\paciente.png" />
+    <None Include="Resources\profissional.png" />
+    <None Include="Resources\FMv42.png" />
+    <None Include="Resources\sairicon.png" />
+    <None Include="Resources\relatorios.png" />
+    <None Include="Resources\pesquisar.png" />
+    <None Include="Resources\loginicon.png" />
+    <None Include="Resources\agendar .png" />
+    <None Include="Resources\Alterar.png" />
+    <None Include="Resources\agendaricon.png" />
+    <None Include="Resources\agendamentos.png" />
+    <Content Include="Resources\backggroudv3.png" />
+    <None Include="Resources\FMv41.png" />
+    <None Include="Resources\FMv32.png" />
+    <None Include="Resources\cor1.png" />
+    <None Include="Resources\backgroundv2-11.png" />
+    <None Include="Resources\backggroudv31.png" />
+    <Content Include="Resources\background.png" />
+    <Content Include="Resources\backgroundv2-1.png" />
+    <None Include="Resources\color.png" />
+    <None Include="Resources\barra.png" />
+    <None Include="Resources\barra %281%29.png" />
+    <None Include="Resources\backgroundv2-12.png" />
+    <None Include="Resources\cadastrar.png" />
+    <None Include="Resources\Consulta.png" />
+    <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\consultaicon.png" />
+    <None Include="Resources\cadastraresagendar.png" />
+    <None Include="Resources\checkbox1.png" />
+    <None Include="Resources\checkbox2.png" />
+    <Content Include="Resources\cor.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\delete-photo.png" />
+    <None Include="Resources\EditarIcon.png" />
+    <None Include="Resources\deletarIcon.png" />
+    <None Include="Resources\EditarIcon %281%29.png" />
+    <None Include="Resources\deletarIcon %281%29.png" />
+    <None Include="Resources\Dados Deletados.png" />
+    <None Include="Resources\Dados Deletados1.png" />
+    <Content Include="Resources\FMv3.png" />
+    <None Include="Resources\FMv33.png" />
+    <Content Include="Resources\FMv4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
