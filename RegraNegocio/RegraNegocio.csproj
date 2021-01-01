@@ -77,11 +77,6 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -121,39 +116,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agendamento\AgendarConsultaRegra.cs" />
-    <Compile Include="Agendamento\ConsultarPacienteAgendadoRegra.cs" />
+    <Compile Include="Agendamento\AgendamentosRegra.cs" />
     <Compile Include="Dados Deletados\ConsultasDeletadasRegra.cs" />
-    <Compile Include="Consulta\SintomasReferidos\CadastrarSintomasReferidosRegra.cs" />
-    <Compile Include="Consulta\RxFinal\CadastrarRxFinalRegra.cs" />
-    <Compile Include="Consulta\Oftalmoscopia\CadastrarOftalmoscopiaRegra.cs" />
-    <Compile Include="Consulta\AntecedentesOculares\CadastrarAntecedentesOcularesRegra.cs" />
-    <Compile Include="Consulta\AntecedentesGerais\CadastrarAntecedentesGeraisRegra.cs" />
-    <Compile Include="Consulta\Anamnese\CadastrarAnamneseRegra.cs" />
-    <Compile Include="Consulta\AcuidadeVisual\CadastrarAcuidadeVisualRegra.cs" />
-    <Compile Include="Consulta\AcuidadeVisual\EditarAcuidadeVisualRegra.cs" />
-    <Compile Include="Consulta\rxInicial\CadastrarRxInicialRegra.cs" />
-    <Compile Include="Contato\EditarContatoRegra.cs" />
-    <Compile Include="Consulta\DeletarConsultaRegra.cs" />
-    <Compile Include="Contato\DeletarContatoRegra.cs" />
-    <Compile Include="Consulta\EditarConsultaRegra.cs" />
-    <Compile Include="Agendamento\LocalizarConsultaAgendamentoRegra.cs" />
-    <Compile Include="Agendamento\EditarAgendamentoRegra.cs" />
-    <Compile Include="Consulta\Anamnese\EditarAnamneseRegra.cs" />
-    <Compile Include="Consulta\AntecedentesGerais\EditarAntecedentesGeraisRegra.cs" />
-    <Compile Include="Consulta\AntecedentesOculares\EditarAntecedentesOcularesRegra.cs" />
-    <Compile Include="Consulta\Oftalmoscopia\EditarOftalmoscopiaRegra.cs" />
-    <Compile Include="Consulta\RxFinal\EditarRxFinalRegra.cs" />
-    <Compile Include="Consulta\rxInicial\EditarRxInicialRegra.cs" />
-    <Compile Include="Consulta\SintomasReferidos\EditarSintomasReferidosRegra.cs" />
-    <Compile Include="Consulta\AcuidadeVisual\LocalizarAcuidadeVisualRegra.cs" />
-    <Compile Include="Consulta\Anamnese\LocalizarAnamneseRegra.cs" />
-    <Compile Include="Consulta\AntecedentesGerais\LocalizarAntecedentesGeraisRegra.cs" />
-    <Compile Include="Consulta\AntecedentesOculares\LocalizarAntecedentesOcularesRegra.cs" />
-    <Compile Include="Consulta\Oftalmoscopia\localizarOftalmoscopiaRegra.cs" />
-    <Compile Include="Consulta\RxFinal\LocalizarRxFinalRegra.cs" />
-    <Compile Include="Consulta\rxInicial\LocalizarRxInicialRegra.cs" />
-    <Compile Include="Consulta\SintomasReferidos\LocalizarSintomasReferidosRegra.cs" />
+    <Compile Include="Consulta\SintomasReferidosRegra.cs" />
+    <Compile Include="Consulta\RxFinalRegra.cs" />
+    <Compile Include="Consulta\OftalmoscopiaRegra.cs" />
+    <Compile Include="Consulta\AntecedentesOcularesRegra.cs" />
+    <Compile Include="Consulta\AntecedentesGeraisRegra.cs" />
+    <Compile Include="Consulta\AnamneseRegra.cs" />
+    <Compile Include="Consulta\AcuidadeVisualRegra.cs" />
+    <Compile Include="Consulta\RxInicialRegra.cs" />
     <Compile Include="Impressão\ImpressaoConsultaRegra.cs" />
     <Compile Include="Impressão\ImpressaoReceitaRegra.cs" />
     <Compile Include="Impressão\ImpressaoUsuarioRegra.cs" />
@@ -161,21 +133,12 @@
     <Compile Include="Impressão\ImpressaoProfissionalRegra.cs" />
     <Compile Include="Dados Deletados\PacienteDeletadoRegra.cs" />
     <Compile Include="Dados Deletados\ProfissionaisDeletadosRegra.cs" />
-    <Compile Include="Profissional\RetornarIdProfissionalRegra.cs" />
     <Compile Include="Relatorios\RelatorioBasicoConsultaRegra.cs" />
     <Compile Include="Relatorios\RelatorioBasicoUsuarioRegra.cs" />
     <Compile Include="Relatorios\RelatorioProfissionalBasicoRegra.cs" />
     <Compile Include="Relatorios\RelatoriosPacienteRegra.cs" />
     <Compile Include="Status\LocalizarStatusAgendamentoRegra.cs" />
     <Compile Include="Dados Deletados\UsuariosDeletadosRegra.cs" />
-    <Compile Include="Usuario\EditarUsuarioRegra.cs" />
-    <Compile Include="Usuario\DeletarUsuarioRegra.cs" />
-    <Compile Include="Profissional\EditarProfissionalRegra.cs" />
-    <Compile Include="Profissional\DeletarProfissionalRegra.cs" />
-    <Compile Include="Endereço\DeletarEnderecoRegra.cs" />
-    <Compile Include="Paciente\DeletarPacienteRegra.cs" />
-    <Compile Include="Endereço\EditarEnderecoRegra.cs" />
-    <Compile Include="Paciente\EditarPacienteRegra.cs" />
     <Compile Include="Paciente\ConstrutorPaciente.cs" />
     <Compile Include="criptografia\CripofragarSenhasRegra.cs" />
     <Compile Include="login\loginRegra.cs" />
@@ -187,17 +150,13 @@
     </Compile>
     <Compile Include="Status\LocalizarStatusUsuarioRegra.cs" />
     <Compile Include="Usuario\PermissoesUsuarioRegra.cs" />
-    <Compile Include="Usuario\LocalizarUsuariosRegra.cs" />
     <Compile Include="Nivel Acesso\LocalizarNivelRegra.cs" />
-    <Compile Include="Usuario\CadastrarUsuarioRegra.cs" />
-    <Compile Include="Consulta\CadastrarConsultaRegraNegocio.cs" />
-    <Compile Include="Contato\ContatoRegraNegocio.cs" />
-    <Compile Include="Endereço\EnderecoRegraNegocio.cs" />
-    <Compile Include="Consulta\LocalizarConsultaRegra.cs" />
-    <Compile Include="Paciente\LocalizarPacienteRegra.cs" />
-    <Compile Include="Profissional\LocalizarProfissionalRegra.cs" />
-    <Compile Include="Paciente\CadastrarPacienteRegra.cs" />
-    <Compile Include="Profissional\CadastrarProfissionalRegraNegocio.cs" />
+    <Compile Include="Usuario\UsuarioRegra.cs" />
+    <Compile Include="Consulta\ConsultaRegraNegocio.cs" />
+    <Compile Include="Contato\ContatoRegra.cs" />
+    <Compile Include="Endereço\EnderecoRegra.cs" />
+    <Compile Include="Paciente\PacienteRegra.cs" />
+    <Compile Include="Profissional\ProfissionalRegra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

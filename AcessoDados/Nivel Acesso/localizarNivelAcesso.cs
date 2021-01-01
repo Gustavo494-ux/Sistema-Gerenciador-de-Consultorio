@@ -46,7 +46,6 @@ namespace AcessoDados
             
             try
             {
-                string nivel = null;
                 ConexaoAcesso.Conectar();
                 StringBuilder sql = new StringBuilder();
                 NpgsqlCommand comandoSql = new NpgsqlCommand();

@@ -592,3 +592,9 @@ G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\RegraNegocio\
 G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.CopyComplete
 G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\RegraNegocio\obj\Debug\RegraNegocio.dll
 G:\Projetos\Desenvolvimento\SGC\Sistema_Gerenciador_de_Consultorio\RegraNegocio\obj\Debug\RegraNegocio.pdb
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csprojAssemblyReference.cache
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\Sistema_Gerenciador_de_Consultorio.frmUsuario.resources
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.GenerateResource.cache
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.CoreCompileInputs.cache
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.pdb
