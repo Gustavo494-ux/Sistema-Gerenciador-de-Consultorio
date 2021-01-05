@@ -12,6 +12,7 @@ namespace RegraNegocio
     public class UsuarioRegra
     {
         string senhaEncriptada;
+        DataTable tableVazia = new DataTable();
         public bool Cadastrar(string idNivel, string nomeUsuario, string loginUsuario, string senhaUsuario, string confirmacaoSenha, string observacaoUsuario, string statusUsuario)
         {
             try

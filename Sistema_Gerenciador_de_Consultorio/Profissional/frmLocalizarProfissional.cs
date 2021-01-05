@@ -37,7 +37,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosProfissional;
             try
             {
-                LocalizarProfissionalRegra PesquisaProfissional = new LocalizarProfissionalRegra();
+                ProfissionalRegra PesquisaProfissional = new ProfissionalRegra();
                 if (rbIdProfissional.Checked == true)
                 {
                     int cod = Convert.ToInt32(nudPesquisar.Text);
@@ -95,7 +95,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosProfissional;
             try
             {
-                LocalizarProfissionalRegra PesquisaProfissional = new LocalizarProfissionalRegra();
+                ProfissionalRegra PesquisaProfissional = new ProfissionalRegra();
                 dadosProfissional = PesquisaProfissional.TodosProfissionais();
 
                 PreencherDtg(dadosProfissional);
@@ -263,11 +263,11 @@ namespace Sistema_Gerenciador_de_Consultorio
                 DialogResult confirmarDelecao = MessageBox.Show("Deseja realmente deletar o Endereço, Contato, Consulta e todos os dados relacionados a este Profissional ?", "Deletar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirmarDelecao == DialogResult.Yes)//Profissional
                 {
-                    DeletarProfissionalRegra delProfissinal = new DeletarProfissionalRegra();
+                    ProfissionalRegra delProfissinal = new ProfissionalRegra();
                     bool ProfissionalConfirm = delProfissinal.idProfissional(idUsuarioSistema, dtgProfissional.Rows[e.RowIndex].Cells["idProfissional"].Value.ToString());
 
                     //Consulta
-                    DeletarConsultaRegra delConsulta = new DeletarConsultaRegra();
+                    ConsultaRegra delConsulta = new ConsultaRegra();
                     bool consultaConfirm = delConsulta.DeletarConsultaIdProfissional(idUsuarioSistema, dtgProfissional.Rows[e.RowIndex].Cells["idProfissional"].Value.ToString());
 
 

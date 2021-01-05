@@ -627,7 +627,10 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
                 else
                 {
-                    MessageBox.Show("Registros de pacientes não encontrado!", "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dtgPaciente.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Registros de pacientes não encontrado!", "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    }
                   
                 }
                 dtgPaciente.AutoResizeColumns();
@@ -678,8 +681,11 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
                 else
                 {
-                  MessageBox.Show("Os Registros de profissionais não foram encontrados!", 
-                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dtgProfissional.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Os Registros de profissionais não foram encontrados!",
+                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    }
                 }
                 dtgProfissional.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
             }
@@ -723,8 +729,11 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
                 else
                 {
-                    MessageBox.Show("Os Registros de Consultas não foram encontrados!",
-                        "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dtgConsulta.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Os Registros só de Consultas não foram encontrados!",
+                                       "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    }
                 }
                dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
             }
@@ -762,18 +771,21 @@ namespace Sistema_Gerenciador_de_Consultorio
 
                     //Restaurar
                     dtgUsuario.Columns["btnRestaurarUsuario"].Width = 80;//largura total da coluna.
-                    dtgUsuario.Columns["btnRestaurarUsuario"].DisplayIndex = dtgUsuario.Columns.Count ;//Posição dentro do dtg
+                    dtgUsuario.Columns["btnRestaurarUsuario"].DisplayIndex = dtgUsuario.Columns.Count -1 ;//Posição dentro do dtg
                     dtgUsuario.Columns["btnRestaurarUsuario"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
                     //Deletar
                     dtgUsuario.Columns["btnDeletarUsuario"].Width = 65;//largura total da coluna.
-                    dtgUsuario.Columns["btnDeletarUsuario"].DisplayIndex = dtgUsuario.Columns.Count ;//Posição dentro do dtg.
+                    dtgUsuario.Columns["btnDeletarUsuario"].DisplayIndex = dtgUsuario.Columns.Count -1;//Posição dentro do dtg.
                     dtgUsuario.Columns["btnDeletarUsuario"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
                 else
                 {
-                    MessageBox.Show("Os Registros de Consultas não foram encontrados!",
-                        "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dtgUsuario.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Os Registros de Consultas não foram encontrados!",
+                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    }
                 }
                 dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
             }

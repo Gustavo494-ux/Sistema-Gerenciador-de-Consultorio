@@ -212,9 +212,9 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("select idPaciente,idContato,idEndereco,idUsuario, nomePaciente, nomeResponsavel, rg,cpf,ocupacao,idade,sexo,dataNascimento,");
-                sql.Append("dataCadastro,horaCadastro,observacaoPacienteusuario.loginUsuario FROM paciente INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario ");
-                sql.Append("where rg LIKE '" + rg + "%' and deletar = false order by idPaciente asc");
+                sql.Append("select idPaciente,idContato,idEndereco,paciente.idUsuario, nomePaciente, nomeResponsavel, rg,cpf,ocupacao,idade,sexo,dataNascimento,");
+                sql.Append("paciente.dataCadastro,paciente.horaCadastro,observacaoPaciente,usuario.loginUsuario FROM paciente INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario ");
+                sql.Append("where rg LIKE '" + rg + "%' and paciente.deletar = false order by idPaciente asc");
 
 
                 return acessoBanco.Pesquisar(sql.ToString());
@@ -286,7 +286,7 @@ namespace AcessoDados
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao deletar o paciente(Classe PacienteAcesso, Método idUsuario)", "Erro de exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ocorreu um erro ao deletar o paciente(Classe DeletarPacienteAcesso, Método idUsuario)", "Erro de exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             return false;
         }
@@ -296,6 +296,7 @@ namespace AcessoDados
             try
             {
                 //Comando sql responsavel por inserir os dados
+                sql.Clear();
                 sql.Append("select idEndereco from endereco order by idEndereco desc limit 1");
 
                 ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
@@ -318,6 +319,7 @@ namespace AcessoDados
             try
             {
                 //Comando sql responsavel por inserir os dados
+                sql.Clear();
                 sql.Append("select idContato from contato order by idContato desc limit 1");
 
                 ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.

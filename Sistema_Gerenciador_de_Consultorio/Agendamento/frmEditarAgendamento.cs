@@ -41,7 +41,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarConsultaAgendamentoRegra pesquisar = new LocalizarConsultaAgendamentoRegra();
+               AgendamentosRegra pesquisar = new AgendamentosRegra();
                 dadosTabela = pesquisar.TodosAgendamentos();
                 PreencherAgendamentos(dadosTabela);
 
@@ -56,7 +56,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarConsultaAgendamentoRegra pesquisar = new LocalizarConsultaAgendamentoRegra();
+                AgendamentosRegra pesquisar = new AgendamentosRegra();
                 dadosTabela = null;
                 dadosTabela = pesquisar.StatusAgendamento("Marcada");
 
@@ -87,7 +87,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void CarregarTodosAgendamento()
         {
             DataTable dadosTabela = new DataTable();
-            LocalizarConsultaAgendamentoRegra pesquisar = new LocalizarConsultaAgendamentoRegra();
+            AgendamentosRegra pesquisar = new AgendamentosRegra();
 
             dadosTabela = pesquisar.TodosAgendamentos();
 
@@ -96,7 +96,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void pesquisarAgendamentos()
         {
             DataTable dadosTabela = new DataTable();
-            LocalizarConsultaAgendamentoRegra PESQUISAR = new LocalizarConsultaAgendamentoRegra();
+            AgendamentosRegra PESQUISAR = new AgendamentosRegra();
 
             if (rbTodasConsultas.Checked == true)
             {
@@ -174,6 +174,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                         string loginUsuario = dtgIntermediario.Rows[i].Cells["loginusuario"].Value.ToString();
                         string nomeStatus = dtgIntermediario.Rows[i].Cells["nomestatus"].Value.ToString();
 
+                        CPF = CPF.Replace(".", "").Replace(",", "").Replace("-", "");
                         string CPF1 = CPF[0] + "" + CPF[1] + "" + CPF[2] + "." + CPF[3] + "" + CPF[4] + "" + CPF[5] + "." + CPF[6] + "" + CPF[7] + "" + CPF[8] + "-" + CPF[9] + "" + CPF[10];
                         CPF = CPF1.Trim();
                         string[] arrayNascimento = new string[2];
@@ -341,7 +342,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             if (dtgPesquisarConsultasAgendadas.Columns[e.ColumnIndex].Name == "btnPacientePresente")
             {
-                AgendarConsultaRegra ordenar = new AgendarConsultaRegra();
+                AgendamentosRegra ordenar = new AgendamentosRegra();
                 string id = dtgPesquisarConsultasAgendadas.Rows[e.RowIndex].Cells["idAgendamento"].Value.ToString();
                 string dataConsulta = dtgPesquisarConsultasAgendadas.Rows[e.RowIndex].Cells["dataConsulta"].Value.ToString();
 
@@ -377,7 +378,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
                     idPacientePassarDados = dtgPesquisarConsultasAgendadas.Rows[e.RowIndex].Cells["codigoPaciente"].Value.ToString();
 
-                    LocalizarPacienteRegra pesquisar = new LocalizarPacienteRegra();
+                    PacienteRegra pesquisar = new PacienteRegra();
                     dados = pesquisar.CodigoPaciente(Convert.ToInt32(idPacientePassarDados));
 
                     dtgIntermediario.DataSource = dados;
@@ -415,7 +416,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
         private void btnSalvarEdicao_Click(object sender, EventArgs e)
         {
-            EditarAgendamentoRegra atualizar = new EditarAgendamentoRegra();
+            AgendamentosRegra atualizar = new AgendamentosRegra();
             if (atualizar.AtualizarAgendamentos(CodAgendamento, Convert.ToString(cbStatusConsultaEditar.SelectedIndex+1), dtpDataConsultaEditar.Text, txtObservacaoAgendamentoEditar.Text) == true)
             {
                 MessageBox.Show("Agendamento Atualizado com sucesso!", "Dados Atualizados!", MessageBoxButtons.OK, MessageBoxIcon.Information);

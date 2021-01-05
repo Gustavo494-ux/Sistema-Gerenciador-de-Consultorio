@@ -75,11 +75,6 @@
             this.lblStatusConsultaPacienteExistente = new System.Windows.Forms.Label();
             this.lblObservacaoConsultaPacienteExistente = new System.Windows.Forms.Label();
             this.tpPacienteNovo = new System.Windows.Forms.TabPage();
-            this.btnCadastrarEAgendar = new System.Windows.Forms.Button();
-            this.rbDadosAgendamento = new System.Windows.Forms.RadioButton();
-            this.rbEndereco = new System.Windows.Forms.RadioButton();
-            this.rbContato = new System.Windows.Forms.RadioButton();
-            this.rbDadosPessoais = new System.Windows.Forms.RadioButton();
             this.gbDadosPessoais = new System.Windows.Forms.GroupBox();
             this.mtxtCPFNovo = new System.Windows.Forms.MaskedTextBox();
             this.mtxtRGNovo = new System.Windows.Forms.TextBox();
@@ -95,13 +90,6 @@
             this.txtNomeResponsavelNovo = new System.Windows.Forms.TextBox();
             this.lblNomePacienteNovo = new System.Windows.Forms.Label();
             this.txtNomePacienteNovo = new System.Windows.Forms.TextBox();
-            this.gbDadosAgendamento = new System.Windows.Forms.GroupBox();
-            this.cbStatusConsultaNovo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtObservacaoAgendamentoNovo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpDataConsultaNovo = new System.Windows.Forms.DateTimePicker();
             this.gbEndereco = new System.Windows.Forms.GroupBox();
             this.txtObservacaoEnderecoNovo = new System.Windows.Forms.TextBox();
             this.lblObsercacaoEnderecoNovo = new System.Windows.Forms.Label();
@@ -120,6 +108,18 @@
             this.lblEstadoNovo = new System.Windows.Forms.Label();
             this.mtxtCEPNovo = new System.Windows.Forms.MaskedTextBox();
             this.lblCepNovo = new System.Windows.Forms.Label();
+            this.btnCadastrarEAgendar = new System.Windows.Forms.Button();
+            this.rbDadosAgendamento = new System.Windows.Forms.RadioButton();
+            this.rbEndereco = new System.Windows.Forms.RadioButton();
+            this.rbContato = new System.Windows.Forms.RadioButton();
+            this.rbDadosPessoais = new System.Windows.Forms.RadioButton();
+            this.gbDadosAgendamento = new System.Windows.Forms.GroupBox();
+            this.cbStatusConsultaNovo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtObservacaoAgendamentoNovo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpDataConsultaNovo = new System.Windows.Forms.DateTimePicker();
             this.gbContato = new System.Windows.Forms.GroupBox();
             this.mtxtTelefone3 = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTelefone2Novo = new System.Windows.Forms.MaskedTextBox();
@@ -144,16 +144,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).BeginInit();
             this.tpPacienteNovo.SuspendLayout();
             this.gbDadosPessoais.SuspendLayout();
-            this.gbDadosAgendamento.SuspendLayout();
             this.gbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroNovo)).BeginInit();
+            this.gbDadosAgendamento.SuspendLayout();
             this.gbContato.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblUsuarioSistema
             // 
@@ -270,8 +270,8 @@
             this.groupBox1.Controls.Add(this.rbSemFiltros);
             this.groupBox1.Controls.Add(this.rbIdPaciente);
             this.groupBox1.Controls.Add(this.btnPesquisarPaciente);
-            this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.nudPesquisar);
+            this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(630, 14);
@@ -328,6 +328,7 @@
             this.rbSemFiltros.TabStop = true;
             this.rbSemFiltros.Text = "Todos";
             this.rbSemFiltros.UseVisualStyleBackColor = true;
+            this.rbSemFiltros.CheckedChanged += new System.EventHandler(this.rbSemFiltros_CheckedChanged);
             // 
             // rbIdPaciente
             // 
@@ -351,6 +352,7 @@
             this.btnPesquisarPaciente.Size = new System.Drawing.Size(91, 30);
             this.btnPesquisarPaciente.TabIndex = 18;
             this.btnPesquisarPaciente.UseVisualStyleBackColor = true;
+            this.btnPesquisarPaciente.Click += new System.EventHandler(this.btnPesquisarPaciente_Click);
             // 
             // txtPesquisar
             // 
@@ -607,71 +609,6 @@
             this.tpPacienteNovo.TabIndex = 2;
             this.tpPacienteNovo.Text = "Paciente novo";
             // 
-            // btnCadastrarEAgendar
-            // 
-            this.btnCadastrarEAgendar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.cadastraresagendar;
-            this.btnCadastrarEAgendar.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnCadastrarEAgendar.Location = new System.Drawing.Point(979, 6);
-            this.btnCadastrarEAgendar.Name = "btnCadastrarEAgendar";
-            this.btnCadastrarEAgendar.Size = new System.Drawing.Size(165, 30);
-            this.btnCadastrarEAgendar.TabIndex = 10;
-            this.btnCadastrarEAgendar.UseVisualStyleBackColor = true;
-            this.btnCadastrarEAgendar.Click += new System.EventHandler(this.btnCadastrarEAgendar_Click);
-            // 
-            // rbDadosAgendamento
-            // 
-            this.rbDadosAgendamento.AutoSize = true;
-            this.rbDadosAgendamento.Checked = true;
-            this.rbDadosAgendamento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDadosAgendamento.ForeColor = System.Drawing.Color.White;
-            this.rbDadosAgendamento.Location = new System.Drawing.Point(351, 4);
-            this.rbDadosAgendamento.Name = "rbDadosAgendamento";
-            this.rbDadosAgendamento.Size = new System.Drawing.Size(174, 22);
-            this.rbDadosAgendamento.TabIndex = 5;
-            this.rbDadosAgendamento.TabStop = true;
-            this.rbDadosAgendamento.Text = "Dados Agendamento";
-            this.rbDadosAgendamento.UseVisualStyleBackColor = true;
-            this.rbDadosAgendamento.CheckedChanged += new System.EventHandler(this.rbDadosAgendamento_CheckedChanged);
-            // 
-            // rbEndereco
-            // 
-            this.rbEndereco.AutoSize = true;
-            this.rbEndereco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(248, 4);
-            this.rbEndereco.Name = "rbEndereco";
-            this.rbEndereco.Size = new System.Drawing.Size(98, 22);
-            this.rbEndereco.TabIndex = 5;
-            this.rbEndereco.Text = "Endereço ";
-            this.rbEndereco.UseVisualStyleBackColor = true;
-            this.rbEndereco.CheckedChanged += new System.EventHandler(this.rbEndereco_CheckedChanged);
-            // 
-            // rbContato
-            // 
-            this.rbContato.AutoSize = true;
-            this.rbContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbContato.ForeColor = System.Drawing.Color.White;
-            this.rbContato.Location = new System.Drawing.Point(158, 4);
-            this.rbContato.Name = "rbContato";
-            this.rbContato.Size = new System.Drawing.Size(81, 22);
-            this.rbContato.TabIndex = 5;
-            this.rbContato.Text = "Contato";
-            this.rbContato.UseVisualStyleBackColor = true;
-            this.rbContato.CheckedChanged += new System.EventHandler(this.rbContato_CheckedChanged);
-            // 
-            // rbDadosPessoais
-            // 
-            this.rbDadosPessoais.AutoSize = true;
-            this.rbDadosPessoais.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDadosPessoais.ForeColor = System.Drawing.Color.White;
-            this.rbDadosPessoais.Location = new System.Drawing.Point(9, 4);
-            this.rbDadosPessoais.Name = "rbDadosPessoais";
-            this.rbDadosPessoais.Size = new System.Drawing.Size(143, 22);
-            this.rbDadosPessoais.TabIndex = 5;
-            this.rbDadosPessoais.Text = "Dados Pessoais";
-            this.rbDadosPessoais.UseVisualStyleBackColor = true;
-            this.rbDadosPessoais.CheckedChanged += new System.EventHandler(this.rbDadosPessoais_CheckedChanged);
-            // 
             // gbDadosPessoais
             // 
             this.gbDadosPessoais.Controls.Add(this.mtxtCPFNovo);
@@ -827,75 +764,6 @@
             this.txtNomePacienteNovo.Name = "txtNomePacienteNovo";
             this.txtNomePacienteNovo.Size = new System.Drawing.Size(399, 26);
             this.txtNomePacienteNovo.TabIndex = 50;
-            // 
-            // gbDadosAgendamento
-            // 
-            this.gbDadosAgendamento.Controls.Add(this.cbStatusConsultaNovo);
-            this.gbDadosAgendamento.Controls.Add(this.label2);
-            this.gbDadosAgendamento.Controls.Add(this.label3);
-            this.gbDadosAgendamento.Controls.Add(this.txtObservacaoAgendamentoNovo);
-            this.gbDadosAgendamento.Controls.Add(this.label4);
-            this.gbDadosAgendamento.Controls.Add(this.dtpDataConsultaNovo);
-            this.gbDadosAgendamento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDadosAgendamento.ForeColor = System.Drawing.Color.White;
-            this.gbDadosAgendamento.Location = new System.Drawing.Point(56, 87);
-            this.gbDadosAgendamento.Name = "gbDadosAgendamento";
-            this.gbDadosAgendamento.Size = new System.Drawing.Size(582, 215);
-            this.gbDadosAgendamento.TabIndex = 4;
-            this.gbDadosAgendamento.TabStop = false;
-            this.gbDadosAgendamento.Text = "Dados Agendamento";
-            this.gbDadosAgendamento.Visible = false;
-            // 
-            // cbStatusConsultaNovo
-            // 
-            this.cbStatusConsultaNovo.FormattingEnabled = true;
-            this.cbStatusConsultaNovo.Location = new System.Drawing.Point(328, 55);
-            this.cbStatusConsultaNovo.Name = "cbStatusConsultaNovo";
-            this.cbStatusConsultaNovo.Size = new System.Drawing.Size(226, 26);
-            this.cbStatusConsultaNovo.TabIndex = 47;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 18);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Observação:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(329, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 18);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Status:";
-            // 
-            // txtObservacaoAgendamentoNovo
-            // 
-            this.txtObservacaoAgendamentoNovo.Location = new System.Drawing.Point(22, 114);
-            this.txtObservacaoAgendamentoNovo.Multiline = true;
-            this.txtObservacaoAgendamentoNovo.Name = "txtObservacaoAgendamentoNovo";
-            this.txtObservacaoAgendamentoNovo.Size = new System.Drawing.Size(532, 64);
-            this.txtObservacaoAgendamentoNovo.TabIndex = 50;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 18);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Data:";
-            // 
-            // dtpDataConsultaNovo
-            // 
-            this.dtpDataConsultaNovo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataConsultaNovo.Location = new System.Drawing.Point(26, 55);
-            this.dtpDataConsultaNovo.Name = "dtpDataConsultaNovo";
-            this.dtpDataConsultaNovo.Size = new System.Drawing.Size(124, 26);
-            this.dtpDataConsultaNovo.TabIndex = 52;
             // 
             // gbEndereco
             // 
@@ -1069,6 +937,140 @@
             this.lblCepNovo.Size = new System.Drawing.Size(46, 18);
             this.lblCepNovo.TabIndex = 8;
             this.lblCepNovo.Text = "CEP:";
+            // 
+            // btnCadastrarEAgendar
+            // 
+            this.btnCadastrarEAgendar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.cadastraresagendar;
+            this.btnCadastrarEAgendar.Font = new System.Drawing.Font("Arial", 12F);
+            this.btnCadastrarEAgendar.Location = new System.Drawing.Point(979, 6);
+            this.btnCadastrarEAgendar.Name = "btnCadastrarEAgendar";
+            this.btnCadastrarEAgendar.Size = new System.Drawing.Size(165, 30);
+            this.btnCadastrarEAgendar.TabIndex = 10;
+            this.btnCadastrarEAgendar.UseVisualStyleBackColor = true;
+            this.btnCadastrarEAgendar.Click += new System.EventHandler(this.btnCadastrarEAgendar_Click);
+            // 
+            // rbDadosAgendamento
+            // 
+            this.rbDadosAgendamento.AutoSize = true;
+            this.rbDadosAgendamento.Checked = true;
+            this.rbDadosAgendamento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDadosAgendamento.ForeColor = System.Drawing.Color.White;
+            this.rbDadosAgendamento.Location = new System.Drawing.Point(351, 4);
+            this.rbDadosAgendamento.Name = "rbDadosAgendamento";
+            this.rbDadosAgendamento.Size = new System.Drawing.Size(174, 22);
+            this.rbDadosAgendamento.TabIndex = 5;
+            this.rbDadosAgendamento.TabStop = true;
+            this.rbDadosAgendamento.Text = "Dados Agendamento";
+            this.rbDadosAgendamento.UseVisualStyleBackColor = true;
+            this.rbDadosAgendamento.CheckedChanged += new System.EventHandler(this.rbDadosAgendamento_CheckedChanged);
+            // 
+            // rbEndereco
+            // 
+            this.rbEndereco.AutoSize = true;
+            this.rbEndereco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEndereco.ForeColor = System.Drawing.Color.White;
+            this.rbEndereco.Location = new System.Drawing.Point(248, 4);
+            this.rbEndereco.Name = "rbEndereco";
+            this.rbEndereco.Size = new System.Drawing.Size(98, 22);
+            this.rbEndereco.TabIndex = 5;
+            this.rbEndereco.Text = "Endereço ";
+            this.rbEndereco.UseVisualStyleBackColor = true;
+            this.rbEndereco.CheckedChanged += new System.EventHandler(this.rbEndereco_CheckedChanged);
+            // 
+            // rbContato
+            // 
+            this.rbContato.AutoSize = true;
+            this.rbContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbContato.ForeColor = System.Drawing.Color.White;
+            this.rbContato.Location = new System.Drawing.Point(158, 4);
+            this.rbContato.Name = "rbContato";
+            this.rbContato.Size = new System.Drawing.Size(81, 22);
+            this.rbContato.TabIndex = 5;
+            this.rbContato.Text = "Contato";
+            this.rbContato.UseVisualStyleBackColor = true;
+            this.rbContato.CheckedChanged += new System.EventHandler(this.rbContato_CheckedChanged);
+            // 
+            // rbDadosPessoais
+            // 
+            this.rbDadosPessoais.AutoSize = true;
+            this.rbDadosPessoais.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDadosPessoais.ForeColor = System.Drawing.Color.White;
+            this.rbDadosPessoais.Location = new System.Drawing.Point(9, 4);
+            this.rbDadosPessoais.Name = "rbDadosPessoais";
+            this.rbDadosPessoais.Size = new System.Drawing.Size(143, 22);
+            this.rbDadosPessoais.TabIndex = 5;
+            this.rbDadosPessoais.Text = "Dados Pessoais";
+            this.rbDadosPessoais.UseVisualStyleBackColor = true;
+            this.rbDadosPessoais.CheckedChanged += new System.EventHandler(this.rbDadosPessoais_CheckedChanged);
+            // 
+            // gbDadosAgendamento
+            // 
+            this.gbDadosAgendamento.Controls.Add(this.cbStatusConsultaNovo);
+            this.gbDadosAgendamento.Controls.Add(this.label2);
+            this.gbDadosAgendamento.Controls.Add(this.label3);
+            this.gbDadosAgendamento.Controls.Add(this.txtObservacaoAgendamentoNovo);
+            this.gbDadosAgendamento.Controls.Add(this.label4);
+            this.gbDadosAgendamento.Controls.Add(this.dtpDataConsultaNovo);
+            this.gbDadosAgendamento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosAgendamento.ForeColor = System.Drawing.Color.White;
+            this.gbDadosAgendamento.Location = new System.Drawing.Point(56, 87);
+            this.gbDadosAgendamento.Name = "gbDadosAgendamento";
+            this.gbDadosAgendamento.Size = new System.Drawing.Size(582, 215);
+            this.gbDadosAgendamento.TabIndex = 4;
+            this.gbDadosAgendamento.TabStop = false;
+            this.gbDadosAgendamento.Text = "Dados Agendamento";
+            this.gbDadosAgendamento.Visible = false;
+            // 
+            // cbStatusConsultaNovo
+            // 
+            this.cbStatusConsultaNovo.FormattingEnabled = true;
+            this.cbStatusConsultaNovo.Location = new System.Drawing.Point(328, 55);
+            this.cbStatusConsultaNovo.Name = "cbStatusConsultaNovo";
+            this.cbStatusConsultaNovo.Size = new System.Drawing.Size(226, 26);
+            this.cbStatusConsultaNovo.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Observação:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(329, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 18);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Status:";
+            // 
+            // txtObservacaoAgendamentoNovo
+            // 
+            this.txtObservacaoAgendamentoNovo.Location = new System.Drawing.Point(22, 114);
+            this.txtObservacaoAgendamentoNovo.Multiline = true;
+            this.txtObservacaoAgendamentoNovo.Name = "txtObservacaoAgendamentoNovo";
+            this.txtObservacaoAgendamentoNovo.Size = new System.Drawing.Size(532, 64);
+            this.txtObservacaoAgendamentoNovo.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 18);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Data:";
+            // 
+            // dtpDataConsultaNovo
+            // 
+            this.dtpDataConsultaNovo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataConsultaNovo.Location = new System.Drawing.Point(26, 55);
+            this.dtpDataConsultaNovo.Name = "dtpDataConsultaNovo";
+            this.dtpDataConsultaNovo.Size = new System.Drawing.Size(124, 26);
+            this.dtpDataConsultaNovo.TabIndex = 52;
             // 
             // gbContato
             // 
@@ -1249,11 +1251,11 @@
             this.tpPacienteNovo.PerformLayout();
             this.gbDadosPessoais.ResumeLayout(false);
             this.gbDadosPessoais.PerformLayout();
-            this.gbDadosAgendamento.ResumeLayout(false);
-            this.gbDadosAgendamento.PerformLayout();
             this.gbEndereco.ResumeLayout(false);
             this.gbEndereco.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroNovo)).EndInit();
+            this.gbDadosAgendamento.ResumeLayout(false);
+            this.gbDadosAgendamento.PerformLayout();
             this.gbContato.ResumeLayout(false);
             this.gbContato.PerformLayout();
             this.ResumeLayout(false);

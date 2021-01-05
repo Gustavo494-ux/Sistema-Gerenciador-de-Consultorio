@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using AcessoDados;
 namespace RegraNegocio
 {
-   public  class ConsultaRegraNegocio
+   public  class ConsultaRegra
    {
         DataTable tableVazia = new DataTable();
         public bool Cadastrar(string idPaciente,string idProfissional,string idUsuario,string origem,string hobbies,string encaminhadoPor,string ajudaOpticaPrescrita,

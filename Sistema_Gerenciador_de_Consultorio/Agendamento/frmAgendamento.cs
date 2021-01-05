@@ -126,7 +126,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             esvaziardtg();
             try
             {
-                LocalizarPacienteRegra PesquisarRegra = new LocalizarPacienteRegra();
+                PacienteRegra PesquisarRegra = new PacienteRegra();
                 DadosPaciente = PesquisarRegra.TodosPacientes();
                 dtgPaciente.DataSource = null;
                 PreencherPaciente(DadosPaciente);
@@ -178,8 +178,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                             CADASTRO = arrayCadastro[0];
                         }
                         string CPF1="";
-                        if (CPF.Length == 11)
-                        { 
+                        if (CPF.Length == 11 || CPF.Length == 14)
+                        {
+                            CPF = CPF.Replace(".", "").Replace(",", "").Replace("-", "");
                             CPF1 = CPF[0] + "" + CPF[1] + "" + CPF[2] + "." + CPF[3] + "" + CPF[4] + "" + CPF[5] + "." + CPF[6] + "" + CPF[7] + "" + CPF[8] + "-" + CPF[9] + "" + CPF[10];
                         }
                         CPF = CPF1.Trim();
@@ -225,7 +226,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                AgendarConsultaRegra agendarConsultaNovo = new AgendarConsultaRegra();
+                AgendamentosRegra agendarConsultaNovo = new AgendamentosRegra();
                 bool paciente = agendarConsultaNovo.AgendarNovo(Convert.ToString(cbStatusConsultaNovo.SelectedIndex+1),dtpDataConsultaNovo.Text, txtObservacaoAgendamentoNovo.Text,idUsuario,
                     txtNomePacienteNovo.Text.ToUpper(), txtNomeResponsavelNovo.Text.ToUpper(), mtxtRGNovo.Text, mtxtCPFNovo.Text, txtIdadeNovo.Text, dtpNascimento.Text,
                     txtObservacaoPacienteNovo.Text,txtEmail.Text, mtxtTelefone1Novo.Text, mtxtTelefone2Novo.Text, mtxtTelefone3.Text, txtOutro.Text, txtObservacaoContatoNovo.Text,
@@ -253,36 +254,34 @@ namespace Sistema_Gerenciador_de_Consultorio
         } 
         void PesquisarPaciente()
         {
-            DataTable dadosProfissional;
+            DataTable dadosProfissional = new DataTable();
             try
             {
-                LocalizarPacienteRegra localizarPaciente = new LocalizarPacienteRegra();
+                PacienteRegra localizarPaciente = new PacienteRegra();
                 if (rbIdPaciente.Checked == true)
                 {
-                    int cod = Convert.ToInt32(nudPesquisar.Text);
+                    int cod = Convert.ToInt32(txtPesquisar.Text);
                     dadosProfissional = localizarPaciente.CodigoPaciente(cod);
-                    esvaziardtg();
-                    PreencherPaciente(dadosProfissional);
                 }
                 if (rbNome.Checked == true)
                 {
                     dadosProfissional = localizarPaciente.NomePaciente(txtPesquisar.Text);
-                    esvaziardtg();
-                    PreencherPaciente(dadosProfissional);
                 }
                 if (rbCpf.Checked == true)
                 {
-                    dadosProfissional = localizarPaciente.CpfPaciente(nudPesquisar.Text);
-                    esvaziardtg();
-                    PreencherPaciente(dadosProfissional);
+                    dadosProfissional = localizarPaciente.CpfPaciente(txtPesquisar.Text);
                 }
 
                 if (rbRG.Checked == true)
                 {
-                    dadosProfissional = localizarPaciente.RgPaciente(nudPesquisar.Text);
-                    esvaziardtg();
-                    PreencherPaciente(dadosProfissional);
+                    dadosProfissional = localizarPaciente.RgPaciente(txtPesquisar.Text);
                 }
+                if(rbSemFiltros.Checked == true)
+                {
+                    dadosProfissional = localizarPaciente.TodosPacientes();
+                }
+                esvaziardtg();
+                PreencherPaciente(dadosProfissional);
 
             }
             catch (Exception ex)
@@ -382,7 +381,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                 idStatus = idStatus + 1;
                 string[] arrayNascimento = new string[2];
                 string[] arrayCadastro = new string[2];
-                AgendarConsultaRegra agendarConsultaPacienteExistente = new AgendarConsultaRegra();
+
+                AgendamentosRegra agendarConsultaPacienteExistente = new AgendamentosRegra();
+
                 string IDPACIENTE = dtgPaciente.Rows[e.RowIndex].Cells["CodPaciente"].Value.ToString();
                 string IDCONTATO = dtgPaciente.Rows[e.RowIndex].Cells["idcontato"].Value.ToString();
                 string IDENDERECO = dtgPaciente.Rows[e.RowIndex].Cells["idendereco"].Value.ToString();
@@ -429,12 +430,9 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            centralizarGbs();
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            centralizarGbs();
             dtgPaciente.AutoResizeColumns();
             //dtgPesquisarConsultasAgendadas.AutoResizeColumns();
             //pnlPesquisarEditar.Refresh();

@@ -52,7 +52,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             esvaziardtg();
             try
             {
-                LocalizarPacienteRegra PesquisarRegra = new LocalizarPacienteRegra();
+               PacienteRegra PesquisarRegra = new PacienteRegra();
                 DadosPaciente = PesquisarRegra.TodosPacientes();
                 dtgPaciente.DataSource = null;
                 PreencherDtg(DadosPaciente);
@@ -67,7 +67,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosProfissional;
             try
             {
-                LocalizarPacienteRegra localizarPaciente = new LocalizarPacienteRegra();
+                PacienteRegra localizarPaciente = new PacienteRegra();
                 if (rbIdPaciente.Checked == true)
                 {
                     int cod = Convert.ToInt32(nudPesquisar.Text);
@@ -338,12 +338,12 @@ namespace Sistema_Gerenciador_de_Consultorio
                     if (confirmarDelecao == DialogResult.Yes)
                     {
                         //Paciente
-                        DeletarPacienteRegra delPaciente = new DeletarPacienteRegra();
+                        PacienteRegra delPaciente = new PacienteRegra();
                         bool pacienteConfirm =delPaciente.excluirLogicamenteIdPaciente(idUsuario,dtgPaciente.Rows[e.RowIndex].Cells["idPaciente"].Value.ToString());
-                       
+
                         //Consulta
-                        DeletarConsultaRegra delConsulta = new DeletarConsultaRegra();
-                       bool consultaConfirm= delConsulta.DeletarConsultaIdPaciente(idUsuario,dtgPaciente.Rows[e.RowIndex].Cells["idPaciente"].Value.ToString());
+                        ConsultaRegra delConsulta = new ConsultaRegra();
+                        bool consultaConfirm= delConsulta.DeletarConsultaIdPaciente(idUsuario,dtgPaciente.Rows[e.RowIndex].Cells["idPaciente"].Value.ToString());
 
                         if(pacienteConfirm == true && consultaConfirm == true)
                         {

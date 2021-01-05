@@ -16,6 +16,7 @@ namespace AcessoDados
         
         public bool Autenticar(string usuario, string senha)
         {
+            
             string usuarioBanco =  null, senhaBanco = null,statusBanco=null;
             try
             {
@@ -71,7 +72,9 @@ namespace AcessoDados
             }
 			catch (Exception ex)
 			{
-                MessageBox.Show("Ocorreu um erro ao logar(Classe loginAcesso, Método Autenticar)", "Erro bde login", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
+                MessageBox.Show("Ocorreu um erro ao logar(Classe loginAcesso, Método Autenticar)"
+                    +"\n Erro: \n" +ex
+                    , "Erro bde login", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
 			}
             return false;
         }

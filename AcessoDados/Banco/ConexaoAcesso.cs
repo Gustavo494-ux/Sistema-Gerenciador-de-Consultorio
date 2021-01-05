@@ -13,9 +13,8 @@ namespace AcessoDados
 {
     public class ConexaoAcesso
     {
-        //public static NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=679-6951;Database=Sistema_de_Gerenciamento_de_Consultorio_SGC");
-        //public static NpgsqlConnection conn = new NpgsqlConnection("Server=192.168.0.105;Port=5432;User Id=postgres;Password=679-Gust@v0-6951;Database=Sistema_Gerenciador_de_Consultorio");
-        public static NpgsqlConnection conn = new NpgsqlConnection("Server=localHost;Port=5432;User Id=postgres;Password=679-Gust@v0-6951;Database=Sistema_Gerenciador_de_Consultorio");
+        //public static NpgsqlConnection conn = new NpgsqlConnection("Server=localHost;Port=5432;User Id=postgres;Password=679-Gust@v0-6951;Database=Sistema_Gerenciador_de_Consultorio");
+        public static NpgsqlConnection conn = new NpgsqlConnection("Server=localHost;Port=5432;User Id=postgres;Password=679-6951;Database=Sistema_Gerenciador_de_Consultorio");
         public static string stringConect = Convert.ToString(conn);
         public static void Conectar()
         {
@@ -28,8 +27,9 @@ namespace AcessoDados
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro no método de conexão com o banco de dados, Tente novamente, Caso o problema persista entre em contato com o suporte!",
-                        "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ocorreu um erro no método de conexão com o banco de dados, Tente novamente, Caso o problema persista entre em contato com o suporte!"
+                    +"\n Erro:\n" + ex
+                    ,"Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public static void Desconectar()

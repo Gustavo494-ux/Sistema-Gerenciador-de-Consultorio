@@ -78,7 +78,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarAcuidadeVisualRegra editarAcuidade = new EditarAcuidadeVisualRegra();
+                AcuidadeVisualRegra editarAcuidade = new AcuidadeVisualRegra();
 
                 //visão de longe
                 string vlOdSg = Convert.ToString(dtgAcuidadeVisual.Rows[0].Cells["sgVlAcuidadeVisual"].Value);
@@ -115,7 +115,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarAnamneseRegra editarAnamnese = new EditarAnamneseRegra();
+                AnamneseRegra editarAnamnese = new AnamneseRegra();
                 bool confirm = editarAnamnese.Editar(Convert.ToInt32(idConsulta), txtMotivoConsulta.Text, txtTempoQueixa.Text, txtObservacaoAnamnese.Text);
                 return confirm;
             }
@@ -130,7 +130,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarAntecedentesGeraisRegra editarAntecedentesGerais = new EditarAntecedentesGeraisRegra();
+                AntecedentesGeraisRegra editarAntecedentesGerais = new AntecedentesGeraisRegra();
                 string vasculares = "", vascularesTratamento = "";
                 string diabetes = "", diabetesTratamento = "";
                 string imunes = "", imunesTratamento = "";
@@ -219,7 +219,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarAntecedentesOcularesRegra antecedentesOcularesRegra = new EditarAntecedentesOcularesRegra();
+                AntecedentesOcularesRegra antecedentesOcularesRegra = new AntecedentesOcularesRegra();
                 bool[] possuir = new bool[15];
                 string[] tratamento = new string[15];
                 string outros = "";
@@ -264,7 +264,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarOftalmoscopiaRegra editarOftalmoscopoia = new EditarOftalmoscopiaRegra();
+                OftalmoscopiaRegra editarOftalmoscopoia = new OftalmoscopiaRegra();
                 bool oftalmoscopia = editarOftalmoscopoia.Editar(Convert.ToInt32(idConsulta), txtDistanciaBrucknerOftalmoscopia.Text, txtPapilaOdOftalmoscopia.Text, txtPapilaOeOftalmoscopia.Text, txtEscavacaoOdOftalmoscopia.Text,
                     txtEscavacaoOeOftalmoscopia.Text, txtMaculaOdOftalmoscopia.Text, txtMaculaOeOftalmoscopia.Text, txtFixacaoOdOftalmoscopia.Text, txtFixacaoOeOftalmoscopia.Text,
                     txtRelacaoAVOdOftalmoscopia.Text, txtRelacaoAVOeOftalmoscopia.Text, txtCorOdOftalmoscopia.Text, txtCorOeOftalmoscopia.Text, txtLenteOdOftalmoscopia.Text,
@@ -282,7 +282,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarRxFinalRegra editarRxFinal = new EditarRxFinalRegra();
+                RxFinalRegra editarRxFinal = new RxFinalRegra();
                 string[,] ArrayRxFinal = new string[4, 6];
                 string[] colunas = { "EsferaRxFinal", "cilindroRxFinal", "eixoRxFinal", "adicaoRxFinal", "prismaRxFinal", "baseRxFinal" };
                 for (int l = 0; l < 4; l++)//linha 
@@ -315,7 +315,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarRxInicialRegra editarRxInicial = new EditarRxInicialRegra();
+                RxInicialRegra editarRxInicial = new RxInicialRegra();
                 string[,] ArrayRxInicial = new string[4, 6];
                 string[] colunas = { "EsferaRxInicial", "cilindroRxInicial", "eixoRxInicial", "adicaoRxInicial", "prismaRxInicial", "baseRxInicial" };
                 for (int l = 0; l < 4; l++)//linha 
@@ -348,7 +348,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarSintomasReferidosRegra editarSintomas = new EditarSintomasReferidosRegra();
+                SintomasReferidosRegra editarSintomas = new SintomasReferidosRegra();
 
                 bool[] sintomas = new bool[17];
                 string outros = "";
@@ -393,7 +393,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     arrayconfirm[6] = EditarRxInicial(idConsulta);
                     arrayconfirm[7] = EditarSintomasReferidos(idConsulta);
 
-                    EditarConsultaRegra editarConsulta = new EditarConsultaRegra();
+                    ConsultaRegra editarConsulta = new ConsultaRegra();
                     bool confirmAtualizacao = editarConsulta.Atualizar(idConsulta, txtOrigem.Text, txtHobbies.Text, txtEncaminhadoPor.Text,
                         txtAjudaOpticaPrescrita.Text, dtpDataUltimoExame.Value, txtTrascricaoLentes.Text, txtObservacaoReceita.Text, cbStatusConsulta.Text, txtObservacaoConsulta.Text);
 
@@ -428,7 +428,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosTabela = new DataTable();
             try
             {
-                LocalizarConsultaRegra pesquisarChaves = new LocalizarConsultaRegra();
+                ConsultaRegra pesquisarChaves = new ConsultaRegra();
                 if (Convert.ToInt32(IDCONSULTA) >0)
                 {
                     //dadosTabela = pesquisarChaves.u(idConsulta);
@@ -464,7 +464,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarConsultaRegra pesquisarConsulta = new LocalizarConsultaRegra();
+                ConsultaRegra pesquisarConsulta = new ConsultaRegra();
                 if (Convert.ToInt32(idConsulta)>0)
                 {
                     dadosTabela = pesquisarConsulta.CodigoConsulta(idConsulta);
@@ -499,12 +499,30 @@ namespace Sistema_Gerenciador_de_Consultorio
                     "Erro de pesquisa",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+        bool RetornarIdProfissional(string idUsuario)
+        {
+            try
+            {
+                DataTable dadosProfissional = new DataTable();
+
+                ProfissionalRegra pesquisar = new ProfissionalRegra();
+                dadosProfissional = pesquisar.CodigoProfissional(Convert.ToInt32(idUsuario));
+                idProfissional = dadosProfissional.Rows[0]["idProfissional"].ToString();
+                if (Convert.ToInt32(idProfissional) > 0) return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao pesquisar pelo idProfissional(Formulario frmCadastrarConsulta,Método RetornarIdProfissional)",
+                    "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
+        }
         void RetornarPaciente(string idPaciente)
         {
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarPacienteRegra pesquisarPaciente = new LocalizarPacienteRegra();
+                PacienteRegra pesquisarPaciente = new PacienteRegra();
                 if (Convert.ToInt32(idPaciente)>0)
                 {
                     dadosTabela = pesquisarPaciente.CodigoPaciente(Convert.ToInt32(idPaciente));
@@ -541,7 +559,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                LocalizarAnamneseRegra pesquisarAnamnese = new LocalizarAnamneseRegra();
+                AnamneseRegra pesquisarAnamnese = new AnamneseRegra();
                 if (Convert.ToInt32(idAnamnese)>0)
                 {
                     dtgIntermediario.DataSource = pesquisarAnamnese.PesquisarAnamnese(idAnamnese);
@@ -564,7 +582,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarSintomasReferidosRegra pesquisarSintomas = new LocalizarSintomasReferidosRegra();
+                SintomasReferidosRegra pesquisarSintomas = new SintomasReferidosRegra();
                 if (Convert.ToInt32(idSintomasReferidos) > 0)
                 {
                     dadosTabela = pesquisarSintomas.PesquisarSintomasReferidos(idSintomasReferidos);
@@ -629,7 +647,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                LocalizarAntecedentesGeraisRegra pesquisarGerais = new LocalizarAntecedentesGeraisRegra();
+                AntecedentesGeraisRegra pesquisarGerais = new AntecedentesGeraisRegra();
                 if (Convert.ToInt32(idAntecedentesGerais) > 0)
                 {
                     dtgIntermediario.DataSource = pesquisarGerais.PesquisarAntecedentesGerais(idAntecedentesGerais);
@@ -729,7 +747,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarAntecedentesOcularesRegra pesquisarOculares = new LocalizarAntecedentesOcularesRegra();
+                AntecedentesOcularesRegra pesquisarOculares = new AntecedentesOcularesRegra();
                 if (Convert.ToInt32(idAntecedentesOculares)>0)
                 {
                     dadosTabela = pesquisarOculares.PesquisarAntecedentesOculares(idAntecedentesOculares);
@@ -795,7 +813,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarRxInicialRegra pesquisarRx = new LocalizarRxInicialRegra();
+                RxInicialRegra pesquisarRx = new RxInicialRegra();
                 if (Convert.ToInt32(idRxInicial)>0)
                 {
                     dadosTabela = pesquisarRx.PesquisarRxInicial(idRxInicial);
@@ -866,7 +884,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarRxFinalRegra pesquisarRx = new LocalizarRxFinalRegra();
+                RxFinalRegra pesquisarRx = new RxFinalRegra();
                 if (Convert.ToInt32(idRxFinal) > 0)
                 {
                     dadosTabela = pesquisarRx.PesquisarRxFinal(idRxFinal);
@@ -938,7 +956,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                LocalizarAcuidadeVisualRegra pesquisarAcuidade = new LocalizarAcuidadeVisualRegra();
+                AcuidadeVisualRegra pesquisarAcuidade = new AcuidadeVisualRegra();
                 if (Convert.ToInt32(idAcuidadeVisual)>0)
                 {
                     dadosTabela = pesquisarAcuidade.PesquisarAcuidadeVisual(idAcuidadeVisual);
@@ -1004,7 +1022,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosTabela = new DataTable();
-                localizarOftalmoscopiaRegra pesquisarOftalmoscopia = new localizarOftalmoscopiaRegra();
+                OftalmoscopiaRegra pesquisarOftalmoscopia = new OftalmoscopiaRegra();
                 if (Convert.ToInt32(idOftalmoscopia)>0)
                 {
                     dadosTabela = pesquisarOftalmoscopia.LocalizarOftalmoscopia(idOftalmoscopia);
@@ -1042,22 +1060,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        bool RetornarIdProfissional(string idUsuario)
-        {
-            try
-            {
-                RetornarIdProfissionalRegra pesquisar = new RetornarIdProfissionalRegra();
-                int id = pesquisar.idUsuario(idUsuario);
-                idProfissional = Convert.ToString(id);
-                if (id > 0) return true; return false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro ao pesquisar pelo idProfissional(Formulario frmCadastrarConsulta,Método RetornarIdProfissional)",
-                    "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return false;
-        }
+    
         void CarregarPaciente(string idPaciente, string idContato, string idEndereco, string idUsuario, string paciente, string responsavel, string rg, string cpf, string ocupacao, string idade, string sexo,
             string dataNascimento, string dataCadastro, string horaCadastro, string observacao)
         {
@@ -1068,46 +1071,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 dtgPaciente.AutoResizeColumns();
             }
         }
-
-        private void tbConsulta_CheckedChanged(object sender, EventArgs e)
-        {
-            gbReceita.Visible = false;
-            gbConsulta.Visible = true;
-        }
-        private void rbReceita_CheckedChanged(object sender, EventArgs e)
-        {
-            gbReceita.Visible = true;
-            gbConsulta.Visible = false;
-        }
-        private void repetir_Tick(object sender, EventArgs e)
-        {
-            dtgPaciente.AutoResizeColumns();
-        }
-
-        private void rbAntecedentesGerais_CheckedChanged(object sender, EventArgs e)
-        {
-            gbAntecedentesGerais.Visible = true;
-            gbAntecedentesOculares.Visible = false;
-        }
-
-        private void rbAntecedentesOculares_CheckedChanged(object sender, EventArgs e)
-        {
-            gbAntecedentesGerais.Visible = false;
-            gbAntecedentesOculares.Visible = true;
-        }
-
-        private void rbRxInicial_CheckedChanged(object sender, EventArgs e)
-        {
-            gbRxInicial.Visible = true;
-            gbRxFinal.Visible = false; 
-        }
-
-        private void rbRxFinal_CheckedChanged(object sender, EventArgs e)
-        {
-            gbRxInicial.Visible = false;
-            gbRxFinal.Visible = true;
-        }
-        #endregion
+          #endregion
 
         #region Métodos de cadastro
         bool CadastrarAcuidadeVisual(string IDCONSULTA)
@@ -1135,7 +1099,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 string vpAoCc = Convert.ToString(dtgAcuidadeVisual.Rows[2].Cells["ccVpAcuidadeVisual"].Value);
 
 
-                CadastrarAcuidadeVisualRegra AcuidadeRegra = new CadastrarAcuidadeVisualRegra();
+                AcuidadeVisualRegra AcuidadeRegra = new AcuidadeVisualRegra();
                 bool acuidade = AcuidadeRegra.Cadastrar(IDCONSULTA,vlOdSg, vlOeSg, vlAoSg, vlPh, vlOdCc, vlOeCc, vlAoCc, vpOdSc, vpOeSc, vpAoSc, vpOdCc, vpOeCc, vpAoCc, txtTipoOptotipo.Text);
                 return acuidade;
             }
@@ -1150,7 +1114,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                CadastrarAnamneseRegra AnamneseRegra = new CadastrarAnamneseRegra();
+                AnamneseRegra AnamneseRegra = new AnamneseRegra();
                 bool Anamnese = AnamneseRegra.Cadastrar(IDCONSULTA, txtMotivoConsulta.Text,txtTempoQueixa.Text,txtObservacaoAnamnese.Text);
                 return Anamnese;
             }
@@ -1238,7 +1202,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                         outrosTratamento = Convert.ToString(dtgAntecedentesGerais.Rows[i].Cells["tipoTratamentoAntecedentesGerais"].Value);
                     }
                 }
-                CadastrarAntecedentesGeraisRegra antecedentesGeraisRegra = new CadastrarAntecedentesGeraisRegra();
+                AntecedentesGeraisRegra antecedentesGeraisRegra = new AntecedentesGeraisRegra();
                 bool antecedentesGerais = antecedentesGeraisRegra.Cadastrar(IDCONSULTA, vasculares,vascularesTratamento,diabetes,diabetesTratamento,imunes,imunesTratamento,neurologicos,
                     neurologicosTratamento,outros,outrosTratamento,txtObservacaoAntecedentesGerais.Text);
                 return antecedentesGerais;
@@ -1283,7 +1247,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     tratamento[i] = Convert.ToString(dtgAntecedentesOculares.Rows[i].Cells["TipoTratamentoAntecedentesOculares"].Value);
                 }
 
-                CadastrarAntecedentesOcularesRegra antecedentesOcularesRegra = new CadastrarAntecedentesOcularesRegra();
+               AntecedentesOcularesRegra antecedentesOcularesRegra = new AntecedentesOcularesRegra();
                 bool antecedentesOculares = antecedentesOcularesRegra.Cadastrar(IDCONSULTA, possuir[0], tratamento[0], possuir[1], tratamento[1], possuir[2], tratamento[2], possuir[3], tratamento[3], possuir[4], tratamento[4], 
                     possuir[5], tratamento[5], possuir[6], tratamento[6], possuir[7], tratamento[7], possuir[8], tratamento[8], possuir[9], tratamento[9], possuir[10], tratamento[10],
                     possuir[11], tratamento[11], possuir[12], tratamento[12], possuir[13], tratamento[13], outros, tratamento[14]);
@@ -1300,7 +1264,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                CadastrarOftalmoscopiaRegra oftalmoscopiaRegra = new CadastrarOftalmoscopiaRegra();
+                OftalmoscopiaRegra oftalmoscopiaRegra = new OftalmoscopiaRegra();
                 bool oftalmoscopia =oftalmoscopiaRegra.Cadastrar(IDCONSULTA, txtDistanciaBrucknerOftalmoscopia.Text, txtPapilaOdOftalmoscopia.Text, txtPapilaOeOftalmoscopia.Text, txtEscavacaoOdOftalmoscopia.Text,
                     txtEscavacaoOeOftalmoscopia.Text, txtMaculaOdOftalmoscopia.Text, txtMaculaOeOftalmoscopia.Text, txtFixacaoOdOftalmoscopia.Text,txtFixacaoOeOftalmoscopia.Text,
                     txtRelacaoAVOdOftalmoscopia.Text,txtRelacaoAVOeOftalmoscopia.Text,txtCorOdOftalmoscopia.Text,txtCorOeOftalmoscopia.Text,txtLenteOdOftalmoscopia.Text,
@@ -1327,12 +1291,17 @@ namespace Sistema_Gerenciador_de_Consultorio
                     }
                 }
 
-                CadastrarRxFinalRegra rxFinalRegra = new CadastrarRxFinalRegra();
+                RxFinalRegra rxFinalRegra = new RxFinalRegra();
 
-                bool rxFinal = rxFinalRegra.Cadastrar(IDCONSULTA, ArrayRxFinal[0,0], ArrayRxFinal[0,1], ArrayRxFinal[0,2], ArrayRxFinal[0,3], ArrayRxFinal[0,4], ArrayRxFinal[0,5],
-                    ArrayRxFinal[1,0], ArrayRxFinal[1,1], ArrayRxFinal[1,2], ArrayRxFinal[1,3], ArrayRxFinal[1,4], ArrayRxFinal[1,5], ArrayRxFinal[2,0], ArrayRxFinal[2,1], ArrayRxFinal[2,2],
-                    ArrayRxFinal[2,3], ArrayRxFinal[2,4], ArrayRxFinal[2,5], ArrayRxFinal[3,0], ArrayRxFinal[3,1], ArrayRxFinal[3,2], ArrayRxFinal[3,3], ArrayRxFinal[3,4], ArrayRxFinal[3,5], 
-                    txtTipoLenteRxFinal.Text, txtTipoLenteRxFinal.Text, txtCorRxFinal.Text, txtEstadoRxFinal.Text, txtObservacaoRxFinal.Text);
+                bool rxFinal = rxFinalRegra.Cadastrar(IDCONSULTA, 
+                    ArrayRxFinal[0,0], ArrayRxFinal[1,0], ArrayRxFinal[2,0], ArrayRxFinal[3,0],
+                    ArrayRxFinal[0,1], ArrayRxFinal[1,1], ArrayRxFinal[2,1], ArrayRxFinal[3,1],
+                    ArrayRxFinal[0,2], ArrayRxFinal[1,2], ArrayRxFinal[2,2], ArrayRxFinal[3,2],
+
+                    ArrayRxFinal[0,3], ArrayRxFinal[1,3], ArrayRxFinal[2,3], ArrayRxFinal[3,3], 
+                    ArrayRxFinal[0,4], ArrayRxFinal[1,4], ArrayRxFinal[2,4], ArrayRxFinal[3,4],
+                    ArrayRxFinal[0,5], ArrayRxFinal[1,5], ArrayRxFinal[2,5], ArrayRxFinal[3,5], 
+                    txtTipoLenteRxFinal.Text,txtTipoMaterialRxFinal.Text, txtCorRxFinal.Text, txtEstadoRxFinal.Text, txtObservacaoRxFinal.Text);
                 return rxFinal;
             }
             catch (Exception)
@@ -1355,7 +1324,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     }
                 }
 
-                CadastrarRxInicialRegra RxInicialRegra = new CadastrarRxInicialRegra();
+                RxInicialRegra RxInicialRegra = new RxInicialRegra();
 
                 bool RxInicial = RxInicialRegra.Cadastrar(IDCONSULTA,
                     ArrayRxInicial[0,0], ArrayRxInicial[1,0], ArrayRxInicial[2,0], ArrayRxInicial[3,0], /*esfera*/
@@ -1394,7 +1363,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     
                 }
                 outros = dtgSintomasReferidos.Rows[dtgSintomasReferidos.Rows.Count -1 ].Cells["sintomaSintomasReferidos"].Value.ToString();
-                CadastrarSintomasReferidosRegra sintomasReferidosRegra = new CadastrarSintomasReferidosRegra();
+                SintomasReferidosRegra sintomasReferidosRegra = new SintomasReferidosRegra();
               bool sintomasReferidos =  sintomasReferidosRegra.Cadastrar(IDCONSULTA, sintomas[0], sintomas[1], sintomas[2], sintomas[3], sintomas[4], sintomas[5], sintomas[6], sintomas[7], sintomas[8], sintomas[9], sintomas[10],
                     sintomas[11], sintomas[12], sintomas[13], sintomas[14], sintomas[15], outros);
                 return sintomasReferidos;
@@ -1411,13 +1380,13 @@ namespace Sistema_Gerenciador_de_Consultorio
             bool confirmGeral = true, confirmConsulta = false;
             bool[] confirmacao = new bool[8];
 
-            ConsultaRegraNegocio consultaRegra = new ConsultaRegraNegocio();
-            LocalizarConsultaRegra pesquisarConsulta = new LocalizarConsultaRegra();
+            ConsultaRegra consultaRegra = new ConsultaRegra();
+
 
             confirmConsulta = consultaRegra.Cadastrar(idPaciente, idProfissional, idUsuarioSistema, txtOrigem.Text, txtHobbies.Text, txtEncaminhadoPor.Text,
                 txtAjudaOpticaPrescrita.Text, dtpDataUltimoExame.Value, txtTrascricaoLentes.Text, txtObservacaoReceita.Text, cbStatusConsulta.Text, txtObservacaoConsulta.Text);
 
-            dtgIntermediario.DataSource = pesquisarConsulta.PesquisarUltimoId();
+            dtgIntermediario.DataSource = consultaRegra.PesquisarUltimoId();
             string idUlitmaConsulta = dtgIntermediario.Rows[0].Cells["idConsulta"].Value.ToString();
 
             confirmacao[0] = CadastrarAcuidadeVisual(idUlitmaConsulta);
@@ -1439,7 +1408,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
 
-            ConsultarPacienteAgendadoRegra finalizar = new ConsultarPacienteAgendadoRegra();
+           AgendamentosRegra finalizar = new AgendamentosRegra();
             bool finalizarConsulta = finalizar.FinalizarConsultaAgendada(Convert.ToInt32(idPaciente));
 
             if (finalizarConsulta == true && confirmGeral == true && confirmConsulta == true)
@@ -1490,6 +1459,49 @@ namespace Sistema_Gerenciador_de_Consultorio
 
         }
 
+        private void tbConsulta_CheckedChanged(object sender, EventArgs e)
+        {
+            gbReceita.Visible = false;
+            gbConsulta.Visible = true;
+        }
+        private void rbReceita_CheckedChanged(object sender, EventArgs e)
+        {
+            gbReceita.Visible = true;
+            gbConsulta.Visible = false;
+        }
+        private void repetir_Tick(object sender, EventArgs e)
+        {
+            dtgPaciente.AutoResizeColumns();
+        }
+
+        private void rbAntecedentesGerais_CheckedChanged(object sender, EventArgs e)
+        {
+            gbAntecedentesGerais.Visible = true;
+            gbAntecedentesOculares.Visible = false;
+        }
+
+        private void rbAntecedentesOculares_CheckedChanged(object sender, EventArgs e)
+        {
+            gbAntecedentesGerais.Visible = false;
+            gbAntecedentesOculares.Visible = true;
+        }
+
+        private void rbRxInicial_CheckedChanged(object sender, EventArgs e)
+        {
+            gbRxInicial.Visible = true;
+            gbRxFinal.Visible = false;
+        }
+
+        private void rbRxFinal_CheckedChanged(object sender, EventArgs e)
+        {
+            gbRxInicial.Visible = false;
+            gbRxFinal.Visible = true;
+        }
+
+        private void painelConsulta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         void CarregarDadosEstaticosDosDtg()
         {
             /*Método responsável por incluir em tempo de execução dados dados estaticos em multiplos dataGridView cada um com suas informações estaticas que não necessitam ser alteradas*/

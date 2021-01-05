@@ -104,16 +104,16 @@ namespace Sistema_Gerenciador_de_Consultorio
                
             try
             {
-                ContatoRegraNegocio novaVerificacaoContato = new ContatoRegraNegocio();
+                ContatoRegra novaVerificacaoContato = new ContatoRegra();
                 novaVerificacaoContato.Verificar(idContato, idUsuario, txtEmail.Text, mtxtTelefone1.Text, mtxtTelefone2.Text, mtxtTelefone3.Text, txtOutro.Text, txtObservacaoContato.Text);
 
 
-                EnderecoRegraNegocio novaVerificacaoEndereco = new EnderecoRegraNegocio();
+                EnderecoRegra novaVerificacaoEndereco = new EnderecoRegra();
                 novaVerificacaoEndereco.Validar(idEndereco,idUsuario, txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text,
                     txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);
 
 
-                CadastrarProfissionalRegraNegocio novaVerificacaoProfissionaç = new CadastrarProfissionalRegraNegocio();
+                ProfissionalRegra novaVerificacaoProfissionaç = new ProfissionalRegra();
                 novaVerificacaoProfissionaç.Verificar(idProfissional, idEndereco, idContato, idUsuario, txtNomeProfissional.Text, txtEspecialidade.Text,
                     mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtObservacaoProfissional.Text);
 
@@ -129,9 +129,9 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                EditarProfissionalRegra editarProfissional = new EditarProfissionalRegra();
-                EditarContatoRegra editarContato = new EditarContatoRegra();
-                EditarEnderecoRegra editarEndereco = new EditarEnderecoRegra();
+                ProfissionalRegra editarProfissional = new ProfissionalRegra();
+                ContatoRegra editarContato = new ContatoRegra();
+                EnderecoRegra editarEndereco = new EnderecoRegra();
                 DataTable dadosTabela = new DataTable();
                 dadosTabela = editarProfissional.RetornarDados(idProfissional);
                 dtgIntermediario.DataSource = dadosTabela;
@@ -187,17 +187,17 @@ namespace Sistema_Gerenciador_de_Consultorio
             dataCadastro = DateTime.Now.ToShortTimeString();
             horaCadastro = DateTime.Now.ToLongTimeString();
             //Insere os dados do Contato
-            ContatoRegraNegocio novaVerificacaoContato = new ContatoRegraNegocio();
+            ContatoRegra novaVerificacaoContato = new ContatoRegra();
             confirm[0] = novaVerificacaoContato.cadastrar(idContato, idUsuario, txtEmail.Text, mtxtTelefone1.Text, mtxtTelefone2.Text, mtxtTelefone3.Text, txtOutro.Text, txtObservacaoContato.Text);
 
             //Insere os dados do endereco
-            EnderecoRegraNegocio novaVerificacaoEndereco = new EnderecoRegraNegocio();
+            EnderecoRegra novaVerificacaoEndereco = new EnderecoRegra();
             confirm[1] = novaVerificacaoEndereco.Cadastrar(idEndereco, idUsuario ,txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text,
                 txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);
 
             //Insere os dados do profissional
             idProfissional = "0";
-            CadastrarProfissionalRegraNegocio novoProfissional = new CadastrarProfissionalRegraNegocio();
+            ProfissionalRegra novoProfissional = new ProfissionalRegra();
             confirm[2] = novoProfissional.Cadastrar(idProfissional, idEndereco, idContato, idUsuario, txtNomeProfissional.Text, txtEspecialidade.Text, mtxRG.Text, mtxtCPF.Text, 
             cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtObservacaoProfissional.Text);
 
@@ -224,9 +224,9 @@ namespace Sistema_Gerenciador_de_Consultorio
             {
                 if (Convert.ToInt32(idProfissional) > 0 && Convert.ToInt32(idEndereco) > 0 && Convert.ToInt32(idContato) > 0)
                 {
-                    EditarProfissionalRegra editarProfissional = new EditarProfissionalRegra();
-                    EditarContatoRegra editarContato = new EditarContatoRegra();
-                    EditarEnderecoRegra editarEndereco = new EditarEnderecoRegra();
+                    ProfissionalRegra editarProfissional = new ProfissionalRegra();
+                    ContatoRegra editarContato = new ContatoRegra();
+                    EnderecoRegra editarEndereco = new EnderecoRegra();
 
                     bool profissional = editarProfissional.Atualizar(idProfissional, txtNomeProfissional.Text, txtEspecialidade.Text, mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, txtObservacaoProfissional.Text);
                     bool endereco = editarEndereco.Atualizar(Convert.ToInt32(idEndereco), txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text, txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);

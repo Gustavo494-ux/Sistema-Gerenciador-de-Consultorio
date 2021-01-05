@@ -55,9 +55,10 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             try
             {
-                RetornarIdProfissionalRegra pesquisar = new RetornarIdProfissionalRegra();
-                int id = pesquisar.idUsuario(idUsuario);
-                idProfissional = Convert.ToString(id);
+                DataTable dadosProfissional = new DataTable();
+                ProfissionalRegra pesquisar = new ProfissionalRegra();
+                dadosProfissional = pesquisar.CodigoProfissional(Convert.ToInt32(idUsuario));
+                idProfissional = dadosProfissional.Rows[0]["idProfissional"].ToString();
             }
             catch (Exception)
             {
@@ -84,7 +85,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosConsulta;
             try
             {
-                LocalizarConsultaRegra localizarConsulta = new LocalizarConsultaRegra();
+                ConsultaRegra localizarConsulta = new ConsultaRegra();
                 dadosConsulta = localizarConsulta.TodasConsultas();
                 esvaziarDtg();
                 PreencherDtg(dadosConsulta);
@@ -167,7 +168,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable DadosConsulta;
             try
             {
-                 LocalizarConsultaRegra localizarConsulta = new LocalizarConsultaRegra();
+                ConsultaRegra localizarConsulta = new ConsultaRegra();
                 if (rbTodos.Checked == true)
                 {
                     CarregarTodasConsultas();
@@ -249,7 +250,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     DialogResult confirmarDelecao = MessageBox.Show("Deseja realmente deletar está Consulta?", "Deletar Dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (confirmarDelecao == DialogResult.Yes)
                     {
-                        DeletarConsultaRegra deletar = new DeletarConsultaRegra();
+                        ConsultaRegra deletar = new ConsultaRegra();
                         deletar.DeletarConsultaIdConsulta(idUsuario, idConsulta);
                         if (MessageBox.Show("Dados Deletados Permanentemente com Sucesso!\nDeseja retorna ao formulario  principal?",
                             "Dados Deletados", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)

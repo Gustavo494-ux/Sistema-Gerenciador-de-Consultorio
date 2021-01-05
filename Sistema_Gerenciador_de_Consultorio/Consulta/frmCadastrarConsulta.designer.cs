@@ -239,8 +239,8 @@
             this.pnlMenuSuperior.Controls.Add(this.dtgIntermediario);
             this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
             this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
             this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
+            this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
             this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenuSuperior.Location = new System.Drawing.Point(2, 0);
             this.pnlMenuSuperior.Name = "pnlMenuSuperior";
@@ -460,6 +460,7 @@
             this.painelConsulta.Name = "painelConsulta";
             this.painelConsulta.Size = new System.Drawing.Size(1146, 494);
             this.painelConsulta.TabIndex = 2;
+            this.painelConsulta.Paint += new System.Windows.Forms.PaintEventHandler(this.painelConsulta_Paint);
             // 
             // gbReceita
             // 

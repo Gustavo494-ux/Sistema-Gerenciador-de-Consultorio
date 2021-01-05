@@ -61,9 +61,9 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            EditarPacienteRegra editarPaciente = new EditarPacienteRegra();
-            EditarEnderecoRegra editarEndereco = new EditarEnderecoRegra();
-            EditarContatoRegra editarContato = new EditarContatoRegra();
+           PacienteRegra editarPaciente = new PacienteRegra();
+            EnderecoRegra editarEndereco = new EnderecoRegra();
+            ContatoRegra editarContato = new ContatoRegra();
             if (Convert.ToInt32(idPaciente) > 0)
             {
                 if (Convert.ToInt32(idEndereco) > 0)
@@ -111,7 +111,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
 
             DataTable dadosTabela = new DataTable();
-            EditarPacienteRegra editarPaciente = new EditarPacienteRegra();
+            PacienteRegra editarPaciente = new PacienteRegra();
             dadosTabela = editarPaciente.RetornarDados(idPaciente);
             dtgPaciente.DataSource = dadosTabela;
 
@@ -234,16 +234,16 @@ namespace Sistema_Gerenciador_de_Consultorio
             bool[] confirm = new bool[6];
             string idEndereco = "0", idContato = "0", dataCadastro = DateTime.Now.ToShortDateString(), horaCadastro = DateTime.Now.ToLongTimeString();
             //Insere os dados do Contato
-            ContatoRegraNegocio novaVerificacaoContato = new ContatoRegraNegocio();
+            ContatoRegra novaVerificacaoContato = new ContatoRegra();
            confirm[0]= novaVerificacaoContato.cadastrar(idContato, idUsuarioSistema, txtEmail.Text, mtxtTelefone1.Text, mtxtTelefone2.Text, mtxtTelefone3.Text, txtOutro.Text, txtObservacaoContato.Text);
 
             //Insere os dados do endereco
-            EnderecoRegraNegocio novaVerificacaoEndereco = new EnderecoRegraNegocio();
+            EnderecoRegra novaVerificacaoEndereco = new EnderecoRegra();
            confirm[1]= novaVerificacaoEndereco.Cadastrar(idEndereco, idUsuarioSistema, txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text,
                 txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);
 
             //Insere os dados do Paciente 
-            RegraNegocio.CadastrarPacienteRegra novaVerificacaoPaciente = new RegraNegocio.CadastrarPacienteRegra();
+            PacienteRegra novaVerificacaoPaciente = new PacienteRegra();
             confirm[2]=novaVerificacaoPaciente.Cadastrar(idPaciente, idContato, idEndereco, idUsuarioSistema, txtNomePaciente.Text, txtNomeResponsavel.Text, mtxRG.Text, mtxtCPF.Text, txtocupacao.Text,
                 txtIdade.Text, cbSexo.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtObservacaoPaciente.Text);
 

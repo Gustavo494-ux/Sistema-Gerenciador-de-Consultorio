@@ -152,7 +152,7 @@
     <Compile Include="Usuario\PermissoesUsuarioRegra.cs" />
     <Compile Include="Nivel Acesso\LocalizarNivelRegra.cs" />
     <Compile Include="Usuario\UsuarioRegra.cs" />
-    <Compile Include="Consulta\ConsultaRegraNegocio.cs" />
+    <Compile Include="Consulta\ConsultaRegra.cs" />
     <Compile Include="Contato\ContatoRegra.cs" />
     <Compile Include="Endereço\EnderecoRegra.cs" />
     <Compile Include="Paciente\PacienteRegra.cs" />

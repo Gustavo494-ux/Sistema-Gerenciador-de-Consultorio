@@ -93,7 +93,7 @@ namespace RegraNegocio
                 DataTable dadosTabela = new DataTable();
                 AcuidadeVisualAcesso pesquisar = new AcuidadeVisualAcesso();
 
-                if (Convert.ToInt32(idAcuidadeVisual) > 0) dadosTabela = pesquisar.PesquisarAcuidade(idAcuidadeVisual);
+                if (Convert.ToInt32(idAcuidadeVisual) > 0) return dadosTabela = pesquisar.PesquisarAcuidade(idAcuidadeVisual);
             }
             catch (Exception)
             {

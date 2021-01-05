@@ -39,10 +39,10 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(idPaciente) < 1) return false;
-                if (Convert.ToInt32(idContato) < 1) return false;
-                if (Convert.ToInt32(idEndereco) < 1) return false;
-                if (Convert.ToInt32(idUsuario) < 1) return false;
+                //if (Convert.ToInt32(idPaciente) < 1) return false;
+                //if (Convert.ToInt32(idContato) < 1) return false;
+                //if (Convert.ToInt32(idEndereco) < 1) return false;
+                //if (Convert.ToInt32(idUsuario) < 1) return false;
                 if (nomePaciente.Length > 50 || nomePaciente.Length < 1) return false;
                 if (nomeResponsavel.Length > 50) return false;
                 if (rg.Trim().Length > 20) return false;
@@ -169,7 +169,7 @@ namespace RegraNegocio
                 }
                 else
                 {
-                    MessageBox.Show("Código Indentificador é inválido, para proseguir com a pesquisa insira um código valido.", "Código Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Código Indentificador é inválido, para proseguir com a pesquisa insira um código valido.", "Código Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

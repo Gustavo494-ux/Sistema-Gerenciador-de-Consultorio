@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcessoDados.dll" size="176128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcessoDados.dll" size="175616">
       <assemblyIdentity name="AcessoDados" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>223X45MU9RoT6XQO1uVqVEAUP5w2Ijb4f+to5rd4ZXA=</dsig:DigestValue>
+        <dsig:DigestValue>03dk5WOMv0/FerJztkY7hD/L5eHnRhenLyUQfTemC6A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -294,26 +294,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegraNegocio.dll" size="139264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegraNegocio.dll" size="124416">
       <assemblyIdentity name="RegraNegocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o2c98ko7awwUBILpkhiOQSXgxXRIWyDno2Os5H1ZXrU=</dsig:DigestValue>
+        <dsig:DigestValue>Lw1nbuPQJIsnGkFBVcs7uPGx2aWH3hcIYZtEpC5rAFc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2698240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2697216">
       <assemblyIdentity name="Sistema_Gerenciador_de_Consultorio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>paoFPAKKlV8jPabro2XvUjI7I+KTJc8PfRo0H8DunAQ=</dsig:DigestValue>
+        <dsig:DigestValue>dN9xT9CMU6WqXkOXO/5N+c66gCOZAbNYKjAP/i3S3YI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

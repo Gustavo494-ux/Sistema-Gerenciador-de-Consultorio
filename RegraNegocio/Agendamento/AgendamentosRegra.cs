@@ -20,14 +20,15 @@ namespace RegraNegocio
                 if (Convert.ToInt32(idPaciente) < 1) return false;
                 if (Convert.ToInt32(idUsuario) < 1) return false;
                 if (Convert.ToInt32(idStatusAgendamento) < 1) return false;
-                if (Convert.ToDateTime(dataConsulta) < Convert.ToDateTime(DateTime.Now.ToShortDateString())) return false;
+                if (Convert.ToDateTime(dataConsulta) < Convert.ToDateTime(DateTime.Today.ToString())) return false;
                 if (observacaoAgendamento.GetType() != typeof(string)) return false;
+                return true;
             }
             catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro ao tentar validar os dados do agendamento(Classe AgendamentosRegra, Método ValidarAgendamento)", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return true;
+            return false;
         }
 
         //Função que realiza a validação dos dados do cadastro do paciente, endereço e contato do paciente e além do agendamento da consulta.
@@ -89,17 +90,18 @@ namespace RegraNegocio
                 #endregion
                 #region Contato Novo
                 if (email.Trim().Length > 50) return false;
-                if (telefone1.Replace("(", "").Replace(")", "").Replace(",", "").Replace(".", "").Replace("_", "").Replace("-", "").Trim().Length != 11) return false;
+                if (telefone1.Replace("(", "").Replace(")", "").Replace(",", "").Replace(".", "").Replace("_", "").Replace("-", "").Trim().Length > 11) return false;
                 if (outro.GetType() != typeof(string)) return false;
                 if (observacaoContato.GetType() != typeof(string)) return false;
                 #endregion
                 #region Endereco Novo
-                if (estado.Trim().Length < 4 || estado.Length > 30) return false;
+                if ( estado.Length > 30) return false;
                 if (cidade.Length > 30) return false;
                 if (bairro.Length > 30) return false;
                 if (rua.Length > 50) return false;
                 if (numero.Trim().Length > 5) return false;
-                if (cep.Replace("_", "").Replace(",", "").Replace(".", "").Replace("-", "").Trim().Length != 8) return false;
+                if (cep.Replace("_", "").Replace(",", "").Replace(".", "").Replace("-", "").Trim().Length != 8 && cep.Replace("_", "").Replace(",", "").Replace(".", "").Replace("-", "").Trim().Length
+                    != 0) return false;
                 if (pontoReferencia.GetType() != typeof(string)) return false;
                 if (observacaoEndereco.GetType() != typeof(string)) return false;
                 #endregion
@@ -122,9 +124,10 @@ namespace RegraNegocio
                 {
                     if (ValidarAgendamento(idPaciente, idUsuario, idStatusAgendamento, dataConsulta, observacaoAgendamento) == true)
                     {
-                        AgendamentosRegra consulta = new AgendamentosRegra();
+                        AgendamentosAcesso consulta = new AgendamentosAcesso();
 
-                        if (consulta.AgendarConsulta(idPaciente,idUsuario,idStatusAgendamento,dataConsulta,observacaoAgendamento) == true)
+                        if (consulta.AgendarConsulta(Convert.ToInt32(idPaciente),Convert.ToInt32(idUsuario),Convert.ToInt32(idStatusAgendamento),
+                            Convert.ToDateTime(dataConsulta),observacaoAgendamento) == true)
                         {
                             return true;//Só é retornado caso o agendamento seja realizado com sucesso 
                         }

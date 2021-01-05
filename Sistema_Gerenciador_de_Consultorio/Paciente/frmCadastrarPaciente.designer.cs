@@ -706,9 +706,9 @@
             this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
             this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
             this.pnlMenuSuperior.Controls.Add(this.dtgPaciente);
             this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
+            this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
             this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuSuperior.Name = "pnlMenuSuperior";

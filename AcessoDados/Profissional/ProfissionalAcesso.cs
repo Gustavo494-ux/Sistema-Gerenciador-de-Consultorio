@@ -108,6 +108,7 @@ namespace AcessoDados
         {
             try
             {
+                ConexaoAcesso.Conectar();
                 sql.Append("update profissional set nomeProfissional =@nomeProfissional,especialidade = @especialidade, rg = @rg, cpf = @cpf, sexo = @sexo, croo = @croo, ");
                 sql.Append("dataNascimento = @dataNascimento, observacaoProfissional = @observacaoProfissional where idProfissional = @idProfissional");
 
@@ -129,7 +130,7 @@ namespace AcessoDados
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao atualizar os dados do Profissional(Classe ProfissionalAcesso)", "Erro de Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao atualizar os dados do Profissional(Classe ProfissionalAcesso, Método atualizar)", "Erro de Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }
@@ -165,9 +166,10 @@ namespace AcessoDados
 
                 StringBuilder sql = new StringBuilder();
                 NpgsqlCommand comandoSql = new NpgsqlCommand();
-                sql.Append("SELECT * FROM profissional WHERE idProfissional = @idProfissional and deletar = false order by idProfissional asc");
+                sql.Clear();
+                sql.Append("SELECT * FROM profissional WHERE idProfissional = codProfissional and deletar = false order by idProfissional asc");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idProfissional", codigo));
+                sql = sql.Replace("codProfissional", codigo.ToString()) ;
                 comandoSql.CommandText = sql.ToString();
                 comandoSql.Connection = ConexaoAcesso.conn;
                 dadosTabelaAcesso.Load(comandoSql.ExecuteReader());

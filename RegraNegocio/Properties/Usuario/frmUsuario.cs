@@ -31,7 +31,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void CarregarUsuario()
         {
             DataTable dadosTabelaForm;
-            LocalizarUsuariosRegra pesquisarUsuario = new LocalizarUsuariosRegra();
+            UsuarioRegra pesquisarUsuario = new UsuarioRegra();
             dadosTabelaForm = pesquisarUsuario.Todos();
             CarregarDTG(dadosTabelaForm);
         }
@@ -46,13 +46,13 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void salvar()
         {
-            CadastrarUsuarioRegra novoUsuario = new CadastrarUsuarioRegra();
+            UsuarioRegra novoUsuario = new UsuarioRegra();
             novoUsuario.Cadastrar(cbIntermediario.Text, txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text,cbStatusUsuario.Text);
             CarregarUsuario();
         }
         void Verificar()
         {
-            CadastrarUsuarioRegra novoUsuario = new CadastrarUsuarioRegra();
+            UsuarioRegra novoUsuario = new UsuarioRegra();
             novoUsuario.verificar(cbIntermediario.Text, txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text);
         }
     
@@ -175,7 +175,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CadastrarUsuarioRegra novoUsuario = new CadastrarUsuarioRegra();
+            UsuarioRegra novoUsuario = new UsuarioRegra();
             novoUsuario.Cadastrar(cbNivelAcesso.ValueMember, txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text);
         }
         private void cbNivelAcesso_SelectedIndexChanged(object sender, EventArgs e)

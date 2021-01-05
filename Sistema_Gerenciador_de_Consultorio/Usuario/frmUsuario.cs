@@ -61,7 +61,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void CarregarUsuario()
         {
             DataTable dadosTabelaForm;
-            LocalizarUsuariosRegra pesquisarUsuario = new LocalizarUsuariosRegra();
+            UsuarioRegra pesquisarUsuario = new UsuarioRegra();
             dadosTabelaForm = pesquisarUsuario.Todos();
            
             CarregarDTG(dadosTabelaForm);
@@ -81,7 +81,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void salvar()
         {
-            CadastrarUsuarioRegra novoUsuario = new CadastrarUsuarioRegra();
+            UsuarioRegra novoUsuario = new UsuarioRegra();
             if(novoUsuario.Cadastrar(Convert.ToString(cbNivelAcesso.SelectedIndex+1), txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text,cbStatusUsuario.Text) == true)
             {
                DialogResult confirm =  MessageBox.Show("Usuario Cadastrado com sucesso!\nDeseja retornar Formulário anterior?","Cadastro Realizado!",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
@@ -196,7 +196,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void pesquisar()
         {
             DataTable dadosTabelaForm;
-            LocalizarUsuariosRegra pesquisarUsuario = new LocalizarUsuariosRegra();
+            UsuarioRegra pesquisarUsuario = new UsuarioRegra();
             if (rbTodos.Checked == true)
             {
                 CarregarUsuario();
@@ -248,7 +248,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CadastrarUsuarioRegra novoUsuario = new CadastrarUsuarioRegra();
+            UsuarioRegra novoUsuario = new UsuarioRegra();
             novoUsuario.Cadastrar(cbNivelAcesso.ValueMember, txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text);
         }
         private void cbNivelAcesso_SelectedIndexChanged(object sender, EventArgs e)
@@ -330,7 +330,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             try
             {
                 DataTable dadosform = new DataTable();
-                EditarUsuarioRegra editarUsuario = new EditarUsuarioRegra();
+                UsuarioRegra editarUsuario = new UsuarioRegra();
 
                 dadosform = editarUsuario.RetornarDados(idUsuario);
                 dtgIntermediario.DataSource = null;
@@ -359,77 +359,85 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void dtgUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            PermissoesUsuarioRegra autenticarEdicao = new PermissoesUsuarioRegra();
-            ImpressaoUsuarioRegra pesquisar= new ImpressaoUsuarioRegra();
-            string acao = dtgUsuario.Columns[e.ColumnIndex].Name;
-            switch (acao)
+            try
             {
-                case "btnEditar":
-                    if (autenticarEdicao.ControleTotalUsuario(idNivel) == true)
-                    {
-                        PassarUsuarioParaEdicao(dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                    }
-                    else
-                    {
-                        if (autenticarEdicao.EditarProprioUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString()) == true)
+                PermissoesUsuarioRegra autenticarEdicao = new PermissoesUsuarioRegra();
+                ImpressaoUsuarioRegra pesquisar = new ImpressaoUsuarioRegra();
+                string acao = dtgUsuario.Columns[e.ColumnIndex].Name;
+                switch (acao)
+                {
+                    case "btnEditar":
+                        if (autenticarEdicao.ControleTotalUsuario(idNivel) == true)
                         {
-                            PassarUsuarioParaEdicao(dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                        }
-                    }
-                    break;
-                case "btnDeletar":
-                    DialogResult delConfirm = MessageBox.Show("Deseja realmente deletar este usuario, isto irá deletar todos os registros relacionados ao usuario",
-                        "Deseja deletar?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (delConfirm == DialogResult.Yes)
-                    {
-                       
-                       DeletarUsuarioRegra delUsuario = new DeletarUsuarioRegra();
-                       bool deletarUsuario = delUsuario.Deletar(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-
-                        DeletarConsultaRegra delConsulta = new DeletarConsultaRegra();
-                        bool deletarConsulta = delConsulta.DeletarConsultaIdUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-
-                        DeletarProfissionalRegra delProfissional = new DeletarProfissionalRegra();
-                        bool deletarProfissional =  delProfissional.idUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-
-                        DeletarPacienteRegra delPaciente = new DeletarPacienteRegra();
-                        bool deletarPaciente = delPaciente.excluirLogicamenteIdUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
-
-                        if (deletarUsuario == true && deletarConsulta == true && deletarProfissional == true && deletarPaciente == true )
-                        {
-                            if (MessageBox.Show("Dados deletados permanentemente\nDeseja retornar ao formulario anterior?", "Dados deletados", MessageBoxButtons.YesNo,
-                          MessageBoxIcon.Information) == DialogResult.Yes)
-                            {
-                                this.Dispose();
-                            }
-                            else
-                            {
-                                CarregarUsuario();
-                            }
+                            PassarUsuarioParaEdicao(dtgUsuario.Rows[e.RowIndex].Cells["Código"].Value.ToString());
                         }
                         else
                         {
-                            MessageBox.Show("Ocorreu um erro ao deletar o usuário e todos os registros relacionados a ele","Erro de exclusão",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            if (autenticarEdicao.EditarProprioUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString()) == true)
+                            {
+                                PassarUsuarioParaEdicao(dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString());
+                            }
                         }
-                    }
-                    break;
-                case "btnImprimir":
-                    DataTable dadosTabela = new DataTable();
-                    string codUsuario = dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString();
-                    dadosTabela = pesquisar.impressaoCompleta(codUsuario);
-                    frmImpressao imprimir = new frmImpressao("4", codUsuario);
-                    imprimir.ShowDialog();
-                    break;
-                default:
-                    break;
-                    
-            }            
+                        break;
+                    case "btnDeletar":
+                        DialogResult delConfirm = MessageBox.Show("Deseja realmente deletar este usuario, isto irá deletar todos os registros relacionados ao usuario",
+                            "Deseja deletar?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (delConfirm == DialogResult.Yes)
+                        {
+
+                            UsuarioRegra delUsuario = new UsuarioRegra();
+                            bool deletarUsuario = delUsuario.Deletar(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["Código"].Value.ToString());
+
+                            ConsultaRegra delConsulta = new ConsultaRegra();
+                            bool deletarConsulta = delConsulta.DeletarConsultaIdUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["Código"].Value.ToString());
+
+                            ProfissionalRegra delProfissional = new ProfissionalRegra();
+                            bool deletarProfissional = delProfissional.idUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["Código"].Value.ToString());
+
+                            PacienteRegra delPaciente = new PacienteRegra();
+                            bool deletarPaciente = delPaciente.excluirLogicamenteIdUsuario(idUsuario, dtgUsuario.Rows[e.RowIndex].Cells["Código"].Value.ToString());
+
+                            if (deletarUsuario == true && deletarConsulta == true && deletarProfissional == true && deletarPaciente == true)
+                            {
+                                if (MessageBox.Show("Dados deletados permanentemente\nDeseja retornar ao formulario anterior?", "Dados deletados", MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Information) == DialogResult.Yes)
+                                {
+                                    this.Dispose();
+                                }
+                                else
+                                {
+                                    CarregarUsuario();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um erro ao deletar o usuário e todos os registros relacionados a ele", "Erro de exclusão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        break;
+                    case "btnImprimir":
+                        DataTable dadosTabela = new DataTable();
+                        string codUsuario = dtgUsuario.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                        dadosTabela = pesquisar.impressaoCompleta(codUsuario);
+                        frmImpressao imprimir = new frmImpressao("4", codUsuario);
+                        imprimir.ShowDialog();
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro(" + ex + ") ao utilizar o DataGridView dtgUsuario(Formulario frmUsuario, Método dtgUsuario_CellClick)","Erro no DataGrid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(idUsuarioEditar)>0)
             {
-                EditarUsuarioRegra editar = new EditarUsuarioRegra();
+                UsuarioRegra editar = new UsuarioRegra();
 
 
                 if (editar.Atualizar(Convert.ToInt32(idUsuarioEditar), Convert.ToInt32(cbNivelAcesso.SelectedIndex), txtNomeUsuario.Text, txtLoginUsuario.Text,
