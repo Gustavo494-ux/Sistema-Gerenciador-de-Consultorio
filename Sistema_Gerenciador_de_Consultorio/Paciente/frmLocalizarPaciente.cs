@@ -199,8 +199,6 @@ namespace Sistema_Gerenciador_de_Consultorio
                     CarregarTodosPacientes();
                 }
             }
-         
-
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -246,12 +244,6 @@ namespace Sistema_Gerenciador_de_Consultorio
                 CarregarTodosPacientes();
             }
         }
-
-        private void pnlMenuSuperior_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             Pesquisar();

@@ -22,10 +22,6 @@ namespace Sistema_Gerenciador_de_Consultorio
             this.loginUsuario = loginUsuario;
             this.nomeNivel = nomeNivel;
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
         private void frmDadosDeletados_Load(object sender, EventArgs e)
         {
 
@@ -36,22 +32,41 @@ namespace Sistema_Gerenciador_de_Consultorio
 
             carregarNivelAcesso();
             carregarStatusUsuario();
-            gbPaciente.Visible = true;  
+
+            zerarDataGrid();
+        }
+        private void btnvoltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        //Zerar dataGridView´s
+        void zerarDataGrid()
+        {
+            for (int i = 0; i < dtgPaciente.Rows.Count; i++)
+            {
+                dtgPaciente.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                i++;
+            }
+
+            for (int i = 0; i < dtgProfissional.Rows.Count; i++)
+            {
+                dtgProfissional.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                i++;
+            }
+
+            for (int i = 0; i < dtgConsulta.Rows.Count; i++)
+            {
+                dtgConsulta.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                i++;
+            }
+
+            for (int i = 0; i < dtgUsuario.Rows.Count; i++)
+            {
+                dtgUsuario.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                i++;
+            }
         }
         //Escolher dados
-        private void EscolherDeletados(object sender, EventArgs e)
-        {
-            gbPaciente.Visible = false;
-            gbProfissional.Visible = false;
-            gbConsulta.Visible = false;
-            gbUsuario.Visible = false;
-
-            if (rbPaciente.Checked == true) gbPaciente.Visible = true;
-            if (rbProfissional.Checked == true) gbProfissional.Visible = true;
-            if (rbConsulta.Checked == true) gbConsulta.Visible = true;
-            if (rbUsuario.Checked == true) gbUsuario.Visible = true;
-            
-        }
         void PesquisarPaciente()
         {
             PacienteDeletadoRegra pesquisar = new PacienteDeletadoRegra();
@@ -90,7 +105,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             if (rbNivelAcessoUsuario.Checked == true) PreencherDtgUsuario(usuario.PesquisarNivelAcessoUsuario(Convert.ToString(cbNivelAcessoUsuario.SelectedIndex+1)));
         }
         //Deletar Todos
-        private void btnDeletarTodosPacientes_Click(object sender, EventArgs e)//Deletar Fisicamente
+        private void deletarTodosPacientesMsMenuSuperior_Click(object sender, EventArgs e)
         {
             PacienteDeletadoRegra deletarTodos = new PacienteDeletadoRegra();
             if (MessageBox.Show("Deseja realmente deletar permanentemente todos os pacientes que foram deletados?Está ação é não pode ser revertida de maneira nenhuma!!!",
@@ -110,7 +125,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnDeletarTodosProfissionais_Click(object sender, EventArgs e)
+        private void deletarTodosProfissionaisMsMenuSuperior_Click(object sender, EventArgs e)
         {
             ProfissionaisDeletadosRegra profissional = new ProfissionaisDeletadosRegra();
             if (MessageBox.Show("Deseja realmente deletar permanentemente todos os profissionais que foram deletados?Está ação é não pode ser revertida de maneira nenhuma!!!",
@@ -130,8 +145,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnDeletarTodasConsultas_Click(object sender, EventArgs e)
+        private void deletarTodasConsultasMsMenuSuperior_Click(object sender, EventArgs e)
         {
+
             ConsultasDeletadasRegra consulta = new ConsultasDeletadasRegra();
             if (MessageBox.Show("Deseja realmente deletar permanentemente todas as consultas que foram deletadas?Está ação é não pode ser revertida de maneira nenhuma!!!",
                "Deletar Permanentemente", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
@@ -150,8 +166,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnDeletarTodosUsuarios_Click(object sender, EventArgs e)
+        private void deletarTodosUsuariosMsMenuSuperior_Click(object sender, EventArgs e)
         {
+
             UsuariosDeletadosRegra usuario = new UsuariosDeletadosRegra();
             if (MessageBox.Show("Deseja realmente deletar permanentemente todos os usuários que foram deletados?Está ação é não pode ser revertida de maneira nenhuma!!!",
                "Deletar Permanentemente", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
@@ -171,7 +188,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
         }
         //Restaurar Todos
-        private void btnRestaurarTodosPacientes_Click(object sender, EventArgs e)//Restaurar Todos
+        private void restaurarTodosPacientesMsMenuSuperior_Click(object sender, EventArgs e)
         {
             PacienteDeletadoRegra deletarTodos = new PacienteDeletadoRegra();
 
@@ -192,7 +209,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnRestaurarTodosProfissionais_Click(object sender, EventArgs e)
+        private void restaurarTodosProfissionaisMsMenuSuperior_Click(object sender, EventArgs e)
         {
             ProfissionaisDeletadosRegra profissionais = new ProfissionaisDeletadosRegra();
 
@@ -213,7 +230,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnRestaurarTodasConsultas_Click(object sender, EventArgs e)
+        private void restaurarTodasConsultasMsMenuSuperior_Click(object sender, EventArgs e)
         {
             ConsultasDeletadasRegra consulta = new ConsultasDeletadasRegra();
 
@@ -234,7 +251,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
             }
         }
-        private void btnRestaurarTodosUsuarios_Click(object sender, EventArgs e)
+        private void restaurarTodosUsuariosMsMenuSuperior_Click(object sender, EventArgs e)
         {
             UsuariosDeletadosRegra usuarios= new UsuariosDeletadosRegra();
 
@@ -310,6 +327,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             txtPesquisarConsulta.Clear();
             nudConsulta.Visible = false;
             nudConsulta.Value =  0;
+
             if (rbTodasConsultas.Checked == true) txtPesquisarConsulta.Visible = true;
             if (rbNomePacienteConsulta.Checked == true) txtPesquisarConsulta.Visible = true;
             if (rbRGConsulta.Checked == true) nudConsulta.Visible = true;
@@ -397,11 +415,12 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void dtgProfissional_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string idProfissionalSelecionado = dtgProfissional.Rows[e.RowIndex].Cells["Código"].Value.ToString();
+            string idProfissionalSelecionado;
             ProfissionaisDeletadosRegra profissionais = new ProfissionaisDeletadosRegra();
 
             if (dtgProfissional.Columns[e.ColumnIndex].Name == "btnRestaurarProfissional")
             {
+                idProfissionalSelecionado = dtgProfissional.Rows[e.RowIndex].Cells["Código"].Value.ToString();
                 if (MessageBox.Show("Tem certeza de que deseja restaurar esse registro?", "Restaurar Dados?", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -421,6 +440,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             if(dtgProfissional.Columns[e.ColumnIndex].Name == "btnDeletarProfissional")
             {
+                idProfissionalSelecionado = dtgProfissional.Rows[e.RowIndex].Cells["Código"].Value.ToString();
                 if (MessageBox.Show("Tem certeza de que deseja deletar o registro permanentemente?Os dados serão permanente deletados", "Deletar dados fisicamente?", 
                     MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
                 {
@@ -565,29 +585,7 @@ namespace Sistema_Gerenciador_de_Consultorio
            
         }
         //zebrar Dtg
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dtgProfissional.Rows.Count; i++)
-            {
-                dtgProfissional.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
-                i++;
-            }
-            for (int i = 0; i < dtgPaciente.Rows.Count; i++)
-            {
-                dtgPaciente.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
-                i++;
-            }
-            for (int i = 0; i < dtgConsulta.Rows.Count; i++)
-            {
-                dtgConsulta.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
-                i++;
-            }
-            for (int i = 0; i < dtgUsuario.Rows.Count; i++)
-            {
-                dtgUsuario.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
-                i++;
-            }
-        }
+        
         //Preencher DTG
         void PreencherDtgPaciente(DataTable dados)
         {
@@ -598,7 +596,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                     dtgPaciente.DataSource = dados;
 
                     //Código
-                    dtgPaciente.Columns["Código"].Width = 70;//Largura da coluna
+                    
                     dtgPaciente.Columns["Código"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;//Linhas      
 
                     //Nome
@@ -617,7 +615,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
                     //Restaurar
                     dtgPaciente.Columns["btnRestaurarPaciente"].Width = 80;//largura total da coluna.
-                    dtgPaciente.Columns["btnRestaurarPaciente"].DisplayIndex = dtgPaciente.Columns.Count -1;//Posição dentro do dtg
+                    dtgPaciente.Columns["btnRestaurarPaciente"].DisplayIndex = dtgPaciente.Columns.Count - 1;//Posição dentro do dtg
                     dtgPaciente.Columns["btnRestaurarPaciente"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
                     //Deletar
@@ -629,17 +627,19 @@ namespace Sistema_Gerenciador_de_Consultorio
                 {
                     if (dtgPaciente.Rows.Count > 0)
                     {
-                        MessageBox.Show("Registros de pacientes não encontrado!", "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                        MessageBox.Show("Registros de pacientes não encontrado!", "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dtgPaciente.Rows.Clear();
                     }
-                  
                 }
                 dtgPaciente.AutoResizeColumns();
+                dtgPaciente.Columns["Código"].Width = 70;//Largura da coluna
+                zerarDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro(" + ex.Message + ") no método PreencherDtg do frmLocalizarPaciente", "Erro");
             }
-            
+
         }
         void PreencherDtgProfissional(DataTable dados)
         {
@@ -684,10 +684,12 @@ namespace Sistema_Gerenciador_de_Consultorio
                     if (dtgProfissional.Rows.Count > 0)
                     {
                         MessageBox.Show("Os Registros de profissionais não foram encontrados!",
-                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dtgProfissional.Rows.Clear();
                     }
                 }
                 dtgProfissional.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
+                zerarDataGrid();
             }
             catch (Exception ex)
             {
@@ -732,10 +734,12 @@ namespace Sistema_Gerenciador_de_Consultorio
                     if (dtgConsulta.Rows.Count > 0)
                     {
                         MessageBox.Show("Os Registros só de Consultas não foram encontrados!",
-                                       "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                                       "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dtgConsulta.Rows.Clear();
                     }
                 }
-               dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
+               dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente.
+                zerarDataGrid();
             }
             catch (Exception ex)
             {
@@ -784,15 +788,44 @@ namespace Sistema_Gerenciador_de_Consultorio
                     if (dtgUsuario.Rows.Count > 0)
                     {
                         MessageBox.Show("Os Registros de Consultas não foram encontrados!",
-                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                                      "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dtgUsuario.Rows.Clear();
                     }
                 }
-                dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente
+                dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente.
+                zerarDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro ao preencher o dtgUsuario" + ex, "Erro de preenchimento", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //Repetidor
+        private void repetidor_Tick(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < dtgPaciente.Rows.Count; i++)
+            {
+                dtgPaciente.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                i++;
+            }
+            for (int i = 0; i < dtgProfissional.Rows.Count; i++)
+            {
+                dtgProfissional.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                i++;
+            }
+            for (int i = 0; i < dtgConsulta.Rows.Count; i++)
+            {
+                dtgConsulta.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                i++;
+            }
+            for (int i = 0; i < dtgUsuario.Rows.Count; i++)
+            {
+                dtgUsuario.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                i++;
+            }
+        }
+
     }
 }

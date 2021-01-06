@@ -100,7 +100,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(198, 4);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 27);
+            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -111,7 +111,7 @@
             this.btnLImpar.Location = new System.Drawing.Point(101, 4);
             this.btnLImpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLImpar.Name = "btnLImpar";
-            this.btnLImpar.Size = new System.Drawing.Size(91, 27);
+            this.btnLImpar.Size = new System.Drawing.Size(91, 30);
             this.btnLImpar.TabIndex = 0;
             this.btnLImpar.UseVisualStyleBackColor = true;
             this.btnLImpar.Click += new System.EventHandler(this.btnLImpar_Click);
@@ -133,7 +133,7 @@
             this.btnAlterar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Alterar;
             this.btnAlterar.Location = new System.Drawing.Point(4, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(91, 27);
+            this.btnAlterar.Size = new System.Drawing.Size(91, 30);
             this.btnAlterar.TabIndex = 0;
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -292,9 +292,9 @@
             // btnPesquisar
             // 
             this.btnPesquisar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.pesquisar;
-            this.btnPesquisar.Location = new System.Drawing.Point(320, 7);
+            this.btnPesquisar.Location = new System.Drawing.Point(320, 11);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(91, 27);
+            this.btnPesquisar.Size = new System.Drawing.Size(91, 30);
             this.btnPesquisar.TabIndex = 5;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
@@ -570,7 +570,7 @@
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuários";

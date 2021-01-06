@@ -507,7 +507,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
                 ProfissionalRegra pesquisar = new ProfissionalRegra();
                 dadosProfissional = pesquisar.CodigoProfissional(Convert.ToInt32(idUsuario));
-                idProfissional = dadosProfissional.Rows[0]["idProfissional"].ToString();
+                if(dadosProfissional.Rows.Count > 0)idProfissional = dadosProfissional.Rows[0]["idProfissional"].ToString();
                 if (Convert.ToInt32(idProfissional) > 0) return true;
             }
             catch (Exception)

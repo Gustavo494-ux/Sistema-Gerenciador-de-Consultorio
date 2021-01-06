@@ -191,6 +191,12 @@
     <Compile Include="Agendamento\frmAgendamento.Designer.cs">
       <DependentUpon>frmAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dados Deletados\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dados Deletados\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DataSetImpressao.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agendamento\frmEditarAgendamento.resx">
       <DependentUpon>frmEditarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dados Deletados\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dados Deletados\frmDadosDeletados.resx">
       <DependentUpon>frmDadosDeletados.cs</DependentUpon>

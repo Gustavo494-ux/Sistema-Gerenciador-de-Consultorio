@@ -20,13 +20,11 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void frmLogin_Load(object sender, EventArgs e)
         {
-           // posicionar();
 
         }
         private void timerHora_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();//Exibe a hora no painel de login.
-            //posicionar();
 
         }
 

@@ -91,7 +91,6 @@
             this.pnlMenuSuperior.Name = "pnlMenuSuperior";
             this.pnlMenuSuperior.Size = new System.Drawing.Size(1160, 40);
             this.pnlMenuSuperior.TabIndex = 1;
-            this.pnlMenuSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuSuperior_Paint);
             // 
             // btnLimpar
             // 

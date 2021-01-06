@@ -11,7 +11,6 @@ namespace AcessoDados
 {
     public class PacientesDeletadosAcesso
     {
-        DataTable dadosTabela = new DataTable();
         DataTable tableVazia = new DataTable();
         Banco AcessoBanco = new Banco();
         StringBuilder sql = new StringBuilder();
@@ -31,7 +30,7 @@ namespace AcessoDados
                     "Tente Novamente com uma informação diferente, Caso o Problema persista entre em contato com o suporte!", "Erro de Pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return tableVazia;     
-       }
+        }
         public DataTable CodigoPaciente(int codigo)
         {
             try
