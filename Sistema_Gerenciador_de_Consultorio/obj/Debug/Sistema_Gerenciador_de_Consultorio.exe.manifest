@@ -306,14 +306,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2698752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2697728">
       <assemblyIdentity name="Sistema_Gerenciador_de_Consultorio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LRBTs5rrRo65EiFE5mG9VVL7PHu4fbF5Re9rqFprr+E=</dsig:DigestValue>
+        <dsig:DigestValue>7PIiqz15Qw7M1Zcw0pFj43NPz3eWGzMN5U93gZ+72tg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

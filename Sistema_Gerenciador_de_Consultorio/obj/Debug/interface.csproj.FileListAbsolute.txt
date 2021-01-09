@@ -1421,4 +1421,3 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\interface.csproj.CopyComplete
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.exe
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.pdb
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.Dados_Deletados.Form1.resources
