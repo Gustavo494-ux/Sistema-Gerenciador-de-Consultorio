@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcessoDados.dll" size="175616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcessoDados.dll" size="184832">
       <assemblyIdentity name="AcessoDados" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v5UzemDH5fhOJU/r56mAb3ATc9goSZERycDpBEEocqw=</dsig:DigestValue>
+        <dsig:DigestValue>xg4Uov36THMmyQYveryW86XNRCc03GoZe+JrgHMtbrM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -294,14 +294,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegraNegocio.dll" size="124416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegraNegocio.dll" size="126976">
       <assemblyIdentity name="RegraNegocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Lw1nbuPQJIsnGkFBVcs7uPGx2aWH3hcIYZtEpC5rAFc=</dsig:DigestValue>
+        <dsig:DigestValue>PQhSPfnZX79yElX3+XrW+NM27mzA4nR+NqLcvGXNd8M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -12,18 +12,18 @@ namespace RegraNegocio
     public class RxInicialRegra
     {
         DataTable tableVazia = new DataTable();
-        public bool Cadastrar(string idConsulta,string vlOdEsfera, string vlOeEsfera, string vpOdEsfera, string vpOeEsfera, string vlOdCilindro, string vlOeCilindro, string vpOdCilindro, string vpOeCilindro, string vlOdEixo,
-            string vlOeEixo, string vpOdEixo, string vpOeEixo, string vlOdAdicao, string vlOeAdicao, string vpOdAdicao, string vpOeAdicao, string vlOdPrisma, string vlOePrisma, string vpOdPrisma, string vpOePrisma,
-            string vlOdBase, string vlOeBase, string vpOdBase, string vpOeBase, string tipoLente, string material, string cor, string estado, string observacaoRxFinal)
+        public bool Cadastrar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
+            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+            string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXINICIAL)
         {
             try
             {
-                if (Validar(vlOdEsfera, vlOeEsfera, vpOdEsfera, vpOeEsfera, vlOdCilindro, vlOeCilindro, vpOdCilindro, vpOeCilindro, vlOdEixo, vlOeEixo, vpOdEixo, vpOeEixo, vlOdAdicao, vlOeAdicao, vpOdAdicao, vpOeAdicao, vlOdPrisma,
-                vlOePrisma, vpOdPrisma, vpOePrisma, vlOdBase, vlOeBase, vpOdBase, vpOeBase, tipoLente, material, cor, estado, observacaoRxFinal) == true)
+                if (Validar( IDCONSULTA,  VLODESFERA,  VLOEESFERA,  VPODESFERA,  VPOEESFERA,  VLODCILINDRO,  VLOECILINDRO,  VPODCILINDRO,VPOECILINDRO,  VLODEIXO,  VLOEEIXO,  VPODEIXO,
+                    VPOEEIXO,  AVVLOD,  AVVLOE,  AVVPOD,  AVVPOE,  ADICAO,TP,  TIPOMATERIAL,  COR,  USO,  TIPOLENTE,  OBSERVACAORXINICIAL) == true)
                 {
                     RxInicialAcesso cadastrarAcesso = new RxInicialAcesso();
-                    if (cadastrarAcesso.CadastrarRxInicial(idConsulta,vlOdEsfera, vlOeEsfera, vpOdEsfera, vpOeEsfera, vlOdCilindro, vlOeCilindro, vpOdCilindro, vpOeCilindro, vlOdEixo, vlOeEixo, vpOdEixo, vpOeEixo, vlOdAdicao, vlOeAdicao, vpOdAdicao, vpOeAdicao, vlOdPrisma,
-                    vlOePrisma, vpOdPrisma, vpOePrisma, vlOdBase, vlOeBase, vpOdBase, vpOeBase, tipoLente, material, cor, estado, observacaoRxFinal) == true) return true; return false;
+                    if (cadastrarAcesso.CadastrarRxInicial(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXINICIAL) == true) return true; return false;
                 }
                 else return false;
             }
@@ -33,72 +33,60 @@ namespace RegraNegocio
             }
             return false;
         }
-        public bool Validar(string vlOdEsfera, string vlOeEsfera, string vpOdEsfera, string vpOeEsfera, string vlOdCilindro, string vlOeCilindro, string vpOdCilindro, string vpOeCilindro, string vlOdEixo,
-            string vlOeEixo, string vpOdEixo, string vpOeEixo, string vlOdAdicao, string vlOeAdicao, string vpOdAdicao, string vpOeAdicao, string vlOdPrisma, string vlOePrisma, string vpOdPrisma, string vpOePrisma,
-            string vlOdBase, string vlOeBase, string vpOdBase, string vpOeBase, string tipoLente, string material, string cor, string estado, string observacaoRxFinal)
+        public bool Validar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
+            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+            string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXINICIAL)
         {
             try
             {
-                if (vlOdEsfera.GetType() != typeof(string) || vlOdEsfera.Length > 5) return false;
-                if (vlOeEsfera.GetType() != typeof(string) || vlOeEsfera.Length > 5) return false;
-                if (vpOdEsfera.GetType() != typeof(string) || vpOdEsfera.Length > 5) return false;
-                if (vpOeEsfera.GetType() != typeof(string) || vpOeEsfera.Length > 5) return false;
+                if (VLODESFERA.Length > 20) return false;
+                if (VLOEESFERA.Length > 20) return false;
+                if (VPODESFERA.Length > 20) return false;
+                if (VPOEESFERA.Length > 20) return false;
 
-                if (vlOdCilindro.GetType() != typeof(string) || vlOdCilindro.Length > 5) return false;
-                if (vlOeCilindro.GetType() != typeof(string) || vlOeCilindro.Length > 5) return false;
-                if (vpOdCilindro.GetType() != typeof(string) || vpOdCilindro.Length > 5) return false;
-                if (vpOeCilindro.GetType() != typeof(string) || vpOeCilindro.Length > 5) return false;
+                if ( VLODCILINDRO.Length > 20) return false;
+                if (VLOECILINDRO.Length > 20) return false;
+                if (VPODCILINDRO.Length > 20) return false;
+                if (VPOECILINDRO.Length > 20) return false;
 
-                if (vlOdEixo.GetType() != typeof(string) || vlOdEixo.Length > 5) return false;
-                if (vlOeEixo.GetType() != typeof(string) || vlOeEixo.Length > 5) return false;
-                if (vpOdEixo.GetType() != typeof(string) || vpOdEixo.Length > 5) return false;
-                if (vpOeEixo.GetType() != typeof(string) || vpOeEixo.Length > 5) return false;
+                if (VLODEIXO.Length > 20) return false;
+                if (VLOEEIXO.Length > 20) return false;
+                if (VPODEIXO.Length > 20) return false;
+                if (VPOEEIXO.Length > 20) return false;
 
-                if (vlOdAdicao.GetType() != typeof(string) || vlOdAdicao.Length > 5) return false;
-                if (vlOeAdicao.GetType() != typeof(string) || vlOeAdicao.Length > 5) return false;
-                if (vpOdAdicao.GetType() != typeof(string) || vpOdAdicao.Length > 5) return false;
-                if (vpOeAdicao.GetType() != typeof(string) || vpOeAdicao.Length > 5) return false;
+                if (AVVLOD.Length > 20) return false;
+                if (AVVLOE.Length > 20) return false;
+                if (AVVPOD.Length > 20) return false;
+                if (AVVPOE.Length > 20) return false;
 
-                if (vlOdPrisma.GetType() != typeof(string) || vlOdPrisma.Length > 5) return false;
-                if (vlOePrisma.GetType() != typeof(string) || vlOePrisma.Length > 5) return false;
-                if (vpOdPrisma.GetType() != typeof(string) || vpOdPrisma.Length > 5) return false;
-                if (vpOePrisma.GetType() != typeof(string) || vpOePrisma.Length > 5) return false;
+                if (ADICAO.Length > 50) return false;
 
-                if (vlOdBase.GetType() != typeof(string) || vlOdBase.Length > 5) return false;
-                if (vlOeBase.GetType() != typeof(string) || vlOeBase.Length > 5) return false;
-                if (vpOdBase.GetType() != typeof(string) || vpOdBase.Length > 5) return false;
-                if (vpOeBase.GetType() != typeof(string) || vpOeBase.Length > 5) return false;
+                if (TP.Length > 50) return false;
+                if (TIPOMATERIAL.Length > 50) return false;
+                if (COR.Length > 50) return false;
 
-                if (tipoLente.GetType() != typeof(string) || tipoLente.Length > 50) return false;
-
-                if (material.GetType() != typeof(string) || material.Length > 50) return false;
-
-                if (cor.GetType() != typeof(string) || cor.Length > 50) return false;
-
-                if (estado.GetType() != typeof(string) || estado.Length > 50) return false;
-
-                if (observacaoRxFinal.GetType() != typeof(string)) return false;
-
-                return true;
+                if (USO.Length > 50) return false;
+                if (TIPOLENTE.Length > 50) return false;
+                if (OBSERVACAORXINICIAL.GetType() != typeof(string) ) return false;
             }
             catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro ao validar o Rx Inicial(Classe RxInicialRegra, Método Validar)", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return false;
+            return true;
         }
-        public bool Editar(int idRxInicial, string vlOdEsfera, string vlOeEsfera, string vpOdEsfera, string vpOeEsfera, string vlOdCilindro, string vlOeCilindro, string vpOdCilindro, string vpOeCilindro, string vlOdEixo,
-          string vlOeEixo, string vpOdEixo, string vpOeEixo, string vlOdAdicao, string vlOeAdicao, string vpOdAdicao, string vpOeAdicao, string vlOdPrisma, string vlOePrisma, string vpOdPrisma, string vpOePrisma,
-          string vlOdBase, string vlOeBase, string vpOdBase, string vpOeBase, string tipoLente, string material, string cor, string estado, string observacaoRxInicial)
+        public bool Editar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
+            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+            string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXINICIAL)
         {
             try
             {
-                if (Validar(vlOdEsfera, vlOeEsfera, vpOdEsfera, vpOeEsfera, vlOdCilindro, vlOeCilindro, vpOdCilindro, vpOeCilindro, vlOdEixo, vlOeEixo, vpOdEixo, vpOeEixo, vlOdAdicao, vlOeAdicao, vpOdAdicao, vpOeAdicao, vlOdPrisma,
-                vlOePrisma, vpOdPrisma, vpOePrisma, vlOdBase, vlOeBase, vpOdBase, vpOeBase, tipoLente, material, cor, estado, observacaoRxInicial) == true)
+                if (Validar(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXINICIAL) == true)
                 {
                     RxInicialAcesso EditarAcesso = new RxInicialAcesso();
-                    if (EditarAcesso.EditarRxInicial(Convert.ToString(idRxInicial), vlOdEsfera, vlOeEsfera, vpOdEsfera, vpOeEsfera, vlOdCilindro, vlOeCilindro, vpOdCilindro, vpOeCilindro, vlOdEixo, vlOeEixo, vpOdEixo, vpOeEixo, vlOdAdicao, vlOeAdicao, vpOdAdicao, vpOeAdicao, vlOdPrisma,
-                    vlOePrisma, vpOdPrisma, vpOePrisma, vlOdBase, vlOeBase, vpOdBase, vpOeBase, tipoLente, material, cor, estado, observacaoRxInicial) == true) return true; return false;
+                    if (EditarAcesso.EditarRxInicial(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXINICIAL) == true) return true; return false;
                 }
                 else return false;
             }

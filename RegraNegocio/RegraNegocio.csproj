@@ -117,6 +117,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agendamento\AgendamentosRegra.cs" />
+    <Compile Include="Consulta\AmslerRegra.cs" />
+    <Compile Include="Consulta\CeratometriaRegra.cs" />
+    <Compile Include="Consulta\BiomicroscopiaRegra.cs" />
+    <Compile Include="Consulta\ForometriaAcesso.cs" />
     <Compile Include="Dados Deletados\ConsultasDeletadasRegra.cs" />
     <Compile Include="Consulta\SintomasReferidosRegra.cs" />
     <Compile Include="Consulta\RxFinalRegra.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="Consulta\AnamneseRegra.cs" />
     <Compile Include="Consulta\AcuidadeVisualRegra.cs" />
     <Compile Include="Consulta\RxInicialRegra.cs" />
+    <Compile Include="Consulta\ForometriaRegra.cs" />
     <Compile Include="Impressão\ImpressaoConsultaRegra.cs" />
     <Compile Include="Impressão\ImpressaoReceitaRegra.cs" />
     <Compile Include="Impressão\ImpressaoUsuarioRegra.cs" />
@@ -133,10 +138,13 @@
     <Compile Include="Impressão\ImpressaoProfissionalRegra.cs" />
     <Compile Include="Dados Deletados\PacienteDeletadoRegra.cs" />
     <Compile Include="Dados Deletados\ProfissionaisDeletadosRegra.cs" />
+    <Compile Include="Consulta\LensometriaRegra.cs" />
+    <Compile Include="Consulta\MotilidadeOcularRegra.cs" />
     <Compile Include="Relatorios\RelatorioBasicoConsultaRegra.cs" />
     <Compile Include="Relatorios\RelatorioBasicoUsuarioRegra.cs" />
     <Compile Include="Relatorios\RelatorioProfissionalBasicoRegra.cs" />
     <Compile Include="Relatorios\RelatoriosPacienteRegra.cs" />
+    <Compile Include="Consulta\RetinoscopiaRegra.cs" />
     <Compile Include="Status\LocalizarStatusAgendamentoRegra.cs" />
     <Compile Include="Dados Deletados\UsuariosDeletadosRegra.cs" />
     <Compile Include="Paciente\ConstrutorPaciente.cs" />
@@ -158,6 +166,7 @@
     <Compile Include="Paciente\PacienteRegra.cs" />
     <Compile Include="Profissional\ProfissionalRegra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Consulta\VisaoCorRegra.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcessoDados\AcessoDados.csproj">
@@ -167,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Compile Include="Consulta\EstereopsiaRegra.cs" />
     <None Include="Paciente\packages.config" />
     <None Include="packages.config" />
   </ItemGroup>

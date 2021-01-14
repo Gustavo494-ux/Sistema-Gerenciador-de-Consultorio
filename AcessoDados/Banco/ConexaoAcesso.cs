@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
-
-
 namespace AcessoDados
 {
     public class ConexaoAcesso
