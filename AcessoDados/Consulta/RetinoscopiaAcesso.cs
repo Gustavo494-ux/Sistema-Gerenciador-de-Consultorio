@@ -20,7 +20,7 @@ namespace AcessoDados
             {
                 sql.Clear();
                 sql.Append("INSERT INTO Retinoscopia(idConsulta, estaticaOd, estaticaOe, dinamicaOd,dinamicaOe, subjetivoOd, subjetivoOe, afinamentoOd,afinamentoOe, adicaoNivelOd, adicaoNivelOe) ");
-                sql.Append("VALUES (IDCONSULTA,ESTATICAOD,ESTATICAOE,DINAMICAOD,DINAMICAOE,SUBJETIVAOD,SUBJETIVOOE,AFINAMENTOOD,AFINAMENTOOE,ADICAONIVELOD,ADICAONIVELOE) ");
+                sql.Append("VALUES (\'IDCONSULTA\',\'ESTATICAOD\',\'ESTATICAOE\',\'DINAMICAOD\',\'DINAMICAOE\',\'SUBJETIVAOD\',\'SUBJETIVOOE\',\'AFINAMENTOOD\',\'AFINAMENTOOE\',\'ADICAONIVELOD\',\'ADICAONIVELOE\') ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("ESTATICAOD", ESTATICAOD).Replace("ESTATICAOE", ESTATICAOE).Replace("DINAMICAOD", DINAMICAOD).Replace("DINAMICAOE", DINAMICAOE);
                 sql = sql.Replace("SUBJETIVAOD", SUBJETIVOOD).Replace("SUBJETIVOOE", SUBJETIVOOE).Replace("AFINAMENTOOD", AFINAMENTOOD).Replace("AFINAMENTOOE", AFINAMENTOOE);
@@ -42,12 +42,12 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE Retinoscopia SET estaticaOd = \'ESTATICAOD\',estaticaOe = \'ESTATICAOE\',dinamicaOd = \'DINMAICAOD\',dinamicaOe = \'DINAMICAOE\',subjetivoOd = \'SUBJETIVOOD\', ");
+                sql.Append("UPDATE Retinoscopia SET estaticaOd = \'ESTATICAOD\',estaticaOe = \'ESTATICAOE\',dinamicaOd = \'DINAMICAOD\',dinamicaOe = \'DINAMICAOE\',subjetivoOd = \'SUBJETIVOOD\', ");
                 sql.Append("subjetivoOe = \'SUBJETIVOOE\', afinamentoOd = \'AFINAMENTOOD\', afinamentoOe = \'AFINAMENTOOE\',adicaoNivelOd = \'ADICAONIVELOD\',adicaoNivelOe = \'ADICAONIVELOE\' ");
                 sql.Append("WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("ESTATICAOD", ESTATICAOD).Replace("ESTATICAOE", ESTATICAOE).Replace("DINAMICAOD", DINAMICAOD).Replace("DINAMICAOE", DINAMICAOE);
-                sql = sql.Replace("SUBJETIVAOD", SUBJETIVOOD).Replace("SUBJETIVOOE", SUBJETIVOOE).Replace("AFINAMENTOOD", AFINAMENTOOD).Replace("AFINAMENTOOE", AFINAMENTOOE);
+                sql = sql.Replace("SUBJETIVOOD", SUBJETIVOOD).Replace("SUBJETIVOOE", SUBJETIVOOE).Replace("AFINAMENTOOD", AFINAMENTOOD).Replace("AFINAMENTOOE", AFINAMENTOOE);
                 sql = sql.Replace("ADICAONIVELOD", ADICAONIVELOD).Replace("ADICAONIVELOE", ADICAONIVELOE);
 
                 return acessoBanco.Executar(sql.ToString());
@@ -65,9 +65,9 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT Retinoscopia idConsulta \'Código Consulta\', estaticaOd as \'Estática OD\', estaticaOe as \'Estática OE\',dinamicaOd as \'Dinâmica OD\', ");
-                sql.Append("dinamicaOe as \'Dinâmica OE\', subjetivoOd as \'Subjetivo OD\', subjetivoOe as \'Subjetivo OE\', afinamentoOd as \'Afinamento OD\', afinamentoOe \'Afinamento OE\', ");
-                sql.Append("adicaoNivelOd as \'Adição Nível OD\', adicaoNivelOe as \'Adicao Nível OE\' FROM Retinoscopia WHERE idConsulta = \'IDCONSULTA\' ");
+                sql.Append("SELECT idConsulta as \"Código Consulta\", estaticaOd as \"Estática OD\", estaticaOe as \"Estática OE\",dinamicaOd as \"Dinâmica OD\", ");
+                sql.Append("dinamicaOe as \"Dinâmica OE\", subjetivoOd as \"Subjetivo OD\", subjetivoOe as \"Subjetivo OE\", afinamentoOd as \"Afinamento OD\", afinamentoOe as \"Afinamento OE\", ");
+                sql.Append("adicaoNivelOd as \"Adição Nível OD\", adicaoNivelOe as \"Adição Nível OE\" FROM Retinoscopia WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
 

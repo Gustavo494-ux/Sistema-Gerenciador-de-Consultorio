@@ -15,13 +15,13 @@ namespace RegraNegocio
         public bool Cadastrar(string idConsulta,bool traumaOcular, string traumaOcularTratamento, bool corpoEstranho, string corpoEstranhoTratamento, bool queimaduras, string queimadurasTratamento,
             bool cirurgicos, string cirurgicosTratamento, bool inflamacoes, string inflamacoesTratamento, bool catarata, string catarataTratamento, bool glaucoma, string glaucomaTratamento,
             bool cegueira, string cegueiraTratamento, bool descolamentoRetina, string descolamentoRetinaTratamento, bool toxoplasmose, string toxoplasmoseTratamento, bool estrabismo, string estrabismoTratamento,
-            bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro, string outroTratamento)
+            bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro,string outrosConfirm ,string outroTratamento)
         {
             try
             {
                 if (Validar(traumaOcular, traumaOcularTratamento, corpoEstranho, corpoEstranhoTratamento, queimaduras, queimadurasTratamento, cirurgicos, cirurgicosTratamento, inflamacoes, inflamacoesTratamento, catarata,
                 catarataTratamento, glaucoma, glaucomaTratamento, cegueira, cegueiraTratamento, descolamentoRetina, descolamentoRetinaTratamento, toxoplasmose, toxoplasmoseTratamento, estrabismo, estrabismoTratamento,
-                alergicos, alergicosTratamento, pterigio, pterigioTratamento, defeitosRefracao, defeitosRefracaoTratamento, outro, outroTratamento) == true)
+                alergicos, alergicosTratamento, pterigio, pterigioTratamento, defeitosRefracao, defeitosRefracaoTratamento, outro,Convert.ToBoolean(outrosConfirm), outroTratamento) == true)
                 {
                     AntecedentesOcularesAcesso cadastrarAcesso = new AntecedentesOcularesAcesso();
                     if (cadastrarAcesso.CadastrarAntecedentesOculares(idConsulta, Convert.ToString(traumaOcular), traumaOcularTratamento, Convert.ToString(corpoEstranho), corpoEstranhoTratamento,
@@ -29,7 +29,7 @@ namespace RegraNegocio
                         Convert.ToString(catarata),catarataTratamento, Convert.ToString(glaucoma), glaucomaTratamento, Convert.ToString(cegueira), cegueiraTratamento,
                         Convert.ToString(descolamentoRetina), descolamentoRetinaTratamento,Convert.ToString(toxoplasmose),toxoplasmoseTratamento, Convert.ToString(estrabismo), estrabismoTratamento,
                         Convert.ToString(alergicos), alergicosTratamento, Convert.ToString(pterigio), pterigioTratamento, Convert.ToString(defeitosRefracao), defeitosRefracaoTratamento, outro, 
-                        outroTratamento) == true) return true;return false;
+                        Convert.ToString(outrosConfirm),outroTratamento) == true) return true;return false;
                 }
                 else return false;
             }
@@ -42,7 +42,7 @@ namespace RegraNegocio
         public bool Validar(bool traumaOcular, string traumaOcularTratamento, bool corpoEstranho, string corpoEstranhoTratamento, bool queimaduras, string queimadurasTratamento,
            bool cirurgicos, string cirurgicosTratamento, bool inflamacoes, string inflamacoesTratamento, bool catarata, string catarataTratamento, bool glaucoma, string glaucomaTratamento,
            bool cegueira, string cegueiraTratamento, bool descolamentoRetina, string descolamentoRetinaTratamento, bool toxoplasmose, string toxoplasmoseTratamento, bool estrabismo, string estrabismoTratamento,
-           bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro, string outroTratamento)
+           bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro, bool outrosConfirm, string outroTratamento)
         {
             try
             {
@@ -91,6 +91,7 @@ namespace RegraNegocio
                 if (defeitosRefracaoTratamento.GetType() != typeof(string) || defeitosRefracaoTratamento.Length > 100) return false;
 
                 if (outro.GetType() != typeof(string) || outro.Length>100) return false;
+                if (outrosConfirm.GetType() != typeof(bool)) return false;
                 if (outroTratamento.GetType() != typeof(string) || outroTratamento.Length > 100) return false;
 
                 return true;
@@ -105,13 +106,13 @@ namespace RegraNegocio
         public bool Editar(int idAntecedentesOculares, bool traumaOcular, string traumaOcularTratamento, bool corpoEstranho, string corpoEstranhoTratamento, bool queimaduras, string queimadurasTratamento,
            bool cirurgicos, string cirurgicosTratamento, bool inflamacoes, string inflamacoesTratamento, bool catarata, string catarataTratamento, bool glaucoma, string glaucomaTratamento,
            bool cegueira, string cegueiraTratamento, bool descolamentoRetina, string descolamentoRetinaTratamento, bool toxoplasmose, string toxoplasmoseTratamento, bool estrabismo, string estrabismoTratamento,
-           bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro, string outroTratamento)
+           bool alergicos, string alergicosTratamento, bool pterigio, string pterigioTratamento, bool defeitosRefracao, string defeitosRefracaoTratamento, string outro,string outrosConfirm, string outroTratamento)
         {
             try
             {
                 if (Validar(traumaOcular, traumaOcularTratamento, corpoEstranho, corpoEstranhoTratamento, queimaduras, queimadurasTratamento, cirurgicos, cirurgicosTratamento, inflamacoes,
                     inflamacoesTratamento, catarata, catarataTratamento, glaucoma, glaucomaTratamento, cegueira, cegueiraTratamento, descolamentoRetina, descolamentoRetinaTratamento, toxoplasmose, toxoplasmoseTratamento,
-                    estrabismo, estrabismoTratamento, alergicos, alergicosTratamento, pterigio, pterigioTratamento, defeitosRefracao, defeitosRefracaoTratamento, outro, outroTratamento) == true)
+                    estrabismo, estrabismoTratamento, alergicos, alergicosTratamento, pterigio, pterigioTratamento, defeitosRefracao, defeitosRefracaoTratamento, outro, Convert.ToBoolean(outrosConfirm), outroTratamento) == true)
                 {
                     AntecedentesOcularesAcesso EditarAcesso = new AntecedentesOcularesAcesso();
                     if (EditarAcesso.EditarAntecedentesOculare(Convert.ToString(idAntecedentesOculares), Convert.ToString(traumaOcular), traumaOcularTratamento, Convert.ToString(corpoEstranho),
@@ -119,7 +120,7 @@ namespace RegraNegocio
                         inflamacoesTratamento, Convert.ToString(catarata), catarataTratamento, Convert.ToString(glaucoma), glaucomaTratamento, Convert.ToString(cegueira), cegueiraTratamento,
                         Convert.ToString(descolamentoRetina), descolamentoRetinaTratamento, Convert.ToString(toxoplasmose), toxoplasmoseTratamento, Convert.ToString(estrabismo), estrabismoTratamento,
                         Convert.ToString(alergicos), alergicosTratamento, Convert.ToString(pterigio), pterigioTratamento,
-                        Convert.ToString(defeitosRefracao), defeitosRefracaoTratamento, outro, outroTratamento) == true) return true; return false;
+                        Convert.ToString(defeitosRefracao), defeitosRefracaoTratamento, outro,Convert.ToString(outrosConfirm), outroTratamento) == true) return true; return false;
                 }
                 else return false;
             }

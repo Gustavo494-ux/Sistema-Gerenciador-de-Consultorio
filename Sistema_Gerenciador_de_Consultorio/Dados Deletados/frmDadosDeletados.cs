@@ -622,6 +622,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                     dtgPaciente.Columns["btnDeletarPaciente"].Width = 65;//largura total da coluna.
                     dtgPaciente.Columns["btnDeletarPaciente"].DisplayIndex = dtgPaciente.Columns.Count - 1;//Posição dentro do dtg.
                     dtgPaciente.Columns["btnDeletarPaciente"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                    dtgPaciente.AutoResizeColumns();
+                    dtgPaciente.Columns["Código"].Width = 70;//Largura da coluna
                 }
                 else
                 {
@@ -631,8 +634,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                         dtgPaciente.Rows.Clear();
                     }
                 }
-                dtgPaciente.AutoResizeColumns();
-                dtgPaciente.Columns["Código"].Width = 70;//Largura da coluna
+                
                 zerarDataGrid();
             }
             catch (Exception ex)

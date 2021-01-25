@@ -112,74 +112,48 @@ namespace Sistema_Gerenciador_de_Consultorio
 
             DataTable dadosTabela = new DataTable();
             PacienteRegra editarPaciente = new PacienteRegra();
-            dadosTabela = editarPaciente.RetornarDados(idPaciente);
+            dadosTabela = editarPaciente.CodigoPaciente(Convert.ToInt32(idPaciente));
             dtgPaciente.DataSource = dadosTabela;
 
             if (dtgPaciente.Rows.Count > 0)
             {
                 for (int i = 0; i < dtgPaciente.Rows.Count - 1; i++)
                 {
-                    // Desenvolver algoritimos para efetuar a atualização de dados do paciente junto com o endereco e contato
                     //informações do paciente
-                    idPaciente = dtgPaciente.Rows[i].Cells["idpaciente"].Value.ToString();
-                    idContato = dtgPaciente.Rows[i].Cells["idcontato"].Value.ToString();
-                    idEndereco = dtgPaciente.Rows[i].Cells["idendereco"].Value.ToString();
-                    idUsuarioConsulta = dtgPaciente.Rows[i].Cells["idusuario"].Value.ToString();
-                    nomePaciente = dtgPaciente.Rows[i].Cells["nomepaciente"].Value.ToString();
-                    NomeResponsavel = dtgPaciente.Rows[i].Cells["nomeresponsavel"].Value.ToString();
-                    rg = dtgPaciente.Rows[i].Cells["rg"].Value.ToString();
-                    cpf = dtgPaciente.Rows[i].Cells["cpf"].Value.ToString();
-                    ocupacao = dtgPaciente.Rows[i].Cells["ocupacao"].Value.ToString();
-                    idade = dtgPaciente.Rows[i].Cells["idade"].Value.ToString();
-                    sexo = dtgPaciente.Rows[i].Cells["sexo"].Value.ToString();
-                    dataNascimento = dtgPaciente.Rows[i].Cells["datanascimento"].Value.ToString();
-                    observacaoPaciente = dtgPaciente.Rows[i].Cells["observacaopaciente"].Value.ToString();
+                    idPaciente = dadosTabela.Rows[i]["idpaciente"].ToString();
+                    idContato = dadosTabela.Rows[i]["idcontato"].ToString();
+                    idEndereco = dadosTabela.Rows[i]["idendereco"].ToString();
+                    idUsuarioConsulta = dadosTabela.Rows[i]["idusuario"].ToString();
+
+                    txtNomePaciente.Text = dadosTabela.Rows[i]["nomepaciente"].ToString();
+                    txtNomeResponsavel.Text = dadosTabela.Rows[i]["nomeresponsavel"].ToString();
+                    mtxRG.Text = dadosTabela.Rows[i]["rg"].ToString();
+                    mtxtCPF.Text = dadosTabela.Rows[i]["cpf"].ToString();
+                    txtocupacao.Text = dadosTabela.Rows[i]["ocupacao"].ToString();
+                    txtIdade.Text = dadosTabela.Rows[i]["idade"].ToString();
+                    cbSexo.Text = dadosTabela.Rows[i]["sexo"].ToString();
+                    dtpDataNascimento.Text = dadosTabela.Rows[i]["datanascimento"].ToString();
+                    txtObservacaoPaciente.Text = dadosTabela.Rows[i]["observacaopaciente"].ToString();
                     //informações do endereco
-                    estado = dtgPaciente.Rows[i].Cells["estado"].Value.ToString();
-                    cidade = dtgPaciente.Rows[i].Cells["cidade"].Value.ToString();
-                    bairro = dtgPaciente.Rows[i].Cells["bairro"].Value.ToString();
-                    rua = dtgPaciente.Rows[i].Cells["rua"].Value.ToString();
-                    numero = dtgPaciente.Rows[i].Cells["numero"].Value.ToString();
-                    cep = dtgPaciente.Rows[i].Cells["cep"].Value.ToString();
-                    pontoReferencia = dtgPaciente.Rows[i].Cells["pontoreferencia"].Value.ToString();
-                    observacaoEndereco = dtgPaciente.Rows[i].Cells["observacaoendereco"].Value.ToString();
+                    txtEstado.Text = dadosTabela.Rows[i]["estado"].ToString();
+                    txtCidade.Text = dadosTabela.Rows[i]["cidade"].ToString();
+                    txtBairro.Text = dadosTabela.Rows[i]["bairro"].ToString();
+                    txtRua.Text = dadosTabela.Rows[i]["rua"].ToString();
+                    txtNumero.Text = dadosTabela.Rows[i]["numero"].ToString();
+                    mtxtCEP.Text = dadosTabela.Rows[i]["cep"].ToString();
+                    txtPontoDeReferencia.Text = dadosTabela.Rows[i]["pontoreferencia"].ToString();
+                    txtObservacaoEndereco.Text = dadosTabela.Rows[i]["observacaoendereco"].ToString();
                     //Informações de contato
-                    email = dtgPaciente.Rows[i].Cells["email"].Value.ToString();
-                    telefone1 = dtgPaciente.Rows[i].Cells["telefone1"].Value.ToString();
-                    telefone2 = dtgPaciente.Rows[i].Cells["telefone2"].Value.ToString();
-                    telefone3 = dtgPaciente.Rows[i].Cells["telefone3"].Value.ToString();
-                    outro = dtgPaciente.Rows[i].Cells["outro"].Value.ToString();
-                    observacaoContato = dtgPaciente.Rows[i].Cells["observacaocontato"].Value.ToString();
+                    txtEmail.Text = dadosTabela.Rows[i]["email"].ToString();
+                    mtxtTelefone1.Text = dadosTabela.Rows[i]["telefone1"].ToString();
+                    mtxtTelefone1.Text = dadosTabela.Rows[i]["telefone2"].ToString();
+                    mtxtTelefone3.Text = dadosTabela.Rows[i]["telefone3"].ToString();
+                    txtOutro.Text = dadosTabela.Rows[i]["outro"].ToString();
+                    txtObservacaoContato.Text = dadosTabela.Rows[i]["observacaocontato"].ToString();
                     //Usuario que fez o cadastro
-                    loginUsuarioCadastro = dtgPaciente.Rows[i].Cells["loginusuario"].Value.ToString();
+                    loginUsuarioCadastro = dadosTabela.Rows[i]["loginusuario"].ToString();
                 }
-
             }
-            txtNomePaciente.Text = nomePaciente;
-            txtNomeResponsavel.Text = NomeResponsavel;
-            txtocupacao.Text = ocupacao;
-            mtxRG.Text = rg;
-            mtxtCPF.Text = cpf;
-            txtIdade.Text = idade;
-            cbSexo.Text = sexo;
-            dtpDataNascimento.Text = dataNascimento;
-            txtObservacaoPaciente.Text = observacaoPaciente;
-
-            txtEstado.Text = estado;
-            txtCidade.Text = cidade;
-            txtBairro.Text = bairro;
-            txtRua.Text = rua;
-            txtNumero.Text = numero;
-            mtxtCEP.Text = cep;
-            txtPontoDeReferencia.Text = pontoReferencia;
-            txtObservacaoEndereco.Text = observacaoEndereco;
-
-            txtEmail.Text = email;
-            mtxtTelefone1.Text = telefone1;
-            mtxtTelefone2.Text = telefone2;
-            mtxtTelefone3.Text = telefone3;
-            txtOutro.Text = outro;
-            txtObservacaoContato.Text = observacaoContato;
         }
         void estilizar()
         {

@@ -272,28 +272,32 @@ namespace Sistema_Gerenciador_de_Consultorio
                 if (dtgPaciente.Columns[e.ColumnIndex].Name == "btnConsultar")
                 {
                      idPacientePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idPaciente"].Value.ToString();
-                     idContatoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idContato"].Value.ToString();
-                     idEnderecoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idEndereco"].Value.ToString();
+                    //idContatoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idContato"].Value.ToString();
+                    //idEnderecoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idEndereco"].Value.ToString();
 
-                     idUsuarioPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["usuario"].Value.ToString();
-                     nomePacientePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["nomePaciente"].Value.ToString();
-                     NomeResponsavelPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["nomeResponsavel"].Value.ToString();
+                    //idUsuarioPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["usuario"].Value.ToString();
+                    //nomePacientePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["nomePaciente"].Value.ToString();
+                    //NomeResponsavelPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["nomeResponsavel"].Value.ToString();
 
-                     rgPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["rg"].Value.ToString();
-                     cpfPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
-                     ocupacaoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["ocupacao"].Value.ToString();
+                    //rgPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["rg"].Value.ToString();
+                    //cpfPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
+                    //ocupacaoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["ocupacao"].Value.ToString();
 
-                     idadePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idade"].Value.ToString();
-                     sexoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["sexo"].Value.ToString();
-                     dataNascimentoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["dataNascimento"].Value.ToString();
+                    //idadePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["idade"].Value.ToString();
+                    //sexoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["sexo"].Value.ToString();
+                    //dataNascimentoPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["dataNascimento"].Value.ToString();
 
-                     dataCadastroPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["dataCadastro"].Value.ToString();
-                     horaCadastroPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["horaCadastro"].Value.ToString();
-                     observacaoPacientePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["observacaoPaciente"].Value.ToString();
+                    //dataCadastroPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["dataCadastro"].Value.ToString();
+                    //horaCadastroPassarDados = dtgPaciente.Rows[e.RowIndex].Cells["horaCadastro"].Value.ToString();
+                    //observacaoPacientePassarDados = dtgPaciente.Rows[e.RowIndex].Cells["observacaoPaciente"].Value.ToString();
 
-                    ConstrutorPaciente construtor = new ConstrutorPaciente(idUsuario,idNivel, loginUsuario, nomeNivel, idPacientePassarDados, idContatoPassarDados, idEnderecoPassarDados, idUsuarioPassarDados, nomePacientePassarDados, NomeResponsavelPassarDados, rgPassarDados,
-                    cpfPassarDados, ocupacaoPassarDados, idadePassarDados, sexoPassarDados, dataNascimentoPassarDados, dataCadastroPassarDados, horaCadastroPassarDados, observacaoPacientePassarDados);
-                    frmCadastrarConsulta novaConsulta = new frmCadastrarConsulta(construtor);
+                    //ConstrutorPaciente construtor = new ConstrutorPaciente(idUsuario,idNivel, loginUsuario, nomeNivel, idPacientePassarDados, idContatoPassarDados,
+                    //    idEnderecoPassarDados, idUsuarioPassarDados, nomePacientePassarDados, NomeResponsavelPassarDados, rgPassarDados,cpfPassarDados, ocupacaoPassarDados,
+                    //    idadePassarDados, sexoPassarDados, dataNascimentoPassarDados, dataCadastroPassarDados, horaCadastroPassarDados, observacaoPacientePassarDados);
+                    //frmCadastrarConsulta novaConsulta = new frmCadastrarConsulta(construtor);
+                    //string idUsuario, string idNivel, string loginUsuario, string nomeNivel, string idConsulta
+                    int id_Paciente = Convert.ToInt32(idPacientePassarDados);
+                    frmCadastrarConsulta novaConsulta = new frmCadastrarConsulta(idUsuario,idNivel,loginUsuario,nomeNivel,id_Paciente);
                     novaConsulta.ShowDialog();
                 }
                 if (dtgPaciente.Columns[e.ColumnIndex].Name == "btnEditar")

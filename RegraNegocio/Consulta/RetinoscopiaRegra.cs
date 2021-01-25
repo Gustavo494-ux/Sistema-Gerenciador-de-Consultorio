@@ -54,7 +54,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) <1) return false;
 
                 if (ESTATICAOD.Length > 100) return false;
                 if (ESTATICAOE.Length > 100) return false;
@@ -76,7 +76,7 @@ namespace RegraNegocio
                 MessageBox.Show("Ocorreu um erro ao validar a Retinoscopia(Classe RetinoscopiaRegra, Método ValidarRetinoscopia)", "Erro de Validação",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return false;
+            return true;
         }
 
         public DataTable PesquisarRetinoscopia(string IDCONSULTA)

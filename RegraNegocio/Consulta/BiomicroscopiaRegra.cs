@@ -62,7 +62,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
 
                 if (SOBRANCELHAOD.Length > 100) return false;
                 if (SOBRANCELHAOE.Length > 100) return false;

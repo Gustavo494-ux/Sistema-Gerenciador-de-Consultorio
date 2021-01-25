@@ -19,9 +19,9 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO Estereopsia(idConsulta,teste,resultado) VALUES(IDCONSULTA,TESTE,RESULTADO)");
+                sql.Append("INSERT INTO Estereopsia(idConsulta,teste,resultado) VALUES(\'IDCONSULTA\',\'TESTE\',\'RESULTADO\')");
 
-                sql = sql.Replace("IDCOSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("RESULTATO", RESULTADO);
+                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("RESULTADO", RESULTADO);
 
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -37,9 +37,9 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE Estereopsia SET teste = \'Teste\',resultado = \'Resultado\' WHERE idConsulta = \'IDCONSULTA\' ");
+                sql.Append("UPDATE Estereopsia SET teste = \'TESTE\',resultado = \'RESULTATO\' WHERE idConsulta = \'IDCONSULTA\' ");
 
-                sql = sql.Replace("IDCOSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("RESULTATO", RESULTADO);
+                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("RESULTATO", RESULTADO);
 
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -55,7 +55,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT idConsulta as \'Código Consulta\',teste as \'Teste\',resultado as \'Resultado\' WHERE idConsula = \'IDCONSULTA\' "); ;
+                sql.Append("SELECT idConsulta as \"Código Consulta\",teste as \"Teste\",resultado as \"Resultado\" FROM Estereopsia WHERE idConsulta = \'IDCONSULTA\' "); ;
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
 

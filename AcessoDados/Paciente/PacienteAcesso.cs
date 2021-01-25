@@ -75,18 +75,16 @@ namespace AcessoDados
                 return false;
             }
         }
-        public DataTable RetornarDados(int codigo)
+        public DataTable RetornarDadosConsulta(int idConslta)
         {
             try
             {
-                ConexaoAcesso.Desconectar();
                 ConexaoAcesso.Conectar();
-                sql.Append("SELECT paciente.idPaciente,paciente.idContato,paciente.idEndereco,paciente.idUsuario,usuario.loginUsuario,paciente.nomePaciente,paciente.nomeResponsavel, paciente.Rg,paciente.cpf, ");
-                sql.Append("paciente.ocupacao,paciente.idade, paciente.sexo, paciente.dataNascimento, paciente.observacaoPaciente,endereco.estado,endereco.cidade, endereco.bairro,endereco.rua,endereco.numero, ");
-                sql.Append("endereco.cep,endereco.pontoReferencia,endereco.observacaoEndereco,contato.email,contato.telefone1,contato.telefone2,contato.telefone3,contato.outro,contato.observacaoContato ");
-                sql.Append("FROM paciente INNER JOIN endereco on endereco.idEndereco = paciente.idEndereco INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario ");
-                sql.Append("INNER JOIN contato on contato.idContato = paciente.idContato and paciente.idPaciente = @codigo and paciente.deletar = false  order by idPaciente asc");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@codigo", codigo));
+                sql.Clear();
+                sql.Append("SELECT * FROM paciente INNER JOIN endereco on endereco.idEndereco = ");
+                sql.Append("paciente.idEndereco INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario INNER JOIN contato on contato.idContato = paciente.idContato ");
+                sql.Append("INNER JOIN consulta on consulta.idpaciente = paciente.idpaciente and consulta.idConsulta = @codigo and paciente.deletar = false");
+                comandoSql.Parameters.Add(new NpgsqlParameter("@codigo", idConslta));
                 comandoSql.Connection = ConexaoAcesso.conn;
                 comandoSql.CommandText = sql.ToString();
                 dadosTabela.Load(comandoSql.ExecuteReader());
@@ -95,7 +93,7 @@ namespace AcessoDados
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao realizar uma pesquisa completa do paciente(Classe PacienteAcesso, Método RetornarDados)", "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao realizar uma pesquisa completa do paciente(Classe PacienteAcesso, Método RetornarDadosConsulta)", "Erro de Pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return tableVazia;
         }
@@ -155,12 +153,11 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT paciente.idPaciente,paciente.idContato,paciente.idEndereco,paciente.idUsuario,paciente.nomePaciente,paciente.nomeResponsavel,paciente.rg,paciente.cpf, ");
-                sql.Append("paciente.ocupacao, paciente.idade, paciente.sexo, paciente.dataNascimento, paciente.dataCadastro, paciente.horaCadastro, paciente.observacaoPaciente, ");
-                sql.Append("usuario.loginUsuario FROM paciente INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario ");
-                sql.Append("WHERE paciente.idPaciente = codigo and paciente.deletar = false order by paciente.idPaciente asc");
+                sql.Append("SELECT * FROM paciente INNER JOIN endereco on endereco.idEndereco = ");
+                sql.Append("paciente.idEndereco INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario INNER JOIN contato on contato.idContato = paciente.idContato ");
+                sql.Append("and paciente.idPaciente = \'CODIGO\' and paciente.deletar = false  order by idPaciente asc");
 
-                return acessoBanco.Pesquisar(sql.Replace("codigo", Convert.ToString(codigo)).ToString());
+                return acessoBanco.Pesquisar(sql.Replace("\'CODIGO\'", Convert.ToString(codigo)).ToString());
 
             }
             catch (Exception ex)

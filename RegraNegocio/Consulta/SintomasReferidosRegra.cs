@@ -13,7 +13,7 @@ namespace RegraNegocio
     {
         DataTable tableVazia = new DataTable();
         public bool Validar(bool visaoBorrada,bool cefaleia,bool lacrimejamento,bool olhoVermelho,bool visaoDupla, bool fotopsias_fosfenos,bool miodesopsias,bool dorCabeca,bool astenopia,bool dorOcular,
-            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos,bool estrabismo,string outros)
+            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos,bool estrabismo,string outros,bool outrosConfirm)
         {
             try
             {
@@ -34,6 +34,7 @@ namespace RegraNegocio
                 if (halos.GetType() != typeof(bool)) return false;
                 if (estrabismo.GetType() != typeof(bool)) return false;
                 if (outros.GetType() != typeof(string)) return false;
+                if (outrosConfirm.GetType() != typeof(bool)) return false;
 
                 return true;
             }
@@ -45,18 +46,18 @@ namespace RegraNegocio
         }
 
         public bool Cadastrar(string idConsulta,bool visaoBorrada, bool cefaleia, bool lacrimejamento, bool olhoVermelho, bool visaoDupla, bool fotopsias_fosfenos, bool miodesopsias, bool dorCabeca, bool astenopia, bool dorOcular,
-            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos, bool estrabismo, string outros)
+            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos, bool estrabismo, string outros,bool outrosConfirm)
         {
             try
             {
                 if (Validar(visaoBorrada,cefaleia,lacrimejamento,olhoVermelho,visaoDupla,fotopsias_fosfenos,miodesopsias,dorCabeca,astenopia,dorOcular,ardencia,secrecoes,coceira,
-                    fotofobia,halos,estrabismo,outros))
+                    fotofobia,halos,estrabismo,outros, outrosConfirm))
                 {
                    SintomasReferidosAcesso SintomasAcesso = new SintomasReferidosAcesso();
                    bool confirm = SintomasAcesso.CadastrarSintomasReferidos(idConsulta,Convert.ToString(visaoBorrada), Convert.ToString(cefaleia), Convert.ToString(lacrimejamento), 
                        Convert.ToString(olhoVermelho), Convert.ToString(visaoDupla), Convert.ToString(fotopsias_fosfenos), Convert.ToString(miodesopsias), Convert.ToString(dorCabeca),
                        Convert.ToString(astenopia), Convert.ToString(dorOcular), Convert.ToString(ardencia), Convert.ToString(secrecoes), Convert.ToString(coceira),
-                   Convert.ToString(fotofobia), Convert.ToString(halos), Convert.ToString(estrabismo), Convert.ToString(outros));
+                   Convert.ToString(fotofobia), Convert.ToString(halos), Convert.ToString(estrabismo), Convert.ToString(outros), Convert.ToString(outrosConfirm));
                     return confirm;
                 }
             }
@@ -68,18 +69,18 @@ namespace RegraNegocio
         }
 
         public bool Editar(int idSintomasReferidos, bool visaoBorrada, bool cefaleia, bool lacrimejamento, bool olhoVermelho, bool visaoDupla, bool fotopsias_fosfenos, bool miodesopsias, bool dorCabeca, bool astenopia, bool dorOcular,
-            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos, bool estrabismo, string outros)
+            bool ardencia, bool secrecoes, bool coceira, bool fotofobia, bool halos, bool estrabismo, string outros,bool outrosConfirm)
         {
             try
             {
                 SintomasReferidosAcesso sintomasAcesso = new SintomasReferidosAcesso();
                 if (Validar(visaoBorrada, cefaleia, lacrimejamento, olhoVermelho, visaoDupla, fotopsias_fosfenos, miodesopsias, dorCabeca, astenopia, dorOcular, ardencia, secrecoes, coceira,
-                    fotofobia, halos, estrabismo, outros) == true)
+                    fotofobia, halos, estrabismo, outros,outrosConfirm) == true)
                 {
                     bool sintomas = sintomasAcesso.EditarSintomasReferidos(Convert.ToString(idSintomasReferidos), Convert.ToString(visaoBorrada), Convert.ToString(cefaleia),
                         Convert.ToString(lacrimejamento), Convert.ToString(olhoVermelho), Convert.ToString(visaoDupla), Convert.ToString(fotopsias_fosfenos), Convert.ToString(miodesopsias),
                         Convert.ToString(dorCabeca), Convert.ToString(astenopia), Convert.ToString(dorOcular), Convert.ToString(ardencia), Convert.ToString(secrecoes), Convert.ToString(coceira),
-                    Convert.ToString(fotofobia), Convert.ToString(halos), Convert.ToString(estrabismo), Convert.ToString(outros));
+                    Convert.ToString(fotofobia), Convert.ToString(halos), Convert.ToString(estrabismo), Convert.ToString(outros), Convert.ToString(outrosConfirm));
                     return sintomas;
                 }
             }

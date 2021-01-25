@@ -55,7 +55,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
 
                 if (KAPPAOD.Length > 100) return false;
                 if (KAPPAOE.Length > 100) return false;

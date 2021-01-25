@@ -121,12 +121,6 @@ namespace Sistema_Gerenciador_de_Consultorio
             frmDadosDeletados dadosDeletados = new frmDadosDeletados(idUsuario,idNivel, loginUsuario, nomeNivel);
             dadosDeletados.ShowDialog();
         }
-
-        private void btnNovaConsulta_Click(object sender, EventArgs e)
-        {
-            frmCadastrarConsulta novaConsulta = new frmCadastrarConsulta(idUsuario, idNivel, loginUsuario, nomeNivel);
-            novaConsulta.ShowDialog();
-        }
         private void btnDeslogar_Click(object sender, EventArgs e)
         {
             frmLogin novoLogin = new frmLogin();

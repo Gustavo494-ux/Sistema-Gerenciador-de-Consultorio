@@ -49,7 +49,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
                 if (OD.Length > 100) return false;
                 if (OE.Length > 100) return false;
             }
@@ -60,7 +60,7 @@ namespace RegraNegocio
             }
             return true;
         }
-        public DataTable PesquisarAmsler(string IDCONSULTA, string OD, string OE)
+        public DataTable PesquisarAmsler(string IDCONSULTA)
         {
             try
             {

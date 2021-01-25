@@ -49,7 +49,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) <1) return false;
                 if (TESTE.Length > 100) return false;
                 if (RESULTADO.Length > 200) return false;
             }

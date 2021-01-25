@@ -120,7 +120,6 @@
     <Compile Include="Consulta\AmslerRegra.cs" />
     <Compile Include="Consulta\CeratometriaRegra.cs" />
     <Compile Include="Consulta\BiomicroscopiaRegra.cs" />
-    <Compile Include="Consulta\ForometriaAcesso.cs" />
     <Compile Include="Dados Deletados\ConsultasDeletadasRegra.cs" />
     <Compile Include="Consulta\SintomasReferidosRegra.cs" />
     <Compile Include="Consulta\RxFinalRegra.cs" />

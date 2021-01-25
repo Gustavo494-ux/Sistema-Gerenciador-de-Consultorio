@@ -12,13 +12,13 @@ namespace AcessoDados
     {
         Banco acessoBanco = new Banco();
         StringBuilder sql = new StringBuilder();
-
+        DataTable tableVazia = new DataTable();
         public bool CadastrarVisaoCor(string IDCONSULTA,string TESTE,string OD, string OE,string INTERPRETACAO)
         {
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO VisaoCor(idConsulta,teste,Od,Oe,Interpretacao) VALUES(IDCONSULTA,TESTE,OD,OE,INTERPRETACAO) ");
+                sql.Append("INSERT INTO VisaoCor(idConsulta,teste,Od,Oe,Interpretacao) VALUES(\'IDCONSULTA\',\'TESTE\',\'OD\',\'OE\',\'INTERPRETACAO\') ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("OD", OD).Replace("OE", OE).Replace("INTERPRETACAO", INTERPRETACAO);
 
@@ -36,9 +36,11 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE VisaoCor SET teste =\'TESTE\',od=\'OD\',oe=\'OE\' WHERE idConsulta =\'IDCONSULTA\' ");
+                sql.Append("UPDATE VisaoCor SET teste =\'TESTE\',od=\'OD\',oe=\'OE\',interpretacao =\'INTERPRETACAO\' WHERE idConsulta =\'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("TESTE", TESTE).Replace("OD", OD).Replace("OE", OE).Replace("INTERPRETACAO", INTERPRETACAO);
+
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -52,17 +54,18 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT idConsulta as \'Código Consulta\',teste as \'Teste\',od as \'OD\',oe as \'OE\', interpretacao as \'Interpretação\' FROM visaoCor ");
+                sql.Append("SELECT idConsulta as \"Código Consulta\",teste as \"Teste\",od as \"OD\",oe as \"OE\", interpretacao as \"Interpretação\" FROM visaoCor ");
                 sql.Append("WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro ao pesquisar a Visão de Cor(Classe visaoCorAcesso,Método PesquisarVisaoCor)", "Erro de Pesquisa",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return null;
+            return tableVazia;
         }
     }
 }

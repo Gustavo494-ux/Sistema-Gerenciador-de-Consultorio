@@ -151,6 +151,7 @@
             this.txtUsuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(113, 185);
             this.txtUsuario.Name = "txtUsuario";

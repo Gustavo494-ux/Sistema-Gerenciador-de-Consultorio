@@ -35,6 +35,7 @@ namespace AcessoDados
                 sql = sql.Replace("VPODADICAO", VPODADICAO).Replace("VPOEADICAO", VPOEADICAO).Replace("VLODPRISMA", VLODPRISMA).Replace("VLOEPRISMA", VLOEPRISMA).Replace("VPODPRISMA", VPODPRISMA);
                 sql = sql.Replace("VPOEPRISMA", VPOEPRISMA).Replace("VLODBASE", VLODBASE).Replace("VLOEBASE", VLOEBASE).Replace("VPODBASE", VPODBASE).Replace("VPOEBASE", VPOEBASE).Replace("TIPOLENTE", TIPOLENTE);
                 sql = sql.Replace("MATERIAL", MATERIAL).Replace("COR", COR).Replace("ESTADO", ESTADO).Replace("OBSERVACAOLENSOMETRIA", OBSERVACAOLENSOMETRIA);
+
                 return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)

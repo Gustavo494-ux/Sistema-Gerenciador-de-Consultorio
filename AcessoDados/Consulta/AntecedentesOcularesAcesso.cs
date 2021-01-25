@@ -17,20 +17,21 @@ namespace AcessoDados
         public bool CadastrarAntecedentesOculares(string IDCONSULTA,string TRAUMAOCULAR, string TRAUMAOCULARTRATAMENTO, string CORPOESTRANHO, string CORPOESTRANHOTRATAMENTO, string QUEIMADURAS, string QUEIMADURASTRATAMENTO,
             string CIRURGICOS, string CIRURGICOSTRATAMENTO, string INFLAMACOES, string INFLAMACOESTRATAMENTO, string CATARATA, string CATARATATRATAMENTO, string GLAUCOMA, string GLAUCOMATRATAMENTO,
             string CEGUEIRA, string CEGUEIRATRATAMENTO, string DESCOLAMENTORETINA, string DESCOLAMENTORETINATRATAMENTO, string TOXOPLASMOSE, string TOXOPLASMOSETRATAMENTO, string ESTRABISMO, string ESTRABISMOTRATAMENTO,
-            string ALERGICOS, string ALERGICOSTRATAMENTO, string PTERIGIO, string PTERIGIOTRATAMENTO, string DEFEITOSREFRACAO, string DEFEITOSREFRACAOTRATAMENTO, string OUTRO, string OUTROTRATAMENTO)
+            string ALERGICOS, string ALERGICOSTRATAMENTO, string PTERIGIO, string PTERIGIOTRATAMENTO, string DEFEITOSREFRACAO, string DEFEITOSREFRACAOTRATAMENTO, string OUTRO,string OUTROSCONFIRM, string OUTROTRATAMENTO)
         {
             try
             {
+                sql.Clear();
                 sql.Append("insert into antecedentesOculares(idConsulta,traumaOcular,traumaOcularTratamento,corpoEstranho,corpoEstranhoTratamento,queimaduras,queimadurasTratamento,cirurgicos,cirurgicosTratamento,");
                 sql.Append("inflamacoes,inflamacoesTratamento,catarata,catarataTratamento,glaucoma,glaucomaTratamento,cegueira,cegueiraTratamento,descolamentoRetina,descolamentoRetinaTratamento,");
                 sql.Append("toxoplasmose,toxoplasmoseTratamento,estrabismo,estrabismoTratamento,alergicos,alergicosTratamento,pterigio,pterigioTratamento,defeitosRefracao,defeitosRefracaoTratamento,");
-                sql.Append("outro,outroTratamento,deletar)");
+                sql.Append("outro,outrosConfirm,outroTratamento,deletar)");
 
                 sql.Append("values (\'IDCONSULTA\',\'TRAUMAOCULAR\',\'TRAUMAOCULTRATAMENTO\',\'CORPOESTRANHO\',\'CORPOESTRATRATAMENTO\',\'QUEIMADURAS\',\'QUEIMADUTRATAMENTO\', \'CIRURGICOS\', ");
                 sql.Append("\'CIRURGITRATAMENTO\',\'INFLAMACOES\',\'INFLAMACTRATAMENTO\',\'CATARATA\',\'CATARTRATAMENTO\',\'GLAUCOMA\',\'GLAUCTRATAMENTO\',\'CEGUEIRA\', ");
                 sql.Append("\'CEGUETRATAMENTO\',\'DESCOLAMENTORETINA\',\'DESCOLAMENTORETTRATAMENTO\',\'TOXOPLASMOSE\',\'TOXOPLASMTRATAMENTO\',\'ESTRABISMO\',\'ESTRABITRATAMENTO\' ");
                 sql.Append(",\'ALERGICOS\',\'ALERGITRATAMENTO\',\'PTERIGIO\',\'PTERITRATAMENTO\',\'DEFEITOSREFRACAO\',\'DEFEITOSREFRATRATAMENTO\',");
-                sql.Append("\'OUTRO\',\'OUTRATAMENTO\',false)");
+                sql.Append("\'OUTRO\',\'OUTROSCONFIRM\',\'OUTRATAMENTO\',false)");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
                 sql = sql.Replace("TRAUMAOCULTRATAMENTO", TRAUMAOCULARTRATAMENTO).Replace("CORPOESTRATRATAMENTO", CORPOESTRANHOTRATAMENTO).Replace("QUEIMADUTRATAMENTO", QUEIMADURASTRATAMENTO);
@@ -42,7 +43,7 @@ namespace AcessoDados
                 sql = sql.Replace("TRAUMAOCULAR", TRAUMAOCULAR).Replace("CORPOESTRANHO", CORPOESTRANHO).Replace("QUEIMADURAS", QUEIMADURAS).Replace("CIRURGICOS", CIRURGICOS);
                 sql = sql.Replace("INFLAMACOES", INFLAMACOES).Replace("CATARATA", CATARATA).Replace("GLAUCOMA", GLAUCOMA).Replace("CEGUEIRA", CEGUEIRA).Replace("DESCOLAMENTORETINA", DESCOLAMENTORETINA);
                 sql = sql.Replace("TOXOPLASMOSE", TOXOPLASMOSE).Replace("ESTRABISMO", ESTRABISMO).Replace("ALERGICOS", ALERGICOS).Replace("PTERIGIO", PTERIGIO);
-                sql = sql.Replace("DEFEITOSREFRACAO", DEFEITOSREFRACAO).Replace("OUTRO", OUTRO);
+                sql = sql.Replace("DEFEITOSREFRACAO", DEFEITOSREFRACAO).Replace("OUTROSCONFIRM", OUTROSCONFIRM).Replace("OUTRO", OUTRO);
 
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -57,10 +58,11 @@ namespace AcessoDados
         public bool EditarAntecedentesOculare(string IDCONSULTA, string TRAUMAOCULAR, string TRAUMAOCULARTRATAMENTO, string CORPOESTRANHO, string CORPOESTRANHOTRATAMENTO, string QUEIMADURAS, string QUEIMADURASTRATAMENTO,
           string CIRURGICOS, string CIRURGICOSTRATAMENTO, string INFLAMACOES, string INFLAMACOESTRATAMENTO, string CATARATA, string CATARATATRATAMENTO, string GLAUCOMA, string GLAUCOMATRATAMENTO,
           string CEGUEIRA, string CEGUEIRATRATAMENTO, string DESCOLAMENTORETINA, string DESCOLAMENTORETINATRATAMENTO, string TOXOPLASMOSE, string TOXOPLASMOSETRATAMENTO, string ESTRABISMO, string ESTRABISMOTRATAMENTO,
-          string ALERGICOS, string ALERGICOSTRATAMENTO, string PTERIGIO, string PTERIGIOTRATAMENTO, string DEFEITOSREFRACAO, string DEFEITOSREFRACAOTRATAMENTO, string OUTRO, string OUTROTRATAMENTO)
+          string ALERGICOS, string ALERGICOSTRATAMENTO, string PTERIGIO, string PTERIGIOTRATAMENTO, string DEFEITOSREFRACAO, string DEFEITOSREFRACAOTRATAMENTO, string OUTRO,string OUTROSCONFIRM, string OUTROTRATAMENTO)
         {
             try
             {
+                sql.Clear();
                 sql.Append("UPDATE antecedentesOculares set traumaOcular= \'TRAUMAOCULAR\',traumaOcularTratamento= \'TRAUMAOCULTRATAMENTO\',corpoEstranho= \'CORPOESTRANHO\', ");
                 sql.Append("corpoEstranhoTratamento= \'CORPOESTRATRATAMENTO\',queimaduras = \'QUEIMADURAS\',queimadurasTratamento= \'QUEIMADUTRATAMENTO\', ");
                 sql.Append("cirurgicos= \'CIRURGICOS\',cirurgicosTratamento= \'CIRURGITRATAMENTO\',inflamacoes= \'INFLAMACOES\',inflamacoesTratamento= \'INFLAMACTRATAMENTO\',");
@@ -69,7 +71,7 @@ namespace AcessoDados
                 sql.Append("toxoplasmose= \'TOXOPLASMOSE\',toxoplasmoseTratamento= \'TOXOPLASMTRATAMENTO\',estrabismo= \'ESTRABISMO\',estrabismoTratamento= \'ESTRABITRATAMENTO\', ");
                 sql.Append("alergicos= \'ALERGICOS\',alergicosTratamento= \'ALERGITRATAMENTO\',pterigio= \'PTERIGIO\',pterigioTratamento= \'PTERITRATAMENTO\', ");
                 sql.Append("defeitosRefracao= \'DEFEITOSREFRACAO\',defeitosRefracaoTratamento= \'DEFEITOSREFRATRATAMENTO\',");
-                sql.Append("outro= \'OUTRO\',outroTratamento= \'OUTRATAMENTO\' where idConsulta = \'IDCONSULTA\'");
+                sql.Append("outro= \'OUTRO\',outrosConfirm = \'OUTROSCONFIRM\',outroTratamento= \'OUTRATAMENTO\' where idConsulta = \'IDCONSULTA\'");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
                 sql = sql.Replace("TRAUMAOCULTRATAMENTO", TRAUMAOCULARTRATAMENTO).Replace("CORPOESTRATRATAMENTO", CORPOESTRANHOTRATAMENTO).Replace("QUEIMADUTRATAMENTO", QUEIMADURASTRATAMENTO);
@@ -81,7 +83,7 @@ namespace AcessoDados
                 sql = sql.Replace("TRAUMAOCULAR", TRAUMAOCULAR).Replace("CORPOESTRANHO", CORPOESTRANHO).Replace("QUEIMADURAS", QUEIMADURAS).Replace("CIRURGICOS", CIRURGICOS);
                 sql = sql.Replace("INFLAMACOES", INFLAMACOES).Replace("CATARATA", CATARATA).Replace("GLAUCOMA", GLAUCOMA).Replace("CEGUEIRA", CEGUEIRA).Replace("DESCOLAMENTORETINA", DESCOLAMENTORETINA);
                 sql = sql.Replace("TOXOPLASMOSE", TOXOPLASMOSE).Replace("ESTRABISMO", ESTRABISMO).Replace("ALERGICOS", ALERGICOS).Replace("PTERIGIO", PTERIGIO);
-                sql = sql.Replace("DEFEITOSREFRACAO", DEFEITOSREFRACAO).Replace("OUTRO", OUTRO);
+                sql = sql.Replace("DEFEITOSREFRACAO", DEFEITOSREFRACAO).Replace("OUTROSCONFIRM", OUTROSCONFIRM).Replace("OUTRO", OUTRO);
 
                 return acessoBanco.Executar(sql.ToString());
             }

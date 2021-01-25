@@ -13,15 +13,16 @@ namespace RegraNegocio
     {
         DataTable tableVazia = new DataTable();
         public bool Cadastrar(string idConsulta,string vasculares, string vascularesTratamento, string diabetes, string diabetesTratamento, string imunes, string imunesTratamento, string neurologicos,
-            string neurologicosTratamento, string outros, string outrosTratamento, string observacaoAntecedentesGerais)
+            string neurologicosTratamento, string outros,string outrosConfirm, string outrosTratamento, string observacaoAntecedentesGerais)
         {
             try
             {
-                if (Validar(vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, imunesTratamento, neurologicos, neurologicosTratamento, outros, outrosTratamento, observacaoAntecedentesGerais) == true)
+                if (Validar(vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, imunesTratamento, neurologicos, neurologicosTratamento, outros, outrosConfirm,
+                    outrosTratamento, observacaoAntecedentesGerais) == true)
                 {
                    AntecedentesGeraisAcesso cadastrarAcesso = new AntecedentesGeraisAcesso();
                     if (cadastrarAcesso.CadastrarAntecentesGerais(idConsulta,vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, imunesTratamento, neurologicos, neurologicosTratamento,
-                        outros, outrosTratamento, observacaoAntecedentesGerais) == true) return true; return false;
+                        outros, outrosConfirm, outrosTratamento, observacaoAntecedentesGerais) == true) return true; return false;
                 }
                 else return false;
             }
@@ -32,7 +33,7 @@ namespace RegraNegocio
             return false;
         }
         public bool Validar(string vasculares, string vascularesTratamento, string diabetes, string diabetesTratamento, string imunes, string imunesTratamento, string neurologicos,
-            string neurologicosTratamento, string outros, string outrosTratamento, string observacaoAntecedentesGerais)
+            string neurologicosTratamento, string outros, string outrosConfirm, string outrosTratamento, string observacaoAntecedentesGerais)
         {
             try
             {
@@ -45,6 +46,7 @@ namespace RegraNegocio
                 if (neurologicos.GetType() != typeof(string)) return false;
                 if (neurologicosTratamento.GetType() != typeof(string) || neurologicosTratamento.Length > 100) return false;
                 if (outros.GetType() != typeof(string) || outros.Length >50) return false;
+                if (outrosConfirm.GetType() != typeof(string)) ;
                 if (outrosTratamento.GetType() != typeof(string) || outrosTratamento.Length > 100) return false;
                 if (observacaoAntecedentesGerais.GetType() != typeof(string)) return false;
 
@@ -56,17 +58,18 @@ namespace RegraNegocio
             }
             return false;
         }
-        public bool Editar(int idAntecedentesGerais, string vasculares, string vascularesTratamento, string diabetes, string diabetesTratamento, string imunes, string imunesTratamento, string neurologicos,
-            string neurologicosTratamento, string outros, string outrosTratamento, string observacaoAntecedentesGerais)
+        public bool Editar(int idAntecedentesGerais, string vasculares, string vascularesTratamento, string diabetes, string diabetesTratamento, string imunes, string imunesTratamento, 
+            string neurologicos,
+            string neurologicosTratamento, string outros, string outrosConfirm, string outrosTratamento, string observacaoAntecedentesGerais)
         {
             try
             {
                AntecedentesGeraisAcesso Acesso = new AntecedentesGeraisAcesso();
                 if (Validar(vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, imunesTratamento, neurologicos, neurologicosTratamento,
-                    outros, outrosTratamento, observacaoAntecedentesGerais) == true)
+                    outros, outrosConfirm, outrosTratamento, observacaoAntecedentesGerais) == true)
                 {
-                    bool gerais = Acesso.EditarAntecedentesGerais(Convert.ToString(idAntecedentesGerais), vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, imunesTratamento, neurologicos, neurologicosTratamento,
-                    outros, outrosTratamento, observacaoAntecedentesGerais);
+                    bool gerais = Acesso.EditarAntecedentesGerais(Convert.ToString(idAntecedentesGerais), vasculares, vascularesTratamento, diabetes, diabetesTratamento, imunes, 
+                        imunesTratamento, neurologicos, neurologicosTratamento,outros, outrosConfirm, outrosTratamento, observacaoAntecedentesGerais);
                     return gerais;
                 }
             }

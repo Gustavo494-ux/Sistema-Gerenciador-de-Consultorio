@@ -19,9 +19,9 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO motilidadeOcular(idconsulta, kappaOd,kappaOe,hirschberg, ducaoOd, ducaoOe,versaoOd,versaoOe, observacaoMotilidade, fotomotorOd, fotomotorOe, consesualOd,");
+                sql.Append("INSERT INTO motilidadeOcular(idconsulta, kappaOd,kappaOe,hirschberg, ducaoOd, ducaoOe,versaoOd,versaoOe, observacaoMotilidade, fotomotorOd, fotomotorOe, consensualOd,");
                 sql.Append("consensualOe, acomodativoOd, acomodativoOe, balanco) VALUES(\'IDCONSULTA\',\'KAPPAOD\',\'KAPPAOE\',\'HIRSCHBERG\',\'DUCAOOD\',\'DUCAOOE\',\'VERSAOOD\',\'VERSAOOE\', ");
-                sql.Append("\'OBSERVACAOMOTILIDADE\',\'FOTOMOTOROD\',\'FOTOMOTOROE\',\'CONSESUALOD\',\'CONSENSUALOE\',\'ACOMODATIVOOD\',\'ACOMODATIVOOE\',\'BALANCO\')");
+                sql.Append("\'OBSERVACAOMOTILIDADE\',\'FOTOMOTOROD\',\'FOTOMOTOROE\',\'CONSENSUALOD\',\'CONSENSUALOE\',\'ACOMODATIVOOD\',\'ACOMODATIVOOE\',\'BALANCO\')");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("KAPPAOD", KAPPAOD).Replace("KAPPAOE", KAPPAOE).Replace("HIRSCHBERG", HIRSCHBERG).Replace("DUCAOOD", DUCAOOD);
                 sql = sql.Replace("DUCAOOE", DUCAOOE).Replace("VERSAOOD", VERSAOOD).Replace("VERSAOOE", VERSAOOE).Replace("OBSERVACAOMOTILIDADE", OBSERVACAOMOTILIDADE);
@@ -44,7 +44,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE motilidadeOcular SET kappaOd = \'KAPPAOD\',kappaOe = \'KAPPAOE\', hirschberg = \'HIRSCHBERG\', ducaoOd = \'DUCAOOE\', ducaoOe = \'DUCAOOE\', ");
+                sql.Append("UPDATE motilidadeOcular SET kappaOd = \'KAPPAOD\',kappaOe = \'KAPPAOE\', hirschberg = \'HIRSCHBERG\', ducaoOd = \'DUCAOOD\', ducaoOe = \'DUCAOOE\', ");
                 sql.Append("versaoOd = \'VERSAOOD\',versaoOe = \'VERSAOOE\',observacaoMotilidade = \'OBSERVACAOMOTILIDADE\', fotomotorOd = \'FOTOMOTOROD\', fotomotorOe = \'FOTOMOTOROE\', consensualOd = \'CONSENSUALOD\', ");
                 sql.Append("consensualOe = \'CONSENSUALOE\', acomodativoOd = \'ACOMODATIVOOD\', acomodativoOe = \'ACOMODATIVOOE\', balanco = \'BALANCO\' ");
                 sql.Append("WHERE idConsulta = \'IDCONSULTA\' ");
@@ -69,10 +69,10 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("select idConsulta as \'Código Consulta\',kappaOd as \'Kappa OD\',kappaOe as \'Kappa OE\',hirschberg as \'Hirschberg\',ducaoOd as \'Dução OD\',ducaoOe as \'Dução OE\', ");
-                sql.Append("versaoOd as \'Versão OD\',versaoOe as \'Versão OE\',observacaoMotilidade as \'Observação Motilidade Ocular\',fotomotorOd as \'Fotomotor OD\', ");
-                sql.Append("fotomotorOe as \'Fotomotor OE\',consensualOd as \'Consensual OD\',consensualOe as \'Consensual OE\',acomodativoOd as \'Acomodativo OD\', ");
-                sql.Append("acomodativoOe as \'Acomodativo OE\',balanco as \'Balanço\'FROM MotilidadeOcular WHERE idConsulta =\'IDCONSULTA\' ");
+                sql.Append("select idConsulta as \"Código Consulta\",kappaOd as \"Kappa OD\",kappaOe as \"Kappa OE\",hirschberg as \"Hirschberg\",ducaoOd as \"Dução OD\", ");
+                sql.Append("ducaoOe as \"Dução OE\",versaoOd as \"Versão OD\",versaoOe as \"Versão OE\",observacaoMotilidade as \"Observação Motilidade Ocular\", ");
+                sql.Append("fotomotorOd as \"Fotomotor OD\",fotomotorOe as \"Fotomotor OE\",consensualOd as \"Consensual OD\",consensualOe as \"Consensual OE\", ");
+                sql.Append("acomodativoOd as \"Acomodativo OD\",acomodativoOe as \"Acomodativo OE\",balanco as \"Balanço\" FROM MotilidadeOcular WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA",IDCONSULTA);
 

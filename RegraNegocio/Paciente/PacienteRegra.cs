@@ -29,7 +29,7 @@ namespace RegraNegocio
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro no método de validação das informações de cadastro do Paciente. Error:  " + ex.Message + " Caso o problema persista entre em contato com o suporte!", "Erro na validação",
+                MessageBox.Show("Ocorreu um erro ao cadastrar o Paciente(Classe PacienteRegra, Método Cadastrar", "Erro na validação",
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
@@ -94,25 +94,25 @@ namespace RegraNegocio
             }
             return true;
         }
-        public DataTable RetornarDados(string codigo)
+        public DataTable RetornarDadosConsulta(string codigo)
         {
             try
             {
                 if (Convert.ToInt32(codigo) > 0)
                 {
                     PacienteAcesso retornar = new PacienteAcesso();
-                    return retornar.RetornarDados(Convert.ToInt32(codigo));
+                    return retornar.RetornarDadosConsulta(Convert.ToInt32(codigo));
                 }
                 else
                 {
-                    MessageBox.Show("O Código Indentificador do paciente é inválido", "Código Inválido");
+                    MessageBox.Show("O Código Indentificador do paciente é inválido(Classe PacienteRegra, Método RetornarDadosConsulta)", "Código Inválido");
                     return tableVazia;
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao realzar uma pesquisa completa do paciente(Classe EditarPacienteRegra, Método RetornarDados)", "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao realzar uma pesquisa completa do paciente(Classe PacienteRegra, Método RetornarDadosConsulta)", "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return tableVazia;
         }

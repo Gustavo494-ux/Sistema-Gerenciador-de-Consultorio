@@ -22,6 +22,7 @@ namespace RegraNegocio
                 if (ValidarForometria(IDCONSULTA, TESTEUTILIZADO, CORRECAO, VLOD, VLOE, QUARENTACMOD, QUARENTACMOE, VINTECMOD, VINTECMOE, PPCOR, PPCLUZ, PPCFILTRO, PFPVL, PFPVP, RFNVL, RFNVP, 
                     AAOD, AAOE, FLEXIBILIDADEOD, FLEXIBILIDADEOE, METODO, NIVELVISUAL, DT))
                 {
+                    if (CORRECAO != "True") CORRECAO = "False";
                     return foroRegra.CadastrarForometria(IDCONSULTA, TESTEUTILIZADO, CORRECAO, VLOD, VLOE, QUARENTACMOD, QUARENTACMOE, VINTECMOD, VINTECMOE, PPCOR, PPCLUZ, PPCFILTRO, PFPVL,
                         PFPVP, RFNVL, RFNVP, AAOD, AAOE, FLEXIBILIDADEOD, FLEXIBILIDADEOE, METODO, NIVELVISUAL, DT);
                 }
@@ -39,7 +40,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
 
                 if (TESTEUTILIZADO.Length > 100) return false;
 
@@ -93,6 +94,7 @@ namespace RegraNegocio
                 if (ValidarForometria(IDCONSULTA, TESTEUTILIZADO, CORRECAO, VLOD, VLOE, QUARENTACMOD, QUARENTACMOE, VINTECMOD, VINTECMOE, PPCOR, PPCLUZ, PPCFILTRO, PFPVL, PFPVP, RFNVL, RFNVP,
                     AAOD, AAOE, FLEXIBILIDADEOD, FLEXIBILIDADEOE, METODO, NIVELVISUAL, DT))
                 {
+                    if (CORRECAO != "True") CORRECAO = "False";
                     return foroRegra.AtualizarForometria(IDCONSULTA, TESTEUTILIZADO, CORRECAO, VLOD, VLOE, QUARENTACMOD, QUARENTACMOE, VINTECMOD, VINTECMOE, PPCOR, PPCLUZ, PPCFILTRO, PFPVL,
                         PFPVP, RFNVL, RFNVP, AAOD, AAOE, FLEXIBILIDADEOD, FLEXIBILIDADEOE, METODO, NIVELVISUAL, DT);
                 }

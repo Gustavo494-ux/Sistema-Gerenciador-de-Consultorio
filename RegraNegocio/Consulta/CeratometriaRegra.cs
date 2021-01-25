@@ -19,7 +19,7 @@ namespace RegraNegocio
             {
                 if(ValidarCeratometria(IDCONSULTA,OD,OE,TIPOCERATOMETRO,OBSERVACAOCERATOMETRIA))
                 {
-                    return ceratometria.CadastrarCeratometria(IDCONSULTA, OD, OE, TIPOCERATOMETRO, OBSERVACAOCERATOMETRIA));
+                    return ceratometria.CadastrarCeratometria(IDCONSULTA, OD, OE, TIPOCERATOMETRO, OBSERVACAOCERATOMETRIA);
                 }
             }
             catch (Exception)
@@ -34,7 +34,7 @@ namespace RegraNegocio
             {
                 if (ValidarCeratometria(IDCONSULTA, OD, OE, TIPOCERATOMETRO, OBSERVACAOCERATOMETRIA))
                 {
-                    return ceratometria.AtualizarCeratometria(IDCONSULTA, OD, OE, TIPOCERATOMETRO, OBSERVACAOCERATOMETRIA));
+                    return ceratometria.AtualizarCeratometria(IDCONSULTA, OD, OE, TIPOCERATOMETRO, OBSERVACAOCERATOMETRIA);
                 }
             }
             catch (Exception)
@@ -48,7 +48,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
                 if (OD.Length > 100) return false;
                 if (OE.Length > 100) return false;
                 if (TIPOCERATOMETRO.Length > 100) return false;
@@ -59,6 +59,19 @@ namespace RegraNegocio
                 MessageBox.Show("Ocorreu um erro ao validar a Ceratometria(Classe CeratometriaRegra, Método ValidarCeratometria)", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return true;
+        }
+        public DataTable PesquisarCeratometria(string IDCONSULTA)
+        {
+            try
+            {
+                return ceratometria.PesquisarCeratometria(IDCONSULTA);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao pesquisar a Ceratometria(Formulario frmCadastrarConsulta, Método PesquisarCeratometria)", "Erro de Pesquisa",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
         }
     }
 }

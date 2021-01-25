@@ -66,7 +66,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 0) return false;
 
                 if (VLODESFERA.Length > 5) return false;
                 if (VLOEESFERA.Length > 5) return false;

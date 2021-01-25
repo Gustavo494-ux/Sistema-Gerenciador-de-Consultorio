@@ -17,7 +17,8 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO Ceratometria(idConsuta,od,oe,tipoCeratometro,observacaoCeratometria) VALUES (IDCONSULTA,OD,OE,TIPOCERATOMETRO,OBSERVACAOCERATOMETRIA) ");
+                sql.Append("INSERT INTO Ceratometria(idConsulta,od,oe,tipoCeratometro,observacaoCeratometria) VALUES (\'IDCONSULTA\',\'OD\',\'OE\',\'TIPOCERATOMETRO\', ");
+                sql.Append("\'OBSERVACAOCERATOMETRIA\') ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("OD", OD).Replace("OE", OE).Replace("TIPOCERATOMETRO", TIPOCERATOMETRO).Replace("OBSERVACAOCERATOMETRIA", OBSERVACAOCERATOMETRIA);
 
@@ -35,7 +36,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE Ceratometria SET od = \'OD\', oe = \'OE\',tipoCeratometro as \'Tipo Ceratometro\', observacaoCeratometria = \'Observação Ceratometria\' ");
+                sql.Append("UPDATE Ceratometria SET od = \'OD\', oe = \'OE\',tipoCeratometro = \'TIPOCERATOMETRO\', observacaoCeratometria = \'OBSERVACAOCERATOMETRIA\' ");
                 sql.Append("WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("OD", OD).Replace("OE", OE).Replace("TIPOCERATOMETRO", TIPOCERATOMETRO).Replace("OBSERVACAOCERATOMETRIA", OBSERVACAOCERATOMETRIA);
@@ -54,7 +55,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT idConsulta as \'Código Consulta\', od as \'OD\', oe as \'OE\',tipoCeratometro as \'Tipo Ceratometro\', observacaoCeratometria as \'Observação Ceratometria ");
+                sql.Append("SELECT idConsulta as \"Código Consulta\", od as \"OD\", oe as \"OE\",tipoCeratometro as \"Tipo Ceratometro\", observacaoCeratometria as \"Observação Ceratometria\" ");
                 sql.Append("FROM Ceratometria WHERE idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);

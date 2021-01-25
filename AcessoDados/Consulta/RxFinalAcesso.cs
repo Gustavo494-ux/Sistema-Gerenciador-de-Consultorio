@@ -14,24 +14,25 @@ namespace AcessoDados
         DataTable tableVazia = new DataTable();
         StringBuilder sql = new StringBuilder();
         Banco acessoBanco = new Banco();
-        public bool CadastrarRxFinal(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
-            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
-            string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE,string OBSERVACAORXFINAL)
+        public bool CadastrarRxFinal(string IDCONSULTA, string ESFERAVLOD, string ESFERAVLOE, string ESFERAVPOD, string ESFERAVPOE, string CILINDROVLOD, string CILINDROVLOE, 
+            string CILINDROVPOD,string CILINDROVPOE, string EIXOVLOD, string EIXOVLOE, string EIXOVPOD, string EIXOVPOE, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE,
+            string ADICAO,string DP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE,string OBSERVACAORXFINAL)
         {
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append("INSERT INTO rxFinal(idConsulta,vlOdEsfera,vlOeEsfera,vpOdEsfera,vpOeEsfera,vlOdCilindro,vlOeCilindro,vpOdCilindro,vpOeCilindro,vlOdEixo,vlOeEixo,vpOdEixo, ");
-                sql.Append("vpOeEixo,avVlOd,avVleOe,avVpOd,avVpOe,adicao,tp,tipoMatrial,cor,uso,tipoLente,observacaoRxFinal) values ");
-                sql.Append("(\'IDCONSULTA\',\'VLODESFERA\',\'VLOEESFERA\',\'VPODESFERA\',\'VPOEESFERA\',\'VLODCILINDRO\',\'VLOECILINDRO\',\'VPODCILINDRO\',\'VPOECILINDRO\',\'VLODEIXO\', ");
-                sql.Append("\'VLOEEIXO\',\'VPODEIXO\',\'VPOEEIXO\',\'AVVLOD\',\'AVVLOE\',\'AVVPOD,AVVPOE\',\'ADICAO\',\'TP\',\'TIPOMATERIAL\',\'COR\',\'USO\',\'TIPOLENTE\',\'OBSERVACAORXFINAL\')");
+                sql.Clear();
+                sql.Append("INSERT INTO rxFinal(idConsulta,esferaVlOd,esferaVlOe,esferaVpOd,esferaVpOe,cilindroVlOd,cilindroVlOe,cilindroVpOd,cilindroVpOe,eixoVlOd,eixoVlOe, ");
+                sql.Append("eixoVpOd,eixoVpOe,avVlOd,avVlOe,avVpOd,avVpOe,adicao,dp,tipoMaterial,cor,uso,tipoLente,observacaoRxFinal) values ");
+                sql.Append("(\'IDCONSULTA\',\'ESFERAVLOD\',\'ESFERAVLOE\',\'ESFERAVPOD\',\'ESFERAVPOE\',\'CILINDROVLOD\',\'CILINDROVLOE\',\'CILINDROVPOD\',\'CILINDROVPOE\', ");
+                sql.Append("\'EIXOVLOD\',\'EIXOVLOE\',\'EIXOVPOD\',\'EIXOVPOE\',\'AVVLOD\',\'AVVLOE\',\'AVVPOD\',\'AVVPOE\',\'ADICAO\',\'DP\',\'TIPOMATERIAL\',\'COR\',\'USO\', ");
+                sql.Append("\'TIPOLENTE\',\'OBSERVACAORXFINAL\')");
 
-                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("VLODESFERA", VLODESFERA).Replace("VLOEESFERA", VLOEESFERA).Replace("VPODESFERA", VPODESFERA).Replace("VPOEESFERA", VPOEESFERA);
-                sql = sql.Replace("VLODCILINDRO", VLODCILINDRO).Replace("VLOECILINDRO", VLOECILINDRO).Replace("VPODCILINDRO", VPODCILINDRO).Replace("VPOECILINDRO", VPOECILINDRO);
-                sql = sql.Replace("VLODEIXO", VLODEIXO);
-                sql = sql.Replace("VLOEEIXO", VLOEEIXO).Replace("VPODEIXO", VPODEIXO).Replace("VPOEEIXO", VPOEEIXO).Replace("AVVLOD", AVVLOD).Replace("AVVLOE", AVVLOE);
-                sql = sql.Replace("AVVPOD", AVVPOD).Replace("AVVPOE", AVVPOE).Replace("TP", TP).Replace("TIPOMATERIAL", TIPOMATERIAL).Replace("TIPOLENTE", TIPOLENTE);
-                sql = sql.Replace("COR", COR).Replace("USO", USO).Replace("OBSERVACAORXFINAL", OBSERVACAORXFINAL);
+                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("ESFERAVLOD", ESFERAVLOD).Replace("ESFERAVLOE", ESFERAVLOE).Replace("ESFERAVPOD", ESFERAVPOD);
+                sql = sql.Replace("ESFERAVPOE", ESFERAVPOE).Replace("CILINDROVLOD", CILINDROVLOD).Replace("CILINDROVLOE", CILINDROVLOE).Replace("CILINDROVPOD", CILINDROVPOD);
+                sql = sql.Replace("CILINDROVPOE", CILINDROVPOE).Replace("EIXOVLOD", EIXOVLOD).Replace("EIXOVLOE", EIXOVLOE).Replace("EIXOVPOD", EIXOVPOD).Replace("EIXOVPOE", EIXOVPOE);
+                sql = sql.Replace("AVVLOD", AVVLOD).Replace("AVVLOE", AVVLOE).Replace("AVVPOD", AVVPOD).Replace("AVVPOE", AVVPOE).Replace("ADICAO", ADICAO).Replace("DP", DP);
+                sql = sql.Replace("TIPOMATERIAL", TIPOMATERIAL).Replace("TIPOLENTE", TIPOLENTE).Replace("COR", COR).Replace("USO", USO).Replace("OBSERVACAORXFINAL", OBSERVACAORXFINAL);
 
                 return acessoBanco.Executar(sql.ToString());
 
@@ -44,23 +45,21 @@ namespace AcessoDados
         }
         public bool EditarRxFinal(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
             string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
-            string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXFINAL)
+            string DP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXFINAL)
         {
             try
             {
-
-                sql.Append("UPDATE rxFinal set vlOdEsfera= \'VLODESFERA\',vlOeEsfera= \'VLOEESFERA\',vpOdEsfera= \'VPODESFERA\',vpOeEsfera= \'VPOEESFERA\',vlOdCilindro=\'VLODCILINDRO\', ");
-                sql.Append("vlOeCilindro= \'VLOECILINDRO\',vpOdCilindro=\'VPODCILINDRO\',vpOeCilindro= \'VPOECILINDRO\',vlOdEixo = \'VLODEIXO\',vlOeEixo= \'VLOEEIXO\',vpOdEixo = \'VPODEIXO\', ");
-                sql.Append("vpOeEixo= \'VPOEEIXO\',avVlOd= \'AVVLOD\',avVlOe=\'AVVLOE\',avVpOd=\'AVVPOD\',vlVpOe=\'AVVPOE\',adicao=\'ADICAO\', ");
-                sql.Append("tp= \'TP\',tipoMaterial=\'TIPOMATERIAL\',cor=\'COR\',uso=\'USO\',tipoLente=\'TIPOLENTE\',observacaorxFinal=\'OBSERVACAORXFINALL\' where idConsulta=\'IDCONSULTA\'");
-
+                sql.Clear();
+                sql.Append("UPDATE rxFinal set esferaVlOd= \'VLODESFERA\',esferaVlOe= \'VLOEESFERA\',esferaVpOd= \'VPODESFERA\',esferaVpOe= \'VPOEESFERA\', ");
+                sql.Append("cilindroVlOd=\'VLODCILINDRO\',cilindroVlOe= \'VLOECILINDRO\',cilindroVpOd=\'VPODCILINDRO\',cilindroVpOe= \'VPOECILINDRO\',eixoVlOd = \'VLODEIXO\', ");
+                sql.Append("eixoVlOe= \'VLOEEIXO\',eixoVpOd = \'VPODEIXO\',eixoVpOe= \'VPOEEIXO\',avVlOd= \'AVVLOD\',avVlOe=\'AVVLOE\',avVpOd=\'AVVPOD\',avVpOe=\'AVVPOE\',adicao=\'ADICAO\', ");
+                sql.Append("dp= \'DP\',tipoMaterial=\'TIPOMATERIAL\',cor=\'COR\',uso=\'USO\',tipoLente=\'TIPOLENTE\',observacaorxFinal=\'OBSERVACAORXFINAL\' where idConsulta=\'IDCONSULTA\'");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("VLODESFERA", VLODESFERA).Replace("VLOEESFERA", VLOEESFERA).Replace("VPODESFERA", VPODESFERA).Replace("VPOEESFERA", VPOEESFERA);
                 sql = sql.Replace("VLODCILINDRO", VLODCILINDRO).Replace("VLOECILINDRO", VLOECILINDRO).Replace("VPODCILINDRO", VPODCILINDRO).Replace("VPOECILINDRO", VPOECILINDRO);
-                sql = sql.Replace("VLODEIXO", VLODEIXO);
-                sql = sql.Replace("VLOEEIXO", VLOEEIXO).Replace("VPODEIXO", VPODEIXO).Replace("VPOEEIXO", VPOEEIXO).Replace("AVVLOD", AVVLOD).Replace("AVVLOE", AVVLOE);
-                sql = sql.Replace("AVVPOD", AVVPOD).Replace("AVVPOE", AVVPOE).Replace("TP", TP).Replace("TIPOMATERIAL", TIPOMATERIAL).Replace("TIPOLENTE", TIPOLENTE);
-                sql = sql.Replace("COR", COR).Replace("USO", USO).Replace("OBSERVACAORXFINAL", OBSERVACAORXFINAL);
+                sql = sql.Replace("VLODEIXO", VLODEIXO).Replace("VLOEEIXO", VLOEEIXO).Replace("VPODEIXO", VPODEIXO).Replace("VPOEEIXO", VPOEEIXO).Replace("AVVLOD", AVVLOD);
+                sql = sql.Replace("AVVLOE", AVVLOE).Replace("AVVPOD", AVVPOD).Replace("AVVPOE", AVVPOE).Replace("ADICAO", ADICAO).Replace("DP", DP);
+                sql = sql.Replace("TIPOMATERIAL", TIPOMATERIAL).Replace("TIPOLENTE", TIPOLENTE).Replace("COR", COR).Replace("USO", USO).Replace("OBSERVACAORXFINAL", OBSERVACAORXFINAL);
 
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -75,7 +74,7 @@ namespace AcessoDados
             try
             {
                 sql.Append("select * from RxFinal ");
-                sql.Append("where idConsulta = \'IDCONSULTA\' and deletar = false;");
+                sql.Append("where idConsulta = \'IDCONSULTA\'");
 
                 return acessoBanco.Pesquisar(sql.Replace("IDCONSULTA", IDCONSULTA).ToString());
             }

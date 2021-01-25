@@ -76,21 +76,12 @@
             this.tpAnamnese = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.dtgSintomasReferidos = new System.Windows.Forms.DataGridView();
-            this.sintomaSintomasReferidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmacaoSintomasReferidos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dtgAntecedentesOculares = new System.Windows.Forms.DataGridView();
-            this.patologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmacaoPatologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TipoTratamentoAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblObservacaoAntecedentesGerais = new System.Windows.Forms.Label();
             this.txtObservacaoAntecedentesGerais = new System.Windows.Forms.TextBox();
             this.dtgAntecedentesGerais = new System.Windows.Forms.DataGridView();
-            this.patologiaAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pessoalAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.familiarAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tipoTratamentoAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblObservacaoAnamnese = new System.Windows.Forms.Label();
             this.txtObservacaoAnamnese = new System.Windows.Forms.TextBox();
             this.txtTempoQueixa = new System.Windows.Forms.TextBox();
@@ -108,7 +99,7 @@
             this.baseLensometria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTipoLenteLensometria = new System.Windows.Forms.TextBox();
             this.txtObservacaoLensometria = new System.Windows.Forms.TextBox();
-            this.txtUsoLensometria = new System.Windows.Forms.TextBox();
+            this.txtEstadoLensometria = new System.Windows.Forms.TextBox();
             this.txtCorLensometria = new System.Windows.Forms.TextBox();
             this.txtTipoMaterialLensometria = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -367,7 +358,7 @@
             this.txtAdicaoRxFinal = new System.Windows.Forms.TextBox();
             this.txtObservacaoRxInicial = new System.Windows.Forms.TextBox();
             this.txtCorRxFinal = new System.Windows.Forms.TextBox();
-            this.txtEstadoRxInicial = new System.Windows.Forms.TextBox();
+            this.txtAdicaoRxInicial = new System.Windows.Forms.TextBox();
             this.txtTipoMaterialRxFinal = new System.Windows.Forms.TextBox();
             this.txtCorRxInicial = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
@@ -384,6 +375,15 @@
             this.npgsqlCommand1 = new Npgsql.NpgsqlCommand();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
+            this.sintomaSintomasReferidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmacaoSintomasReferidos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.patologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmacaoPatologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TipoTratamentoAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patologiaAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pessoalAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.familiarAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoTratamentoAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msMenuSuperior.SuspendLayout();
             this.tabControlTodosDados.SuspendLayout();
             this.tpConsulta.SuspendLayout();
@@ -442,6 +442,7 @@
             this.AtualizarToolStripMenuItem.Name = "AtualizarToolStripMenuItem";
             this.AtualizarToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
             this.AtualizarToolStripMenuItem.Text = "Atualizar";
+            this.AtualizarToolStripMenuItem.Click += new System.EventHandler(this.AtualizarToolStripMenuItem_Click);
             // 
             // limparToolStripMenuItem
             // 
@@ -469,7 +470,7 @@
             this.tabControlTodosDados.Name = "tabControlTodosDados";
             this.tabControlTodosDados.SelectedIndex = 0;
             this.tabControlTodosDados.Size = new System.Drawing.Size(1160, 520);
-            this.tabControlTodosDados.TabIndex = 5;
+            this.tabControlTodosDados.TabIndex = 1;
             // 
             // tpConsulta
             // 
@@ -516,7 +517,7 @@
             this.txtObservacaoConsulta.Location = new System.Drawing.Point(195, 295);
             this.txtObservacaoConsulta.Name = "txtObservacaoConsulta";
             this.txtObservacaoConsulta.Size = new System.Drawing.Size(820, 26);
-            this.txtObservacaoConsulta.TabIndex = 36;
+            this.txtObservacaoConsulta.TabIndex = 8;
             // 
             // lblAjudaOpticaPrescrita
             // 
@@ -535,7 +536,7 @@
             this.txtAjudaOpticaPrescrita.Location = new System.Drawing.Point(599, 137);
             this.txtAjudaOpticaPrescrita.Name = "txtAjudaOpticaPrescrita";
             this.txtAjudaOpticaPrescrita.Size = new System.Drawing.Size(416, 26);
-            this.txtAjudaOpticaPrescrita.TabIndex = 35;
+            this.txtAjudaOpticaPrescrita.TabIndex = 5;
             // 
             // lblHobbies
             // 
@@ -554,14 +555,14 @@
             this.txtHobbies.Location = new System.Drawing.Point(195, 105);
             this.txtHobbies.Name = "txtHobbies";
             this.txtHobbies.Size = new System.Drawing.Size(263, 26);
-            this.txtHobbies.TabIndex = 33;
+            this.txtHobbies.TabIndex = 2;
             // 
             // txtOrigem
             // 
             this.txtOrigem.Location = new System.Drawing.Point(805, 73);
             this.txtOrigem.Name = "txtOrigem";
             this.txtOrigem.Size = new System.Drawing.Size(210, 26);
-            this.txtOrigem.TabIndex = 31;
+            this.txtOrigem.TabIndex = 1;
             // 
             // txtCpf
             // 
@@ -571,7 +572,7 @@
             this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(122, 26);
-            this.txtCpf.TabIndex = 30;
+            this.txtCpf.TabIndex = 0;
             // 
             // dtpUltimaConsulta
             // 
@@ -580,7 +581,7 @@
             this.dtpUltimaConsulta.Location = new System.Drawing.Point(897, 105);
             this.dtpUltimaConsulta.Name = "dtpUltimaConsulta";
             this.dtpUltimaConsulta.Size = new System.Drawing.Size(118, 26);
-            this.dtpUltimaConsulta.TabIndex = 28;
+            this.dtpUltimaConsulta.TabIndex = 3;
             // 
             // dtpDataNascimento
             // 
@@ -590,7 +591,7 @@
             this.dtpDataNascimento.Location = new System.Drawing.Point(621, 73);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(118, 26);
-            this.dtpDataNascimento.TabIndex = 27;
+            this.dtpDataNascimento.TabIndex = 0;
             // 
             // label13
             // 
@@ -741,7 +742,7 @@
             this.txtObservacaoReceita.Location = new System.Drawing.Point(195, 248);
             this.txtObservacaoReceita.Name = "txtObservacaoReceita";
             this.txtObservacaoReceita.Size = new System.Drawing.Size(820, 26);
-            this.txtObservacaoReceita.TabIndex = 14;
+            this.txtObservacaoReceita.TabIndex = 7;
             // 
             // txtTranscricaoLentes
             // 
@@ -749,7 +750,7 @@
             this.txtTranscricaoLentes.Location = new System.Drawing.Point(195, 216);
             this.txtTranscricaoLentes.Name = "txtTranscricaoLentes";
             this.txtTranscricaoLentes.Size = new System.Drawing.Size(820, 26);
-            this.txtTranscricaoLentes.TabIndex = 14;
+            this.txtTranscricaoLentes.TabIndex = 6;
             // 
             // txtEncaminhadoPor
             // 
@@ -757,7 +758,7 @@
             this.txtEncaminhadoPor.Location = new System.Drawing.Point(195, 137);
             this.txtEncaminhadoPor.Name = "txtEncaminhadoPor";
             this.txtEncaminhadoPor.Size = new System.Drawing.Size(288, 26);
-            this.txtEncaminhadoPor.TabIndex = 13;
+            this.txtEncaminhadoPor.TabIndex = 4;
             // 
             // txtNomeResponsavel
             // 
@@ -766,7 +767,7 @@
             this.txtNomeResponsavel.Location = new System.Drawing.Point(665, 41);
             this.txtNomeResponsavel.Name = "txtNomeResponsavel";
             this.txtNomeResponsavel.Size = new System.Drawing.Size(350, 26);
-            this.txtNomeResponsavel.TabIndex = 12;
+            this.txtNomeResponsavel.TabIndex = 0;
             // 
             // txtObservacaoPaciente
             // 
@@ -784,7 +785,7 @@
             this.txtRg.Location = new System.Drawing.Point(195, 73);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(149, 26);
-            this.txtRg.TabIndex = 10;
+            this.txtRg.TabIndex = 0;
             // 
             // txtOcupacaoPaciente
             // 
@@ -802,7 +803,7 @@
             this.txtNomePaciente.Location = new System.Drawing.Point(195, 41);
             this.txtNomePaciente.Name = "txtNomePaciente";
             this.txtNomePaciente.Size = new System.Drawing.Size(350, 26);
-            this.txtNomePaciente.TabIndex = 9;
+            this.txtNomePaciente.TabIndex = 0;
             // 
             // tpAnamnese
             // 
@@ -856,30 +857,17 @@
             this.dtgSintomasReferidos.Name = "dtgSintomasReferidos";
             this.dtgSintomasReferidos.RowHeadersVisible = false;
             this.dtgSintomasReferidos.Size = new System.Drawing.Size(707, 405);
-            this.dtgSintomasReferidos.TabIndex = 15;
-            // 
-            // sintomaSintomasReferidos
-            // 
-            this.sintomaSintomasReferidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sintomaSintomasReferidos.HeaderText = "Sintomas";
-            this.sintomaSintomasReferidos.Name = "sintomaSintomasReferidos";
-            // 
-            // confirmacaoSintomasReferidos
-            // 
-            this.confirmacaoSintomasReferidos.FalseValue = "F";
-            this.confirmacaoSintomasReferidos.HeaderText = "Possuir";
-            this.confirmacaoSintomasReferidos.Name = "confirmacaoSintomasReferidos";
-            this.confirmacaoSintomasReferidos.TrueValue = "V";
+            this.dtgSintomasReferidos.TabIndex = 7;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(44, 320);
+            this.label15.Location = new System.Drawing.Point(68, 333);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 18);
+            this.label15.Size = new System.Drawing.Size(150, 18);
             this.label15.TabIndex = 14;
-            this.label15.Text = "Antecedentes Oculares:";
+            this.label15.Text = "Sintomas Referidos:";
             // 
             // label14
             // 
@@ -908,30 +896,7 @@
             this.dtgAntecedentesOculares.Name = "dtgAntecedentesOculares";
             this.dtgAntecedentesOculares.RowHeadersVisible = false;
             this.dtgAntecedentesOculares.Size = new System.Drawing.Size(707, 358);
-            this.dtgAntecedentesOculares.TabIndex = 13;
-            // 
-            // patologiaAntecedentesOculares
-            // 
-            this.patologiaAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.patologiaAntecedentesOculares.HeaderText = "Patologia";
-            this.patologiaAntecedentesOculares.Name = "patologiaAntecedentesOculares";
-            this.patologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.patologiaAntecedentesOculares.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.patologiaAntecedentesOculares.Width = 5;
-            // 
-            // confirmacaoPatologiaAntecedentesOculares
-            // 
-            this.confirmacaoPatologiaAntecedentesOculares.HeaderText = "Possuir";
-            this.confirmacaoPatologiaAntecedentesOculares.Name = "confirmacaoPatologiaAntecedentesOculares";
-            this.confirmacaoPatologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TipoTratamentoAntecedentesOculares
-            // 
-            this.TipoTratamentoAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoTratamentoAntecedentesOculares.HeaderText = "Tratamento";
-            this.TipoTratamentoAntecedentesOculares.MaxInputLength = 100;
-            this.TipoTratamentoAntecedentesOculares.Name = "TipoTratamentoAntecedentesOculares";
-            this.TipoTratamentoAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgAntecedentesOculares.TabIndex = 6;
             // 
             // lblObservacaoAntecedentesGerais
             // 
@@ -965,38 +930,11 @@
             this.familiarAntecedentesGerais,
             this.tipoTratamentoAntecedentesGerais});
             this.dtgAntecedentesGerais.GridColor = System.Drawing.Color.Black;
-            this.dtgAntecedentesGerais.Location = new System.Drawing.Point(223, 177);
+            this.dtgAntecedentesGerais.Location = new System.Drawing.Point(223, 164);
             this.dtgAntecedentesGerais.Name = "dtgAntecedentesGerais";
             this.dtgAntecedentesGerais.RowHeadersVisible = false;
-            this.dtgAntecedentesGerais.Size = new System.Drawing.Size(707, 128);
-            this.dtgAntecedentesGerais.TabIndex = 11;
-            // 
-            // patologiaAntecedentesGerais
-            // 
-            this.patologiaAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.patologiaAntecedentesGerais.HeaderText = "Patologia";
-            this.patologiaAntecedentesGerais.Name = "patologiaAntecedentesGerais";
-            this.patologiaAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.patologiaAntecedentesGerais.Width = 5;
-            // 
-            // pessoalAntecedentesGerais
-            // 
-            this.pessoalAntecedentesGerais.HeaderText = "Pessoal";
-            this.pessoalAntecedentesGerais.Name = "pessoalAntecedentesGerais";
-            // 
-            // familiarAntecedentesGerais
-            // 
-            this.familiarAntecedentesGerais.HeaderText = "Familiar";
-            this.familiarAntecedentesGerais.Name = "familiarAntecedentesGerais";
-            // 
-            // tipoTratamentoAntecedentesGerais
-            // 
-            this.tipoTratamentoAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoTratamentoAntecedentesGerais.HeaderText = "Tratamento";
-            this.tipoTratamentoAntecedentesGerais.MaxInputLength = 100;
-            this.tipoTratamentoAntecedentesGerais.Name = "tipoTratamentoAntecedentesGerais";
-            this.tipoTratamentoAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tipoTratamentoAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dtgAntecedentesGerais.Size = new System.Drawing.Size(707, 141);
+            this.dtgAntecedentesGerais.TabIndex = 5;
             // 
             // lblObservacaoAnamnese
             // 
@@ -1013,21 +951,21 @@
             this.txtObservacaoAnamnese.Location = new System.Drawing.Point(223, 100);
             this.txtObservacaoAnamnese.Name = "txtObservacaoAnamnese";
             this.txtObservacaoAnamnese.Size = new System.Drawing.Size(707, 26);
-            this.txtObservacaoAnamnese.TabIndex = 9;
+            this.txtObservacaoAnamnese.TabIndex = 3;
             // 
             // txtTempoQueixa
             // 
             this.txtTempoQueixa.Location = new System.Drawing.Point(223, 68);
             this.txtTempoQueixa.Name = "txtTempoQueixa";
             this.txtTempoQueixa.Size = new System.Drawing.Size(707, 26);
-            this.txtTempoQueixa.TabIndex = 8;
+            this.txtTempoQueixa.TabIndex = 2;
             // 
             // txtMotivoConsulta
             // 
             this.txtMotivoConsulta.Location = new System.Drawing.Point(223, 36);
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
             this.txtMotivoConsulta.Size = new System.Drawing.Size(707, 26);
-            this.txtMotivoConsulta.TabIndex = 7;
+            this.txtMotivoConsulta.TabIndex = 1;
             // 
             // lblTempoQueixa
             // 
@@ -1055,7 +993,7 @@
             this.tpLensometria.Controls.Add(this.dtgLensometria);
             this.tpLensometria.Controls.Add(this.txtTipoLenteLensometria);
             this.tpLensometria.Controls.Add(this.txtObservacaoLensometria);
-            this.tpLensometria.Controls.Add(this.txtUsoLensometria);
+            this.tpLensometria.Controls.Add(this.txtEstadoLensometria);
             this.tpLensometria.Controls.Add(this.txtCorLensometria);
             this.tpLensometria.Controls.Add(this.txtTipoMaterialLensometria);
             this.tpLensometria.Controls.Add(this.label17);
@@ -1093,7 +1031,7 @@
             this.dtgLensometria.Name = "dtgLensometria";
             this.dtgLensometria.RowHeadersVisible = false;
             this.dtgLensometria.Size = new System.Drawing.Size(713, 118);
-            this.dtgLensometria.TabIndex = 6;
+            this.dtgLensometria.TabIndex = 1;
             // 
             // olhoLensometria
             // 
@@ -1139,39 +1077,39 @@
             // 
             // txtTipoLenteLensometria
             // 
-            this.txtTipoLenteLensometria.Location = new System.Drawing.Point(225, 236);
+            this.txtTipoLenteLensometria.Location = new System.Drawing.Point(225, 172);
             this.txtTipoLenteLensometria.Name = "txtTipoLenteLensometria";
             this.txtTipoLenteLensometria.Size = new System.Drawing.Size(713, 26);
-            this.txtTipoLenteLensometria.TabIndex = 12;
+            this.txtTipoLenteLensometria.TabIndex = 2;
             // 
             // txtObservacaoLensometria
             // 
-            this.txtObservacaoLensometria.Location = new System.Drawing.Point(225, 313);
+            this.txtObservacaoLensometria.Location = new System.Drawing.Point(225, 300);
             this.txtObservacaoLensometria.Multiline = true;
             this.txtObservacaoLensometria.Name = "txtObservacaoLensometria";
             this.txtObservacaoLensometria.Size = new System.Drawing.Size(713, 38);
-            this.txtObservacaoLensometria.TabIndex = 16;
+            this.txtObservacaoLensometria.TabIndex = 6;
             // 
-            // txtUsoLensometria
+            // txtEstadoLensometria
             // 
-            this.txtUsoLensometria.Location = new System.Drawing.Point(225, 204);
-            this.txtUsoLensometria.Name = "txtUsoLensometria";
-            this.txtUsoLensometria.Size = new System.Drawing.Size(713, 26);
-            this.txtUsoLensometria.TabIndex = 15;
+            this.txtEstadoLensometria.Location = new System.Drawing.Point(225, 268);
+            this.txtEstadoLensometria.Name = "txtEstadoLensometria";
+            this.txtEstadoLensometria.Size = new System.Drawing.Size(713, 26);
+            this.txtEstadoLensometria.TabIndex = 5;
             // 
             // txtCorLensometria
             // 
-            this.txtCorLensometria.Location = new System.Drawing.Point(225, 268);
+            this.txtCorLensometria.Location = new System.Drawing.Point(225, 236);
             this.txtCorLensometria.Name = "txtCorLensometria";
             this.txtCorLensometria.Size = new System.Drawing.Size(713, 26);
-            this.txtCorLensometria.TabIndex = 14;
+            this.txtCorLensometria.TabIndex = 4;
             // 
             // txtTipoMaterialLensometria
             // 
-            this.txtTipoMaterialLensometria.Location = new System.Drawing.Point(225, 172);
+            this.txtTipoMaterialLensometria.Location = new System.Drawing.Point(225, 204);
             this.txtTipoMaterialLensometria.Name = "txtTipoMaterialLensometria";
             this.txtTipoMaterialLensometria.Size = new System.Drawing.Size(713, 26);
-            this.txtTipoMaterialLensometria.TabIndex = 13;
+            this.txtTipoMaterialLensometria.TabIndex = 3;
             // 
             // label17
             // 
@@ -1185,7 +1123,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(112, 239);
+            this.label18.Location = new System.Drawing.Point(112, 172);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(107, 18);
             this.label18.TabIndex = 8;
@@ -1194,16 +1132,16 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(179, 204);
+            this.label19.Location = new System.Drawing.Point(157, 268);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 18);
+            this.label19.Size = new System.Drawing.Size(62, 18);
             this.label19.TabIndex = 9;
-            this.label19.Text = "Uso:";
+            this.label19.Text = "Estado:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(181, 268);
+            this.label20.Location = new System.Drawing.Point(181, 236);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 18);
             this.label20.TabIndex = 10;
@@ -1212,7 +1150,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(95, 172);
+            this.label21.Location = new System.Drawing.Point(95, 204);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(124, 18);
             this.label21.TabIndex = 11;
@@ -1254,7 +1192,7 @@
             this.dtgAcuidadeVisual.Name = "dtgAcuidadeVisual";
             this.dtgAcuidadeVisual.RowHeadersVisible = false;
             this.dtgAcuidadeVisual.Size = new System.Drawing.Size(704, 112);
-            this.dtgAcuidadeVisual.TabIndex = 5;
+            this.dtgAcuidadeVisual.TabIndex = 2;
             // 
             // visaoLongeAcuidadeVisual
             // 
@@ -1305,7 +1243,7 @@
             this.txtTipoOptotipo.Location = new System.Drawing.Point(370, 59);
             this.txtTipoOptotipo.Name = "txtTipoOptotipo";
             this.txtTipoOptotipo.Size = new System.Drawing.Size(405, 26);
-            this.txtTipoOptotipo.TabIndex = 4;
+            this.txtTipoOptotipo.TabIndex = 1;
             // 
             // tpMotilidadeOcular
             // 
@@ -1365,7 +1303,7 @@
             this.txtBalancoMotilidade.Location = new System.Drawing.Point(272, 379);
             this.txtBalancoMotilidade.Name = "txtBalancoMotilidade";
             this.txtBalancoMotilidade.Size = new System.Drawing.Size(652, 26);
-            this.txtBalancoMotilidade.TabIndex = 3;
+            this.txtBalancoMotilidade.TabIndex = 25;
             // 
             // label37
             // 
@@ -1373,7 +1311,7 @@
             this.label37.Location = new System.Drawing.Point(197, 379);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(69, 18);
-            this.label37.TabIndex = 2;
+            this.label37.TabIndex = 0;
             this.label37.Text = "Balanço:";
             // 
             // label35
@@ -1390,77 +1328,77 @@
             this.txtVersaoOe6.Location = new System.Drawing.Point(843, 186);
             this.txtVersaoOe6.Name = "txtVersaoOe6";
             this.txtVersaoOe6.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe6.TabIndex = 1;
+            this.txtVersaoOe6.TabIndex = 17;
             // 
             // txtVersaoOd6
             // 
             this.txtVersaoOd6.Location = new System.Drawing.Point(448, 186);
             this.txtVersaoOd6.Name = "txtVersaoOd6";
             this.txtVersaoOd6.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd6.TabIndex = 1;
+            this.txtVersaoOd6.TabIndex = 11;
             // 
             // txtAcomodativoOe
             // 
             this.txtAcomodativoOe.Location = new System.Drawing.Point(666, 347);
             this.txtAcomodativoOe.Name = "txtAcomodativoOe";
             this.txtAcomodativoOe.Size = new System.Drawing.Size(258, 26);
-            this.txtAcomodativoOe.TabIndex = 1;
+            this.txtAcomodativoOe.TabIndex = 24;
             // 
             // txtAcomodativoOd
             // 
             this.txtAcomodativoOd.Location = new System.Drawing.Point(272, 347);
             this.txtAcomodativoOd.Name = "txtAcomodativoOd";
             this.txtAcomodativoOd.Size = new System.Drawing.Size(258, 26);
-            this.txtAcomodativoOd.TabIndex = 1;
+            this.txtAcomodativoOd.TabIndex = 23;
             // 
             // txtVersaoOe1
             // 
             this.txtVersaoOe1.Location = new System.Drawing.Point(667, 154);
             this.txtVersaoOe1.Name = "txtVersaoOe1";
             this.txtVersaoOe1.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe1.TabIndex = 1;
+            this.txtVersaoOe1.TabIndex = 12;
             // 
             // txtVersaoOd1
             // 
             this.txtVersaoOd1.Location = new System.Drawing.Point(272, 154);
             this.txtVersaoOd1.Name = "txtVersaoOd1";
             this.txtVersaoOd1.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd1.TabIndex = 1;
+            this.txtVersaoOd1.TabIndex = 6;
             // 
             // txtVersaoOe4
             // 
             this.txtVersaoOe4.Location = new System.Drawing.Point(667, 186);
             this.txtVersaoOe4.Name = "txtVersaoOe4";
             this.txtVersaoOe4.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe4.TabIndex = 1;
+            this.txtVersaoOe4.TabIndex = 15;
             // 
             // txtVersaoOd4
             // 
             this.txtVersaoOd4.Location = new System.Drawing.Point(272, 186);
             this.txtVersaoOd4.Name = "txtVersaoOd4";
             this.txtVersaoOd4.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd4.TabIndex = 1;
+            this.txtVersaoOd4.TabIndex = 9;
             // 
             // txtFotomotorOe
             // 
             this.txtFotomotorOe.Location = new System.Drawing.Point(666, 283);
             this.txtFotomotorOe.Name = "txtFotomotorOe";
             this.txtFotomotorOe.Size = new System.Drawing.Size(258, 26);
-            this.txtFotomotorOe.TabIndex = 1;
+            this.txtFotomotorOe.TabIndex = 20;
             // 
             // txtFotomotorOd
             // 
             this.txtFotomotorOd.Location = new System.Drawing.Point(272, 283);
             this.txtFotomotorOd.Name = "txtFotomotorOd";
             this.txtFotomotorOd.Size = new System.Drawing.Size(258, 26);
-            this.txtFotomotorOd.TabIndex = 1;
+            this.txtFotomotorOd.TabIndex = 19;
             // 
             // txtDucaoOd
             // 
             this.txtDucaoOd.Location = new System.Drawing.Point(272, 122);
             this.txtDucaoOd.Name = "txtDucaoOd";
             this.txtDucaoOd.Size = new System.Drawing.Size(258, 26);
-            this.txtDucaoOd.TabIndex = 1;
+            this.txtDucaoOd.TabIndex = 4;
             // 
             // label33
             // 
@@ -1476,7 +1414,7 @@
             this.txtKappaOe.Location = new System.Drawing.Point(666, 58);
             this.txtKappaOe.Name = "txtKappaOe";
             this.txtKappaOe.Size = new System.Drawing.Size(258, 26);
-            this.txtKappaOe.TabIndex = 1;
+            this.txtKappaOe.TabIndex = 2;
             // 
             // label29
             // 
@@ -1546,42 +1484,42 @@
             this.txtVersaoOe3.Location = new System.Drawing.Point(843, 154);
             this.txtVersaoOe3.Name = "txtVersaoOe3";
             this.txtVersaoOe3.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe3.TabIndex = 1;
+            this.txtVersaoOe3.TabIndex = 14;
             // 
             // txtVersaoOd3
             // 
             this.txtVersaoOd3.Location = new System.Drawing.Point(448, 154);
             this.txtVersaoOd3.Name = "txtVersaoOd3";
             this.txtVersaoOd3.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd3.TabIndex = 1;
+            this.txtVersaoOd3.TabIndex = 8;
             // 
             // txtConsensualOe
             // 
             this.txtConsensualOe.Location = new System.Drawing.Point(666, 315);
             this.txtConsensualOe.Name = "txtConsensualOe";
             this.txtConsensualOe.Size = new System.Drawing.Size(258, 26);
-            this.txtConsensualOe.TabIndex = 1;
+            this.txtConsensualOe.TabIndex = 22;
             // 
             // txtVersaoOe2
             // 
             this.txtVersaoOe2.Location = new System.Drawing.Point(755, 154);
             this.txtVersaoOe2.Name = "txtVersaoOe2";
             this.txtVersaoOe2.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe2.TabIndex = 1;
+            this.txtVersaoOe2.TabIndex = 13;
             // 
             // txtConsensualOd
             // 
             this.txtConsensualOd.Location = new System.Drawing.Point(272, 315);
             this.txtConsensualOd.Name = "txtConsensualOd";
             this.txtConsensualOd.Size = new System.Drawing.Size(258, 26);
-            this.txtConsensualOd.TabIndex = 1;
+            this.txtConsensualOd.TabIndex = 21;
             // 
             // txtVersaoOd2
             // 
             this.txtVersaoOd2.Location = new System.Drawing.Point(360, 154);
             this.txtVersaoOd2.Name = "txtVersaoOd2";
             this.txtVersaoOd2.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd2.TabIndex = 1;
+            this.txtVersaoOd2.TabIndex = 7;
             // 
             // label31
             // 
@@ -1597,7 +1535,7 @@
             this.txtHirsChberg.Location = new System.Drawing.Point(272, 90);
             this.txtHirsChberg.Name = "txtHirsChberg";
             this.txtHirsChberg.Size = new System.Drawing.Size(652, 26);
-            this.txtHirsChberg.TabIndex = 1;
+            this.txtHirsChberg.TabIndex = 3;
             // 
             // label27
             // 
@@ -1613,7 +1551,7 @@
             this.txtVersaoOe5.Location = new System.Drawing.Point(755, 186);
             this.txtVersaoOe5.Name = "txtVersaoOe5";
             this.txtVersaoOe5.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOe5.TabIndex = 1;
+            this.txtVersaoOe5.TabIndex = 16;
             // 
             // label24
             // 
@@ -1629,14 +1567,14 @@
             this.txtVersaoOd5.Location = new System.Drawing.Point(360, 186);
             this.txtVersaoOd5.Name = "txtVersaoOd5";
             this.txtVersaoOd5.Size = new System.Drawing.Size(81, 26);
-            this.txtVersaoOd5.TabIndex = 1;
+            this.txtVersaoOd5.TabIndex = 10;
             // 
             // txtObservacaoMotilidade
             // 
             this.txtObservacaoMotilidade.Location = new System.Drawing.Point(272, 218);
             this.txtObservacaoMotilidade.Name = "txtObservacaoMotilidade";
             this.txtObservacaoMotilidade.Size = new System.Drawing.Size(652, 26);
-            this.txtObservacaoMotilidade.TabIndex = 1;
+            this.txtObservacaoMotilidade.TabIndex = 18;
             // 
             // label26
             // 
@@ -1652,7 +1590,7 @@
             this.txtDucaoOe.Location = new System.Drawing.Point(666, 122);
             this.txtDucaoOe.Name = "txtDucaoOe";
             this.txtDucaoOe.Size = new System.Drawing.Size(258, 26);
-            this.txtDucaoOe.TabIndex = 1;
+            this.txtDucaoOe.TabIndex = 5;
             // 
             // label30
             // 
@@ -1734,70 +1672,70 @@
             this.txtObservacaoBiomicroscopia.Location = new System.Drawing.Point(268, 366);
             this.txtObservacaoBiomicroscopia.Name = "txtObservacaoBiomicroscopia";
             this.txtObservacaoBiomicroscopia.Size = new System.Drawing.Size(683, 26);
-            this.txtObservacaoBiomicroscopia.TabIndex = 1;
+            this.txtObservacaoBiomicroscopia.TabIndex = 19;
             // 
             // txtCamaraAnteriorOe
             // 
             this.txtCamaraAnteriorOe.Location = new System.Drawing.Point(693, 334);
             this.txtCamaraAnteriorOe.Name = "txtCamaraAnteriorOe";
             this.txtCamaraAnteriorOe.Size = new System.Drawing.Size(258, 26);
-            this.txtCamaraAnteriorOe.TabIndex = 1;
+            this.txtCamaraAnteriorOe.TabIndex = 18;
             // 
             // txtCamaraAnteriorOd
             // 
             this.txtCamaraAnteriorOd.Location = new System.Drawing.Point(268, 334);
             this.txtCamaraAnteriorOd.Name = "txtCamaraAnteriorOd";
             this.txtCamaraAnteriorOd.Size = new System.Drawing.Size(258, 26);
-            this.txtCamaraAnteriorOd.TabIndex = 1;
+            this.txtCamaraAnteriorOd.TabIndex = 17;
             // 
             // txtCristalinoOe
             // 
             this.txtCristalinoOe.Location = new System.Drawing.Point(693, 302);
             this.txtCristalinoOe.Name = "txtCristalinoOe";
             this.txtCristalinoOe.Size = new System.Drawing.Size(258, 26);
-            this.txtCristalinoOe.TabIndex = 1;
+            this.txtCristalinoOe.TabIndex = 16;
             // 
             // txtCristalinoOd
             // 
             this.txtCristalinoOd.Location = new System.Drawing.Point(268, 302);
             this.txtCristalinoOd.Name = "txtCristalinoOd";
             this.txtCristalinoOd.Size = new System.Drawing.Size(258, 26);
-            this.txtCristalinoOd.TabIndex = 1;
+            this.txtCristalinoOd.TabIndex = 15;
             // 
             // txtConjuntivasOe
             // 
             this.txtConjuntivasOe.Location = new System.Drawing.Point(693, 174);
             this.txtConjuntivasOe.Name = "txtConjuntivasOe";
             this.txtConjuntivasOe.Size = new System.Drawing.Size(258, 26);
-            this.txtConjuntivasOe.TabIndex = 1;
+            this.txtConjuntivasOe.TabIndex = 8;
             // 
             // txtConjuntivasOd
             // 
             this.txtConjuntivasOd.Location = new System.Drawing.Point(268, 174);
             this.txtConjuntivasOd.Name = "txtConjuntivasOd";
             this.txtConjuntivasOd.Size = new System.Drawing.Size(258, 26);
-            this.txtConjuntivasOd.TabIndex = 1;
+            this.txtConjuntivasOd.TabIndex = 7;
             // 
             // txtCorneasOe
             // 
             this.txtCorneasOe.Location = new System.Drawing.Point(693, 238);
             this.txtCorneasOe.Name = "txtCorneasOe";
             this.txtCorneasOe.Size = new System.Drawing.Size(258, 26);
-            this.txtCorneasOe.TabIndex = 1;
+            this.txtCorneasOe.TabIndex = 12;
             // 
             // txtCorneasOd
             // 
             this.txtCorneasOd.Location = new System.Drawing.Point(268, 238);
             this.txtCorneasOd.Name = "txtCorneasOd";
             this.txtCorneasOd.Size = new System.Drawing.Size(258, 26);
-            this.txtCorneasOd.TabIndex = 1;
+            this.txtCorneasOd.TabIndex = 11;
             // 
             // txtCiliosOe
             // 
             this.txtCiliosOe.Location = new System.Drawing.Point(693, 110);
             this.txtCiliosOe.Name = "txtCiliosOe";
             this.txtCiliosOe.Size = new System.Drawing.Size(258, 26);
-            this.txtCiliosOe.TabIndex = 1;
+            this.txtCiliosOe.TabIndex = 4;
             // 
             // label55
             // 
@@ -1822,7 +1760,7 @@
             this.txtCiliosOd.Location = new System.Drawing.Point(268, 110);
             this.txtCiliosOd.Name = "txtCiliosOd";
             this.txtCiliosOd.Size = new System.Drawing.Size(258, 26);
-            this.txtCiliosOd.TabIndex = 1;
+            this.txtCiliosOd.TabIndex = 3;
             // 
             // label54
             // 
@@ -1910,28 +1848,28 @@
             this.txtIrisOe.Location = new System.Drawing.Point(693, 270);
             this.txtIrisOe.Name = "txtIrisOe";
             this.txtIrisOe.Size = new System.Drawing.Size(258, 26);
-            this.txtIrisOe.TabIndex = 1;
+            this.txtIrisOe.TabIndex = 14;
             // 
             // txtIrisOd
             // 
             this.txtIrisOd.Location = new System.Drawing.Point(268, 270);
             this.txtIrisOd.Name = "txtIrisOd";
             this.txtIrisOd.Size = new System.Drawing.Size(258, 26);
-            this.txtIrisOd.TabIndex = 1;
+            this.txtIrisOd.TabIndex = 13;
             // 
             // txtPalpebrasOe
             // 
             this.txtPalpebrasOe.Location = new System.Drawing.Point(693, 142);
             this.txtPalpebrasOe.Name = "txtPalpebrasOe";
             this.txtPalpebrasOe.Size = new System.Drawing.Size(258, 26);
-            this.txtPalpebrasOe.TabIndex = 1;
+            this.txtPalpebrasOe.TabIndex = 6;
             // 
             // txtPalpebrasOd
             // 
             this.txtPalpebrasOd.Location = new System.Drawing.Point(268, 142);
             this.txtPalpebrasOd.Name = "txtPalpebrasOd";
             this.txtPalpebrasOd.Size = new System.Drawing.Size(258, 26);
-            this.txtPalpebrasOd.TabIndex = 1;
+            this.txtPalpebrasOd.TabIndex = 5;
             // 
             // label49
             // 
@@ -1974,14 +1912,14 @@
             this.txtEscleroticasOe.Location = new System.Drawing.Point(693, 206);
             this.txtEscleroticasOe.Name = "txtEscleroticasOe";
             this.txtEscleroticasOe.Size = new System.Drawing.Size(258, 26);
-            this.txtEscleroticasOe.TabIndex = 1;
+            this.txtEscleroticasOe.TabIndex = 10;
             // 
             // txtEscleroticasOd
             // 
             this.txtEscleroticasOd.Location = new System.Drawing.Point(268, 206);
             this.txtEscleroticasOd.Name = "txtEscleroticasOd";
             this.txtEscleroticasOd.Size = new System.Drawing.Size(258, 26);
-            this.txtEscleroticasOd.TabIndex = 1;
+            this.txtEscleroticasOd.TabIndex = 9;
             // 
             // label47
             // 
@@ -2006,7 +1944,7 @@
             this.txtSobrancelhaOe.Location = new System.Drawing.Point(693, 78);
             this.txtSobrancelhaOe.Name = "txtSobrancelhaOe";
             this.txtSobrancelhaOe.Size = new System.Drawing.Size(258, 26);
-            this.txtSobrancelhaOe.TabIndex = 1;
+            this.txtSobrancelhaOe.TabIndex = 2;
             // 
             // label46
             // 
@@ -2083,7 +2021,7 @@
             this.txtObservacaoOftalmoscopia.Multiline = true;
             this.txtObservacaoOftalmoscopia.Name = "txtObservacaoOftalmoscopia";
             this.txtObservacaoOftalmoscopia.Size = new System.Drawing.Size(655, 53);
-            this.txtObservacaoOftalmoscopia.TabIndex = 48;
+            this.txtObservacaoOftalmoscopia.TabIndex = 16;
             // 
             // txtDistanciaBrucknerOftalmoscopia
             // 
@@ -2091,14 +2029,14 @@
             this.txtDistanciaBrucknerOftalmoscopia.Multiline = true;
             this.txtDistanciaBrucknerOftalmoscopia.Name = "txtDistanciaBrucknerOftalmoscopia";
             this.txtDistanciaBrucknerOftalmoscopia.Size = new System.Drawing.Size(655, 33);
-            this.txtDistanciaBrucknerOftalmoscopia.TabIndex = 33;
+            this.txtDistanciaBrucknerOftalmoscopia.TabIndex = 1;
             // 
             // txtEscavacaoOeOftalmoscopia
             // 
             this.txtEscavacaoOeOftalmoscopia.Location = new System.Drawing.Point(720, 149);
             this.txtEscavacaoOeOftalmoscopia.Name = "txtEscavacaoOeOftalmoscopia";
             this.txtEscavacaoOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtEscavacaoOeOftalmoscopia.TabIndex = 37;
+            this.txtEscavacaoOeOftalmoscopia.TabIndex = 5;
             // 
             // lblObservacaoOftalmoscopia
             // 
@@ -2123,35 +2061,35 @@
             this.txtRelacaoAVOeOftalmoscopia.Location = new System.Drawing.Point(720, 245);
             this.txtRelacaoAVOeOftalmoscopia.Name = "txtRelacaoAVOeOftalmoscopia";
             this.txtRelacaoAVOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtRelacaoAVOeOftalmoscopia.TabIndex = 43;
+            this.txtRelacaoAVOeOftalmoscopia.TabIndex = 11;
             // 
             // txtEscavacaoOdOftalmoscopia
             // 
             this.txtEscavacaoOdOftalmoscopia.Location = new System.Drawing.Point(373, 149);
             this.txtEscavacaoOdOftalmoscopia.Name = "txtEscavacaoOdOftalmoscopia";
             this.txtEscavacaoOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtEscavacaoOdOftalmoscopia.TabIndex = 36;
+            this.txtEscavacaoOdOftalmoscopia.TabIndex = 4;
             // 
             // txtRelacaoAVOdOftalmoscopia
             // 
             this.txtRelacaoAVOdOftalmoscopia.Location = new System.Drawing.Point(373, 245);
             this.txtRelacaoAVOdOftalmoscopia.Name = "txtRelacaoAVOdOftalmoscopia";
             this.txtRelacaoAVOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtRelacaoAVOdOftalmoscopia.TabIndex = 42;
+            this.txtRelacaoAVOdOftalmoscopia.TabIndex = 10;
             // 
             // txtLenteOeOftalmoscopia
             // 
             this.txtLenteOeOftalmoscopia.Location = new System.Drawing.Point(720, 309);
             this.txtLenteOeOftalmoscopia.Name = "txtLenteOeOftalmoscopia";
             this.txtLenteOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtLenteOeOftalmoscopia.TabIndex = 47;
+            this.txtLenteOeOftalmoscopia.TabIndex = 15;
             // 
             // txtLenteOdOftalmoscopia
             // 
             this.txtLenteOdOftalmoscopia.Location = new System.Drawing.Point(373, 309);
             this.txtLenteOdOftalmoscopia.Name = "txtLenteOdOftalmoscopia";
             this.txtLenteOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtLenteOdOftalmoscopia.TabIndex = 46;
+            this.txtLenteOdOftalmoscopia.TabIndex = 14;
             // 
             // lblEscavacaoOeOftalmoscopia
             // 
@@ -2212,7 +2150,7 @@
             this.txtFixacaoOeOftalmoscopia.Location = new System.Drawing.Point(720, 213);
             this.txtFixacaoOeOftalmoscopia.Name = "txtFixacaoOeOftalmoscopia";
             this.txtFixacaoOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtFixacaoOeOftalmoscopia.TabIndex = 41;
+            this.txtFixacaoOeOftalmoscopia.TabIndex = 9;
             // 
             // lblFixacaoOeOftalmoscopia
             // 
@@ -2228,14 +2166,14 @@
             this.txtMaculaOeOftalmoscopia.Location = new System.Drawing.Point(720, 181);
             this.txtMaculaOeOftalmoscopia.Name = "txtMaculaOeOftalmoscopia";
             this.txtMaculaOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtMaculaOeOftalmoscopia.TabIndex = 39;
+            this.txtMaculaOeOftalmoscopia.TabIndex = 7;
             // 
             // txtFixacaoOdOftalmoscopia
             // 
             this.txtFixacaoOdOftalmoscopia.Location = new System.Drawing.Point(373, 213);
             this.txtFixacaoOdOftalmoscopia.Name = "txtFixacaoOdOftalmoscopia";
             this.txtFixacaoOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtFixacaoOdOftalmoscopia.TabIndex = 40;
+            this.txtFixacaoOdOftalmoscopia.TabIndex = 8;
             // 
             // txtCorOeOftalmoscopia
             // 
@@ -2243,7 +2181,7 @@
             this.txtCorOeOftalmoscopia.Name = "txtCorOeOftalmoscopia";
             this.txtCorOeOftalmoscopia.ShortcutsEnabled = false;
             this.txtCorOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtCorOeOftalmoscopia.TabIndex = 45;
+            this.txtCorOeOftalmoscopia.TabIndex = 13;
             // 
             // lblMaculaOeOftalmoscopia
             // 
@@ -2268,7 +2206,7 @@
             this.txtMaculaOdOftalmoscopia.Location = new System.Drawing.Point(373, 181);
             this.txtMaculaOdOftalmoscopia.Name = "txtMaculaOdOftalmoscopia";
             this.txtMaculaOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtMaculaOdOftalmoscopia.TabIndex = 38;
+            this.txtMaculaOdOftalmoscopia.TabIndex = 6;
             // 
             // lblCorOeOftalmoscopia
             // 
@@ -2293,7 +2231,7 @@
             this.txtCorOdOftalmoscopia.Location = new System.Drawing.Point(373, 277);
             this.txtCorOdOftalmoscopia.Name = "txtCorOdOftalmoscopia";
             this.txtCorOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtCorOdOftalmoscopia.TabIndex = 44;
+            this.txtCorOdOftalmoscopia.TabIndex = 12;
             // 
             // lblCorOdOftalmoscopia
             // 
@@ -2309,7 +2247,7 @@
             this.txtPapilaOeOftalmoscopia.Location = new System.Drawing.Point(720, 117);
             this.txtPapilaOeOftalmoscopia.Name = "txtPapilaOeOftalmoscopia";
             this.txtPapilaOeOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtPapilaOeOftalmoscopia.TabIndex = 35;
+            this.txtPapilaOeOftalmoscopia.TabIndex = 3;
             // 
             // lblPapilaOeOftalmoscopia
             // 
@@ -2325,7 +2263,7 @@
             this.txtPapilaOdOftalmoscopia.Location = new System.Drawing.Point(373, 117);
             this.txtPapilaOdOftalmoscopia.Name = "txtPapilaOdOftalmoscopia";
             this.txtPapilaOdOftalmoscopia.Size = new System.Drawing.Size(186, 26);
-            this.txtPapilaOdOftalmoscopia.TabIndex = 34;
+            this.txtPapilaOdOftalmoscopia.TabIndex = 2;
             // 
             // lblPapilaOdOftalmoscopia
             // 
@@ -2361,7 +2299,7 @@
             this.txtOlhoEsquerdoCeratometria.Location = new System.Drawing.Point(690, 75);
             this.txtOlhoEsquerdoCeratometria.Name = "txtOlhoEsquerdoCeratometria";
             this.txtOlhoEsquerdoCeratometria.Size = new System.Drawing.Size(254, 26);
-            this.txtOlhoEsquerdoCeratometria.TabIndex = 1;
+            this.txtOlhoEsquerdoCeratometria.TabIndex = 2;
             // 
             // label58
             // 
@@ -2377,7 +2315,7 @@
             this.txtObservacaoCeratometria.Location = new System.Drawing.Point(305, 139);
             this.txtObservacaoCeratometria.Name = "txtObservacaoCeratometria";
             this.txtObservacaoCeratometria.Size = new System.Drawing.Size(639, 26);
-            this.txtObservacaoCeratometria.TabIndex = 1;
+            this.txtObservacaoCeratometria.TabIndex = 4;
             // 
             // label60
             // 
@@ -2393,7 +2331,7 @@
             this.txtTipoCeratometro.Location = new System.Drawing.Point(305, 107);
             this.txtTipoCeratometro.Name = "txtTipoCeratometro";
             this.txtTipoCeratometro.Size = new System.Drawing.Size(639, 26);
-            this.txtTipoCeratometro.TabIndex = 1;
+            this.txtTipoCeratometro.TabIndex = 3;
             // 
             // label59
             // 
@@ -2457,28 +2395,28 @@
             this.txtAdicaoNivelOe.Location = new System.Drawing.Point(693, 199);
             this.txtAdicaoNivelOe.Name = "txtAdicaoNivelOe";
             this.txtAdicaoNivelOe.Size = new System.Drawing.Size(258, 26);
-            this.txtAdicaoNivelOe.TabIndex = 1;
+            this.txtAdicaoNivelOe.TabIndex = 10;
             // 
             // txtAdicaoNivelOd
             // 
             this.txtAdicaoNivelOd.Location = new System.Drawing.Point(297, 199);
             this.txtAdicaoNivelOd.Name = "txtAdicaoNivelOd";
             this.txtAdicaoNivelOd.Size = new System.Drawing.Size(258, 26);
-            this.txtAdicaoNivelOd.TabIndex = 1;
+            this.txtAdicaoNivelOd.TabIndex = 9;
             // 
             // txtAfinamentoOe
             // 
             this.txtAfinamentoOe.Location = new System.Drawing.Point(693, 167);
             this.txtAfinamentoOe.Name = "txtAfinamentoOe";
             this.txtAfinamentoOe.Size = new System.Drawing.Size(258, 26);
-            this.txtAfinamentoOe.TabIndex = 1;
+            this.txtAfinamentoOe.TabIndex = 8;
             // 
             // txtAfinamentoOd
             // 
             this.txtAfinamentoOd.Location = new System.Drawing.Point(297, 167);
             this.txtAfinamentoOd.Name = "txtAfinamentoOd";
             this.txtAfinamentoOd.Size = new System.Drawing.Size(258, 26);
-            this.txtAfinamentoOd.TabIndex = 1;
+            this.txtAfinamentoOd.TabIndex = 7;
             // 
             // label70
             // 
@@ -2503,14 +2441,14 @@
             this.txtDinamicaOe.Location = new System.Drawing.Point(693, 103);
             this.txtDinamicaOe.Name = "txtDinamicaOe";
             this.txtDinamicaOe.Size = new System.Drawing.Size(258, 26);
-            this.txtDinamicaOe.TabIndex = 1;
+            this.txtDinamicaOe.TabIndex = 4;
             // 
             // txtDinamicaOd
             // 
             this.txtDinamicaOd.Location = new System.Drawing.Point(297, 103);
             this.txtDinamicaOd.Name = "txtDinamicaOd";
             this.txtDinamicaOd.Size = new System.Drawing.Size(258, 26);
-            this.txtDinamicaOd.TabIndex = 1;
+            this.txtDinamicaOd.TabIndex = 3;
             // 
             // label69
             // 
@@ -2553,14 +2491,14 @@
             this.txtSubjetivoOe.Location = new System.Drawing.Point(693, 135);
             this.txtSubjetivoOe.Name = "txtSubjetivoOe";
             this.txtSubjetivoOe.Size = new System.Drawing.Size(258, 26);
-            this.txtSubjetivoOe.TabIndex = 1;
+            this.txtSubjetivoOe.TabIndex = 6;
             // 
             // txtSubjetivoOd
             // 
             this.txtSubjetivoOd.Location = new System.Drawing.Point(297, 135);
             this.txtSubjetivoOd.Name = "txtSubjetivoOd";
             this.txtSubjetivoOd.Size = new System.Drawing.Size(258, 26);
-            this.txtSubjetivoOd.TabIndex = 1;
+            this.txtSubjetivoOd.TabIndex = 5;
             // 
             // label67
             // 
@@ -2585,7 +2523,7 @@
             this.txtEstaticaOe.Location = new System.Drawing.Point(693, 71);
             this.txtEstaticaOe.Name = "txtEstaticaOe";
             this.txtEstaticaOe.Size = new System.Drawing.Size(258, 26);
-            this.txtEstaticaOe.TabIndex = 1;
+            this.txtEstaticaOe.TabIndex = 2;
             // 
             // label66
             // 
@@ -2675,7 +2613,7 @@
             this.rbSemCorrecao.Location = new System.Drawing.Point(900, 65);
             this.rbSemCorrecao.Name = "rbSemCorrecao";
             this.rbSemCorrecao.Size = new System.Drawing.Size(55, 22);
-            this.rbSemCorrecao.TabIndex = 2;
+            this.rbSemCorrecao.TabIndex = 0;
             this.rbSemCorrecao.TabStop = true;
             this.rbSemCorrecao.Text = "Não";
             this.rbSemCorrecao.UseVisualStyleBackColor = true;
@@ -2686,7 +2624,7 @@
             this.rbComCorrecao.Location = new System.Drawing.Point(828, 65);
             this.rbComCorrecao.Name = "rbComCorrecao";
             this.rbComCorrecao.Size = new System.Drawing.Size(54, 22);
-            this.rbComCorrecao.TabIndex = 2;
+            this.rbComCorrecao.TabIndex = 0;
             this.rbComCorrecao.TabStop = true;
             this.rbComCorrecao.Text = "Sim";
             this.rbComCorrecao.UseVisualStyleBackColor = true;
@@ -2696,42 +2634,42 @@
             this.txtDtForometria.Location = new System.Drawing.Point(789, 353);
             this.txtDtForometria.Name = "txtDtForometria";
             this.txtDtForometria.Size = new System.Drawing.Size(167, 26);
-            this.txtDtForometria.TabIndex = 1;
+            this.txtDtForometria.TabIndex = 21;
             // 
             // txtAaOe
             // 
             this.txtAaOe.Location = new System.Drawing.Point(697, 289);
             this.txtAaOe.Name = "txtAaOe";
             this.txtAaOe.Size = new System.Drawing.Size(259, 26);
-            this.txtAaOe.TabIndex = 1;
+            this.txtAaOe.TabIndex = 16;
             // 
             // txtAaOd
             // 
             this.txtAaOd.Location = new System.Drawing.Point(312, 289);
             this.txtAaOd.Name = "txtAaOd";
             this.txtAaOd.Size = new System.Drawing.Size(259, 26);
-            this.txtAaOd.TabIndex = 1;
+            this.txtAaOd.TabIndex = 15;
             // 
             // txtNivelVisualForometria
             // 
             this.txtNivelVisualForometria.Location = new System.Drawing.Point(581, 353);
             this.txtNivelVisualForometria.Name = "txtNivelVisualForometria";
             this.txtNivelVisualForometria.Size = new System.Drawing.Size(167, 26);
-            this.txtNivelVisualForometria.TabIndex = 1;
+            this.txtNivelVisualForometria.TabIndex = 20;
             // 
             // txt20CmOe
             // 
             this.txt20CmOe.Location = new System.Drawing.Point(697, 161);
             this.txt20CmOe.Name = "txt20CmOe";
             this.txt20CmOe.Size = new System.Drawing.Size(259, 26);
-            this.txt20CmOe.TabIndex = 1;
+            this.txt20CmOe.TabIndex = 7;
             // 
             // txt20CmOd
             // 
             this.txt20CmOd.Location = new System.Drawing.Point(312, 161);
             this.txt20CmOd.Name = "txt20CmOd";
             this.txt20CmOd.Size = new System.Drawing.Size(259, 26);
-            this.txt20CmOd.TabIndex = 1;
+            this.txt20CmOd.TabIndex = 6;
             // 
             // label92
             // 
@@ -2792,49 +2730,49 @@
             this.txtMetodoForometria.Location = new System.Drawing.Point(312, 353);
             this.txtMetodoForometria.Name = "txtMetodoForometria";
             this.txtMetodoForometria.Size = new System.Drawing.Size(167, 26);
-            this.txtMetodoForometria.TabIndex = 1;
+            this.txtMetodoForometria.TabIndex = 19;
             // 
             // txtRfnVp
             // 
             this.txtRfnVp.Location = new System.Drawing.Point(697, 257);
             this.txtRfnVp.Name = "txtRfnVp";
             this.txtRfnVp.Size = new System.Drawing.Size(259, 26);
-            this.txtRfnVp.TabIndex = 1;
+            this.txtRfnVp.TabIndex = 14;
             // 
             // txtPfpVp
             // 
             this.txtPfpVp.Location = new System.Drawing.Point(697, 225);
             this.txtPfpVp.Name = "txtPfpVp";
             this.txtPfpVp.Size = new System.Drawing.Size(259, 26);
-            this.txtPfpVp.TabIndex = 1;
+            this.txtPfpVp.TabIndex = 12;
             // 
             // txtRfnVl
             // 
             this.txtRfnVl.Location = new System.Drawing.Point(312, 257);
             this.txtRfnVl.Name = "txtRfnVl";
             this.txtRfnVl.Size = new System.Drawing.Size(259, 26);
-            this.txtRfnVl.TabIndex = 1;
+            this.txtRfnVl.TabIndex = 13;
             // 
             // txtPfpVl
             // 
             this.txtPfpVl.Location = new System.Drawing.Point(312, 225);
             this.txtPfpVl.Name = "txtPfpVl";
             this.txtPfpVl.Size = new System.Drawing.Size(259, 26);
-            this.txtPfpVl.TabIndex = 1;
+            this.txtPfpVl.TabIndex = 11;
             // 
             // txtVlOe
             // 
             this.txtVlOe.Location = new System.Drawing.Point(697, 97);
             this.txtVlOe.Name = "txtVlOe";
             this.txtVlOe.Size = new System.Drawing.Size(259, 26);
-            this.txtVlOe.TabIndex = 1;
+            this.txtVlOe.TabIndex = 3;
             // 
             // txtVlOd
             // 
             this.txtVlOd.Location = new System.Drawing.Point(312, 97);
             this.txtVlOd.Name = "txtVlOd";
             this.txtVlOd.Size = new System.Drawing.Size(259, 26);
-            this.txtVlOd.TabIndex = 1;
+            this.txtVlOd.TabIndex = 2;
             // 
             // label80
             // 
@@ -2913,21 +2851,21 @@
             this.txtFlexibilidadeOe.Location = new System.Drawing.Point(697, 321);
             this.txtFlexibilidadeOe.Name = "txtFlexibilidadeOe";
             this.txtFlexibilidadeOe.Size = new System.Drawing.Size(259, 26);
-            this.txtFlexibilidadeOe.TabIndex = 1;
+            this.txtFlexibilidadeOe.TabIndex = 18;
             // 
             // txtFlexibilidadeOd
             // 
             this.txtFlexibilidadeOd.Location = new System.Drawing.Point(312, 321);
             this.txtFlexibilidadeOd.Name = "txtFlexibilidadeOd";
             this.txtFlexibilidadeOd.Size = new System.Drawing.Size(259, 26);
-            this.txtFlexibilidadeOd.TabIndex = 1;
+            this.txtFlexibilidadeOd.TabIndex = 17;
             // 
             // txtPpcOr
             // 
             this.txtPpcOr.Location = new System.Drawing.Point(312, 193);
             this.txtPpcOr.Name = "txtPpcOr";
             this.txtPpcOr.Size = new System.Drawing.Size(155, 26);
-            this.txtPpcOr.TabIndex = 1;
+            this.txtPpcOr.TabIndex = 8;
             // 
             // label97
             // 
@@ -2961,21 +2899,21 @@
             this.txtPpcFiltro.Location = new System.Drawing.Point(801, 193);
             this.txtPpcFiltro.Name = "txtPpcFiltro";
             this.txtPpcFiltro.Size = new System.Drawing.Size(155, 26);
-            this.txtPpcFiltro.TabIndex = 1;
+            this.txtPpcFiltro.TabIndex = 10;
             // 
             // txt40CmOe
             // 
             this.txt40CmOe.Location = new System.Drawing.Point(697, 129);
             this.txt40CmOe.Name = "txt40CmOe";
             this.txt40CmOe.Size = new System.Drawing.Size(259, 26);
-            this.txt40CmOe.TabIndex = 1;
+            this.txt40CmOe.TabIndex = 5;
             // 
             // txt40CmOd
             // 
             this.txt40CmOd.Location = new System.Drawing.Point(312, 129);
             this.txt40CmOd.Name = "txt40CmOd";
             this.txt40CmOd.Size = new System.Drawing.Size(259, 26);
-            this.txt40CmOd.TabIndex = 1;
+            this.txt40CmOd.TabIndex = 4;
             // 
             // label84
             // 
@@ -3009,7 +2947,7 @@
             this.txtPpcLuz.Location = new System.Drawing.Point(551, 193);
             this.txtPpcLuz.Name = "txtPpcLuz";
             this.txtPpcLuz.Size = new System.Drawing.Size(155, 26);
-            this.txtPpcLuz.TabIndex = 1;
+            this.txtPpcLuz.TabIndex = 9;
             // 
             // label83
             // 
@@ -3072,28 +3010,28 @@
             this.txtAmslerOd.Location = new System.Drawing.Point(275, 213);
             this.txtAmslerOd.Name = "txtAmslerOd";
             this.txtAmslerOd.Size = new System.Drawing.Size(258, 26);
-            this.txtAmslerOd.TabIndex = 1;
+            this.txtAmslerOd.TabIndex = 5;
             // 
             // txtResultadoEstereopsia
             // 
             this.txtResultadoEstereopsia.Location = new System.Drawing.Point(275, 297);
             this.txtResultadoEstereopsia.Name = "txtResultadoEstereopsia";
             this.txtResultadoEstereopsia.Size = new System.Drawing.Size(639, 26);
-            this.txtResultadoEstereopsia.TabIndex = 1;
+            this.txtResultadoEstereopsia.TabIndex = 8;
             // 
             // txtAmslerOe
             // 
             this.txtAmslerOe.Location = new System.Drawing.Point(656, 213);
             this.txtAmslerOe.Name = "txtAmslerOe";
             this.txtAmslerOe.Size = new System.Drawing.Size(258, 26);
-            this.txtAmslerOe.TabIndex = 1;
+            this.txtAmslerOe.TabIndex = 6;
             // 
             // txtVisaoCorOd
             // 
             this.txtVisaoCorOd.Location = new System.Drawing.Point(275, 131);
             this.txtVisaoCorOd.Name = "txtVisaoCorOd";
             this.txtVisaoCorOd.Size = new System.Drawing.Size(258, 26);
-            this.txtVisaoCorOd.TabIndex = 1;
+            this.txtVisaoCorOd.TabIndex = 2;
             // 
             // label94
             // 
@@ -3154,7 +3092,7 @@
             this.txtInterpretacaoVisaoCor.Location = new System.Drawing.Point(275, 163);
             this.txtInterpretacaoVisaoCor.Name = "txtInterpretacaoVisaoCor";
             this.txtInterpretacaoVisaoCor.Size = new System.Drawing.Size(639, 26);
-            this.txtInterpretacaoVisaoCor.TabIndex = 1;
+            this.txtInterpretacaoVisaoCor.TabIndex = 4;
             // 
             // label90
             // 
@@ -3179,7 +3117,7 @@
             this.txtTesteEstereopsia.Location = new System.Drawing.Point(275, 265);
             this.txtTesteEstereopsia.Name = "txtTesteEstereopsia";
             this.txtTesteEstereopsia.Size = new System.Drawing.Size(639, 26);
-            this.txtTesteEstereopsia.TabIndex = 1;
+            this.txtTesteEstereopsia.TabIndex = 7;
             // 
             // label89
             // 
@@ -3195,7 +3133,7 @@
             this.txtVisaoCorOe.Location = new System.Drawing.Point(656, 131);
             this.txtVisaoCorOe.Name = "txtVisaoCorOe";
             this.txtVisaoCorOe.Size = new System.Drawing.Size(258, 26);
-            this.txtVisaoCorOe.TabIndex = 1;
+            this.txtVisaoCorOe.TabIndex = 3;
             // 
             // label95
             // 
@@ -3245,7 +3183,7 @@
             this.tpRx.Controls.Add(this.txtAdicaoRxFinal);
             this.tpRx.Controls.Add(this.txtObservacaoRxInicial);
             this.tpRx.Controls.Add(this.txtCorRxFinal);
-            this.tpRx.Controls.Add(this.txtEstadoRxInicial);
+            this.tpRx.Controls.Add(this.txtAdicaoRxInicial);
             this.tpRx.Controls.Add(this.txtTipoMaterialRxFinal);
             this.tpRx.Controls.Add(this.txtCorRxInicial);
             this.tpRx.Controls.Add(this.label110);
@@ -3273,7 +3211,7 @@
             this.panel1.Location = new System.Drawing.Point(454, 683);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 22;
+            this.panel1.TabIndex = 0;
             // 
             // label114
             // 
@@ -3281,7 +3219,7 @@
             this.label114.Location = new System.Drawing.Point(227, 387);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(64, 18);
-            this.label114.TabIndex = 21;
+            this.label114.TabIndex = 0;
             this.label114.Text = "Rx Final";
             // 
             // label113
@@ -3290,7 +3228,7 @@
             this.label113.Location = new System.Drawing.Point(227, 58);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(69, 18);
-            this.label113.TabIndex = 21;
+            this.label113.TabIndex = 0;
             this.label113.Text = "Rx Inicial";
             // 
             // txtDpRxFinal
@@ -3298,14 +3236,14 @@
             this.txtDpRxFinal.Location = new System.Drawing.Point(663, 543);
             this.txtDpRxFinal.Name = "txtDpRxFinal";
             this.txtDpRxFinal.Size = new System.Drawing.Size(280, 26);
-            this.txtDpRxFinal.TabIndex = 20;
+            this.txtDpRxFinal.TabIndex = 10;
             // 
             // txtDpRxInicial
             // 
             this.txtDpRxInicial.Location = new System.Drawing.Point(663, 214);
             this.txtDpRxInicial.Name = "txtDpRxInicial";
             this.txtDpRxInicial.Size = new System.Drawing.Size(280, 26);
-            this.txtDpRxInicial.TabIndex = 20;
+            this.txtDpRxInicial.TabIndex = 3;
             // 
             // label112
             // 
@@ -3313,7 +3251,7 @@
             this.label112.Location = new System.Drawing.Point(619, 543);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(35, 18);
-            this.label112.TabIndex = 19;
+            this.label112.TabIndex = 0;
             this.label112.Text = "DP:";
             // 
             // label103
@@ -3322,7 +3260,7 @@
             this.label103.Location = new System.Drawing.Point(619, 214);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(35, 18);
-            this.label103.TabIndex = 19;
+            this.label103.TabIndex = 0;
             this.label103.Text = "DP:";
             // 
             // label111
@@ -3331,7 +3269,7 @@
             this.label111.Location = new System.Drawing.Point(257, 607);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(40, 18);
-            this.label111.TabIndex = 18;
+            this.label111.TabIndex = 0;
             this.label111.Text = "Uso:";
             // 
             // label102
@@ -3340,7 +3278,7 @@
             this.label102.Location = new System.Drawing.Point(257, 278);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(40, 18);
-            this.label102.TabIndex = 18;
+            this.label102.TabIndex = 0;
             this.label102.Text = "Uso:";
             // 
             // txtUsoRxFinal
@@ -3348,14 +3286,14 @@
             this.txtUsoRxFinal.Location = new System.Drawing.Point(303, 607);
             this.txtUsoRxFinal.Name = "txtUsoRxFinal";
             this.txtUsoRxFinal.Size = new System.Drawing.Size(241, 26);
-            this.txtUsoRxFinal.TabIndex = 17;
+            this.txtUsoRxFinal.TabIndex = 13;
             // 
             // txtUsoRxInicial
             // 
             this.txtUsoRxInicial.Location = new System.Drawing.Point(303, 278);
             this.txtUsoRxInicial.Name = "txtUsoRxInicial";
             this.txtUsoRxInicial.Size = new System.Drawing.Size(241, 26);
-            this.txtUsoRxInicial.TabIndex = 17;
+            this.txtUsoRxInicial.TabIndex = 6;
             // 
             // dtgRxFinal
             // 
@@ -3376,7 +3314,7 @@
             this.dtgRxFinal.Name = "dtgRxFinal";
             this.dtgRxFinal.RowHeadersVisible = false;
             this.dtgRxFinal.Size = new System.Drawing.Size(713, 118);
-            this.dtgRxFinal.TabIndex = 6;
+            this.dtgRxFinal.TabIndex = 9;
             // 
             // OlhoRxFinal
             // 
@@ -3413,7 +3351,7 @@
             this.txtTipoLenteRxFinal.Location = new System.Drawing.Point(663, 607);
             this.txtTipoLenteRxFinal.Name = "txtTipoLenteRxFinal";
             this.txtTipoLenteRxFinal.Size = new System.Drawing.Size(280, 26);
-            this.txtTipoLenteRxFinal.TabIndex = 12;
+            this.txtTipoLenteRxFinal.TabIndex = 14;
             // 
             // dtgRxInicial
             // 
@@ -3434,7 +3372,7 @@
             this.dtgRxInicial.Name = "dtgRxInicial";
             this.dtgRxInicial.RowHeadersVisible = false;
             this.dtgRxInicial.Size = new System.Drawing.Size(713, 118);
-            this.dtgRxInicial.TabIndex = 6;
+            this.dtgRxInicial.TabIndex = 1;
             // 
             // olhoRxInicial
             // 
@@ -3472,21 +3410,21 @@
             this.txtObservacaoRxFinal.Multiline = true;
             this.txtObservacaoRxFinal.Name = "txtObservacaoRxFinal";
             this.txtObservacaoRxFinal.Size = new System.Drawing.Size(640, 38);
-            this.txtObservacaoRxFinal.TabIndex = 16;
+            this.txtObservacaoRxFinal.TabIndex = 15;
             // 
             // txtTipoLenteRxInicial
             // 
             this.txtTipoLenteRxInicial.Location = new System.Drawing.Point(663, 278);
             this.txtTipoLenteRxInicial.Name = "txtTipoLenteRxInicial";
             this.txtTipoLenteRxInicial.Size = new System.Drawing.Size(280, 26);
-            this.txtTipoLenteRxInicial.TabIndex = 12;
+            this.txtTipoLenteRxInicial.TabIndex = 7;
             // 
             // txtAdicaoRxFinal
             // 
             this.txtAdicaoRxFinal.Location = new System.Drawing.Point(303, 543);
             this.txtAdicaoRxFinal.Name = "txtAdicaoRxFinal";
             this.txtAdicaoRxFinal.Size = new System.Drawing.Size(280, 26);
-            this.txtAdicaoRxFinal.TabIndex = 15;
+            this.txtAdicaoRxFinal.TabIndex = 9;
             // 
             // txtObservacaoRxInicial
             // 
@@ -3494,35 +3432,35 @@
             this.txtObservacaoRxInicial.Multiline = true;
             this.txtObservacaoRxInicial.Name = "txtObservacaoRxInicial";
             this.txtObservacaoRxInicial.Size = new System.Drawing.Size(640, 38);
-            this.txtObservacaoRxInicial.TabIndex = 16;
+            this.txtObservacaoRxInicial.TabIndex = 8;
             // 
             // txtCorRxFinal
             // 
             this.txtCorRxFinal.Location = new System.Drawing.Point(663, 575);
             this.txtCorRxFinal.Name = "txtCorRxFinal";
             this.txtCorRxFinal.Size = new System.Drawing.Size(280, 26);
-            this.txtCorRxFinal.TabIndex = 14;
+            this.txtCorRxFinal.TabIndex = 12;
             // 
-            // txtEstadoRxInicial
+            // txtAdicaoRxInicial
             // 
-            this.txtEstadoRxInicial.Location = new System.Drawing.Point(303, 214);
-            this.txtEstadoRxInicial.Name = "txtEstadoRxInicial";
-            this.txtEstadoRxInicial.Size = new System.Drawing.Size(280, 26);
-            this.txtEstadoRxInicial.TabIndex = 15;
+            this.txtAdicaoRxInicial.Location = new System.Drawing.Point(303, 214);
+            this.txtAdicaoRxInicial.Name = "txtAdicaoRxInicial";
+            this.txtAdicaoRxInicial.Size = new System.Drawing.Size(280, 26);
+            this.txtAdicaoRxInicial.TabIndex = 2;
             // 
             // txtTipoMaterialRxFinal
             // 
             this.txtTipoMaterialRxFinal.Location = new System.Drawing.Point(303, 575);
             this.txtTipoMaterialRxFinal.Name = "txtTipoMaterialRxFinal";
             this.txtTipoMaterialRxFinal.Size = new System.Drawing.Size(280, 26);
-            this.txtTipoMaterialRxFinal.TabIndex = 13;
+            this.txtTipoMaterialRxFinal.TabIndex = 11;
             // 
             // txtCorRxInicial
             // 
             this.txtCorRxInicial.Location = new System.Drawing.Point(663, 246);
             this.txtCorRxInicial.Name = "txtCorRxInicial";
             this.txtCorRxInicial.Size = new System.Drawing.Size(280, 26);
-            this.txtCorRxInicial.TabIndex = 14;
+            this.txtCorRxInicial.TabIndex = 5;
             // 
             // label110
             // 
@@ -3530,7 +3468,7 @@
             this.label110.Location = new System.Drawing.Point(200, 639);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(97, 18);
-            this.label110.TabIndex = 7;
+            this.label110.TabIndex = 0;
             this.label110.Text = "Observação:";
             // 
             // txtTipoMaterialRxInicial
@@ -3538,7 +3476,7 @@
             this.txtTipoMaterialRxInicial.Location = new System.Drawing.Point(303, 246);
             this.txtTipoMaterialRxInicial.Name = "txtTipoMaterialRxInicial";
             this.txtTipoMaterialRxInicial.Size = new System.Drawing.Size(280, 26);
-            this.txtTipoMaterialRxInicial.TabIndex = 13;
+            this.txtTipoMaterialRxInicial.TabIndex = 4;
             // 
             // label109
             // 
@@ -3546,7 +3484,7 @@
             this.label109.Location = new System.Drawing.Point(550, 607);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(107, 18);
-            this.label109.TabIndex = 8;
+            this.label109.TabIndex = 0;
             this.label109.Text = "Tipo de Lente:";
             // 
             // lblObservacaoRxInicial
@@ -3555,7 +3493,7 @@
             this.lblObservacaoRxInicial.Location = new System.Drawing.Point(200, 310);
             this.lblObservacaoRxInicial.Name = "lblObservacaoRxInicial";
             this.lblObservacaoRxInicial.Size = new System.Drawing.Size(97, 18);
-            this.lblObservacaoRxInicial.TabIndex = 7;
+            this.lblObservacaoRxInicial.TabIndex = 0;
             this.lblObservacaoRxInicial.Text = "Observação:";
             // 
             // label108
@@ -3564,7 +3502,7 @@
             this.label108.Location = new System.Drawing.Point(235, 543);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(62, 18);
-            this.label108.TabIndex = 9;
+            this.label108.TabIndex = 0;
             this.label108.Text = "Adição:";
             // 
             // lblTipoLenteRxInicial
@@ -3573,7 +3511,7 @@
             this.lblTipoLenteRxInicial.Location = new System.Drawing.Point(550, 278);
             this.lblTipoLenteRxInicial.Name = "lblTipoLenteRxInicial";
             this.lblTipoLenteRxInicial.Size = new System.Drawing.Size(107, 18);
-            this.lblTipoLenteRxInicial.TabIndex = 8;
+            this.lblTipoLenteRxInicial.TabIndex = 0;
             this.lblTipoLenteRxInicial.Text = "Tipo de Lente:";
             // 
             // label107
@@ -3582,7 +3520,7 @@
             this.label107.Location = new System.Drawing.Point(616, 575);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(38, 18);
-            this.label107.TabIndex = 10;
+            this.label107.TabIndex = 0;
             this.label107.Text = "Cor:";
             // 
             // lblEstadoRxInicial
@@ -3591,7 +3529,7 @@
             this.lblEstadoRxInicial.Location = new System.Drawing.Point(235, 214);
             this.lblEstadoRxInicial.Name = "lblEstadoRxInicial";
             this.lblEstadoRxInicial.Size = new System.Drawing.Size(62, 18);
-            this.lblEstadoRxInicial.TabIndex = 9;
+            this.lblEstadoRxInicial.TabIndex = 0;
             this.lblEstadoRxInicial.Text = "Adição:";
             // 
             // label104
@@ -3600,7 +3538,7 @@
             this.label104.Location = new System.Drawing.Point(173, 575);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(124, 18);
-            this.label104.TabIndex = 11;
+            this.label104.TabIndex = 0;
             this.label104.Text = "Tipo de Material:";
             // 
             // lblCorRxInicial
@@ -3609,7 +3547,7 @@
             this.lblCorRxInicial.Location = new System.Drawing.Point(616, 246);
             this.lblCorRxInicial.Name = "lblCorRxInicial";
             this.lblCorRxInicial.Size = new System.Drawing.Size(38, 18);
-            this.lblCorRxInicial.TabIndex = 10;
+            this.lblCorRxInicial.TabIndex = 0;
             this.lblCorRxInicial.Text = "Cor:";
             // 
             // lblTipoMaterialRxInicial
@@ -3618,7 +3556,7 @@
             this.lblTipoMaterialRxInicial.Location = new System.Drawing.Point(173, 246);
             this.lblTipoMaterialRxInicial.Name = "lblTipoMaterialRxInicial";
             this.lblTipoMaterialRxInicial.Size = new System.Drawing.Size(124, 18);
-            this.lblTipoMaterialRxInicial.TabIndex = 11;
+            this.lblTipoMaterialRxInicial.TabIndex = 0;
             this.lblTipoMaterialRxInicial.Text = "Tipo de Material:";
             // 
             // npgsqlCommand1
@@ -3651,6 +3589,75 @@
             this.lblLoginUsuario.TabIndex = 7;
             this.lblLoginUsuario.Text = "Nome de usuario";
             // 
+            // sintomaSintomasReferidos
+            // 
+            this.sintomaSintomasReferidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sintomaSintomasReferidos.HeaderText = "Sintomas";
+            this.sintomaSintomasReferidos.Name = "sintomaSintomasReferidos";
+            this.sintomaSintomasReferidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // confirmacaoSintomasReferidos
+            // 
+            this.confirmacaoSintomasReferidos.FalseValue = "false";
+            this.confirmacaoSintomasReferidos.HeaderText = "Possuir";
+            this.confirmacaoSintomasReferidos.IndeterminateValue = "false";
+            this.confirmacaoSintomasReferidos.Name = "confirmacaoSintomasReferidos";
+            this.confirmacaoSintomasReferidos.TrueValue = "true";
+            // 
+            // patologiaAntecedentesOculares
+            // 
+            this.patologiaAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patologiaAntecedentesOculares.HeaderText = "Patologia";
+            this.patologiaAntecedentesOculares.Name = "patologiaAntecedentesOculares";
+            this.patologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.patologiaAntecedentesOculares.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.patologiaAntecedentesOculares.Width = 5;
+            // 
+            // confirmacaoPatologiaAntecedentesOculares
+            // 
+            this.confirmacaoPatologiaAntecedentesOculares.FalseValue = "false";
+            this.confirmacaoPatologiaAntecedentesOculares.HeaderText = "Possuir";
+            this.confirmacaoPatologiaAntecedentesOculares.IndeterminateValue = "false";
+            this.confirmacaoPatologiaAntecedentesOculares.Name = "confirmacaoPatologiaAntecedentesOculares";
+            this.confirmacaoPatologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmacaoPatologiaAntecedentesOculares.TrueValue = "true";
+            // 
+            // TipoTratamentoAntecedentesOculares
+            // 
+            this.TipoTratamentoAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoTratamentoAntecedentesOculares.HeaderText = "Tratamento";
+            this.TipoTratamentoAntecedentesOculares.MaxInputLength = 100;
+            this.TipoTratamentoAntecedentesOculares.Name = "TipoTratamentoAntecedentesOculares";
+            this.TipoTratamentoAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // patologiaAntecedentesGerais
+            // 
+            this.patologiaAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patologiaAntecedentesGerais.HeaderText = "Patologia";
+            this.patologiaAntecedentesGerais.Name = "patologiaAntecedentesGerais";
+            this.patologiaAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.patologiaAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.patologiaAntecedentesGerais.Width = 5;
+            // 
+            // pessoalAntecedentesGerais
+            // 
+            this.pessoalAntecedentesGerais.HeaderText = "Pessoal";
+            this.pessoalAntecedentesGerais.Name = "pessoalAntecedentesGerais";
+            // 
+            // familiarAntecedentesGerais
+            // 
+            this.familiarAntecedentesGerais.HeaderText = "Familiar";
+            this.familiarAntecedentesGerais.Name = "familiarAntecedentesGerais";
+            // 
+            // tipoTratamentoAntecedentesGerais
+            // 
+            this.tipoTratamentoAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tipoTratamentoAntecedentesGerais.HeaderText = "Tratamento";
+            this.tipoTratamentoAntecedentesGerais.MaxInputLength = 100;
+            this.tipoTratamentoAntecedentesGerais.Name = "tipoTratamentoAntecedentesGerais";
+            this.tipoTratamentoAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipoTratamentoAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // frmCadastrarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -3667,7 +3674,7 @@
             this.Name = "frmCadastrarConsulta";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulario de realização de nova Consulta";
+            this.Text = "Cadastrar/Atualizar Consulta";
             this.Load += new System.EventHandler(this.frmCadastrarConsulta_Load);
             this.msMenuSuperior.ResumeLayout(false);
             this.msMenuSuperior.PerformLayout();
@@ -3753,10 +3760,6 @@
         private System.Windows.Forms.TextBox txtObservacaoConsulta;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dtgAntecedentesGerais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patologiaAntecedentesGerais;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn pessoalAntecedentesGerais;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn familiarAntecedentesGerais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTratamentoAntecedentesGerais;
         private System.Windows.Forms.Label lblObservacaoAnamnese;
         private System.Windows.Forms.TextBox txtObservacaoAnamnese;
         private System.Windows.Forms.TextBox txtTempoQueixa;
@@ -3765,14 +3768,9 @@
         private System.Windows.Forms.Label lblMotivoConsulta;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dtgSintomasReferidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sintomaSintomasReferidos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn confirmacaoSintomasReferidos;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dtgAntecedentesOculares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patologiaAntecedentesOculares;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn confirmacaoPatologiaAntecedentesOculares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoTratamentoAntecedentesOculares;
         private System.Windows.Forms.Label lblObservacaoAntecedentesGerais;
         private System.Windows.Forms.TextBox txtObservacaoAntecedentesGerais;
         private System.Windows.Forms.TabPage tpLensometria;
@@ -3786,7 +3784,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn baseLensometria;
         private System.Windows.Forms.TextBox txtTipoLenteLensometria;
         private System.Windows.Forms.TextBox txtObservacaoLensometria;
-        private System.Windows.Forms.TextBox txtUsoLensometria;
+        private System.Windows.Forms.TextBox txtEstadoLensometria;
         private System.Windows.Forms.TextBox txtCorLensometria;
         private System.Windows.Forms.TextBox txtTipoMaterialLensometria;
         private System.Windows.Forms.Label label17;
@@ -3996,7 +3994,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AvRxInicial;
         private System.Windows.Forms.TextBox txtTipoLenteRxInicial;
         private System.Windows.Forms.TextBox txtObservacaoRxInicial;
-        private System.Windows.Forms.TextBox txtEstadoRxInicial;
+        private System.Windows.Forms.TextBox txtAdicaoRxInicial;
         private System.Windows.Forms.TextBox txtCorRxInicial;
         private System.Windows.Forms.TextBox txtTipoMaterialRxInicial;
         private System.Windows.Forms.Label lblObservacaoRxInicial;
@@ -4059,5 +4057,14 @@
         private System.Windows.Forms.Label lblPapilaOeOftalmoscopia;
         private System.Windows.Forms.TextBox txtPapilaOdOftalmoscopia;
         private System.Windows.Forms.Label lblPapilaOdOftalmoscopia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sintomaSintomasReferidos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn confirmacaoSintomasReferidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patologiaAntecedentesOculares;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn confirmacaoPatologiaAntecedentesOculares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoTratamentoAntecedentesOculares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patologiaAntecedentesGerais;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn pessoalAntecedentesGerais;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn familiarAntecedentesGerais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTratamentoAntecedentesGerais;
     }
 }

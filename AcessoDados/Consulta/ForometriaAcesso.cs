@@ -20,9 +20,10 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO Forometria(idConsulta,testeUtilizado,correcao,vlOd,vlOe,quarentaCmOd,quatentaCmOe,vinteCmOd,vinteCmOe,ppcOr,ppcLuz,ppcFiltro,pfpVl,pfpVp ");
-                sql.Append("rfnVl,rfnVp,aaOd,aaOe,flexibilidadeOd,flexibilidadeOe,metodo,nivelVisual,dt) VALUES (IDCONSULTA,TESTEUTILIZADO,CORRECAO,VLOD,VLOE,QUARENTACMOD,QUATENTACMOE, ");
-                sql.Append("VINTECMOD,VINTECMOE,PPCOR,PPCLUZ,PPCFILTRO,PFPVL,PFPVP,RFNVL,RFNVP,AAOD,AAOE,FLEXIBILIDADEOD,FLEXIBILIDADEOE,METODO,NIVELVISUAL,DT) ");
+                sql.Append("INSERT INTO Forometria(idConsulta,testeUtilizado,correcao,vlOd,vlOe,quarentaCmOd,quarentaCmOe,vinteCmOd,vinteCmOe,ppcOr,ppcLuz,ppcFiltro,pfpVl,pfpVp, ");
+                sql.Append("rfnVl,rfnVp,aaOd,aaOe,flexibilidadeOd,flexibilidadeOe,metodo,nivelVisual,dt) VALUES (\'IDCONSULTA\',\'TESTEUTILIZADO\',\'CORRECAO\',\'VLOD\',\'VLOE\',\'QUARENTACMOD\', ");
+                sql.Append("\'QUARENTACMOE\',\'VINTECMOD\',\'VINTECMOE\',\'PPCOR\',\'PPCLUZ\',\'PPCFILTRO\',\'PFPVL\',\'PFPVP\',\'RFNVL\',\'RFNVP\',\'AAOD\',\'AAOE\',\'FLEXIBILIDADEOD\', ");
+                sql.Append("\'FLEXIBILIDADEOE\',\'METODO\',\'NIVELVISUAL\',\'DT\') ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("TESTEUTILIZADO", TESTEUTILIZADO).Replace("CORRECAO", CORRECAO).Replace("VLOD", VLOD).Replace("VLOE", VLOE);
                 sql = sql.Replace("QUARENTACMOD", QUARENTACMOD).Replace("QUARENTACMOE", QUARENTACMOE).Replace("VINTECMOD", VINTECMOD).Replace("VINTECMOE", VINTECMOE).Replace("PPCOR", PPCOR);
@@ -47,8 +48,8 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("UPDATE Forometria SET testeUtilizado =\'TESTEUTILIZADO\',correcao =\'CORRECAO\',vlOd =\'VLOD\',vloOe =\'VLOE\',quarentaCmOd =\'QUARENTACMOD\', ");
-                sql.Append("quarentaCmOe = \'QUARENTACMOE\',vinteCmOd = \'VINTECMOD\',vinteCmOe = \'VINTECMOE\',ppcOr = \'PPCOR\',ppcLuz = \'PPCLUZ\',ppcFiltro = \'PPCFILTRO\',pfpVl = \'PFPVL\' ");
+                sql.Append("UPDATE Forometria SET testeUtilizado =\'TESTEUTILIZADO\',correcao =\'CORRECAO\',vlOd =\'VLOD\',vlOe =\'VLOE\',quarentaCmOd =\'QUARENTACMOD\', ");
+                sql.Append("quarentaCmOe = \'QUARENTACMOE\',vinteCmOd = \'VINTECMOD\',vinteCmOe = \'VINTECMOE\',ppcOr = \'PPCOR\',ppcLuz = \'PPCLUZ\',ppcFiltro = \'PPCFILTRO\',pfpVl = \'PFPVL\', ");
                 sql.Append("pfpVp = \'PFPVP\',rfnVl = \'RFNVL\',rfnVp = \'RFNVP\',aaOd = \'AAOD\',aaOe =\'AAOE\',flexibilidadeOd=\'FLEXIBILIDADEOD\',flexibilidadeOe=\'FLEXIBILIDADEOE\', ");
                 sql.Append("metodo =\'METODO\',nivelVisual=\'NIVELVISUAL\',dt =\'DT\' WHERE idConsulta = \'IDCONSULTA\' ");
 
@@ -73,10 +74,10 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT testeUtilizado as \'Teste Utilizado\',correcao as \'Correção\',vlOd as \'VL OD\',vlOe as \'VL OE\',quarentaCmod as \'40 Cm OD\',quarentaCmOe as \'40 Cm OE\' ");
-                sql.Append("vinteCmOd as \'20 Cm OD\',vinteCmOe as \'20 Cm OE\',ppcOr as \'PPC OR\',ppcLuz as \'PPC LUZ\',ppcFiltro as \'PPC FILTRO\',pfpVl as \'PFP VL\',pfpVp as \'PFP VP\', ");
-                sql.Append("rfnVl as \'RFN VL\', rfnVp as \'RFN VP\',aaOd as \'AA OD\',aaOe as \'AA OE\',flexibilidadeOd as \'Flexibilidade OD\',flexibilidadeOe as \'Flexibilidade OE\', ");
-                sql.Append("metodo as \'Método\',nivelVisual as \'Nível Visual\',dt as \'DT\' FROM Forometria WHERE idConsulta =\'IDCONSULTA\' ");
+                sql.Append("SELECT testeUtilizado as \"Teste Utilizado\",correcao as \"Correção\",vlOd as \"VL OD\",vlOe as \"VL OE\",quarentaCmod as \"40 Cm OD\",quarentaCmOe as \"40 Cm OE\", ");
+                sql.Append("vinteCmOd as \"20 Cm OD\",vinteCmOe as \"20 Cm OE\",ppcOr as \"PPC OR\",ppcLuz as \"PPC LUZ\",ppcFiltro as \"PPC FILTRO\",pfpVl as \"PFP VL\",pfpVp as \"PFP VP\", ");
+                sql.Append("rfnVl as \"RFN VL\", rfnVp as \"RFN VP\",aaOd as \"AA OD\",aaOe as \"AA OE\",flexibilidadeOd as \"Flexibilidade OD\",flexibilidadeOe as \"Flexibilidade OE\", ");
+                sql.Append("metodo as \"Método\",nivelVisual as \"Nível Visual\",dt as \"DT\" FROM Forometria WHERE idConsulta =\'IDCONSULTA\' ");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
 

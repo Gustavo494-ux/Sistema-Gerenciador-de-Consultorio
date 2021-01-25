@@ -14,20 +14,20 @@ namespace AcessoDados
         StringBuilder sql = new StringBuilder();
         Banco acessoBanco = new Banco();
         DataTable tableVazia = new DataTable();
-        public bool CadastrarAntecentesGerais(string IDCONSULTA,string VASCULARES, string VASCULARESTRATAMENTO, string DIABETES, string DIABETESTRATAMENTO, string IMUNES, string IMUNESTRATAMENTO, string NEUROLOGICOS,
-            string NEUROLOGICOSTRATAMENTO, string OUTROS, string OUTROSTRATAMENTO, string OBSERVACAOANTECEDENTESGERAIS)
+        public bool CadastrarAntecentesGerais(string IDCONSULTA,string VASCULARES, string VASCULARESTRATAMENTO, string DIABETES, string DIABETESTRATAMENTO, string IMUNES, string IMUNESTRATAMENTO, 
+            string NEUROLOGICOS,string NEUROLOGICOSTRATAMENTO, string OUTROS,string OUTROSCONFIRM, string OUTROSTRATAMENTO, string OBSERVACAOANTECEDENTESGERAIS)
         {
             try
             {
+                sql.Clear();
                 sql.Append("INSERT INTO antecedentesGerais(idConsulta,vasculares,vascularTratamento,diabetes,diabetesTratamento,imunes,imunesTratamento,neurologicos,neurologicosTratamento,");
-                sql.Append(" outros,outrosTratamento,observacaoAntecedentesGerais,deletar) values(\'IDCONSULTA\',\'VASCULARES\',\'VASCULTRATAMENTO\',\'DIABETES\',\'DIABETTRATAMENTO\', ");
-                sql.Append("\'IMUNES\',\'IMUNTRATAMENTO\',\'NEUROLOGICOS\',\'NEUROLOGTRATAMENTO\',\'OUTROS\',\'OUTTRATAMENTO\',\'OBSERVACAOANTECEDENTESGERAIS\',false);");
+                sql.Append(" outros,outrosConfirm,outrosTratamento,observacaoAntecedentesGerais,deletar) values(\'IDCONSULTA\',\'VASCULARES\',\'VASCULTRATAMENTO\',\'DIABETES\',\'DIABETTRATAMENTO\', ");
+                sql.Append("\'IMUNES\',\'IMUNTRATAMENTO\',\'NEUROLOGICOS\',\'NEUROLOGTRATAMENTO\',\'OUTROS\',\'OUTROSCONFIRM\',\'OUTTRATAMENTO\',\'OBSERVACAOANTECEDENTESGERAIS\',false);");
 
-                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("VASCULARES", VASCULARES).Replace("DIABETES", DIABETES).Replace("IMUNES", IMUNES);
-                sql = sql.Replace("NEUROLOGICOS", NEUROLOGICOS).Replace("OUTROS", OUTROS);
-
-                sql = sql.Replace("DIABETTRATAMENTO", DIABETESTRATAMENTO).Replace("IMUNTRATAMENTO", IMUNESTRATAMENTO).Replace("VASCULTRATAMENTO", VASCULARESTRATAMENTO);
-                sql = sql.Replace("NEUROLOGTRATAMENTO", NEUROLOGICOSTRATAMENTO).Replace("OUTTRATAMENTO", OUTROSTRATAMENTO).Replace("OBSERVACAOANTECEDENTESGERAIS", OBSERVACAOANTECEDENTESGERAIS);
+                sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("VASCULARES", VASCULARES).Replace("DIABETES", DIABETES).Replace("IMUNES", IMUNES).Replace("NEUROLOGICOS", NEUROLOGICOS);
+                sql = sql.Replace("OUTROSCONFIRM", OUTROSCONFIRM).Replace("OUTROS", OUTROS).Replace("DIABETTRATAMENTO", DIABETESTRATAMENTO).Replace("IMUNTRATAMENTO", IMUNESTRATAMENTO);
+                sql = sql.Replace("VASCULTRATAMENTO", VASCULARESTRATAMENTO).Replace("NEUROLOGTRATAMENTO", NEUROLOGICOSTRATAMENTO).Replace("OUTTRATAMENTO", OUTROSTRATAMENTO);
+                sql = sql.Replace("OBSERVACAOANTECEDENTESGERAIS", OBSERVACAOANTECEDENTESGERAIS);
 
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -40,17 +40,17 @@ namespace AcessoDados
         }
 
         public bool EditarAntecedentesGerais(string IDCONSULTA, string VASCULARES, string VASCULARESTRATAMENTO, string DIABETES, string DIABETESTRATAMENTO, string IMUNES, string IMUNESTRATAMENTO, string NEUROLOGICOS,
-           string NEUROLOGICOSTRATAMENTO, string OUTROS, string OUTROSTRATAMENTO, string OBSERVACAOANTECEDENTESGERAIS)
+           string NEUROLOGICOSTRATAMENTO, string OUTROS,string OUTROSCONFIRM, string OUTROSTRATAMENTO, string OBSERVACAOANTECEDENTESGERAIS)
         {
             try
             {
 
                 sql.Append("UPDATE antecedentesGerais SET vasculares = \'VASCULARES\', vascularTratamento = \'VASCULARESTRATAMENTO\', diabetes = \'DIABETES\', diabetesTratamento = \'DIABETESTRATAMENTO\', ");
                 sql.Append("imunes = \'IMUNES\', imunesTratamento = \'IMUNESTRATAMENTO\',neurologicos = \'NEUROLOGICOS\', neurologicosTratamento = \'NEUROLOGICOSTRATAMENTO\', outros = \'OUTROS\', ");
-                sql.Append("outrosTratamento = \'OUTROSTRATAMENTO\',observacaoAntecedentesGerais = \'OBSERVACAOANTECEDENTESGERAIS\' where idConsulta = \'IDCONSULTA\' ");
+                sql.Append("outrosConfirm = \'OUTROSCONFIRM\',outrosTratamento = \'OUTROSTRATAMENTO\',observacaoAntecedentesGerais = \'OBSERVACAOANTECEDENTESGERAIS\' where idConsulta = \'IDCONSULTA\' ");
 
                 sql = sql.Replace("VASCULARESTRATAMENTO", VASCULARESTRATAMENTO).Replace("DIABETESTRATAMENTO", DIABETESTRATAMENTO).Replace("IMUNESTRATAMENTO", IMUNESTRATAMENTO);
-                sql = sql.Replace("NEUROLOGICOSTRATAMENTO", NEUROLOGICOSTRATAMENTO).Replace("OUTROSTRATAMENTO", OUTROSTRATAMENTO);
+                sql = sql.Replace("NEUROLOGICOSTRATAMENTO", NEUROLOGICOSTRATAMENTO).Replace("OUTROSTRATAMENTO", OUTROSTRATAMENTO).Replace("OUTROSCONFIRM",OUTROSCONFIRM);
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("VASCULARES", VASCULARES).Replace("DIABETES", DIABETES).Replace("IMUNES", IMUNES);
                 sql = sql.Replace("NEUROLOGICOS", NEUROLOGICOS).Replace("OUTROS", OUTROS).Replace("OBSERVACAOANTECEDENTESGERAIS", OBSERVACAOANTECEDENTESGERAIS);
 

@@ -12,7 +12,7 @@ namespace RegraNegocio
     public class VisaoCorRegra
     {
         VisaoCorAcesso visaoCor = new VisaoCorAcesso();
-
+        DataTable tableVazia = new DataTable();
         public bool CadastrarVisaoCor(string IDCONSULTA, string TESTE, string OD, string OE, string INTERPRETACAO)
         {
             try
@@ -49,7 +49,7 @@ namespace RegraNegocio
         {
             try
             {
-                if (Convert.ToInt32(IDCONSULTA) > 0) return false;
+                if (Convert.ToInt32(IDCONSULTA) < 1) return false;
                 if (TESTE.Length > 100) return false;
                 if (OD.Length > 100) return false;
                 if (OE.Length > 100) return false;
@@ -73,7 +73,7 @@ namespace RegraNegocio
                 MessageBox.Show("Ocorreu um erro ao pesquisar a Visão de Cor(Classe VisaoCorRegra, Método PesquisarVisaoCor)", "Erro de Pesquisa",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return null;
+            return tableVazia;
         }
     }
 }

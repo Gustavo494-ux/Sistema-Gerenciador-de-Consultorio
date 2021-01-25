@@ -19,7 +19,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("INSERT INTO Amsler(idConsulta,Od,Oe) VALUES(IDCONSULTA,OD,OE)");
+                sql.Append("INSERT INTO Amsler(idConsulta,Od,Oe) VALUES(\'IDCONSULTA\',\'OD\',\'OE\')");
 
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA).Replace("OD", OD).Replace("OE", OE);
 
@@ -54,7 +54,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("SELECT idConsulta as \'Código Consulta\',od as \'OD\',oe as \'OE\' WHERE idConsulta = \'IDCONSULTA\' ");
+                sql.Append("SELECT idConsulta as \"Código Consulta\",od as \"OD\",oe as \"OE\" FROM amsler WHERE idConsulta = \'IDCONSULTA\' ");
                 sql = sql.Replace("IDCONSULTA", IDCONSULTA);
 
                 return acessoBanco.Pesquisar(sql.ToString());
