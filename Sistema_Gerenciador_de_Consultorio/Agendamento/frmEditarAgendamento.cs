@@ -315,6 +315,25 @@ namespace Sistema_Gerenciador_de_Consultorio
             this.Dispose();
         }
 
+        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgendamentosRegra atualizar = new AgendamentosRegra();
+            if (atualizar.AtualizarAgendamentos(CodAgendamento, Convert.ToString(cbStatusConsultaEditar.SelectedIndex + 1), dtpDataConsultaEditar.Text, txtObservacaoAgendamentoEditar.Text) == true)
+            {
+                MessageBox.Show("Agendamento Atualizado com sucesso!", "Dados Atualizados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CarregarAgendamentosStatusMarcada();
+            }
+            else
+            {
+                MessageBox.Show("Os dados não foram atualizados pois há dados incorrestos", "Dados Incorretos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void btnPesquisarAgendamento_Click(object sender, EventArgs e)
         {
             pesquisarAgendamentos();
@@ -416,16 +435,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
         private void btnSalvarEdicao_Click(object sender, EventArgs e)
         {
-            AgendamentosRegra atualizar = new AgendamentosRegra();
-            if (atualizar.AtualizarAgendamentos(CodAgendamento, Convert.ToString(cbStatusConsultaEditar.SelectedIndex+1), dtpDataConsultaEditar.Text, txtObservacaoAgendamentoEditar.Text) == true)
-            {
-                MessageBox.Show("Agendamento Atualizado com sucesso!", "Dados Atualizados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CarregarAgendamentosStatusMarcada();
-            }
-            else
-            {
-                MessageBox.Show("Os dados não foram atualizados pois há dados incorrestos", "Dados Incorretos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+           
         }
     }
 }

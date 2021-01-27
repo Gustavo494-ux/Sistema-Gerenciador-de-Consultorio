@@ -48,12 +48,7 @@
             this.rbCPF = new System.Windows.Forms.RadioButton();
             this.rbIdProfissional = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dtgProfissional = new System.Windows.Forms.DataGridView();
             this.idProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,11 +70,15 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
-            this.pnlMenuSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProfissional)).BeginInit();
+            this.msMenuSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgIntermediario
@@ -249,37 +248,6 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 1);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1163, 40);
-            this.pnlMenuSuperior.TabIndex = 0;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(8, 5);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 0;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(105, 5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // lblLoginUsuario
             // 
             this.lblLoginUsuario.AutoSize = true;
@@ -290,10 +258,6 @@
             this.lblLoginUsuario.Size = new System.Drawing.Size(127, 18);
             this.lblLoginUsuario.TabIndex = 0;
             this.lblLoginUsuario.Text = "Nome de usuario";
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
             // 
             // dtgProfissional
             // 
@@ -509,19 +473,57 @@
             this.dataGridViewImageColumn3.ReadOnly = true;
             this.dataGridViewImageColumn3.Width = 40;
             // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparToolStripMenuItem,
+            this.voltarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 4;
+            this.msMenuSuperior.Text = "menuStrip1";
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
+            this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1160, 603);
+            this.panel1.TabIndex = 5;
+            // 
             // frmLocalizarProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.lblLoginUsuario);
             this.Controls.Add(this.dtgIntermediario);
             this.Controls.Add(this.pnlPesquisar);
-            this.Controls.Add(this.pnlMenuSuperior);
             this.Controls.Add(this.dtgProfissional);
+            this.Controls.Add(this.msMenuSuperior);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLocalizarProfissional";
@@ -533,8 +535,9 @@
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).EndInit();
-            this.pnlMenuSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProfissional)).EndInit();
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,13 +556,8 @@
         private System.Windows.Forms.RadioButton rbCPF;
         private System.Windows.Forms.RadioButton rbIdProfissional;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
         private System.Windows.Forms.DataGridView dtgIntermediario;
         private System.Windows.Forms.Label lblLoginUsuario;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.DataGridView dtgProfissional;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
@@ -581,5 +579,9 @@
         private System.Windows.Forms.DataGridViewImageColumn btnImprimir;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -26,6 +26,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void frmLocalizarProfissional_Load(object sender, EventArgs e)
         {
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             pnlPesquisar.Location = new Point(this.Width / 2 - (pnlPesquisar.Width / 2), 50);
             limpar();
             lblLoginUsuario.Text = "Usuario: " + loginUsuario+"\nNivel: "+nomeNivel;
@@ -294,6 +295,16 @@ namespace Sistema_Gerenciador_de_Consultorio
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limpar();
+        }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void rbSemFiltros_CheckedChanged(object sender, EventArgs e)

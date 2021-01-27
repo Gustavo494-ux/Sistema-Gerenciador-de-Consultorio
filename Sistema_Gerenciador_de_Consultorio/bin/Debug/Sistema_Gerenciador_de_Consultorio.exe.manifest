@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UfMLFr937HQpuCbOZ9ssuTqcuLDXY0tTERD85NBak/8=</dsig:DigestValue>
+        <dsig:DigestValue>SDnH4GQDDSbF87257sEzqGfXpTO2QDpmrQeRL60J/Ig=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -301,19 +301,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YAj22dD8ezmEktB794jHvLIQsmFd1/WYny0GOfZp338=</dsig:DigestValue>
+        <dsig:DigestValue>PaZOzI1ybVB7W09JgXLiHYvz4lasems3qgQ98lBvrxQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2745856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema_Gerenciador_de_Consultorio.exe" size="2766848">
       <assemblyIdentity name="Sistema_Gerenciador_de_Consultorio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pj0QbuCTCRVYBIuupI92VR14OrfAxnLpEc/70blcXws=</dsig:DigestValue>
+        <dsig:DigestValue>lho5poEb6CGreZP2CmlzUO42MFZJc0ku94QCspEBkDM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

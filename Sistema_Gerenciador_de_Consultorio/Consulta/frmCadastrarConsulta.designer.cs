@@ -76,12 +76,21 @@
             this.tpAnamnese = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.dtgSintomasReferidos = new System.Windows.Forms.DataGridView();
+            this.sintomaSintomasReferidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmacaoSintomasReferidos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dtgAntecedentesOculares = new System.Windows.Forms.DataGridView();
+            this.patologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmacaoPatologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TipoTratamentoAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblObservacaoAntecedentesGerais = new System.Windows.Forms.Label();
             this.txtObservacaoAntecedentesGerais = new System.Windows.Forms.TextBox();
             this.dtgAntecedentesGerais = new System.Windows.Forms.DataGridView();
+            this.patologiaAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pessoalAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.familiarAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoTratamentoAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblObservacaoAnamnese = new System.Windows.Forms.Label();
             this.txtObservacaoAnamnese = new System.Windows.Forms.TextBox();
             this.txtTempoQueixa = new System.Windows.Forms.TextBox();
@@ -375,15 +384,6 @@
             this.npgsqlCommand1 = new Npgsql.NpgsqlCommand();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
-            this.sintomaSintomasReferidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmacaoSintomasReferidos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.patologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmacaoPatologiaAntecedentesOculares = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TipoTratamentoAntecedentesOculares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patologiaAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pessoalAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.familiarAntecedentesGerais = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tipoTratamentoAntecedentesGerais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msMenuSuperior.SuspendLayout();
             this.tabControlTodosDados.SuspendLayout();
             this.tpConsulta.SuspendLayout();
@@ -859,6 +859,21 @@
             this.dtgSintomasReferidos.Size = new System.Drawing.Size(707, 405);
             this.dtgSintomasReferidos.TabIndex = 7;
             // 
+            // sintomaSintomasReferidos
+            // 
+            this.sintomaSintomasReferidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sintomaSintomasReferidos.HeaderText = "Sintomas";
+            this.sintomaSintomasReferidos.Name = "sintomaSintomasReferidos";
+            this.sintomaSintomasReferidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // confirmacaoSintomasReferidos
+            // 
+            this.confirmacaoSintomasReferidos.FalseValue = "false";
+            this.confirmacaoSintomasReferidos.HeaderText = "Possuir";
+            this.confirmacaoSintomasReferidos.IndeterminateValue = "false";
+            this.confirmacaoSintomasReferidos.Name = "confirmacaoSintomasReferidos";
+            this.confirmacaoSintomasReferidos.TrueValue = "true";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -898,6 +913,32 @@
             this.dtgAntecedentesOculares.Size = new System.Drawing.Size(707, 358);
             this.dtgAntecedentesOculares.TabIndex = 6;
             // 
+            // patologiaAntecedentesOculares
+            // 
+            this.patologiaAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patologiaAntecedentesOculares.HeaderText = "Patologia";
+            this.patologiaAntecedentesOculares.Name = "patologiaAntecedentesOculares";
+            this.patologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.patologiaAntecedentesOculares.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.patologiaAntecedentesOculares.Width = 5;
+            // 
+            // confirmacaoPatologiaAntecedentesOculares
+            // 
+            this.confirmacaoPatologiaAntecedentesOculares.FalseValue = "false";
+            this.confirmacaoPatologiaAntecedentesOculares.HeaderText = "Possuir";
+            this.confirmacaoPatologiaAntecedentesOculares.IndeterminateValue = "false";
+            this.confirmacaoPatologiaAntecedentesOculares.Name = "confirmacaoPatologiaAntecedentesOculares";
+            this.confirmacaoPatologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmacaoPatologiaAntecedentesOculares.TrueValue = "true";
+            // 
+            // TipoTratamentoAntecedentesOculares
+            // 
+            this.TipoTratamentoAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoTratamentoAntecedentesOculares.HeaderText = "Tratamento";
+            this.TipoTratamentoAntecedentesOculares.MaxInputLength = 100;
+            this.TipoTratamentoAntecedentesOculares.Name = "TipoTratamentoAntecedentesOculares";
+            this.TipoTratamentoAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // lblObservacaoAntecedentesGerais
             // 
             this.lblObservacaoAntecedentesGerais.AutoSize = true;
@@ -935,6 +976,34 @@
             this.dtgAntecedentesGerais.RowHeadersVisible = false;
             this.dtgAntecedentesGerais.Size = new System.Drawing.Size(707, 141);
             this.dtgAntecedentesGerais.TabIndex = 5;
+            // 
+            // patologiaAntecedentesGerais
+            // 
+            this.patologiaAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patologiaAntecedentesGerais.HeaderText = "Patologia";
+            this.patologiaAntecedentesGerais.Name = "patologiaAntecedentesGerais";
+            this.patologiaAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.patologiaAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.patologiaAntecedentesGerais.Width = 5;
+            // 
+            // pessoalAntecedentesGerais
+            // 
+            this.pessoalAntecedentesGerais.HeaderText = "Pessoal";
+            this.pessoalAntecedentesGerais.Name = "pessoalAntecedentesGerais";
+            // 
+            // familiarAntecedentesGerais
+            // 
+            this.familiarAntecedentesGerais.HeaderText = "Familiar";
+            this.familiarAntecedentesGerais.Name = "familiarAntecedentesGerais";
+            // 
+            // tipoTratamentoAntecedentesGerais
+            // 
+            this.tipoTratamentoAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tipoTratamentoAntecedentesGerais.HeaderText = "Tratamento";
+            this.tipoTratamentoAntecedentesGerais.MaxInputLength = 100;
+            this.tipoTratamentoAntecedentesGerais.Name = "tipoTratamentoAntecedentesGerais";
+            this.tipoTratamentoAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipoTratamentoAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // lblObservacaoAnamnese
             // 
@@ -3589,86 +3658,20 @@
             this.lblLoginUsuario.TabIndex = 7;
             this.lblLoginUsuario.Text = "Nome de usuario";
             // 
-            // sintomaSintomasReferidos
-            // 
-            this.sintomaSintomasReferidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sintomaSintomasReferidos.HeaderText = "Sintomas";
-            this.sintomaSintomasReferidos.Name = "sintomaSintomasReferidos";
-            this.sintomaSintomasReferidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // confirmacaoSintomasReferidos
-            // 
-            this.confirmacaoSintomasReferidos.FalseValue = "false";
-            this.confirmacaoSintomasReferidos.HeaderText = "Possuir";
-            this.confirmacaoSintomasReferidos.IndeterminateValue = "false";
-            this.confirmacaoSintomasReferidos.Name = "confirmacaoSintomasReferidos";
-            this.confirmacaoSintomasReferidos.TrueValue = "true";
-            // 
-            // patologiaAntecedentesOculares
-            // 
-            this.patologiaAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.patologiaAntecedentesOculares.HeaderText = "Patologia";
-            this.patologiaAntecedentesOculares.Name = "patologiaAntecedentesOculares";
-            this.patologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.patologiaAntecedentesOculares.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.patologiaAntecedentesOculares.Width = 5;
-            // 
-            // confirmacaoPatologiaAntecedentesOculares
-            // 
-            this.confirmacaoPatologiaAntecedentesOculares.FalseValue = "false";
-            this.confirmacaoPatologiaAntecedentesOculares.HeaderText = "Possuir";
-            this.confirmacaoPatologiaAntecedentesOculares.IndeterminateValue = "false";
-            this.confirmacaoPatologiaAntecedentesOculares.Name = "confirmacaoPatologiaAntecedentesOculares";
-            this.confirmacaoPatologiaAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.confirmacaoPatologiaAntecedentesOculares.TrueValue = "true";
-            // 
-            // TipoTratamentoAntecedentesOculares
-            // 
-            this.TipoTratamentoAntecedentesOculares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoTratamentoAntecedentesOculares.HeaderText = "Tratamento";
-            this.TipoTratamentoAntecedentesOculares.MaxInputLength = 100;
-            this.TipoTratamentoAntecedentesOculares.Name = "TipoTratamentoAntecedentesOculares";
-            this.TipoTratamentoAntecedentesOculares.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // patologiaAntecedentesGerais
-            // 
-            this.patologiaAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.patologiaAntecedentesGerais.HeaderText = "Patologia";
-            this.patologiaAntecedentesGerais.Name = "patologiaAntecedentesGerais";
-            this.patologiaAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.patologiaAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.patologiaAntecedentesGerais.Width = 5;
-            // 
-            // pessoalAntecedentesGerais
-            // 
-            this.pessoalAntecedentesGerais.HeaderText = "Pessoal";
-            this.pessoalAntecedentesGerais.Name = "pessoalAntecedentesGerais";
-            // 
-            // familiarAntecedentesGerais
-            // 
-            this.familiarAntecedentesGerais.HeaderText = "Familiar";
-            this.familiarAntecedentesGerais.Name = "familiarAntecedentesGerais";
-            // 
-            // tipoTratamentoAntecedentesGerais
-            // 
-            this.tipoTratamentoAntecedentesGerais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoTratamentoAntecedentesGerais.HeaderText = "Tratamento";
-            this.tipoTratamentoAntecedentesGerais.MaxInputLength = 100;
-            this.tipoTratamentoAntecedentesGerais.Name = "tipoTratamentoAntecedentesGerais";
-            this.tipoTratamentoAntecedentesGerais.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tipoTratamentoAntecedentesGerais.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // frmCadastrarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.lblLoginUsuario);
             this.Controls.Add(this.dtgIntermediario);
             this.Controls.Add(this.tabControlTodosDados);
             this.Controls.Add(this.msMenuSuperior);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenuSuperior;
             this.Name = "frmCadastrarConsulta";

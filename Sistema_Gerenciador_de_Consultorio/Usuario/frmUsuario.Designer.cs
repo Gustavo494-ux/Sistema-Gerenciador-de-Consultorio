@@ -32,11 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnLImpar = new System.Windows.Forms.Button();
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.rbPesquisarUsuario = new System.Windows.Forms.RadioButton();
             this.rbCadastrarUsuario = new System.Windows.Forms.RadioButton();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -74,69 +69,19 @@
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnImprimir = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
-            this.pnlMenuSuperior.SuspendLayout();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioCompletoBindingSource)).BeginInit();
             this.pnlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).BeginInit();
+            this.msMenuSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Salvar;
-            this.btnSalvar.Location = new System.Drawing.Point(4, 4);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(91, 27);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(198, 4);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnLImpar
-            // 
-            this.btnLImpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLImpar.Location = new System.Drawing.Point(101, 4);
-            this.btnLImpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLImpar.Name = "btnLImpar";
-            this.btnLImpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLImpar.TabIndex = 0;
-            this.btnLImpar.UseVisualStyleBackColor = true;
-            this.btnLImpar.Click += new System.EventHandler(this.btnLImpar_Click);
-            // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
-            this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Controls.Add(this.btnLImpar);
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1160, 36);
-            this.pnlMenuSuperior.TabIndex = 0;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Alterar;
-            this.btnAlterar.Location = new System.Drawing.Point(4, 4);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(91, 30);
-            this.btnAlterar.TabIndex = 0;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // rbPesquisarUsuario
             // 
@@ -552,12 +497,56 @@
             this.dtgUsuario.TabIndex = 3;
             this.dtgUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_CellClick);
             // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.atualizarToolStripMenuItem,
+            this.limparToolStripMenuItem,
+            this.cancelarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 9;
+            this.msMenuSuperior.Text = "menuSuperior";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
+            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
+            this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlCadastrar);
             this.Controls.Add(this.dtgIntermediario);
             this.Controls.Add(this.dtgUsuario);
@@ -565,18 +554,18 @@
             this.Controls.Add(this.rbPesquisarUsuario);
             this.Controls.Add(this.rbCadastrarUsuario);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.pnlMenuSuperior);
+            this.Controls.Add(this.msMenuSuperior);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.msMenuSuperior;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usuários";
+            this.Text = "Cadastro/Atualização de Usuários";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.Click += new System.EventHandler(this.senha);
-            this.pnlMenuSuperior.ResumeLayout(false);
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
@@ -585,16 +574,14 @@
             this.pnlCadastrar.ResumeLayout(false);
             this.pnlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).EndInit();
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnLImpar;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
         private System.Windows.Forms.RadioButton rbPesquisarUsuario;
         private System.Windows.Forms.RadioButton rbCadastrarUsuario;
         private System.Windows.Forms.Timer repetir;
@@ -613,7 +600,6 @@
         private System.Windows.Forms.ComboBox cbStatusUsuarioPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dtgIntermediario;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Panel pnlCadastrar;
         private System.Windows.Forms.Label lblStatusUsuario;
         private System.Windows.Forms.Label lblNivelAcesso;
@@ -633,5 +619,10 @@
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnImprimir;
         private System.Windows.Forms.DataGridView dtgUsuario;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
     }
 }

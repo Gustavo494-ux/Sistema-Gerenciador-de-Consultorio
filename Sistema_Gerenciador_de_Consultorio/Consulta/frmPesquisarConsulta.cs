@@ -24,17 +24,6 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void estilizar()
         {
-            #region PainelSuperior
-            //Define a cor como um tipo de de azul escuro 
-            pnlMenuSuperior.BackColor = Color.FromArgb(120, 120, 120);
-
-            //posicionamento do lado esquerdo superior
-            pnlMenuSuperior.Location = new Point(0, 0);
-
-            //define a largura  como a largura da tela em que ta sendo executada 
-            pnlMenuSuperior.Width = this.Width;
-            #endregion
-
             #region Formulario
             //this.BackColor = Color.FromArgb(186,203,255);
             this.BackColor = Color.FromArgb(85, 86, 90);
@@ -68,8 +57,6 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void formResponsivo()
         {
-            pnlMenuSuperior.Width = this.Width;
-
             pnlPesquisar.Location = new Point(this.Width / 2 - (pnlPesquisar.Width / 2), 100);
         }
         void limpar()
@@ -325,6 +312,16 @@ namespace Sistema_Gerenciador_de_Consultorio
                 CarregarTodasConsultas();
  
             }
+        }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void dtgConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)

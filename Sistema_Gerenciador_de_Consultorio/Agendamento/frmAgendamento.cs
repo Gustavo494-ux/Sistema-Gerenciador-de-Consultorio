@@ -430,6 +430,22 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
         }
 
+        private void agendamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditarAgendamento editarAgendamento = new frmEditarAgendamento(idUsuario, idNivel, loginUsuario, nomeNivel);
+            editarAgendamento.ShowDialog();
+        }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             centralizarGbs();

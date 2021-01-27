@@ -30,31 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarProfissional));
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.atualizar = new System.Windows.Forms.Timer(this.components);
             this.painelExterno1 = new System.Windows.Forms.Panel();
             this.rbEndereco = new System.Windows.Forms.RadioButton();
             this.rbContato = new System.Windows.Forms.RadioButton();
             this.rbDadosPessoais = new System.Windows.Forms.RadioButton();
-            this.gbContato = new System.Windows.Forms.GroupBox();
-            this.mtxtTelefone3 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtTelefone2 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtTelefone1 = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtObservacaoContato = new System.Windows.Forms.TextBox();
-            this.txtOutro = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.gbDadosPessoais = new System.Windows.Forms.GroupBox();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.cbSexo = new System.Windows.Forms.ComboBox();
@@ -89,79 +71,42 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
+            this.gbContato = new System.Windows.Forms.GroupBox();
+            this.mtxtTelefone3 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefone2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefone1 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtObservacaoContato = new System.Windows.Forms.TextBox();
+            this.txtOutro = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.pnlMenuSuperior.SuspendLayout();
+            this.menuStripSuperior = new System.Windows.Forms.MenuStrip();
+            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             this.painelExterno1.SuspendLayout();
-            this.gbContato.SuspendLayout();
             this.gbDadosPessoais.SuspendLayout();
             this.gbEndereco.SuspendLayout();
+            this.gbContato.SuspendLayout();
+            this.menuStripSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
-            this.pnlMenuSuperior.Controls.Add(this.dtgIntermediario);
-            this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(2, 2);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1158, 40);
-            this.pnlMenuSuperior.TabIndex = 0;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Alterar;
-            this.btnAlterar.Location = new System.Drawing.Point(9, 5);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(91, 30);
-            this.btnAlterar.TabIndex = 0;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Visible = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dtgIntermediario
             // 
             this.dtgIntermediario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIntermediario.Location = new System.Drawing.Point(755, 21);
+            this.dtgIntermediario.Location = new System.Drawing.Point(813, 103);
             this.dtgIntermediario.Name = "dtgIntermediario";
             this.dtgIntermediario.Size = new System.Drawing.Size(142, 18);
             this.dtgIntermediario.TabIndex = 0;
             this.dtgIntermediario.Visible = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Salvar;
-            this.btnSalvar.Location = new System.Drawing.Point(9, 6);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(91, 30);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(106, 5);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 0;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(203, 5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblLoginUsuario
             // 
@@ -184,7 +129,9 @@
             // 
             this.painelExterno1.AutoScroll = true;
             this.painelExterno1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
+            this.painelExterno1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.painelExterno1.Controls.Add(this.rbEndereco);
+            this.painelExterno1.Controls.Add(this.dtgIntermediario);
             this.painelExterno1.Controls.Add(this.rbContato);
             this.painelExterno1.Controls.Add(this.lblLoginUsuario);
             this.painelExterno1.Controls.Add(this.rbDadosPessoais);
@@ -193,10 +140,10 @@
             this.painelExterno1.Controls.Add(this.gbContato);
             this.painelExterno1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.painelExterno1.ForeColor = System.Drawing.Color.White;
-            this.painelExterno1.Location = new System.Drawing.Point(0, 40);
+            this.painelExterno1.Location = new System.Drawing.Point(0, 29);
             this.painelExterno1.MinimumSize = new System.Drawing.Size(1073, 383);
             this.painelExterno1.Name = "painelExterno1";
-            this.painelExterno1.Size = new System.Drawing.Size(1160, 563);
+            this.painelExterno1.Size = new System.Drawing.Size(1160, 574);
             this.painelExterno1.TabIndex = 1;
             // 
             // rbEndereco
@@ -237,141 +184,6 @@
             this.rbDadosPessoais.Text = "Dados Pessoais";
             this.rbDadosPessoais.UseVisualStyleBackColor = true;
             this.rbDadosPessoais.CheckedChanged += new System.EventHandler(this.rbDadosPessoais_CheckedChanged);
-            // 
-            // gbContato
-            // 
-            this.gbContato.Controls.Add(this.mtxtTelefone3);
-            this.gbContato.Controls.Add(this.mtxtTelefone2);
-            this.gbContato.Controls.Add(this.mtxtTelefone1);
-            this.gbContato.Controls.Add(this.label1);
-            this.gbContato.Controls.Add(this.label2);
-            this.gbContato.Controls.Add(this.label3);
-            this.gbContato.Controls.Add(this.label4);
-            this.gbContato.Controls.Add(this.label5);
-            this.gbContato.Controls.Add(this.label6);
-            this.gbContato.Controls.Add(this.txtObservacaoContato);
-            this.gbContato.Controls.Add(this.txtOutro);
-            this.gbContato.Controls.Add(this.txtEmail);
-            this.gbContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbContato.ForeColor = System.Drawing.Color.White;
-            this.gbContato.Location = new System.Drawing.Point(63, 127);
-            this.gbContato.Name = "gbContato";
-            this.gbContato.Size = new System.Drawing.Size(1022, 260);
-            this.gbContato.TabIndex = 3;
-            this.gbContato.TabStop = false;
-            this.gbContato.Text = "Contato";
-            // 
-            // mtxtTelefone3
-            // 
-            this.mtxtTelefone3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone3.Location = new System.Drawing.Point(840, 58);
-            this.mtxtTelefone3.Mask = "(00)0,0000-0000";
-            this.mtxtTelefone3.Name = "mtxtTelefone3";
-            this.mtxtTelefone3.Size = new System.Drawing.Size(140, 26);
-            this.mtxtTelefone3.TabIndex = 16;
-            // 
-            // mtxtTelefone2
-            // 
-            this.mtxtTelefone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone2.Location = new System.Drawing.Point(672, 58);
-            this.mtxtTelefone2.Mask = "(00)0,0000-0000";
-            this.mtxtTelefone2.Name = "mtxtTelefone2";
-            this.mtxtTelefone2.Size = new System.Drawing.Size(140, 26);
-            this.mtxtTelefone2.TabIndex = 15;
-            // 
-            // mtxtTelefone1
-            // 
-            this.mtxtTelefone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone1.Location = new System.Drawing.Point(504, 58);
-            this.mtxtTelefone1.Mask = "(00)0,0000-0000";
-            this.mtxtTelefone1.Name = "mtxtTelefone1";
-            this.mtxtTelefone1.Size = new System.Drawing.Size(140, 26);
-            this.mtxtTelefone1.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 18);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Observação";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Outro:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Email:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(843, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 18);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Telefone 3:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(671, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 18);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Telefone 2:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(506, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 18);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Telefone 1:";
-            // 
-            // txtObservacaoContato
-            // 
-            this.txtObservacaoContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacaoContato.Location = new System.Drawing.Point(42, 162);
-            this.txtObservacaoContato.Multiline = true;
-            this.txtObservacaoContato.Name = "txtObservacaoContato";
-            this.txtObservacaoContato.Size = new System.Drawing.Size(938, 64);
-            this.txtObservacaoContato.TabIndex = 18;
-            // 
-            // txtOutro
-            // 
-            this.txtOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOutro.Location = new System.Drawing.Point(42, 110);
-            this.txtOutro.Name = "txtOutro";
-            this.txtOutro.Size = new System.Drawing.Size(938, 26);
-            this.txtOutro.TabIndex = 17;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(42, 58);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(445, 26);
-            this.txtEmail.TabIndex = 13;
             // 
             // gbDadosPessoais
             // 
@@ -736,9 +548,187 @@
             this.txtNumero.Size = new System.Drawing.Size(96, 26);
             this.txtNumero.TabIndex = 21;
             // 
+            // gbContato
+            // 
+            this.gbContato.Controls.Add(this.mtxtTelefone3);
+            this.gbContato.Controls.Add(this.mtxtTelefone2);
+            this.gbContato.Controls.Add(this.mtxtTelefone1);
+            this.gbContato.Controls.Add(this.label1);
+            this.gbContato.Controls.Add(this.label2);
+            this.gbContato.Controls.Add(this.label3);
+            this.gbContato.Controls.Add(this.label4);
+            this.gbContato.Controls.Add(this.label5);
+            this.gbContato.Controls.Add(this.label6);
+            this.gbContato.Controls.Add(this.txtObservacaoContato);
+            this.gbContato.Controls.Add(this.txtOutro);
+            this.gbContato.Controls.Add(this.txtEmail);
+            this.gbContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbContato.ForeColor = System.Drawing.Color.White;
+            this.gbContato.Location = new System.Drawing.Point(63, 127);
+            this.gbContato.Name = "gbContato";
+            this.gbContato.Size = new System.Drawing.Size(1022, 260);
+            this.gbContato.TabIndex = 3;
+            this.gbContato.TabStop = false;
+            this.gbContato.Text = "Contato";
+            // 
+            // mtxtTelefone3
+            // 
+            this.mtxtTelefone3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone3.Location = new System.Drawing.Point(840, 58);
+            this.mtxtTelefone3.Mask = "(00)0,0000-0000";
+            this.mtxtTelefone3.Name = "mtxtTelefone3";
+            this.mtxtTelefone3.Size = new System.Drawing.Size(140, 26);
+            this.mtxtTelefone3.TabIndex = 16;
+            // 
+            // mtxtTelefone2
+            // 
+            this.mtxtTelefone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone2.Location = new System.Drawing.Point(672, 58);
+            this.mtxtTelefone2.Mask = "(00)0,0000-0000";
+            this.mtxtTelefone2.Name = "mtxtTelefone2";
+            this.mtxtTelefone2.Size = new System.Drawing.Size(140, 26);
+            this.mtxtTelefone2.TabIndex = 15;
+            // 
+            // mtxtTelefone1
+            // 
+            this.mtxtTelefone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone1.Location = new System.Drawing.Point(504, 58);
+            this.mtxtTelefone1.Mask = "(00)0,0000-0000";
+            this.mtxtTelefone1.Name = "mtxtTelefone1";
+            this.mtxtTelefone1.Size = new System.Drawing.Size(140, 26);
+            this.mtxtTelefone1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Observação";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(44, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Outro:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(45, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Email:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(843, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 18);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Telefone 3:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(671, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Telefone 2:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(506, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 18);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Telefone 1:";
+            // 
+            // txtObservacaoContato
+            // 
+            this.txtObservacaoContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacaoContato.Location = new System.Drawing.Point(42, 162);
+            this.txtObservacaoContato.Multiline = true;
+            this.txtObservacaoContato.Name = "txtObservacaoContato";
+            this.txtObservacaoContato.Size = new System.Drawing.Size(938, 64);
+            this.txtObservacaoContato.TabIndex = 18;
+            // 
+            // txtOutro
+            // 
+            this.txtOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOutro.Location = new System.Drawing.Point(42, 110);
+            this.txtOutro.Name = "txtOutro";
+            this.txtOutro.Size = new System.Drawing.Size(938, 26);
+            this.txtOutro.TabIndex = 17;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(42, 58);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(445, 26);
+            this.txtEmail.TabIndex = 13;
+            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // menuStripSuperior
+            // 
+            this.menuStripSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarToolStripMenuItem,
+            this.atualizarToolStripMenuItem,
+            this.limparToolStripMenuItem,
+            this.voltarToolStripMenuItem});
+            this.menuStripSuperior.Location = new System.Drawing.Point(0, 0);
+            this.menuStripSuperior.Name = "menuStripSuperior";
+            this.menuStripSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.menuStripSuperior.TabIndex = 2;
+            this.menuStripSuperior.Text = "menuStrip1";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
+            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
+            this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // frmCadastrarProfissional
             // 
@@ -746,40 +736,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.painelExterno1);
-            this.Controls.Add(this.pnlMenuSuperior);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.menuStripSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStripSuperior;
             this.MinimumSize = new System.Drawing.Size(1073, 383);
             this.Name = "frmCadastrarProfissional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro/Atualização de profissional";
             this.Load += new System.EventHandler(this.frmCadastrarProfissional_Load);
-            this.pnlMenuSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
             this.painelExterno1.ResumeLayout(false);
             this.painelExterno1.PerformLayout();
-            this.gbContato.ResumeLayout(false);
-            this.gbContato.PerformLayout();
             this.gbDadosPessoais.ResumeLayout(false);
             this.gbDadosPessoais.PerformLayout();
             this.gbEndereco.ResumeLayout(false);
             this.gbEndereco.PerformLayout();
+            this.gbContato.ResumeLayout(false);
+            this.gbContato.PerformLayout();
+            this.menuStripSuperior.ResumeLayout(false);
+            this.menuStripSuperior.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMenuSuperior;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Timer atualizar;
         private System.Windows.Forms.Panel painelExterno1;
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.DataGridView dtgIntermediario;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.RadioButton rbEndereco;
@@ -832,5 +820,10 @@
         private System.Windows.Forms.TextBox txtObservacaoContato;
         private System.Windows.Forms.TextBox txtOutro;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MenuStrip menuStripSuperior;
+        private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
     }
 }

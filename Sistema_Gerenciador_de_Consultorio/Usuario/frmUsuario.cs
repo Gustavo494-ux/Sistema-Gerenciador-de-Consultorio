@@ -177,10 +177,6 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void estilo()
         {
-            #region Tamanho
-            //define a largura do painel de meu superior como a largura da tela em que ta sendo executada 
-            pnlMenuSuperior.Width = this.Width;
-            #endregion
 
             #region Color
             //Colorir linhas do dtg
@@ -234,8 +230,8 @@ namespace Sistema_Gerenciador_de_Consultorio
             lblUsuario.Text = "Usuário: " + loginUsuario + "\n Nivel: "+nomeNivel;
             rbTodos.Checked = true;
             txtPesquisar.Visible = true;
-            btnAlterar.Visible = false;
-            btnSalvar.Visible = true;
+            atualizarToolStripMenuItem.Visible = false;
+            salvarToolStripMenuItem.Visible = true;
             estilo();
             permissoes();
             dtgUsuario.AutoResizeColumns();
@@ -335,8 +331,8 @@ namespace Sistema_Gerenciador_de_Consultorio
                 dadosform = editarUsuario.RetornarDados(idUsuario);
                 dtgIntermediario.DataSource = null;
                 dtgIntermediario.DataSource = dadosform;
-                btnSalvar.Visible = false;
-                btnAlterar.Visible = true;
+                salvarToolStripMenuItem.Visible = false;
+                atualizarToolStripMenuItem.Visible = true;
                 for (int i = 0; i < dadosform.Rows.Count; i++)
                 {
                     idUsuarioEditar = dtgIntermediario.Rows[i].Cells["idusuario"].Value.ToString();
@@ -435,7 +431,28 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(idUsuarioEditar)>0)
+           
+        }
+        private void repetir_Tick(object sender, EventArgs e)
+        {
+            centralizar();
+            if(rbPesquisarUsuario.Checked == true)
+            {
+                salvarToolStripMenuItem.Visible = false;
+                atualizarToolStripMenuItem.Visible = false;
+                limparToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                salvarToolStripMenuItem.Visible = true;
+                atualizarToolStripMenuItem.Visible = true;
+                limparToolStripMenuItem.Visible = true;
+            }
+        }
+
+        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(idUsuarioEditar) > 0)
             {
                 UsuarioRegra editar = new UsuarioRegra();
 
@@ -445,8 +462,8 @@ namespace Sistema_Gerenciador_de_Consultorio
                 //if(editar.Atualizar(Convert.ToInt32(idUsuarioEditar),Convert.ToInt32(cbIntermediario.Text), txtNomeUsuario.Text,txtLoginUsuario.Text,
                 //    txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text) == true)
                 {
-                    if (MessageBox.Show("Dados Alterados com sucesso!\nDeseja retornar ao formulario anterior?", "Dados Alterados", 
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information)==DialogResult.Yes)
+                    if (MessageBox.Show("Dados Alterados com sucesso!\nDeseja retornar ao formulario anterior?", "Dados Alterados",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         this.Dispose();
                     }
@@ -459,7 +476,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 }
                 else
                 {
-                    MessageBox.Show("A atualização dos dados não foi finalizada corretamente devido dados incorretos ou inválidos","Dados Inválidos",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("A atualização dos dados não foi finalizada corretamente devido dados incorretos ou inválidos", "Dados Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -467,13 +484,25 @@ namespace Sistema_Gerenciador_de_Consultorio
                 MessageBox.Show("Para proseguir com a atualização dos dados é necessario selecionar um usúario valido", "Usuário Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void repetir_Tick(object sender, EventArgs e)
+
+        private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            centralizar();
+            salvar();
         }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LimparCadastro();
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void senha(object sender, EventArgs e)
         {
-            if (btnAlterar.Visible == true)
+            if (atualizarToolStripMenuItem.Visible == true)
             {
                 txtSenha.Clear();
                 txtConfirmacaoSenha.Clear(); 

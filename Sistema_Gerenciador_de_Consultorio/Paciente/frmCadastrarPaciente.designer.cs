@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarPaciente));
             this.painelExterno1 = new System.Windows.Forms.Panel();
+            this.dtgPaciente = new System.Windows.Forms.DataGridView();
             this.gbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
@@ -84,25 +86,26 @@
             this.txtObservacaoContato = new System.Windows.Forms.TextBox();
             this.txtOutro = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.dtgPaciente = new System.Windows.Forms.DataGridView();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.atualizarMsMenuSuperior = new System.Windows.Forms.ToolStripMenuItem();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.salvarMsMenuSuperior = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparMsMenuSuperior = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarMsMenuSuperior = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizar = new System.Windows.Forms.Timer(this.components);
             this.painelExterno1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).BeginInit();
             this.gbDadosPessoais.SuspendLayout();
             this.gbEndereco.SuspendLayout();
             this.gbContato.SuspendLayout();
-            this.pnlMenuSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).BeginInit();
+            this.msMenuSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // painelExterno1
             // 
             this.painelExterno1.AutoScroll = true;
             this.painelExterno1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
+            this.painelExterno1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.painelExterno1.Controls.Add(this.dtgPaciente);
             this.painelExterno1.Controls.Add(this.gbDadosPessoais);
             this.painelExterno1.Controls.Add(this.rbEndereco);
             this.painelExterno1.Controls.Add(this.rbContato);
@@ -113,13 +116,26 @@
             this.painelExterno1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.painelExterno1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.painelExterno1.ForeColor = System.Drawing.Color.White;
-            this.painelExterno1.Location = new System.Drawing.Point(0, 41);
+            this.painelExterno1.Location = new System.Drawing.Point(0, 29);
             this.painelExterno1.Name = "painelExterno1";
-            this.painelExterno1.Size = new System.Drawing.Size(1160, 562);
+            this.painelExterno1.Size = new System.Drawing.Size(1160, 574);
             this.painelExterno1.TabIndex = 0;
+            // 
+            // dtgPaciente
+            // 
+            this.dtgPaciente.AllowUserToAddRows = false;
+            this.dtgPaciente.AllowUserToDeleteRows = false;
+            this.dtgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPaciente.Location = new System.Drawing.Point(789, 20);
+            this.dtgPaciente.Name = "dtgPaciente";
+            this.dtgPaciente.ReadOnly = true;
+            this.dtgPaciente.Size = new System.Drawing.Size(136, 74);
+            this.dtgPaciente.TabIndex = 10;
+            this.dtgPaciente.Visible = false;
             // 
             // gbDadosPessoais
             // 
+            this.gbDadosPessoais.Controls.Add(this.btnCancelar);
             this.gbDadosPessoais.Controls.Add(this.dtpDataNascimento);
             this.gbDadosPessoais.Controls.Add(this.lblDataNascimento);
             this.gbDadosPessoais.Controls.Add(this.cbSexo);
@@ -146,6 +162,13 @@
             this.gbDadosPessoais.TabIndex = 1;
             this.gbDadosPessoais.TabStop = false;
             this.gbDadosPessoais.Text = "Dados Pessoais";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(-60, -10);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 0;
             // 
             // dtpDataNascimento
             // 
@@ -701,72 +724,49 @@
             this.txtEmail.Size = new System.Drawing.Size(431, 26);
             this.txtEmail.TabIndex = 13;
             // 
-            // pnlMenuSuperior
+            // atualizarMsMenuSuperior
             // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.dtgPaciente);
-            this.pnlMenuSuperior.Controls.Add(this.btnAlterar);
-            this.pnlMenuSuperior.Controls.Add(this.btnSalvar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1160, 40);
-            this.pnlMenuSuperior.TabIndex = 0;
+            this.atualizarMsMenuSuperior.Name = "atualizarMsMenuSuperior";
+            this.atualizarMsMenuSuperior.Size = new System.Drawing.Size(80, 22);
+            this.atualizarMsMenuSuperior.Text = "Atualizar";
+            this.atualizarMsMenuSuperior.Click += new System.EventHandler(this.atualizarMsMenuSuperior_Click);
             // 
-            // btnCancelar
+            // msMenuSuperior
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(202, 6);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarMsMenuSuperior,
+            this.atualizarMsMenuSuperior,
+            this.limparMsMenuSuperior,
+            this.voltarMsMenuSuperior});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 1;
+            this.msMenuSuperior.Text = "menuStrip1";
+            this.msMenuSuperior.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.msMenuSuperior_ItemClicked);
             // 
-            // btnLimpar
+            // salvarMsMenuSuperior
             // 
-            this.btnLimpar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(105, 6);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 0;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.salvarMsMenuSuperior.Name = "salvarMsMenuSuperior";
+            this.salvarMsMenuSuperior.Size = new System.Drawing.Size(64, 22);
+            this.salvarMsMenuSuperior.Text = "Salvar";
+            this.salvarMsMenuSuperior.Click += new System.EventHandler(this.salvarMsMenuSuperior_Click);
             // 
-            // btnSalvar
+            // limparMsMenuSuperior
             // 
-            this.btnSalvar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Salvar;
-            this.btnSalvar.Location = new System.Drawing.Point(8, 5);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(91, 30);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.limparMsMenuSuperior.Name = "limparMsMenuSuperior";
+            this.limparMsMenuSuperior.Size = new System.Drawing.Size(69, 22);
+            this.limparMsMenuSuperior.Text = "Limpar";
+            this.limparMsMenuSuperior.Click += new System.EventHandler(this.limparMsMenuSuperior_Click);
             // 
-            // dtgPaciente
+            // voltarMsMenuSuperior
             // 
-            this.dtgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPaciente.Location = new System.Drawing.Point(1578, 26);
-            this.dtgPaciente.Name = "dtgPaciente";
-            this.dtgPaciente.Size = new System.Drawing.Size(140, 24);
-            this.dtgPaciente.TabIndex = 4;
-            this.dtgPaciente.Visible = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Alterar;
-            this.btnAlterar.Location = new System.Drawing.Point(8, 5);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(91, 30);
-            this.btnAlterar.TabIndex = 0;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.voltarMsMenuSuperior.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarMsMenuSuperior.Name = "voltarMsMenuSuperior";
+            this.voltarMsMenuSuperior.Size = new System.Drawing.Size(60, 22);
+            this.voltarMsMenuSuperior.Text = "Voltar";
+            this.voltarMsMenuSuperior.Click += new System.EventHandler(this.voltarMsMenuSuperior_Click);
             // 
             // atualizar
             // 
@@ -778,43 +778,40 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.painelExterno1);
-            this.Controls.Add(this.pnlMenuSuperior);
+            this.Controls.Add(this.msMenuSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastrarPaciente";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar/Atualizar Paciente";
             this.Load += new System.EventHandler(this.frmCadastrarPaciente_Load);
             this.painelExterno1.ResumeLayout(false);
             this.painelExterno1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).EndInit();
             this.gbDadosPessoais.ResumeLayout(false);
             this.gbDadosPessoais.PerformLayout();
             this.gbEndereco.ResumeLayout(false);
             this.gbEndereco.PerformLayout();
             this.gbContato.ResumeLayout(false);
             this.gbContato.PerformLayout();
-            this.pnlMenuSuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).EndInit();
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel painelExterno1;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
-        private System.Windows.Forms.Label lblNomeUsuario;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Timer atualizar;
         private System.Windows.Forms.DataGridView dtgPaciente;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.RadioButton rbEndereco;
-        private System.Windows.Forms.RadioButton rbContato;
-        private System.Windows.Forms.RadioButton rbDadosPessoais;
-        private System.Windows.Forms.GroupBox gbEndereco;
-        private System.Windows.Forms.GroupBox gbContato;
         private System.Windows.Forms.GroupBox gbDadosPessoais;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.ComboBox cbSexo;
@@ -833,18 +830,11 @@
         private System.Windows.Forms.Label lblNomePaciente;
         private System.Windows.Forms.TextBox txtocupacao;
         private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone3;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone2;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone1;
-        private System.Windows.Forms.Label lblObservacaoContato;
-        private System.Windows.Forms.Label lblOutro;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblTelefone3;
-        private System.Windows.Forms.Label lblTelefone2;
-        private System.Windows.Forms.Label lblTelefone1;
-        private System.Windows.Forms.TextBox txtObservacaoContato;
-        private System.Windows.Forms.TextBox txtOutro;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.RadioButton rbEndereco;
+        private System.Windows.Forms.RadioButton rbContato;
+        private System.Windows.Forms.RadioButton rbDadosPessoais;
+        private System.Windows.Forms.Label lblNomeUsuario;
+        private System.Windows.Forms.GroupBox gbEndereco;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblEstado;
@@ -861,5 +851,24 @@
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.GroupBox gbContato;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone3;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone2;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone1;
+        private System.Windows.Forms.Label lblObservacaoContato;
+        private System.Windows.Forms.Label lblOutro;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblTelefone3;
+        private System.Windows.Forms.Label lblTelefone2;
+        private System.Windows.Forms.Label lblTelefone1;
+        private System.Windows.Forms.TextBox txtObservacaoContato;
+        private System.Windows.Forms.TextBox txtOutro;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.ToolStripMenuItem atualizarMsMenuSuperior;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem salvarMsMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparMsMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem voltarMsMenuSuperior;
+        private System.Windows.Forms.Timer atualizar;
     }
 }

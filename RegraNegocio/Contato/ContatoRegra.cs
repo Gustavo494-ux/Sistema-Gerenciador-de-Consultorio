@@ -44,7 +44,7 @@ namespace RegraNegocio
 
                 if (Convert.ToInt32(idUsuario) <1) return false;
 
-                if (email.Length > 50) return false;
+                if (email.Length > 100) return false;
 
                 if (outro.Length > 100) return false;
 

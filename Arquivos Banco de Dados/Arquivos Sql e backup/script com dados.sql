@@ -26,7 +26,7 @@ idUsuarioDeletar serial
 CREATE TABLE contato (
 idContato serial PRIMARY KEY,
 idUsuario serial,
-email varchar(50),
+email varchar(100),
 telefone1 varchar(11),
 telefone2 varchar(11),
 telefone3 varchar(11),

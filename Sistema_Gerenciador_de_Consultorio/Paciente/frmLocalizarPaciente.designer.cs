@@ -32,9 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocalizarPaciente));
             this.atualizar = new System.Windows.Forms.Timer(this.components);
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtgPaciente = new System.Windows.Forms.DataGridView();
@@ -68,11 +65,14 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pnlMenuSuperior.SuspendLayout();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
+            this.msMenuSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // atualizar
@@ -80,47 +80,13 @@
             this.atualizar.Enabled = true;
             this.atualizar.Tick += new System.EventHandler(this.atualizar_Tick);
             // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1160, 40);
-            this.pnlMenuSuperior.TabIndex = 1;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(5, 5);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 0;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(104, 5);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // dtgIntermediario
             // 
             this.dtgIntermediario.AllowUserToAddRows = false;
             this.dtgIntermediario.AllowUserToDeleteRows = false;
             this.dtgIntermediario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgIntermediario.Location = new System.Drawing.Point(1242, 573);
-            this.dtgIntermediario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtgIntermediario.Margin = new System.Windows.Forms.Padding(4);
             this.dtgIntermediario.Name = "dtgIntermediario";
             this.dtgIntermediario.ReadOnly = true;
             this.dtgIntermediario.Size = new System.Drawing.Size(85, 20);
@@ -312,7 +278,7 @@
             this.txtPesquisar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPesquisar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisar.Location = new System.Drawing.Point(9, 16);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(305, 26);
             this.txtPesquisar.TabIndex = 6;
@@ -325,7 +291,7 @@
             this.rbIdPaciente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbIdPaciente.ForeColor = System.Drawing.Color.White;
             this.rbIdPaciente.Location = new System.Drawing.Point(9, 52);
-            this.rbIdPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbIdPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.rbIdPaciente.Name = "rbIdPaciente";
             this.rbIdPaciente.Size = new System.Drawing.Size(78, 22);
             this.rbIdPaciente.TabIndex = 0;
@@ -340,7 +306,7 @@
             this.rbCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCPF.ForeColor = System.Drawing.Color.White;
             this.rbCPF.Location = new System.Drawing.Point(94, 52);
-            this.rbCPF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbCPF.Margin = new System.Windows.Forms.Padding(4);
             this.rbCPF.Name = "rbCPF";
             this.rbCPF.Size = new System.Drawing.Size(59, 22);
             this.rbCPF.TabIndex = 2;
@@ -355,7 +321,7 @@
             this.rbNome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNome.ForeColor = System.Drawing.Color.White;
             this.rbNome.Location = new System.Drawing.Point(9, 86);
-            this.rbNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbNome.Margin = new System.Windows.Forms.Padding(4);
             this.rbNome.Name = "rbNome";
             this.rbNome.Size = new System.Drawing.Size(68, 22);
             this.rbNome.TabIndex = 1;
@@ -370,7 +336,7 @@
             this.rbRG.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbRG.ForeColor = System.Drawing.Color.White;
             this.rbRG.Location = new System.Drawing.Point(94, 86);
-            this.rbRG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbRG.Margin = new System.Windows.Forms.Padding(4);
             this.rbRG.Name = "rbRG";
             this.rbRG.Size = new System.Drawing.Size(49, 22);
             this.rbRG.TabIndex = 3;
@@ -385,7 +351,7 @@
             this.rbSemFiltros.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSemFiltros.ForeColor = System.Drawing.Color.White;
             this.rbSemFiltros.Location = new System.Drawing.Point(160, 52);
-            this.rbSemFiltros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbSemFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.rbSemFiltros.Name = "rbSemFiltros";
             this.rbSemFiltros.Size = new System.Drawing.Size(120, 22);
             this.rbSemFiltros.TabIndex = 4;
@@ -423,7 +389,7 @@
             this.pnlPesquisar.Controls.Add(this.nudPesquisar);
             this.pnlPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.pnlPesquisar.Location = new System.Drawing.Point(334, 50);
-            this.pnlPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPesquisar.Name = "pnlPesquisar";
             this.pnlPesquisar.Size = new System.Drawing.Size(418, 131);
             this.pnlPesquisar.TabIndex = 1;
@@ -432,7 +398,7 @@
             // 
             this.btnPesquisar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.pesquisar;
             this.btnPesquisar.Location = new System.Drawing.Point(322, 13);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(91, 30);
             this.btnPesquisar.TabIndex = 5;
@@ -456,30 +422,60 @@
             this.dataGridViewImageColumn2.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.consultaicon;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparToolStripMenuItem,
+            this.voltarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 50;
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
+            this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
+            // 
             // frmLocalizarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.lblLoginUsuario);
             this.Controls.Add(this.dtgPaciente);
             this.Controls.Add(this.dtgIntermediario);
-            this.Controls.Add(this.pnlMenuSuperior);
             this.Controls.Add(this.pnlPesquisar);
+            this.Controls.Add(this.msMenuSuperior);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MainMenuStrip = this.msMenuSuperior;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLocalizarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Paciente";
             this.Load += new System.EventHandler(this.frmLocalizarPaciente_Load);
-            this.pnlMenuSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).EndInit();
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,9 +483,6 @@
 
         #endregion
         private System.Windows.Forms.Timer atualizar;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dtgIntermediario;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridView dtgPaciente;
@@ -523,5 +516,8 @@
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
     }
 }

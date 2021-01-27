@@ -139,7 +139,7 @@
             this.todosRegistrosToolStripMenuItem});
             this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
             this.msMenuSuperior.Name = "msMenuSuperior";
-            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.Size = new System.Drawing.Size(1156, 26);
             this.msMenuSuperior.TabIndex = 0;
             this.msMenuSuperior.Text = "menuStrip1";
             // 
@@ -264,7 +264,7 @@
             this.tcDadosDeletados.Location = new System.Drawing.Point(0, 26);
             this.tcDadosDeletados.Name = "tcDadosDeletados";
             this.tcDadosDeletados.SelectedIndex = 0;
-            this.tcDadosDeletados.Size = new System.Drawing.Size(1160, 577);
+            this.tcDadosDeletados.Size = new System.Drawing.Size(1156, 573);
             this.tcDadosDeletados.TabIndex = 1;
             // 
             // tpPaciente
@@ -283,7 +283,7 @@
             this.tpPaciente.Location = new System.Drawing.Point(4, 27);
             this.tpPaciente.Name = "tpPaciente";
             this.tpPaciente.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPaciente.Size = new System.Drawing.Size(1152, 546);
+            this.tpPaciente.Size = new System.Drawing.Size(1148, 542);
             this.tpPaciente.TabIndex = 0;
             this.tpPaciente.Text = "Paciente";
             // 
@@ -330,7 +330,7 @@
             this.dtgPaciente.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgPaciente.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgPaciente.GridColor = System.Drawing.Color.Black;
-            this.dtgPaciente.Location = new System.Drawing.Point(3, 174);
+            this.dtgPaciente.Location = new System.Drawing.Point(3, 170);
             this.dtgPaciente.Name = "dtgPaciente";
             this.dtgPaciente.ReadOnly = true;
             this.dtgPaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -350,7 +350,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dtgPaciente.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgPaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPaciente.Size = new System.Drawing.Size(1146, 369);
+            this.dtgPaciente.Size = new System.Drawing.Size(1142, 369);
             this.dtgPaciente.TabIndex = 4;
             this.dtgPaciente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPaciente_CellClick);
             // 
@@ -970,12 +970,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(1176, 642);
+            this.ClientSize = new System.Drawing.Size(1160, 603);
             this.Controls.Add(this.tcDadosDeletados);
             this.Controls.Add(this.msMenuSuperior);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenuSuperior;
             this.Margin = new System.Windows.Forms.Padding(4);

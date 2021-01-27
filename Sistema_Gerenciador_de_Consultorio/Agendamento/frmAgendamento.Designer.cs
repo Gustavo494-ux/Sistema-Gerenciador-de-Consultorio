@@ -35,10 +35,6 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.lblUsuarioSistema = new System.Windows.Forms.Label();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.btnEditarAgendamento = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.AgendamentoTabControl = new System.Windows.Forms.TabControl();
             this.tpPacienteExistente = new System.Windows.Forms.TabPage();
             this.pnlPacienteExistente = new System.Windows.Forms.Panel();
@@ -49,8 +45,8 @@
             this.rbSemFiltros = new System.Windows.Forms.RadioButton();
             this.rbIdPaciente = new System.Windows.Forms.RadioButton();
             this.btnPesquisarPaciente = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.nudPesquisar = new System.Windows.Forms.NumericUpDown();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbStatusConsultaPacienteExistente = new System.Windows.Forms.ComboBox();
             this.txtObservacaoPacienteExistente = new System.Windows.Forms.TextBox();
             this.dtpDataConsultaPacienteExistente = new System.Windows.Forms.DateTimePicker();
@@ -134,8 +130,11 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.msMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.agendamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
-            this.pnlMenuSuperior.SuspendLayout();
             this.AgendamentoTabControl.SuspendLayout();
             this.tpPacienteExistente.SuspendLayout();
             this.pnlPacienteExistente.SuspendLayout();
@@ -148,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroNovo)).BeginInit();
             this.gbDadosAgendamento.SuspendLayout();
             this.gbContato.SuspendLayout();
+            this.msMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -172,56 +172,12 @@
             this.dtgIntermediario.AllowUserToAddRows = false;
             this.dtgIntermediario.AllowUserToDeleteRows = false;
             this.dtgIntermediario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIntermediario.Location = new System.Drawing.Point(1004, 4);
+            this.dtgIntermediario.Location = new System.Drawing.Point(292, 48);
             this.dtgIntermediario.Margin = new System.Windows.Forms.Padding(4);
             this.dtgIntermediario.Name = "dtgIntermediario";
             this.dtgIntermediario.Size = new System.Drawing.Size(85, 20);
             this.dtgIntermediario.TabIndex = 0;
             this.dtgIntermediario.Visible = false;
-            // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.btnEditarAgendamento);
-            this.pnlMenuSuperior.Controls.Add(this.dtgIntermediario);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuSuperior.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1160, 40);
-            this.pnlMenuSuperior.TabIndex = 2;
-            // 
-            // btnEditarAgendamento
-            // 
-            this.btnEditarAgendamento.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.agendamentos;
-            this.btnEditarAgendamento.Location = new System.Drawing.Point(4, 6);
-            this.btnEditarAgendamento.Name = "btnEditarAgendamento";
-            this.btnEditarAgendamento.Size = new System.Drawing.Size(130, 30);
-            this.btnEditarAgendamento.TabIndex = 2;
-            this.btnEditarAgendamento.UseVisualStyleBackColor = true;
-            this.btnEditarAgendamento.Click += new System.EventHandler(this.btnEditarAgendamento_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(236, 6);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(139, 6);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 0;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // AgendamentoTabControl
             // 
@@ -354,17 +310,6 @@
             this.btnPesquisarPaciente.UseVisualStyleBackColor = true;
             this.btnPesquisarPaciente.Click += new System.EventHandler(this.btnPesquisarPaciente_Click);
             // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPesquisar.Location = new System.Drawing.Point(25, 34);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(305, 26);
-            this.txtPesquisar.TabIndex = 19;
-            this.txtPesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPesquisar.Visible = false;
-            // 
             // nudPesquisar
             // 
             this.nudPesquisar.Location = new System.Drawing.Point(25, 34);
@@ -378,6 +323,17 @@
             this.nudPesquisar.TabIndex = 21;
             this.nudPesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudPesquisar.Visible = false;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPesquisar.Location = new System.Drawing.Point(25, 34);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(305, 26);
+            this.txtPesquisar.TabIndex = 19;
+            this.txtPesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisar.Visible = false;
             // 
             // cbStatusConsultaPacienteExistente
             // 
@@ -1217,6 +1173,41 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // msMenuStrip
+            // 
+            this.msMenuStrip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agendamentosToolStripMenuItem,
+            this.limparToolStripMenuItem,
+            this.cancelarToolStripMenuItem});
+            this.msMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.msMenuStrip.Name = "msMenuStrip";
+            this.msMenuStrip.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuStrip.TabIndex = 12;
+            this.msMenuStrip.Text = "MenuSuperior";
+            // 
+            // agendamentosToolStripMenuItem
+            // 
+            this.agendamentosToolStripMenuItem.Name = "agendamentosToolStripMenuItem";
+            this.agendamentosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.agendamentosToolStripMenuItem.Text = "Agendamentos";
+            this.agendamentosToolStripMenuItem.Click += new System.EventHandler(this.agendamentosToolStripMenuItem_Click);
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
+            this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
+            // 
             // frmAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1225,20 +1216,22 @@
             this.ClientSize = new System.Drawing.Size(1160, 603);
             this.ControlBox = false;
             this.Controls.Add(this.lblUsuarioSistema);
+            this.Controls.Add(this.dtgIntermediario);
             this.Controls.Add(this.AgendamentoTabControl);
-            this.Controls.Add(this.pnlMenuSuperior);
+            this.Controls.Add(this.msMenuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.msMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1110, 593);
             this.Name = "frmAgendamento";
             this.RightToLeftLayout = true;
             this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agendamentos";
+            this.Text = "Cadastro de Agendamentos";
             this.Load += new System.EventHandler(this.frmAgendamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
-            this.pnlMenuSuperior.ResumeLayout(false);
             this.AgendamentoTabControl.ResumeLayout(false);
             this.tpPacienteExistente.ResumeLayout(false);
             this.pnlPacienteExistente.ResumeLayout(false);
@@ -1258,6 +1251,8 @@
             this.gbDadosAgendamento.PerformLayout();
             this.gbContato.ResumeLayout(false);
             this.gbContato.PerformLayout();
+            this.msMenuStrip.ResumeLayout(false);
+            this.msMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1266,12 +1261,8 @@
         #endregion
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Button btnEditarAgendamento;
         private System.Windows.Forms.Label lblUsuarioSistema;
         private System.Windows.Forms.DataGridView dtgIntermediario;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button btnCadastrarEAgendar;
         private System.Windows.Forms.TabControl AgendamentoTabControl;
@@ -1367,5 +1358,9 @@
         private System.Windows.Forms.RadioButton rbContato;
         private System.Windows.Forms.RadioButton rbEndereco;
         private System.Windows.Forms.RadioButton rbDadosAgendamento;
+        private System.Windows.Forms.MenuStrip msMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem agendamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
     }
 }

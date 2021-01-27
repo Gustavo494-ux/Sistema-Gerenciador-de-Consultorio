@@ -39,19 +39,22 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            //this.FormBorderStyle = FormBorderStyle.None;
             DadosDeletados();
 
             //Altera a visibilidade dos paineis
             visibilidadePaineis();
 
-            //posicionamento do painel de menu superior 
+            //posicionamento do painel de menu superior
             pnlMenuSuperior.Location = new Point(0, 0);
 
 
-            //define a largura do painel de meu superior como a largura da tela em que ta sendo executada 
+            //define a largura do painel de meu superior como a largura da tela em que ta sendo executada
             pnlMenuSuperior.Width = this.Width;
-            btnDeslogar.Location = new Point(-(110-this.Width), 2);
+            btnDeslogar.Location = new Point(-(110 - this.Width), 2);
             btnUsuarios.Location = new Point(-(150 - this.Width), 2);
+
+            pnlMenuSuperior.Visible = false;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -67,11 +70,6 @@ namespace Sistema_Gerenciador_de_Consultorio
             pesquisarPnl.Visible = true;
             //btnDeslogar.Width = this.Width;
             
-        }
-        private void btnFinanceiro_Click(object sender, EventArgs e)
-        {
-            //Define que o paineis cadastrar e pesquisar do financeiro fica visivel e os demais invisiveis.
-            visibilidadePaineis();
         }
         private void btnRelatotorios_Click(object sender, EventArgs e)
         {
@@ -115,7 +113,6 @@ namespace Sistema_Gerenciador_de_Consultorio
             btnDeslogar.Location = new Point(-(60 - this.Width), 2);
             btnUsuarios.Location = new Point(-(100 - this.Width), 2);
         }
-
         private void btnDadosDeletados_Click(object sender, EventArgs e)
         {
             frmDadosDeletados dadosDeletados = new frmDadosDeletados(idUsuario,idNivel, loginUsuario, nomeNivel);
@@ -132,6 +129,60 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             frmUsuario novoUsuario = new frmUsuario(idUsuario, idNivel, loginUsuario, nomeNivel);
             novoUsuario.ShowDialog();
+        }
+        //Menu Strip
+        private void profissionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrarProfissional novoProfissional = new frmCadastrarProfissional(idUsuario, idNivel, loginUsuario, nomeNivel);
+            novoProfissional.ShowDialog();
+        }
+        private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrarPaciente novoPaciente = new frmCadastrarPaciente(idUsuario, idNivel, loginUsuario, nomeNivel);
+            novoPaciente.ShowDialog();
+        }
+        private void profissionalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmLocalizarProfissional pesquisarProfissional = new frmLocalizarProfissional(idUsuario, idNivel, loginUsuario, nomeNivel);
+            pesquisarProfissional.ShowDialog();
+        }
+        private void pacienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmLocalizarPaciente pesquisarPaciente = new frmLocalizarPaciente(idUsuario, idNivel, loginUsuario, nomeNivel);
+            pesquisarPaciente.ShowDialog();
+        }
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPesquisarConsulta pesquisarConsulta = new frmPesquisarConsulta(idUsuario, idNivel, loginUsuario, nomeNivel);
+            pesquisarConsulta.ShowDialog();
+        }
+        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgendamento agendar = new frmAgendamento(idUsuario, idNivel, loginUsuario, nomeNivel);
+            agendar.ShowDialog();
+        }
+        private void relatoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorio relatorios = new frmRelatorio(idUsuario, idNivel, loginUsuario, nomeNivel);
+            relatorios.ShowDialog();
+        }
+        private void dadosDeletatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDadosDeletados dadosDeletados = new frmDadosDeletados(idUsuario, idNivel, loginUsuario, nomeNivel);
+            dadosDeletados.ShowDialog();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario novoUsuario = new frmUsuario(idUsuario, idNivel, loginUsuario, nomeNivel);
+            novoUsuario.ShowDialog();
+        }
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin novoLogin = new frmLogin();
+            novoLogin.Show();
+            this.Dispose();
+            this.Close();
         }
     }
 }

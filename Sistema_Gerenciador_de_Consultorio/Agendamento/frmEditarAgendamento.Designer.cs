@@ -34,9 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarAgendamento));
             this.pnlPesquisarEditar = new System.Windows.Forms.Panel();
-            this.painelSuperior = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalvarEdicao = new System.Windows.Forms.Button();
             this.gbEditar = new System.Windows.Forms.GroupBox();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             this.cbStatusConsultaEditar = new System.Windows.Forms.ComboBox();
@@ -76,59 +73,32 @@
             this.dtpDataFinalPesquisa = new System.Windows.Forms.DateTimePicker();
             this.lblDataFinal = new System.Windows.Forms.Label();
             this.lblDataInicial = new System.Windows.Forms.Label();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlPesquisarEditar.SuspendLayout();
-            this.painelSuperior.SuspendLayout();
             this.gbEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPesquisarConsultasAgendadas)).BeginInit();
             this.gbPesquisar.SuspendLayout();
+            this.msMenuSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPesquisarEditar
             // 
             this.pnlPesquisarEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
-            this.pnlPesquisarEditar.Controls.Add(this.painelSuperior);
             this.pnlPesquisarEditar.Controls.Add(this.gbEditar);
             this.pnlPesquisarEditar.Controls.Add(this.dtgPesquisarConsultasAgendadas);
             this.pnlPesquisarEditar.Controls.Add(this.gbPesquisar);
+            this.pnlPesquisarEditar.Controls.Add(this.msMenuSuperior);
             this.pnlPesquisarEditar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPesquisarEditar.Location = new System.Drawing.Point(0, 0);
             this.pnlPesquisarEditar.Name = "pnlPesquisarEditar";
             this.pnlPesquisarEditar.Size = new System.Drawing.Size(1160, 603);
             this.pnlPesquisarEditar.TabIndex = 2;
-            // 
-            // painelSuperior
-            // 
-            this.painelSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.painelSuperior.Controls.Add(this.btnCancelar);
-            this.painelSuperior.Controls.Add(this.btnSalvarEdicao);
-            this.painelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.painelSuperior.Name = "painelSuperior";
-            this.painelSuperior.Size = new System.Drawing.Size(1160, 40);
-            this.painelSuperior.TabIndex = 3;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(107, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSalvarEdicao
-            // 
-            this.btnSalvarEdicao.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Alterar;
-            this.btnSalvarEdicao.Location = new System.Drawing.Point(10, 3);
-            this.btnSalvarEdicao.Name = "btnSalvarEdicao";
-            this.btnSalvarEdicao.Size = new System.Drawing.Size(91, 30);
-            this.btnSalvarEdicao.TabIndex = 0;
-            this.btnSalvarEdicao.UseVisualStyleBackColor = true;
-            this.btnSalvarEdicao.Click += new System.EventHandler(this.btnSalvarEdicao_Click);
             // 
             // gbEditar
             // 
@@ -526,6 +496,33 @@
             this.lblDataInicial.TabIndex = 0;
             this.lblDataInicial.Text = "Data Inicial:";
             // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.atualizarToolStripMenuItem,
+            this.cancelarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 4;
+            this.msMenuSuperior.Text = "menuStrip1";
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
+            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
+            this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.HeaderText = "Consultar";
@@ -553,22 +550,26 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlPesquisarEditar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmEditarAgendamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar Agendamento";
+            this.Text = "Atualização de Agendamentos";
             this.Load += new System.EventHandler(this.frmEditarAgendamento_Load);
             this.pnlPesquisarEditar.ResumeLayout(false);
-            this.painelSuperior.ResumeLayout(false);
+            this.pnlPesquisarEditar.PerformLayout();
             this.gbEditar.ResumeLayout(false);
             this.gbEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPesquisarConsultasAgendadas)).EndInit();
             this.gbPesquisar.ResumeLayout(false);
             this.gbPesquisar.PerformLayout();
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -578,7 +579,6 @@
         private System.Windows.Forms.Panel pnlPesquisarEditar;
         private System.Windows.Forms.GroupBox gbEditar;
         private System.Windows.Forms.ComboBox cbStatusConsultaEditar;
-        private System.Windows.Forms.Button btnSalvarEdicao;
         private System.Windows.Forms.Label lblObservacaoPacienteEditar;
         private System.Windows.Forms.Label lblStatusConsultaEditar;
         private System.Windows.Forms.TextBox txtObservacaoAgendamentoEditar;
@@ -619,7 +619,8 @@
         private System.Windows.Forms.DataGridViewImageColumn btnConsultar;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnPacientePresente;
-        private System.Windows.Forms.Panel painelSuperior;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
     }
 }

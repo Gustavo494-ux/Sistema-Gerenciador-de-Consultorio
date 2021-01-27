@@ -57,15 +57,15 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.nudPesquisar = new System.Windows.Forms.NumericUpDown();
-            this.pnlMenuSuperior = new System.Windows.Forms.Panel();
-            this.dtgIntermediario = new System.Windows.Forms.DataGridView();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
-            this.pnlMenuSuperior.SuspendLayout();
+            this.msMenuSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -348,54 +348,6 @@
             this.nudPesquisar.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.nudPesquisar.Visible = false;
             // 
-            // pnlMenuSuperior
-            // 
-            this.pnlMenuSuperior.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlMenuSuperior.Controls.Add(this.dtgIntermediario);
-            this.pnlMenuSuperior.Controls.Add(this.btnLimpar);
-            this.pnlMenuSuperior.Controls.Add(this.btnCancelar);
-            this.pnlMenuSuperior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMenuSuperior.Location = new System.Drawing.Point(0, 1);
-            this.pnlMenuSuperior.Name = "pnlMenuSuperior";
-            this.pnlMenuSuperior.Size = new System.Drawing.Size(1485, 40);
-            this.pnlMenuSuperior.TabIndex = 0;
-            // 
-            // dtgIntermediario
-            // 
-            this.dtgIntermediario.AllowUserToAddRows = false;
-            this.dtgIntermediario.AllowUserToDeleteRows = false;
-            this.dtgIntermediario.AllowUserToResizeColumns = false;
-            this.dtgIntermediario.AllowUserToResizeRows = false;
-            this.dtgIntermediario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgIntermediario.Location = new System.Drawing.Point(831, 35);
-            this.dtgIntermediario.MultiSelect = false;
-            this.dtgIntermediario.Name = "dtgIntermediario";
-            this.dtgIntermediario.RowHeadersVisible = false;
-            this.dtgIntermediario.ShowCellToolTips = false;
-            this.dtgIntermediario.Size = new System.Drawing.Size(89, 17);
-            this.dtgIntermediario.TabIndex = 10;
-            this.dtgIntermediario.Visible = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.limpar;
-            this.btnLimpar.Location = new System.Drawing.Point(6, 4);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(91, 30);
-            this.btnLimpar.TabIndex = 1;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(103, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // lblLoginUsuario
             // 
             this.lblLoginUsuario.AutoSize = true;
@@ -407,17 +359,63 @@
             this.lblLoginUsuario.TabIndex = 7;
             this.lblLoginUsuario.Text = "Nome de usuario";
             // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparToolStripMenuItem,
+            this.cancelarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 8;
+            this.msMenuSuperior.Text = "menuStrip1";
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
+            this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
+            // 
+            // dtgIntermediario
+            // 
+            this.dtgIntermediario.AllowUserToAddRows = false;
+            this.dtgIntermediario.AllowUserToDeleteRows = false;
+            this.dtgIntermediario.AllowUserToResizeColumns = false;
+            this.dtgIntermediario.AllowUserToResizeRows = false;
+            this.dtgIntermediario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgIntermediario.Location = new System.Drawing.Point(823, 81);
+            this.dtgIntermediario.MultiSelect = false;
+            this.dtgIntermediario.Name = "dtgIntermediario";
+            this.dtgIntermediario.RowHeadersVisible = false;
+            this.dtgIntermediario.ShowCellToolTips = false;
+            this.dtgIntermediario.Size = new System.Drawing.Size(89, 17);
+            this.dtgIntermediario.TabIndex = 10;
+            this.dtgIntermediario.Visible = false;
+            // 
             // frmPesquisarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(88)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ControlBox = false;
+            this.Controls.Add(this.dtgIntermediario);
             this.Controls.Add(this.lblLoginUsuario);
             this.Controls.Add(this.pnlPesquisar);
-            this.Controls.Add(this.pnlMenuSuperior);
             this.Controls.Add(this.dtgConsulta);
+            this.Controls.Add(this.msMenuSuperior);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPesquisarConsulta";
@@ -428,7 +426,8 @@
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).EndInit();
-            this.pnlMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.ResumeLayout(false);
+            this.msMenuSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -446,10 +445,6 @@
         private System.Windows.Forms.RadioButton rbIdCosulta;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Panel pnlMenuSuperior;
-        private System.Windows.Forms.DataGridView dtgIntermediario;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.RadioButton rbIdPaciente;
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.NumericUpDown nudPesquisar;
@@ -467,5 +462,9 @@
         private System.Windows.Forms.DataGridViewImageColumn btnImprimirReceita;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dtgIntermediario;
     }
 }
