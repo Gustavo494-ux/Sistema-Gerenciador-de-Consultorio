@@ -50,6 +50,13 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.dtgProfissional = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.idProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idContato = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,13 +74,6 @@
             this.btnImprimir = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
-            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
@@ -312,6 +312,64 @@
             this.dtgProfissional.TabIndex = 3;
             this.dtgProfissional.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProfissional_CellClick);
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Imprimir";
+            this.dataGridViewImageColumn1.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 40;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Editar";
+            this.dataGridViewImageColumn2.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Width = 40;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "Deletar";
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.ReadOnly = true;
+            this.dataGridViewImageColumn3.Width = 40;
+            // 
+            // msMenuSuperior
+            // 
+            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparToolStripMenuItem,
+            this.voltarToolStripMenuItem});
+            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
+            this.msMenuSuperior.Name = "msMenuSuperior";
+            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
+            this.msMenuSuperior.TabIndex = 4;
+            this.msMenuSuperior.Text = "menuStrip1";
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
+            this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1160, 603);
+            this.panel1.TabIndex = 5;
+            // 
             // idProfissional
             // 
             this.idProfissional.Frozen = true;
@@ -432,6 +490,7 @@
             this.btnImprimir.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.ReadOnly = true;
+            this.btnImprimir.Visible = false;
             this.btnImprimir.Width = 40;
             // 
             // btnEditar
@@ -449,64 +508,6 @@
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.ReadOnly = true;
             this.btnDeletar.Width = 40;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Imprimir";
-            this.dataGridViewImageColumn1.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 40;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Editar";
-            this.dataGridViewImageColumn2.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 40;
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.HeaderText = "Deletar";
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.ReadOnly = true;
-            this.dataGridViewImageColumn3.Width = 40;
-            // 
-            // msMenuSuperior
-            // 
-            this.msMenuSuperior.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msMenuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.limparToolStripMenuItem,
-            this.voltarToolStripMenuItem});
-            this.msMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.msMenuSuperior.Name = "msMenuSuperior";
-            this.msMenuSuperior.Size = new System.Drawing.Size(1160, 26);
-            this.msMenuSuperior.TabIndex = 4;
-            this.msMenuSuperior.Text = "menuStrip1";
-            // 
-            // limparToolStripMenuItem
-            // 
-            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
-            this.limparToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
-            this.limparToolStripMenuItem.Text = "Limpar";
-            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
-            // 
-            // voltarToolStripMenuItem
-            // 
-            this.voltarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
-            this.voltarToolStripMenuItem.Text = "Voltar";
-            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1160, 603);
-            this.panel1.TabIndex = 5;
             // 
             // frmLocalizarProfissional
             // 
@@ -562,6 +563,10 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProfissional;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEndereco;
         private System.Windows.Forms.DataGridViewTextBoxColumn idContato;
@@ -579,9 +584,5 @@
         private System.Windows.Forms.DataGridViewImageColumn btnImprimir;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
-        private System.Windows.Forms.MenuStrip msMenuSuperior;
-        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -35,6 +35,20 @@
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtgPaciente = new System.Windows.Forms.DataGridView();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.rbIdPaciente = new System.Windows.Forms.RadioButton();
+            this.rbCPF = new System.Windows.Forms.RadioButton();
+            this.rbNome = new System.Windows.Forms.RadioButton();
+            this.rbRG = new System.Windows.Forms.RadioButton();
+            this.rbSemFiltros = new System.Windows.Forms.RadioButton();
+            this.nudPesquisar = new System.Windows.Forms.NumericUpDown();
+            this.pnlPesquisar = new System.Windows.Forms.Panel();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblLoginUsuario = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idContato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,20 +68,6 @@
             this.btnConsultar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.rbIdPaciente = new System.Windows.Forms.RadioButton();
-            this.rbCPF = new System.Windows.Forms.RadioButton();
-            this.rbNome = new System.Windows.Forms.RadioButton();
-            this.rbRG = new System.Windows.Forms.RadioButton();
-            this.rbSemFiltros = new System.Windows.Forms.RadioButton();
-            this.nudPesquisar = new System.Windows.Forms.NumericUpDown();
-            this.pnlPesquisar = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.lblLoginUsuario = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
-            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
@@ -138,140 +138,6 @@
             this.dtgPaciente.Size = new System.Drawing.Size(1160, 399);
             this.dtgPaciente.TabIndex = 2;
             this.dtgPaciente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPaciente_CellClick);
-            // 
-            // idPaciente
-            // 
-            this.idPaciente.HeaderText = "Código";
-            this.idPaciente.Name = "idPaciente";
-            this.idPaciente.ReadOnly = true;
-            // 
-            // idContato
-            // 
-            this.idContato.HeaderText = "Código Contato";
-            this.idContato.Name = "idContato";
-            this.idContato.ReadOnly = true;
-            this.idContato.Visible = false;
-            // 
-            // idEndereco
-            // 
-            this.idEndereco.HeaderText = "Código Endereço";
-            this.idEndereco.Name = "idEndereco";
-            this.idEndereco.ReadOnly = true;
-            this.idEndereco.Visible = false;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Código Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Visible = false;
-            // 
-            // nomePaciente
-            // 
-            this.nomePaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomePaciente.HeaderText = "Paciente";
-            this.nomePaciente.Name = "nomePaciente";
-            this.nomePaciente.ReadOnly = true;
-            // 
-            // nomeResponsavel
-            // 
-            this.nomeResponsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeResponsavel.HeaderText = "Responsável";
-            this.nomeResponsavel.Name = "nomeResponsavel";
-            this.nomeResponsavel.ReadOnly = true;
-            this.nomeResponsavel.Visible = false;
-            // 
-            // rg
-            // 
-            this.rg.HeaderText = "RG";
-            this.rg.Name = "rg";
-            this.rg.ReadOnly = true;
-            this.rg.Visible = false;
-            // 
-            // cpf
-            // 
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            this.cpf.Visible = false;
-            // 
-            // ocupacao
-            // 
-            this.ocupacao.HeaderText = "Ocupação";
-            this.ocupacao.Name = "ocupacao";
-            this.ocupacao.ReadOnly = true;
-            this.ocupacao.Visible = false;
-            // 
-            // idade
-            // 
-            this.idade.HeaderText = "Idade";
-            this.idade.Name = "idade";
-            this.idade.ReadOnly = true;
-            this.idade.Visible = false;
-            // 
-            // sexo
-            // 
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            // 
-            // dataNascimento
-            // 
-            this.dataNascimento.HeaderText = "D. Nascimento";
-            this.dataNascimento.Name = "dataNascimento";
-            this.dataNascimento.ReadOnly = true;
-            this.dataNascimento.Width = 140;
-            // 
-            // dataCadastro
-            // 
-            this.dataCadastro.HeaderText = "D. Cadastro";
-            this.dataCadastro.Name = "dataCadastro";
-            this.dataCadastro.ReadOnly = true;
-            this.dataCadastro.Visible = false;
-            // 
-            // horaCadastro
-            // 
-            this.horaCadastro.HeaderText = "Hora de Cadastro";
-            this.horaCadastro.Name = "horaCadastro";
-            this.horaCadastro.ReadOnly = true;
-            this.horaCadastro.Visible = false;
-            // 
-            // observacaoPaciente
-            // 
-            this.observacaoPaciente.HeaderText = "Observação";
-            this.observacaoPaciente.Name = "observacaoPaciente";
-            this.observacaoPaciente.ReadOnly = true;
-            this.observacaoPaciente.Visible = false;
-            this.observacaoPaciente.Width = 182;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.HeaderText = "Imprimir";
-            this.btnImprimir.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.ReadOnly = true;
-            this.btnImprimir.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.HeaderText = "Consultar";
-            this.btnConsultar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.consultaicon;
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.ReadOnly = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "Editar";
-            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.HeaderText = "Deletar";
-            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.ReadOnly = true;
             // 
             // txtPesquisar
             // 
@@ -448,6 +314,141 @@
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
+            // idPaciente
+            // 
+            this.idPaciente.HeaderText = "Código";
+            this.idPaciente.Name = "idPaciente";
+            this.idPaciente.ReadOnly = true;
+            // 
+            // idContato
+            // 
+            this.idContato.HeaderText = "Código Contato";
+            this.idContato.Name = "idContato";
+            this.idContato.ReadOnly = true;
+            this.idContato.Visible = false;
+            // 
+            // idEndereco
+            // 
+            this.idEndereco.HeaderText = "Código Endereço";
+            this.idEndereco.Name = "idEndereco";
+            this.idEndereco.ReadOnly = true;
+            this.idEndereco.Visible = false;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Código Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Visible = false;
+            // 
+            // nomePaciente
+            // 
+            this.nomePaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomePaciente.HeaderText = "Paciente";
+            this.nomePaciente.Name = "nomePaciente";
+            this.nomePaciente.ReadOnly = true;
+            // 
+            // nomeResponsavel
+            // 
+            this.nomeResponsavel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeResponsavel.HeaderText = "Responsável";
+            this.nomeResponsavel.Name = "nomeResponsavel";
+            this.nomeResponsavel.ReadOnly = true;
+            this.nomeResponsavel.Visible = false;
+            // 
+            // rg
+            // 
+            this.rg.HeaderText = "RG";
+            this.rg.Name = "rg";
+            this.rg.ReadOnly = true;
+            this.rg.Visible = false;
+            // 
+            // cpf
+            // 
+            this.cpf.HeaderText = "CPF";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            this.cpf.Visible = false;
+            // 
+            // ocupacao
+            // 
+            this.ocupacao.HeaderText = "Ocupação";
+            this.ocupacao.Name = "ocupacao";
+            this.ocupacao.ReadOnly = true;
+            this.ocupacao.Visible = false;
+            // 
+            // idade
+            // 
+            this.idade.HeaderText = "Idade";
+            this.idade.Name = "idade";
+            this.idade.ReadOnly = true;
+            this.idade.Visible = false;
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            // 
+            // dataNascimento
+            // 
+            this.dataNascimento.HeaderText = "D. Nascimento";
+            this.dataNascimento.Name = "dataNascimento";
+            this.dataNascimento.ReadOnly = true;
+            this.dataNascimento.Width = 140;
+            // 
+            // dataCadastro
+            // 
+            this.dataCadastro.HeaderText = "D. Cadastro";
+            this.dataCadastro.Name = "dataCadastro";
+            this.dataCadastro.ReadOnly = true;
+            this.dataCadastro.Visible = false;
+            // 
+            // horaCadastro
+            // 
+            this.horaCadastro.HeaderText = "Hora de Cadastro";
+            this.horaCadastro.Name = "horaCadastro";
+            this.horaCadastro.ReadOnly = true;
+            this.horaCadastro.Visible = false;
+            // 
+            // observacaoPaciente
+            // 
+            this.observacaoPaciente.HeaderText = "Observação";
+            this.observacaoPaciente.Name = "observacaoPaciente";
+            this.observacaoPaciente.ReadOnly = true;
+            this.observacaoPaciente.Visible = false;
+            this.observacaoPaciente.Width = 182;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.HeaderText = "Imprimir";
+            this.btnImprimir.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.ReadOnly = true;
+            this.btnImprimir.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnImprimir.Visible = false;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.HeaderText = "Consultar";
+            this.btnConsultar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.consultaicon;
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.ReadOnly = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "Editar";
+            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.HeaderText = "Deletar";
+            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.ReadOnly = true;
+            // 
             // frmLocalizarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -496,6 +497,10 @@
         private System.Windows.Forms.NumericUpDown nudPesquisar;
         private System.Windows.Forms.Panel pnlPesquisar;
         private System.Windows.Forms.Label lblLoginUsuario;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn idContato;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEndereco;
@@ -515,9 +520,5 @@
         private System.Windows.Forms.DataGridViewImageColumn btnConsultar;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.MenuStrip msMenuSuperior;
-        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
     }
 }

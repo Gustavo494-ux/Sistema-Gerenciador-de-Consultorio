@@ -91,6 +91,8 @@
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtRodapeReceita = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
             this.painelExterno1.SuspendLayout();
             this.gbDadosPessoais.SuspendLayout();
@@ -187,6 +189,8 @@
             // 
             // gbDadosPessoais
             // 
+            this.gbDadosPessoais.Controls.Add(this.txtRodapeReceita);
+            this.gbDadosPessoais.Controls.Add(this.label7);
             this.gbDadosPessoais.Controls.Add(this.dtpDataNascimento);
             this.gbDadosPessoais.Controls.Add(this.cbSexo);
             this.gbDadosPessoais.Controls.Add(this.mtxtCROO);
@@ -207,7 +211,7 @@
             this.gbDadosPessoais.ForeColor = System.Drawing.Color.White;
             this.gbDadosPessoais.Location = new System.Drawing.Point(63, 127);
             this.gbDadosPessoais.Name = "gbDadosPessoais";
-            this.gbDadosPessoais.Size = new System.Drawing.Size(1022, 260);
+            this.gbDadosPessoais.Size = new System.Drawing.Size(1022, 284);
             this.gbDadosPessoais.TabIndex = 4;
             this.gbDadosPessoais.TabStop = false;
             this.gbDadosPessoais.Text = "Dados Pessoais";
@@ -216,7 +220,7 @@
             // 
             this.dtpDataNascimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(834, 111);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(834, 98);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(147, 26);
             this.dtpDataNascimento.TabIndex = 23;
@@ -230,7 +234,7 @@
             "M",
             "F",
             "O"});
-            this.cbSexo.Location = new System.Drawing.Point(523, 111);
+            this.cbSexo.Location = new System.Drawing.Point(523, 98);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(144, 26);
             this.cbSexo.TabIndex = 22;
@@ -238,7 +242,7 @@
             // mtxtCROO
             // 
             this.mtxtCROO.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCROO.Location = new System.Drawing.Point(368, 111);
+            this.mtxtCROO.Location = new System.Drawing.Point(368, 98);
             this.mtxtCROO.Name = "mtxtCROO";
             this.mtxtCROO.Size = new System.Drawing.Size(133, 26);
             this.mtxtCROO.TabIndex = 21;
@@ -246,7 +250,7 @@
             // mtxtCPF
             // 
             this.mtxtCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(197, 111);
+            this.mtxtCPF.Location = new System.Drawing.Point(197, 98);
             this.mtxtCPF.Mask = "000.000.000-00";
             this.mtxtCPF.Name = "mtxtCPF";
             this.mtxtCPF.Size = new System.Drawing.Size(142, 26);
@@ -255,7 +259,7 @@
             // mtxRG
             // 
             this.mtxRG.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxRG.Location = new System.Drawing.Point(43, 111);
+            this.mtxRG.Location = new System.Drawing.Point(43, 98);
             this.mtxRG.Name = "mtxRG";
             this.mtxRG.Size = new System.Drawing.Size(125, 26);
             this.mtxRG.TabIndex = 19;
@@ -264,7 +268,7 @@
             // 
             this.txtEspecialidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEspecialidade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidade.Location = new System.Drawing.Point(523, 59);
+            this.txtEspecialidade.Location = new System.Drawing.Point(523, 46);
             this.txtEspecialidade.Name = "txtEspecialidade";
             this.txtEspecialidade.Size = new System.Drawing.Size(458, 26);
             this.txtEspecialidade.TabIndex = 18;
@@ -273,7 +277,7 @@
             // 
             this.txtNomeProfissional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomeProfissional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeProfissional.Location = new System.Drawing.Point(43, 59);
+            this.txtNomeProfissional.Location = new System.Drawing.Point(43, 46);
             this.txtNomeProfissional.Name = "txtNomeProfissional";
             this.txtNomeProfissional.Size = new System.Drawing.Size(460, 26);
             this.txtNomeProfissional.TabIndex = 17;
@@ -281,7 +285,7 @@
             // txtObservacaoProfissional
             // 
             this.txtObservacaoProfissional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacaoProfissional.Location = new System.Drawing.Point(43, 160);
+            this.txtObservacaoProfissional.Location = new System.Drawing.Point(43, 200);
             this.txtObservacaoProfissional.Multiline = true;
             this.txtObservacaoProfissional.Name = "txtObservacaoProfissional";
             this.txtObservacaoProfissional.Size = new System.Drawing.Size(938, 64);
@@ -292,7 +296,7 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.White;
-            this.lblCPF.Location = new System.Drawing.Point(208, 88);
+            this.lblCPF.Location = new System.Drawing.Point(208, 75);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(45, 18);
             this.lblCPF.TabIndex = 9;
@@ -303,7 +307,7 @@
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.White;
-            this.lblDataNascimento.Location = new System.Drawing.Point(850, 88);
+            this.lblDataNascimento.Location = new System.Drawing.Point(850, 75);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(104, 18);
             this.lblDataNascimento.TabIndex = 10;
@@ -314,7 +318,7 @@
             this.lblCROO.AutoSize = true;
             this.lblCROO.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCROO.ForeColor = System.Drawing.Color.White;
-            this.lblCROO.Location = new System.Drawing.Point(377, 88);
+            this.lblCROO.Location = new System.Drawing.Point(377, 75);
             this.lblCROO.Name = "lblCROO";
             this.lblCROO.Size = new System.Drawing.Size(59, 18);
             this.lblCROO.TabIndex = 11;
@@ -325,7 +329,7 @@
             this.lblEspecialidade.AutoSize = true;
             this.lblEspecialidade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidade.ForeColor = System.Drawing.Color.White;
-            this.lblEspecialidade.Location = new System.Drawing.Point(537, 36);
+            this.lblEspecialidade.Location = new System.Drawing.Point(537, 23);
             this.lblEspecialidade.Name = "lblEspecialidade";
             this.lblEspecialidade.Size = new System.Drawing.Size(113, 18);
             this.lblEspecialidade.TabIndex = 12;
@@ -335,7 +339,7 @@
             // 
             this.lblObservacaoProfissional.AutoSize = true;
             this.lblObservacaoProfissional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservacaoProfissional.Location = new System.Drawing.Point(41, 140);
+            this.lblObservacaoProfissional.Location = new System.Drawing.Point(41, 180);
             this.lblObservacaoProfissional.Name = "lblObservacaoProfissional";
             this.lblObservacaoProfissional.Size = new System.Drawing.Size(97, 18);
             this.lblObservacaoProfissional.TabIndex = 13;
@@ -346,7 +350,7 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.White;
-            this.lblRG.Location = new System.Drawing.Point(57, 88);
+            this.lblRG.Location = new System.Drawing.Point(57, 75);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(35, 18);
             this.lblRG.TabIndex = 14;
@@ -357,7 +361,7 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.White;
-            this.lblSexo.Location = new System.Drawing.Point(537, 88);
+            this.lblSexo.Location = new System.Drawing.Point(537, 75);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(48, 18);
             this.lblSexo.TabIndex = 15;
@@ -368,7 +372,7 @@
             this.lblNomeProfissional.AutoSize = true;
             this.lblNomeProfissional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProfissional.ForeColor = System.Drawing.Color.White;
-            this.lblNomeProfissional.Location = new System.Drawing.Point(59, 36);
+            this.lblNomeProfissional.Location = new System.Drawing.Point(59, 23);
             this.lblNomeProfissional.Name = "lblNomeProfissional";
             this.lblNomeProfissional.Size = new System.Drawing.Size(54, 18);
             this.lblNomeProfissional.TabIndex = 16;
@@ -730,6 +734,22 @@
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
+            // txtRodapeReceita
+            // 
+            this.txtRodapeReceita.Location = new System.Drawing.Point(44, 148);
+            this.txtRodapeReceita.Name = "txtRodapeReceita";
+            this.txtRodapeReceita.Size = new System.Drawing.Size(936, 26);
+            this.txtRodapeReceita.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 18);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Rodapé da Receita:";
+            // 
             // frmCadastrarProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,5 +845,7 @@
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtRodapeReceita;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -36,17 +36,12 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImpressao));
             this.profissionalCompletoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetImpressão = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressao();
             this.receitaCompletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultaCompletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pacienteCompletoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioCompletoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pacienteCompletoTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressaoTableAdapters.PacienteCompletoTableAdapter();
-            this.usuarioCompletoTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressaoTableAdapters.UsuarioCompletoTableAdapter();
-            this.receitaCompletaTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressaoTableAdapters.ReceitaCompletaTableAdapter();
-            this.consultaCompletaTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressaoTableAdapters.ConsultaCompletaTableAdapter();
             this.tpProfissional = new System.Windows.Forms.TabPage();
-            this.rpProfissional = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rpProfissional1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tpReceita = new System.Windows.Forms.TabPage();
             this.rpReceita = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tpConsulta = new System.Windows.Forms.TabPage();
@@ -56,12 +51,8 @@
             this.tpUsuario = new System.Windows.Forms.TabPage();
             this.rpUsuario = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbImpressoes = new System.Windows.Forms.TabControl();
-            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            this.relatoriosDataSet = new Sistema_Gerenciador_de_Consultorio.DataSet.RelatoriosDataSet();
-            this.profissionalRelatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profissionalRelatorioTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.RelatoriosDataSetTableAdapters.ProfissionalRelatorioTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalCompletoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressão)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receitaCompletaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultaCompletaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteCompletoBindingSource)).BeginInit();
@@ -72,81 +63,50 @@
             this.tpPaciente.SuspendLayout();
             this.tpUsuario.SuspendLayout();
             this.tbImpressoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalRelatorioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // profissionalCompletoBindingSource
             // 
             this.profissionalCompletoBindingSource.DataMember = "ProfissionalCompleto";
-            this.profissionalCompletoBindingSource.DataSource = this.dataSetImpressão;
-            // 
-            // dataSetImpressão
-            // 
-            this.dataSetImpressão.DataSetName = "DataSetImpressão";
-            this.dataSetImpressão.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // receitaCompletaBindingSource
             // 
             this.receitaCompletaBindingSource.DataMember = "ReceitaCompleta";
-            this.receitaCompletaBindingSource.DataSource = this.dataSetImpressão;
             // 
             // consultaCompletaBindingSource
             // 
             this.consultaCompletaBindingSource.DataMember = "ConsultaCompleta";
-            this.consultaCompletaBindingSource.DataSource = this.dataSetImpressão;
             // 
             // pacienteCompletoBindingSource
             // 
             this.pacienteCompletoBindingSource.DataMember = "PacienteCompleto";
-            this.pacienteCompletoBindingSource.DataSource = this.dataSetImpressão;
             // 
             // usuarioCompletoBindingSource
             // 
             this.usuarioCompletoBindingSource.DataMember = "UsuarioCompleto";
-            this.usuarioCompletoBindingSource.DataSource = this.dataSetImpressão;
-            // 
-            // pacienteCompletoTableAdapter
-            // 
-            this.pacienteCompletoTableAdapter.ClearBeforeFill = true;
-            // 
-            // usuarioCompletoTableAdapter
-            // 
-            this.usuarioCompletoTableAdapter.ClearBeforeFill = true;
-            // 
-            // receitaCompletaTableAdapter
-            // 
-            this.receitaCompletaTableAdapter.ClearBeforeFill = true;
-            // 
-            // consultaCompletaTableAdapter
-            // 
-            this.consultaCompletaTableAdapter.ClearBeforeFill = true;
             // 
             // tpProfissional
             // 
-            this.tpProfissional.Controls.Add(this.rpProfissional);
+            this.tpProfissional.Controls.Add(this.rpProfissional1);
             this.tpProfissional.Location = new System.Drawing.Point(4, 29);
             this.tpProfissional.Name = "tpProfissional";
             this.tpProfissional.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProfissional.Size = new System.Drawing.Size(1152, 570);
+            this.tpProfissional.Size = new System.Drawing.Size(1148, 566);
             this.tpProfissional.TabIndex = 1;
             this.tpProfissional.Text = "Profissional";
             this.tpProfissional.UseVisualStyleBackColor = true;
-            this.tpProfissional.Click += new System.EventHandler(this.tpProfissional_Click);
             // 
-            // rpProfissional
+            // rpProfissional1
             // 
-            this.rpProfissional.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpProfissional.DocumentMapCollapsed = true;
+            this.rpProfissional1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ProfissionalCompleto";
             reportDataSource1.Value = this.profissionalCompletoBindingSource;
-            this.rpProfissional.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpProfissional.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirProfissionalCompleto.rdlc";
-            this.rpProfissional.Location = new System.Drawing.Point(3, 3);
-            this.rpProfissional.Name = "rpProfissional";
-            this.rpProfissional.ServerReport.BearerToken = null;
-            this.rpProfissional.Size = new System.Drawing.Size(1146, 564);
-            this.rpProfissional.TabIndex = 0;
+            this.rpProfissional1.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpProfissional1.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirProfissionalCompleto.rdlc";
+            this.rpProfissional1.Location = new System.Drawing.Point(3, 3);
+            this.rpProfissional1.Name = "rpProfissional1";
+            this.rpProfissional1.Size = new System.Drawing.Size(1142, 560);
+            this.rpProfissional1.TabIndex = 0;
             // 
             // tpReceita
             // 
@@ -154,7 +114,7 @@
             this.tpReceita.Location = new System.Drawing.Point(4, 29);
             this.tpReceita.Name = "tpReceita";
             this.tpReceita.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReceita.Size = new System.Drawing.Size(1152, 570);
+            this.tpReceita.Size = new System.Drawing.Size(1148, 566);
             this.tpReceita.TabIndex = 5;
             this.tpReceita.Text = "Receita";
             this.tpReceita.UseVisualStyleBackColor = true;
@@ -162,14 +122,13 @@
             // rpReceita
             // 
             this.rpReceita.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "ConsultaCompleta";
+            reportDataSource2.Name = "ReceitaCompleto";
             reportDataSource2.Value = this.receitaCompletaBindingSource;
             this.rpReceita.LocalReport.DataSources.Add(reportDataSource2);
             this.rpReceita.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirReceita.rdlc";
             this.rpReceita.Location = new System.Drawing.Point(3, 3);
             this.rpReceita.Name = "rpReceita";
-            this.rpReceita.ServerReport.BearerToken = null;
-            this.rpReceita.Size = new System.Drawing.Size(1146, 564);
+            this.rpReceita.Size = new System.Drawing.Size(1142, 560);
             this.rpReceita.TabIndex = 0;
             this.rpReceita.Load += new System.EventHandler(this.rpReceita_Load);
             // 
@@ -179,7 +138,7 @@
             this.tpConsulta.Location = new System.Drawing.Point(4, 29);
             this.tpConsulta.Name = "tpConsulta";
             this.tpConsulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tpConsulta.Size = new System.Drawing.Size(1152, 570);
+            this.tpConsulta.Size = new System.Drawing.Size(1148, 566);
             this.tpConsulta.TabIndex = 3;
             this.tpConsulta.Text = "Consulta";
             this.tpConsulta.UseVisualStyleBackColor = true;
@@ -193,8 +152,7 @@
             this.rpConsulta.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirConsultaCompleta.rdlc";
             this.rpConsulta.Location = new System.Drawing.Point(3, 3);
             this.rpConsulta.Name = "rpConsulta";
-            this.rpConsulta.ServerReport.BearerToken = null;
-            this.rpConsulta.Size = new System.Drawing.Size(1146, 564);
+            this.rpConsulta.Size = new System.Drawing.Size(1142, 560);
             this.rpConsulta.TabIndex = 0;
             // 
             // tpPaciente
@@ -203,7 +161,7 @@
             this.tpPaciente.Location = new System.Drawing.Point(4, 29);
             this.tpPaciente.Name = "tpPaciente";
             this.tpPaciente.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPaciente.Size = new System.Drawing.Size(1152, 570);
+            this.tpPaciente.Size = new System.Drawing.Size(1148, 566);
             this.tpPaciente.TabIndex = 0;
             this.tpPaciente.Text = "Paciente";
             this.tpPaciente.UseVisualStyleBackColor = true;
@@ -217,8 +175,7 @@
             this.rpPaciente.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirPacienteCompleto.rdlc";
             this.rpPaciente.Location = new System.Drawing.Point(3, 3);
             this.rpPaciente.Name = "rpPaciente";
-            this.rpPaciente.ServerReport.BearerToken = null;
-            this.rpPaciente.Size = new System.Drawing.Size(1146, 564);
+            this.rpPaciente.Size = new System.Drawing.Size(1142, 560);
             this.rpPaciente.TabIndex = 1;
             // 
             // tpUsuario
@@ -227,7 +184,7 @@
             this.tpUsuario.Location = new System.Drawing.Point(4, 29);
             this.tpUsuario.Name = "tpUsuario";
             this.tpUsuario.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUsuario.Size = new System.Drawing.Size(1152, 570);
+            this.tpUsuario.Size = new System.Drawing.Size(1148, 566);
             this.tpUsuario.TabIndex = 2;
             this.tpUsuario.Text = "Usuario";
             this.tpUsuario.UseVisualStyleBackColor = true;
@@ -241,14 +198,13 @@
             this.rpUsuario.LocalReport.ReportEmbeddedResource = "Sistema_Gerenciador_de_Consultorio.Impressão.ImprimirUsuarioCompleto.rdlc";
             this.rpUsuario.Location = new System.Drawing.Point(3, 3);
             this.rpUsuario.Name = "rpUsuario";
-            this.rpUsuario.ServerReport.BearerToken = null;
-            this.rpUsuario.Size = new System.Drawing.Size(1146, 564);
+            this.rpUsuario.Size = new System.Drawing.Size(1142, 560);
             this.rpUsuario.TabIndex = 0;
             // 
             // tbImpressoes
             // 
-            this.tbImpressoes.Controls.Add(this.tpUsuario);
             this.tbImpressoes.Controls.Add(this.tpConsulta);
+            this.tbImpressoes.Controls.Add(this.tpUsuario);
             this.tbImpressoes.Controls.Add(this.tpReceita);
             this.tbImpressoes.Controls.Add(this.tpProfissional);
             this.tbImpressoes.Controls.Add(this.tpPaciente);
@@ -257,37 +213,30 @@
             this.tbImpressoes.Location = new System.Drawing.Point(0, 0);
             this.tbImpressoes.Name = "tbImpressoes";
             this.tbImpressoes.SelectedIndex = 0;
-            this.tbImpressoes.Size = new System.Drawing.Size(1160, 603);
+            this.tbImpressoes.Size = new System.Drawing.Size(1156, 599);
             this.tbImpressoes.TabIndex = 2;
             // 
-            // relatoriosDataSet
+            // reportViewer1
             // 
-            this.relatoriosDataSet.DataSetName = "RelatoriosDataSet";
-            this.relatoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // profissionalRelatorioBindingSource
-            // 
-            this.profissionalRelatorioBindingSource.DataMember = "ProfissionalRelatorio";
-            this.profissionalRelatorioBindingSource.DataSource = this.relatoriosDataSet;
-            // 
-            // profissionalRelatorioTableAdapter
-            // 
-            this.profissionalRelatorioTableAdapter.ClearBeforeFill = true;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 0;
             // 
             // frmImpressao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 603);
+            this.ClientSize = new System.Drawing.Size(1156, 599);
             this.Controls.Add(this.tbImpressoes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1176, 642);
             this.Name = "frmImpressao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Formulário de Impressões";
             this.Load += new System.EventHandler(this.frmImpressao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profissionalCompletoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressão)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receitaCompletaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultaCompletaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteCompletoBindingSource)).EndInit();
@@ -298,23 +247,20 @@
             this.tpPaciente.ResumeLayout(false);
             this.tpUsuario.ResumeLayout(false);
             this.tbImpressoes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalRelatorioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DataSet.DataSetImpressao dataSetImpressão;
         private System.Windows.Forms.BindingSource profissionalCompletoBindingSource;
         private System.Windows.Forms.BindingSource pacienteCompletoBindingSource;
-        private DataSet.DataSetImpressaoTableAdapters.PacienteCompletoTableAdapter pacienteCompletoTableAdapter;
+
         private System.Windows.Forms.BindingSource usuarioCompletoBindingSource;
-        private DataSet.DataSetImpressaoTableAdapters.UsuarioCompletoTableAdapter usuarioCompletoTableAdapter;
+
         private System.Windows.Forms.BindingSource receitaCompletaBindingSource;
-        private DataSet.DataSetImpressaoTableAdapters.ReceitaCompletaTableAdapter receitaCompletaTableAdapter;
+
         private System.Windows.Forms.BindingSource consultaCompletaBindingSource;
-        private DataSet.DataSetImpressaoTableAdapters.ConsultaCompletaTableAdapter consultaCompletaTableAdapter;
+
         private System.Windows.Forms.TabPage tpProfissional;
         private System.Windows.Forms.TabPage tpReceita;
         private Microsoft.Reporting.WinForms.ReportViewer rpReceita;
@@ -326,9 +272,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer rpUsuario;
         private System.Windows.Forms.TabControl tbImpressoes;
         private Microsoft.Reporting.WinForms.ReportViewer rpProfissional;
-        private System.DirectoryServices.DirectoryEntry directoryEntry1;
-        private DataSet.RelatoriosDataSet relatoriosDataSet;
         private System.Windows.Forms.BindingSource profissionalRelatorioBindingSource;
-        private DataSet.RelatoriosDataSetTableAdapters.ProfissionalRelatorioTableAdapter profissionalRelatorioTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpProfissional1;
     }
 }

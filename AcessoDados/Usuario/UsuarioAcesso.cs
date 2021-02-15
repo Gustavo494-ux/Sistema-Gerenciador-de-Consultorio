@@ -229,5 +229,25 @@ namespace AcessoDados
             }
             return false;
         }
+        //Função que retorna o idProfissional cado algum usuario tenha exatamente o mesmo nome de um profissional.
+        public DataTable RetornarIdProfissional(string idUsuario)
+        {
+            try
+            {
+                sql.Clear();
+                sql.Append("SELECT profissional.idProfissional,profissional.nomeProfissional FROM Profissional WHERE profissional.NomeProfissional ");
+                sql.Append("= (select nomeUsuario from usuario where idUsuario = \'IDUSUARIO\') ");
+
+                sql = sql.Replace("IDUSUARIO", idUsuario);
+
+                return acessoBanco.Pesquisar(sql.ToString());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao retornar o idProfissional do usuário do sistema,caso seja um profissional(Classe UsuarioAcesso,Método RetornarIdProfissional", "Erro de Verificação",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return tableVazia;
+        }
     }
 }

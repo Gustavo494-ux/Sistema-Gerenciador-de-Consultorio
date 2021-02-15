@@ -13,17 +13,17 @@ namespace RegraNegocio
     {
         DataTable tableVazia = new DataTable();
         public bool Cadastrar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
-             string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+             string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE,string DNPOD,string DNPOE, string ADICAO,
              string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXFINAL)
         {
             try
             {
                 if (Validar(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
-                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true)
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE,DNPOD,DNPOE,ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true)
                 {
                     RxFinalAcesso cadastrarAcesso = new RxFinalAcesso();
                     if (cadastrarAcesso.CadastrarRxFinal(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
-                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true) return true; return false;
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, DNPOD, DNPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true) return true; return false;
                 }
                 else return false;
             }
@@ -34,7 +34,7 @@ namespace RegraNegocio
             return false;
         }
         public bool Validar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
-            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE,string DNPOD,string DNPOE, string ADICAO,
             string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXFINAL)
         {
             try
@@ -59,6 +59,9 @@ namespace RegraNegocio
                 if (AVVPOD.Length > 20) return false;
                 if (AVVPOE.Length > 20) return false;
 
+                if (DNPOD.Length > 20) return false;
+                if (DNPOE.Length > 20) return false;
+
                 if (ADICAO.Length > 50) return false;
 
                 if (TP.Length > 50) return false;
@@ -76,17 +79,17 @@ namespace RegraNegocio
             return true;
         }
         public bool Editar(string IDCONSULTA, string VLODESFERA, string VLOEESFERA, string VPODESFERA, string VPOEESFERA, string VLODCILINDRO, string VLOECILINDRO, string VPODCILINDRO,
-            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE, string ADICAO,
+            string VPOECILINDRO, string VLODEIXO, string VLOEEIXO, string VPODEIXO, string VPOEEIXO, string AVVLOD, string AVVLOE, string AVVPOD, string AVVPOE,string DNPOD,string DNPOE, string ADICAO,
             string TP, string TIPOMATERIAL, string COR, string USO, string TIPOLENTE, string OBSERVACAORXFINAL)
         {
             try
             {
                 if (Validar(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
-                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true)
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE,DNPOD,DNPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true)
                 {
                     RxFinalAcesso EditarAcesso = new RxFinalAcesso();
                     if (EditarAcesso.EditarRxFinal(IDCONSULTA, VLODESFERA, VLOEESFERA, VPODESFERA, VPOEESFERA, VLODCILINDRO, VLOECILINDRO, VPODCILINDRO, VPOECILINDRO, VLODEIXO, VLOEEIXO, VPODEIXO,
-                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true) return true; return false;
+                    VPOEEIXO, AVVLOD, AVVLOE, AVVPOD, AVVPOE,DNPOD,DNPOE, ADICAO, TP, TIPOMATERIAL, COR, USO, TIPOLENTE, OBSERVACAORXFINAL) == true) return true; return false;
                 }
                 else return false;
             }

@@ -35,7 +35,6 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorio));
             this.profissionalRelatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.relatoriosDataSet = new Sistema_Gerenciador_de_Consultorio.DataSet.RelatoriosDataSet();
             this.PacienteRelatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RelatorioUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RelatorioConsultaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,7 +69,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.rbDataConsulta = new System.Windows.Forms.RadioButton();
             this.rbTodosConsulta = new System.Windows.Forms.RadioButton();
-            this.profissionalRelatorioTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.RelatoriosDataSetTableAdapters.ProfissionalRelatorioTableAdapter();
             this.rbUsuario = new System.Windows.Forms.RadioButton();
             this.rbConsulta = new System.Windows.Forms.RadioButton();
             this.rbProfissional = new System.Windows.Forms.RadioButton();
@@ -88,9 +86,7 @@
             this.rbDataNascimentoProfissional = new System.Windows.Forms.RadioButton();
             this.gbProfissional = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataSetImpressao = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressao();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalRelatorioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacienteRelatorioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RelatorioUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RelatorioConsultaBindingSource)).BeginInit();
@@ -104,33 +100,26 @@
             this.gbUsuario.SuspendLayout();
             this.gbConsulta.SuspendLayout();
             this.gbProfissional.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressao)).BeginInit();
             this.SuspendLayout();
             // 
             // profissionalRelatorioBindingSource
             // 
             this.profissionalRelatorioBindingSource.DataMember = "ProfissionalRelatorio";
-            this.profissionalRelatorioBindingSource.DataSource = this.relatoriosDataSet;
             // 
             // relatoriosDataSet
             // 
-            this.relatoriosDataSet.DataSetName = "RelatoriosDataSet";
-            this.relatoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PacienteRelatorioBindingSource
             // 
             this.PacienteRelatorioBindingSource.DataMember = "PacienteRelatorio";
-            this.PacienteRelatorioBindingSource.DataSource = this.relatoriosDataSet;
             // 
             // RelatorioUsuarioBindingSource
             // 
             this.RelatorioUsuarioBindingSource.DataMember = "RelatorioUsuario";
-            this.RelatorioUsuarioBindingSource.DataSource = this.relatoriosDataSet;
             // 
             // RelatorioConsultaBindingSource
             // 
             this.RelatorioConsultaBindingSource.DataMember = "RelatorioConsulta";
-            this.RelatorioConsultaBindingSource.DataSource = this.relatoriosDataSet;
             // 
             // ConsultaCadastroBindingSource
             // 
@@ -177,7 +166,6 @@
             this.rpProfissional.Location = new System.Drawing.Point(4, 4);
             this.rpProfissional.Margin = new System.Windows.Forms.Padding(4);
             this.rpProfissional.Name = "rpProfissional";
-            this.rpProfissional.ServerReport.BearerToken = null;
             this.rpProfissional.Size = new System.Drawing.Size(1144, 353);
             this.rpProfissional.TabIndex = 1;
             // 
@@ -204,7 +192,6 @@
             this.rpPaciente.Location = new System.Drawing.Point(4, 4);
             this.rpPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.rpPaciente.Name = "rpPaciente";
-            this.rpPaciente.ServerReport.BearerToken = null;
             this.rpPaciente.Size = new System.Drawing.Size(1144, 353);
             this.rpPaciente.TabIndex = 0;
             // 
@@ -231,7 +218,6 @@
             this.rpUsuario.Location = new System.Drawing.Point(4, 4);
             this.rpUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.rpUsuario.Name = "rpUsuario";
-            this.rpUsuario.ServerReport.BearerToken = null;
             this.rpUsuario.Size = new System.Drawing.Size(1144, 353);
             this.rpUsuario.TabIndex = 0;
             // 
@@ -258,7 +244,6 @@
             this.rpConsulta.Location = new System.Drawing.Point(4, 4);
             this.rpConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.rpConsulta.Name = "rpConsulta";
-            this.rpConsulta.ServerReport.BearerToken = null;
             this.rpConsulta.Size = new System.Drawing.Size(1144, 353);
             this.rpConsulta.TabIndex = 0;
             // 
@@ -496,7 +481,6 @@
             // 
             // profissionalRelatorioTableAdapter
             // 
-            this.profissionalRelatorioTableAdapter.ClearBeforeFill = true;
             // 
             // rbUsuario
             // 
@@ -720,8 +704,6 @@
             // 
             // dataSetImpressao
             // 
-            this.dataSetImpressao.DataSetName = "DataSetImpressao";
-            this.dataSetImpressao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmRelatorio
             // 
@@ -747,7 +729,6 @@
             this.Text = "Relatórios";
             this.Load += new System.EventHandler(this.frmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profissionalRelatorioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacienteRelatorioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RelatorioUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RelatorioConsultaBindingSource)).EndInit();
@@ -765,7 +746,6 @@
             this.gbConsulta.PerformLayout();
             this.gbProfissional.ResumeLayout(false);
             this.gbProfissional.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -777,9 +757,7 @@
         private System.Windows.Forms.TabPage tpProfissional;
         private Microsoft.Reporting.WinForms.ReportViewer rpProfissional;
         private System.Windows.Forms.TabPage tpPaciente;
-        private DataSet.RelatoriosDataSet relatoriosDataSet;
         private System.Windows.Forms.BindingSource profissionalRelatorioBindingSource;
-        private DataSet.RelatoriosDataSetTableAdapters.ProfissionalRelatorioTableAdapter profissionalRelatorioTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer rpPaciente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -826,6 +804,5 @@
         private System.Windows.Forms.RadioButton rbDataNascimentoProfissional;
         private System.Windows.Forms.GroupBox gbProfissional;
         private System.Windows.Forms.Timer timer1;
-        private DataSet.DataSetImpressao dataSetImpressao;
     }
 }

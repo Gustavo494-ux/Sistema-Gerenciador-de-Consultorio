@@ -74,7 +74,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             ImpressaoProfissionalRegra pesquisar = new ImpressaoProfissionalRegra();
             dadosTabela = pesquisar.ImpressaoCompleta(idCadastroLocal);
             this.profissionalCompletoBindingSource.DataSource = dadosTabela;
-            rpProfissional.RefreshReport();
+            rpProfissional1.RefreshReport();
             
         }
         void ImprimirPaciente()
@@ -115,12 +115,6 @@ namespace Sistema_Gerenciador_de_Consultorio
             this.receitaCompletaBindingSource.DataSource = dadosTabela;
             this.rpReceita.RefreshReport();
         }
-
-        private void tpProfissional_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rpReceita_Load(object sender, EventArgs e)
         {
             /*
@@ -132,10 +126,17 @@ namespace Sistema_Gerenciador_de_Consultorio
             */
         }
 
+        private void tpReceita_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void frmImpressao_Load(object sender, EventArgs e)
         {
 
             TipoImpressao(tipoImpressaoLocal);
+            this.rpProfissional1.RefreshReport();
+            this.rpProfissional1.RefreshReport();
         }
     }
 }

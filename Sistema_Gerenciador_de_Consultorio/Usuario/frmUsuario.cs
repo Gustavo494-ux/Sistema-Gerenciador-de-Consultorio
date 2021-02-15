@@ -13,7 +13,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 {
     public partial class frmUsuario : Form
     {
-        string idUsuario,idNivel,loginUsuario,nomeNivel;
+        string idUsuario, idNivel, loginUsuario, nomeNivel;
         string idUsuarioEditar;
         public frmUsuario(string idUsuario, string idNivel, string loginUsuario, string nomeNivel)
         {
@@ -25,7 +25,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         void centralizar()
         {
-            pnlCadastrar.Location = new Point(this.Width/2 -(pnlCadastrar.Width/2),this.Height/2 - (pnlCadastrar.Height/2));
+            pnlCadastrar.Location = new Point(this.Width / 2 - (pnlCadastrar.Width / 2), this.Height / 2 - (pnlCadastrar.Height / 2));
             pnlPesquisar.Location = new Point(this.Width / 2 - (pnlPesquisar.Width / 2), 50);
 
         }
@@ -48,7 +48,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             PermissoesUsuarioRegra autenticar = new PermissoesUsuarioRegra();
             //testa se o usuario que logou tem permissão para o controle total, se tiver nenhum código zerá executado. mas se não tiver alguns componentes seram desativados
-            if (autenticar.ControleTotalUsuario(idNivel) == false)     
+            if (autenticar.ControleTotalUsuario(idNivel) == false)
             {
                 cbNivelAcesso.Enabled = false;
                 cbStatusUsuario.Enabled = false;
@@ -63,7 +63,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosTabelaForm;
             UsuarioRegra pesquisarUsuario = new UsuarioRegra();
             dadosTabelaForm = pesquisarUsuario.Todos();
-           
+
             CarregarDTG(dadosTabelaForm);
         }
         void CarregarStatus()
@@ -82,9 +82,9 @@ namespace Sistema_Gerenciador_de_Consultorio
         void salvar()
         {
             UsuarioRegra novoUsuario = new UsuarioRegra();
-            if(novoUsuario.Cadastrar(Convert.ToString(cbNivelAcesso.SelectedIndex+1), txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text,cbStatusUsuario.Text) == true)
+            if (novoUsuario.Cadastrar(Convert.ToString(cbNivelAcesso.SelectedIndex + 1), txtNomeUsuario.Text, txtLoginUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text) == true)
             {
-               DialogResult confirm =  MessageBox.Show("Usuario Cadastrado com sucesso!\nDeseja retornar Formulário anterior?","Cadastro Realizado!",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                DialogResult confirm = MessageBox.Show("Usuario Cadastrado com sucesso!\nDeseja retornar Formulário anterior?", "Cadastro Realizado!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (confirm == DialogResult.Yes)
                 {
                     this.Dispose();
@@ -99,12 +99,12 @@ namespace Sistema_Gerenciador_de_Consultorio
             {
                 MessageBox.Show("Usuario não foi cadastrado pois nem todas as informações são validas", "Dados Inálidos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
         void CarregarDTG(DataTable dados)
         {
             try
-            {   
+            {
                 if (dados.Rows.Count > 0)
                 {
                     dtgUsuario.DataSource = dados;
@@ -136,13 +136,13 @@ namespace Sistema_Gerenciador_de_Consultorio
                     dtgUsuario.Columns["Observação"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
                     dtgUsuario.Columns["Observação"].Visible = false;
 
-                    dtgUsuario.Columns["btnImprimir"].DisplayIndex = dtgUsuario.Columns.Count -1;//Posição dentro do dtg
-                    dtgUsuario.Columns["btnEditar"].DisplayIndex = dtgUsuario.Columns.Count -1;//Posição dentro do dtg
-                    dtgUsuario.Columns["btnDeletar"].DisplayIndex = dtgUsuario.Columns.Count -1;//Posição dentro do dtg
+                    dtgUsuario.Columns["btnImprimir"].DisplayIndex = dtgUsuario.Columns.Count - 1;//Posição dentro do dtg
+                    dtgUsuario.Columns["btnEditar"].DisplayIndex = dtgUsuario.Columns.Count - 1;//Posição dentro do dtg
+                    dtgUsuario.Columns["btnDeletar"].DisplayIndex = dtgUsuario.Columns.Count - 1;//Posição dentro do dtg
                 }
                 else
                 {
-                    DialogResult resultado= MessageBox.Show("Registros não encontrados,o registro que está sendo consultado não existe ou foi deletado\nDeseja voltar formulario anterior","Dados não encontrados ou deletados",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                    DialogResult resultado = MessageBox.Show("Registros não encontrados,o registro que está sendo consultado não existe ou foi deletado\nDeseja voltar formulario anterior", "Dados não encontrados ou deletados", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (resultado == DialogResult.Yes)
                     {
                         this.Dispose();
@@ -161,7 +161,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro ao pesquisar pelos usuarios do sistema(Formulario frmUsuario, Método CarregarDTG)","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Ocorreu um erro ao pesquisar pelos usuarios do sistema(Formulario frmUsuario, Método CarregarDTG)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             dtgUsuario.AutoResizeColumns();
         }
@@ -174,6 +174,8 @@ namespace Sistema_Gerenciador_de_Consultorio
             txtObservacao.Clear();
             cbNivelAcesso.Text = "Selecionar";
             cbStatusUsuario.Text = "Selecionar";
+
+            idUsuarioEditar = "0";
         }
         void estilo()
         {
@@ -186,7 +188,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 dtgUsuario.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
                 i++;
             }
-            
+
             #endregion
         }
         void pesquisar()
@@ -217,21 +219,19 @@ namespace Sistema_Gerenciador_de_Consultorio
                 dadosTabelaForm = pesquisarUsuario.Status(cbStatusUsuarioPesquisa.Text);
                 CarregarDTG(dadosTabelaForm);
             }
-            
+
         }
         private void frmUsuario_Load(object sender, EventArgs e)
         {
             CarregarCbNIvel();
             CarregarStatus();
             CarregarUsuario();
-            LimparCadastro();   
+            LimparCadastro();
             cbNivelAcessoPesquisa.Text = "Selecionar";
             cbStatusUsuarioPesquisa.Text = "Selecionar";
-            lblUsuario.Text = "Usuário: " + loginUsuario + "\n Nivel: "+nomeNivel;
+            lblUsuario.Text = "Usuário: " + loginUsuario + "\n Nivel: " + nomeNivel;
             rbTodos.Checked = true;
             txtPesquisar.Visible = true;
-            atualizarToolStripMenuItem.Visible = false;
-            salvarToolStripMenuItem.Visible = true;
             estilo();
             permissoes();
             dtgUsuario.AutoResizeColumns();
@@ -252,7 +252,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             DataTable dadosTabelaForm;
             LocalizarNivelRegra localizarNivel = new LocalizarNivelRegra();
             dadosTabelaForm = localizarNivel.retornaridNivel(cbNivelAcesso.Text);
-           // cbIntermediario.DisplayMember = "idNIvelAcesso";
+            // cbIntermediario.DisplayMember = "idNIvelAcesso";
             //cbIntermediario.DataSource = dadosTabelaForm; ;
         }
         private void rbCadastrarUsuario_CheckedChanged(object sender, EventArgs e)
@@ -271,7 +271,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         }
         private void btnSalvar_Click_1(object sender, EventArgs e)
         {
-            
+
             salvar();
         }
         private void filtros(object sender, EventArgs e)
@@ -290,7 +290,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 txtPesquisar.Visible = false;
                 cbStatusUsuarioPesquisa.Focus();
             }
-            if (rbLoginUsuario.Checked== true)
+            if (rbLoginUsuario.Checked == true)
             {
                 cbNivelAcessoPesquisa.Visible = false;
                 cbStatusUsuarioPesquisa.Visible = false;
@@ -349,8 +349,8 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao passar os dados do usuario para os campos de atualizaçãao(Formulario frmUsuario, MétodoPassarUsuarioParaEdicao)", 
-                    "Erro de transferência",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao passar os dados do usuario para os campos de atualizaçãao(Formulario frmUsuario, MétodoPassarUsuarioParaEdicao)",
+                    "Erro de transferência", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void dtgUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -425,27 +425,26 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro(" + ex + ") ao utilizar o DataGridView dtgUsuario(Formulario frmUsuario, Método dtgUsuario_CellClick)","Erro no DataGrid",
+                MessageBox.Show("Ocorreu um erro(" + ex + ") ao utilizar o DataGridView dtgUsuario(Formulario frmUsuario, Método dtgUsuario_CellClick)", "Erro no DataGrid",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void repetir_Tick(object sender, EventArgs e)
         {
             centralizar();
-            if(rbPesquisarUsuario.Checked == true)
+            salvarToolStripMenuItem.Visible = false;
+            atualizarToolStripMenuItem.Visible = false;
+            if (rbPesquisarUsuario.Checked == true)
             {
-                salvarToolStripMenuItem.Visible = false;
-                atualizarToolStripMenuItem.Visible = false;
                 limparToolStripMenuItem.Visible = false;
             }
             else
             {
-                salvarToolStripMenuItem.Visible = true;
-                atualizarToolStripMenuItem.Visible = true;
+                if (Convert.ToInt32(idUsuarioEditar) > 0) { atualizarToolStripMenuItem.Visible = true; } else { salvarToolStripMenuItem.Visible = true; }
                 limparToolStripMenuItem.Visible = true;
             }
         }
@@ -505,8 +504,8 @@ namespace Sistema_Gerenciador_de_Consultorio
             if (atualizarToolStripMenuItem.Visible == true)
             {
                 txtSenha.Clear();
-                txtConfirmacaoSenha.Clear(); 
-            } 
+                txtConfirmacaoSenha.Clear();
+            }
         }
         private void rbNivelAcesso_CheckedChanged(object sender, EventArgs e)
         {

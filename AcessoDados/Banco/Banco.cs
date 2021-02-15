@@ -20,6 +20,8 @@ namespace AcessoDados
         {
             try
             {
+                
+                
                 ConexaoAcesso.Conectar();
 
                 comandoSql.Connection = ConexaoAcesso.conn;

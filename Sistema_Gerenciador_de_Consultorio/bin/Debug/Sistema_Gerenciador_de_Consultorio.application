@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Sistema_Gerenciador_de_Consultorio.exe.manifest" size="28858">
+    <dependentAssembly dependencyType="install" codebase="Sistema_Gerenciador_de_Consultorio.exe.manifest" size="26554">
       <assemblyIdentity name="Sistema_Gerenciador_de_Consultorio.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="pt-BR" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K/qInRHDRrpmq7vlBgQcrJrShi5KyueQYaFSfJjFUL4=</dsig:DigestValue>
+        <dsig:DigestValue>ddzRhUhRrQ8stB1KW2XmTl7EZ4tUYBIdUlmpNpWYD6s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

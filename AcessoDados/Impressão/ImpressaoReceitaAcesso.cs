@@ -12,31 +12,22 @@ namespace AcessoDados
 {
     public class ImpressaoReceitaAcesso
     {
+        StringBuilder sql = new StringBuilder();
         DataTable tableVazia = new DataTable();
+        Banco acessoBanco = new Banco();
         public DataTable  impressaoCompleta(int idConsulta)
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                sql.Append("SELECT * FROM consulta INNER JOIN rxFinal ON rxFinal.idRxFinal = consulta.idRxFinal INNER JOIN paciente ON ");
+                sql.Clear();
+                sql.Append("SELECT * FROM consulta INNER JOIN rxFinal ON rxFinal.idConsulta = consulta.idConsulta INNER JOIN paciente ON ");
                 sql.Append("paciente.idPaciente = consulta.idPaciente INNER JOIN profissional ON profissional.idProfissional = consulta.idProfissional ");
-                sql.Append("WHERE consulta.deletar = false  AND rxFinal.deletar = false AND paciente.deletar = false AND profissional.deletar = false AND ");
-                sql.Append("consulta.idConsulta = @id ");
+                sql.Append("WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.deletar = false AND ");
+                sql.Append("consulta.idConsulta = \'CODCONSULTA\' ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id",idConsulta));
+                sql = sql.Replace("CODCONSULTA",Convert.ToString(idConsulta));
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

@@ -163,14 +163,11 @@ WHERE paciente.deletar = false AND contato.deletar = false AND  endereco.deletar
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReceitaCompletaTableAdapter" GeneratorDataComponentClassName="ReceitaCompletaTableAdapter" Name="ReceitaCompleta" UserDataComponentName="ReceitaCompletaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sistema_Gerenciador_de_Consultorio_Nova_Conexão (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT * FROM consulta INNER JOIN rxFinal ON rxFinal.idRxFinal = consulta.idRxFinal INNER JOIN paciente ON paciente.idPaciente 
-= consulta.idPaciente INNER JOIN profissional ON profissional.idProfissional = consulta.idProfissional
-
-WHERE consulta.deletar = false  AND rxFinal.deletar = false AND paciente.deletar = false AND
-profissional.deletar = false</CommandText>
+                    <CommandText>SELECT * FROM consulta INNER JOIN rxFinal ON rxFinal.idConsulta = consulta.idConsulta INNER JOIN paciente ON 
+paciente.idPaciente = consulta.idPaciente INNER JOIN profissional ON profissional.idProfissional = consulta.idProfissional</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -181,14 +178,7 @@ profissional.deletar = false</CommandText>
               <Mapping SourceColumn="idpaciente" DataSetColumn="idpaciente" />
               <Mapping SourceColumn="idprofissional" DataSetColumn="idprofissional" />
               <Mapping SourceColumn="idusuario" DataSetColumn="idusuario" />
-              <Mapping SourceColumn="idanamnese" DataSetColumn="idanamnese" />
-              <Mapping SourceColumn="idsintomasreferidos" DataSetColumn="idsintomasreferidos" />
-              <Mapping SourceColumn="idantecedentesgerais" DataSetColumn="idantecedentesgerais" />
-              <Mapping SourceColumn="idantecedentesoculares" DataSetColumn="idantecedentesoculares" />
-              <Mapping SourceColumn="idrxinicial" DataSetColumn="idrxinicial" />
               <Mapping SourceColumn="idrxfinal" DataSetColumn="idrxfinal" />
-              <Mapping SourceColumn="idacuidadevisual" DataSetColumn="idacuidadevisual" />
-              <Mapping SourceColumn="idoftalmoscopia" DataSetColumn="idoftalmoscopia" />
               <Mapping SourceColumn="origem" DataSetColumn="origem" />
               <Mapping SourceColumn="hobbies" DataSetColumn="hobbies" />
               <Mapping SourceColumn="encaminhadopor" DataSetColumn="encaminhadopor" />
@@ -202,35 +192,8 @@ profissional.deletar = false</CommandText>
               <Mapping SourceColumn="observacaoconsulta" DataSetColumn="observacaoconsulta" />
               <Mapping SourceColumn="deletar" DataSetColumn="deletar" />
               <Mapping SourceColumn="idusuariodeletar" DataSetColumn="idusuariodeletar" />
-              <Mapping SourceColumn="idrxfinal1" DataSetColumn="idrxfinal1" />
-              <Mapping SourceColumn="vlodesfera" DataSetColumn="vlodesfera" />
-              <Mapping SourceColumn="vloeesfera" DataSetColumn="vloeesfera" />
-              <Mapping SourceColumn="vpodesfera" DataSetColumn="vpodesfera" />
-              <Mapping SourceColumn="vpoeesfera" DataSetColumn="vpoeesfera" />
-              <Mapping SourceColumn="vlodcilindro" DataSetColumn="vlodcilindro" />
-              <Mapping SourceColumn="vloecilindro" DataSetColumn="vloecilindro" />
-              <Mapping SourceColumn="vpodcilindro" DataSetColumn="vpodcilindro" />
-              <Mapping SourceColumn="vpoecilindro" DataSetColumn="vpoecilindro" />
-              <Mapping SourceColumn="vlodeixo" DataSetColumn="vlodeixo" />
-              <Mapping SourceColumn="vloeeixo" DataSetColumn="vloeeixo" />
-              <Mapping SourceColumn="vpodeixo" DataSetColumn="vpodeixo" />
-              <Mapping SourceColumn="vpoeeixo" DataSetColumn="vpoeeixo" />
-              <Mapping SourceColumn="vlodadicao" DataSetColumn="vlodadicao" />
-              <Mapping SourceColumn="vloeadicao" DataSetColumn="vloeadicao" />
-              <Mapping SourceColumn="vpodadicao" DataSetColumn="vpodadicao" />
-              <Mapping SourceColumn="vpoeadicao" DataSetColumn="vpoeadicao" />
-              <Mapping SourceColumn="vlodprisma" DataSetColumn="vlodprisma" />
-              <Mapping SourceColumn="vloeprisma" DataSetColumn="vloeprisma" />
-              <Mapping SourceColumn="vpodprisma" DataSetColumn="vpodprisma" />
-              <Mapping SourceColumn="vpoeprisma" DataSetColumn="vpoeprisma" />
-              <Mapping SourceColumn="vlodbase" DataSetColumn="vlodbase" />
-              <Mapping SourceColumn="vloebase" DataSetColumn="vloebase" />
-              <Mapping SourceColumn="vpodbase" DataSetColumn="vpodbase" />
-              <Mapping SourceColumn="vpoebase" DataSetColumn="vpoebase" />
               <Mapping SourceColumn="tipolente" DataSetColumn="tipolente" />
-              <Mapping SourceColumn="material" DataSetColumn="material" />
               <Mapping SourceColumn="cor" DataSetColumn="cor" />
-              <Mapping SourceColumn="estado" DataSetColumn="estado" />
               <Mapping SourceColumn="observacaorxfinal" DataSetColumn="observacaorxfinal" />
               <Mapping SourceColumn="deletar1" DataSetColumn="deletar1" />
               <Mapping SourceColumn="idpaciente1" DataSetColumn="idpaciente1" />
@@ -264,8 +227,31 @@ profissional.deletar = false</CommandText>
               <Mapping SourceColumn="datacadastro1" DataSetColumn="datacadastro1" />
               <Mapping SourceColumn="horacadastro1" DataSetColumn="horacadastro1" />
               <Mapping SourceColumn="observacaoprofissional" DataSetColumn="observacaoprofissional" />
-              <Mapping SourceColumn="deletar3" DataSetColumn="deletar3" />
               <Mapping SourceColumn="idusuariodeletar2" DataSetColumn="idusuariodeletar2" />
+              <Mapping SourceColumn="idconsulta1" DataSetColumn="idconsulta1" />
+              <Mapping SourceColumn="esferavlod" DataSetColumn="esferavlod" />
+              <Mapping SourceColumn="esferavloe" DataSetColumn="esferavloe" />
+              <Mapping SourceColumn="esferavpod" DataSetColumn="esferavpod" />
+              <Mapping SourceColumn="esferavpoe" DataSetColumn="esferavpoe" />
+              <Mapping SourceColumn="cilindrovlod" DataSetColumn="cilindrovlod" />
+              <Mapping SourceColumn="cilindrovloe" DataSetColumn="cilindrovloe" />
+              <Mapping SourceColumn="cilindrovpod" DataSetColumn="cilindrovpod" />
+              <Mapping SourceColumn="cilindrovpoe" DataSetColumn="cilindrovpoe" />
+              <Mapping SourceColumn="eixovlod" DataSetColumn="eixovlod" />
+              <Mapping SourceColumn="eixovloe" DataSetColumn="eixovloe" />
+              <Mapping SourceColumn="eixovpod" DataSetColumn="eixovpod" />
+              <Mapping SourceColumn="eixovpoe" DataSetColumn="eixovpoe" />
+              <Mapping SourceColumn="avvlod" DataSetColumn="avvlod" />
+              <Mapping SourceColumn="avvloe" DataSetColumn="avvloe" />
+              <Mapping SourceColumn="avvpod" DataSetColumn="avvpod" />
+              <Mapping SourceColumn="avvpoe" DataSetColumn="avvpoe" />
+              <Mapping SourceColumn="adicao" DataSetColumn="adicao" />
+              <Mapping SourceColumn="dp" DataSetColumn="dp" />
+              <Mapping SourceColumn="tipomaterial" DataSetColumn="tipomaterial" />
+              <Mapping SourceColumn="uso" DataSetColumn="uso" />
+              <Mapping SourceColumn="rodapereceita" DataSetColumn="rodapereceita" />
+              <Mapping SourceColumn="dnpod" DataSetColumn="dnpod" />
+              <Mapping SourceColumn="dnpoe" DataSetColumn="dnpoe" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -526,7 +512,7 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
   <xs:element name="DataSetImpressao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetImpressao" msprop:Generator_UserDSName="DataSetImpressao">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ProfissionalCompleto" msprop:Generator_TableClassName="ProfissionalCompletoDataTable" msprop:Generator_TableVarName="tableProfissionalCompleto" msprop:Generator_RowChangedName="ProfissionalCompletoRowChanged" msprop:Generator_TablePropName="ProfissionalCompleto" msprop:Generator_RowDeletingName="ProfissionalCompletoRowDeleting" msprop:Generator_RowChangingName="ProfissionalCompletoRowChanging" msprop:Generator_RowEvHandlerName="ProfissionalCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfissionalCompletoRowDeleted" msprop:Generator_RowClassName="ProfissionalCompletoRow" msprop:Generator_UserTableName="ProfissionalCompleto" msprop:Generator_RowEvArgName="ProfissionalCompletoRowChangeEvent">
+        <xs:element name="ProfissionalCompleto" msprop:Generator_TableClassName="ProfissionalCompletoDataTable" msprop:Generator_TableVarName="tableProfissionalCompleto" msprop:Generator_TablePropName="ProfissionalCompleto" msprop:Generator_RowDeletingName="ProfissionalCompletoRowDeleting" msprop:Generator_RowChangingName="ProfissionalCompletoRowChanging" msprop:Generator_RowEvHandlerName="ProfissionalCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfissionalCompletoRowDeleted" msprop:Generator_UserTableName="ProfissionalCompleto" msprop:Generator_RowChangedName="ProfissionalCompletoRowChanged" msprop:Generator_RowEvArgName="ProfissionalCompletoRowChangeEvent" msprop:Generator_RowClassName="ProfissionalCompletoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idprofissional" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidprofissional" msprop:Generator_ColumnPropNameInRow="idprofissional" msprop:Generator_ColumnPropNameInTable="idprofissionalColumn" msprop:Generator_UserColumnName="idprofissional" type="xs:int" />
@@ -708,7 +694,7 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacienteCompleto" msprop:Generator_TableClassName="PacienteCompletoDataTable" msprop:Generator_TableVarName="tablePacienteCompleto" msprop:Generator_RowChangedName="PacienteCompletoRowChanged" msprop:Generator_TablePropName="PacienteCompleto" msprop:Generator_RowDeletingName="PacienteCompletoRowDeleting" msprop:Generator_RowChangingName="PacienteCompletoRowChanging" msprop:Generator_RowEvHandlerName="PacienteCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteCompletoRowDeleted" msprop:Generator_RowClassName="PacienteCompletoRow" msprop:Generator_UserTableName="PacienteCompleto" msprop:Generator_RowEvArgName="PacienteCompletoRowChangeEvent">
+        <xs:element name="PacienteCompleto" msprop:Generator_TableClassName="PacienteCompletoDataTable" msprop:Generator_TableVarName="tablePacienteCompleto" msprop:Generator_TablePropName="PacienteCompleto" msprop:Generator_RowDeletingName="PacienteCompletoRowDeleting" msprop:Generator_RowChangingName="PacienteCompletoRowChanging" msprop:Generator_RowEvHandlerName="PacienteCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteCompletoRowDeleted" msprop:Generator_UserTableName="PacienteCompleto" msprop:Generator_RowChangedName="PacienteCompletoRowChanged" msprop:Generator_RowEvArgName="PacienteCompletoRowChangeEvent" msprop:Generator_RowClassName="PacienteCompletoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idpaciente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidpaciente" msprop:Generator_ColumnPropNameInRow="idpaciente" msprop:Generator_ColumnPropNameInTable="idpacienteColumn" msprop:Generator_UserColumnName="idpaciente" type="xs:int" />
@@ -861,7 +847,7 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UsuarioCompleto" msprop:Generator_TableClassName="UsuarioCompletoDataTable" msprop:Generator_TableVarName="tableUsuarioCompleto" msprop:Generator_TablePropName="UsuarioCompleto" msprop:Generator_RowDeletingName="UsuarioCompletoRowDeleting" msprop:Generator_RowChangingName="UsuarioCompletoRowChanging" msprop:Generator_RowEvHandlerName="UsuarioCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioCompletoRowDeleted" msprop:Generator_UserTableName="UsuarioCompleto" msprop:Generator_RowChangedName="UsuarioCompletoRowChanged" msprop:Generator_RowEvArgName="UsuarioCompletoRowChangeEvent" msprop:Generator_RowClassName="UsuarioCompletoRow">
+        <xs:element name="UsuarioCompleto" msprop:Generator_TableClassName="UsuarioCompletoDataTable" msprop:Generator_TableVarName="tableUsuarioCompleto" msprop:Generator_RowChangedName="UsuarioCompletoRowChanged" msprop:Generator_TablePropName="UsuarioCompleto" msprop:Generator_RowDeletingName="UsuarioCompletoRowDeleting" msprop:Generator_RowChangingName="UsuarioCompletoRowChanging" msprop:Generator_RowEvHandlerName="UsuarioCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioCompletoRowDeleted" msprop:Generator_RowClassName="UsuarioCompletoRow" msprop:Generator_UserTableName="UsuarioCompleto" msprop:Generator_RowEvArgName="UsuarioCompletoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idusuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidusuario" msprop:Generator_ColumnPropNameInRow="idusuario" msprop:Generator_ColumnPropNameInTable="idusuarioColumn" msprop:Generator_UserColumnName="idusuario" type="xs:int" />
@@ -914,21 +900,14 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ReceitaCompleta" msprop:Generator_TableClassName="ReceitaCompletaDataTable" msprop:Generator_TableVarName="tableReceitaCompleta" msprop:Generator_TablePropName="ReceitaCompleta" msprop:Generator_RowDeletingName="ReceitaCompletaRowDeleting" msprop:Generator_RowChangingName="ReceitaCompletaRowChanging" msprop:Generator_RowEvHandlerName="ReceitaCompletaRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceitaCompletaRowDeleted" msprop:Generator_UserTableName="ReceitaCompleta" msprop:Generator_RowChangedName="ReceitaCompletaRowChanged" msprop:Generator_RowEvArgName="ReceitaCompletaRowChangeEvent" msprop:Generator_RowClassName="ReceitaCompletaRow">
+        <xs:element name="ReceitaCompleta" msprop:Generator_TableClassName="ReceitaCompletaDataTable" msprop:Generator_TableVarName="tableReceitaCompleta" msprop:Generator_RowChangedName="ReceitaCompletaRowChanged" msprop:Generator_TablePropName="ReceitaCompleta" msprop:Generator_RowDeletingName="ReceitaCompletaRowDeleting" msprop:Generator_RowChangingName="ReceitaCompletaRowChanging" msprop:Generator_RowEvHandlerName="ReceitaCompletaRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceitaCompletaRowDeleted" msprop:Generator_RowClassName="ReceitaCompletaRow" msprop:Generator_UserTableName="ReceitaCompleta" msprop:Generator_RowEvArgName="ReceitaCompletaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idconsulta" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidconsulta" msprop:Generator_ColumnPropNameInRow="idconsulta" msprop:Generator_ColumnPropNameInTable="idconsultaColumn" msprop:Generator_UserColumnName="idconsulta" type="xs:int" />
               <xs:element name="idpaciente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidpaciente" msprop:Generator_ColumnPropNameInRow="idpaciente" msprop:Generator_ColumnPropNameInTable="idpacienteColumn" msprop:Generator_UserColumnName="idpaciente" type="xs:int" />
               <xs:element name="idprofissional" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidprofissional" msprop:Generator_ColumnPropNameInRow="idprofissional" msprop:Generator_ColumnPropNameInTable="idprofissionalColumn" msprop:Generator_UserColumnName="idprofissional" type="xs:int" />
               <xs:element name="idusuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidusuario" msprop:Generator_ColumnPropNameInRow="idusuario" msprop:Generator_ColumnPropNameInTable="idusuarioColumn" msprop:Generator_UserColumnName="idusuario" type="xs:int" />
-              <xs:element name="idanamnese" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidanamnese" msprop:Generator_ColumnPropNameInRow="idanamnese" msprop:Generator_ColumnPropNameInTable="idanamneseColumn" msprop:Generator_UserColumnName="idanamnese" type="xs:int" />
-              <xs:element name="idsintomasreferidos" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidsintomasreferidos" msprop:Generator_ColumnPropNameInRow="idsintomasreferidos" msprop:Generator_ColumnPropNameInTable="idsintomasreferidosColumn" msprop:Generator_UserColumnName="idsintomasreferidos" type="xs:int" />
-              <xs:element name="idantecedentesgerais" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidantecedentesgerais" msprop:Generator_ColumnPropNameInRow="idantecedentesgerais" msprop:Generator_ColumnPropNameInTable="idantecedentesgeraisColumn" msprop:Generator_UserColumnName="idantecedentesgerais" type="xs:int" />
-              <xs:element name="idantecedentesoculares" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidantecedentesoculares" msprop:Generator_ColumnPropNameInRow="idantecedentesoculares" msprop:Generator_ColumnPropNameInTable="idantecedentesocularesColumn" msprop:Generator_UserColumnName="idantecedentesoculares" type="xs:int" />
-              <xs:element name="idrxinicial" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidrxinicial" msprop:Generator_ColumnPropNameInRow="idrxinicial" msprop:Generator_ColumnPropNameInTable="idrxinicialColumn" msprop:Generator_UserColumnName="idrxinicial" type="xs:int" />
               <xs:element name="idrxfinal" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidrxfinal" msprop:Generator_ColumnPropNameInRow="idrxfinal" msprop:Generator_ColumnPropNameInTable="idrxfinalColumn" msprop:Generator_UserColumnName="idrxfinal" type="xs:int" />
-              <xs:element name="idacuidadevisual" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidacuidadevisual" msprop:Generator_ColumnPropNameInRow="idacuidadevisual" msprop:Generator_ColumnPropNameInTable="idacuidadevisualColumn" msprop:Generator_UserColumnName="idacuidadevisual" type="xs:int" />
-              <xs:element name="idoftalmoscopia" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidoftalmoscopia" msprop:Generator_ColumnPropNameInRow="idoftalmoscopia" msprop:Generator_ColumnPropNameInTable="idoftalmoscopiaColumn" msprop:Generator_UserColumnName="idoftalmoscopia" type="xs:int" />
               <xs:element name="origem" msprop:Generator_ColumnVarNameInTable="columnorigem" msprop:Generator_ColumnPropNameInRow="origem" msprop:Generator_ColumnPropNameInTable="origemColumn" msprop:Generator_UserColumnName="origem" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -966,175 +945,6 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
               <xs:element name="observacaoconsulta" msprop:Generator_ColumnVarNameInTable="columnobservacaoconsulta" msprop:Generator_ColumnPropNameInRow="observacaoconsulta" msprop:Generator_ColumnPropNameInTable="observacaoconsultaColumn" msprop:Generator_UserColumnName="observacaoconsulta" type="xs:string" minOccurs="0" />
               <xs:element name="deletar" msprop:Generator_ColumnVarNameInTable="columndeletar" msprop:Generator_ColumnPropNameInRow="deletar" msprop:Generator_ColumnPropNameInTable="deletarColumn" msprop:Generator_UserColumnName="deletar" type="xs:boolean" minOccurs="0" />
               <xs:element name="idusuariodeletar" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidusuariodeletar" msprop:Generator_ColumnPropNameInRow="idusuariodeletar" msprop:Generator_ColumnPropNameInTable="idusuariodeletarColumn" msprop:Generator_UserColumnName="idusuariodeletar" type="xs:int" />
-              <xs:element name="idrxfinal1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidrxfinal1" msprop:Generator_ColumnPropNameInRow="idrxfinal1" msprop:Generator_ColumnPropNameInTable="idrxfinal1Column" msprop:Generator_UserColumnName="idrxfinal1" type="xs:int" />
-              <xs:element name="vlodesfera" msprop:Generator_ColumnVarNameInTable="columnvlodesfera" msprop:Generator_ColumnPropNameInRow="vlodesfera" msprop:Generator_ColumnPropNameInTable="vlodesferaColumn" msprop:Generator_UserColumnName="vlodesfera" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloeesfera" msprop:Generator_ColumnVarNameInTable="columnvloeesfera" msprop:Generator_ColumnPropNameInRow="vloeesfera" msprop:Generator_ColumnPropNameInTable="vloeesferaColumn" msprop:Generator_UserColumnName="vloeesfera" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodesfera" msprop:Generator_ColumnVarNameInTable="columnvpodesfera" msprop:Generator_ColumnPropNameInRow="vpodesfera" msprop:Generator_ColumnPropNameInTable="vpodesferaColumn" msprop:Generator_UserColumnName="vpodesfera" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoeesfera" msprop:Generator_ColumnVarNameInTable="columnvpoeesfera" msprop:Generator_ColumnPropNameInRow="vpoeesfera" msprop:Generator_ColumnPropNameInTable="vpoeesferaColumn" msprop:Generator_UserColumnName="vpoeesfera" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vlodcilindro" msprop:Generator_ColumnVarNameInTable="columnvlodcilindro" msprop:Generator_ColumnPropNameInRow="vlodcilindro" msprop:Generator_ColumnPropNameInTable="vlodcilindroColumn" msprop:Generator_UserColumnName="vlodcilindro" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloecilindro" msprop:Generator_ColumnVarNameInTable="columnvloecilindro" msprop:Generator_ColumnPropNameInRow="vloecilindro" msprop:Generator_ColumnPropNameInTable="vloecilindroColumn" msprop:Generator_UserColumnName="vloecilindro" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodcilindro" msprop:Generator_ColumnVarNameInTable="columnvpodcilindro" msprop:Generator_ColumnPropNameInRow="vpodcilindro" msprop:Generator_ColumnPropNameInTable="vpodcilindroColumn" msprop:Generator_UserColumnName="vpodcilindro" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoecilindro" msprop:Generator_ColumnVarNameInTable="columnvpoecilindro" msprop:Generator_ColumnPropNameInRow="vpoecilindro" msprop:Generator_ColumnPropNameInTable="vpoecilindroColumn" msprop:Generator_UserColumnName="vpoecilindro" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vlodeixo" msprop:Generator_ColumnVarNameInTable="columnvlodeixo" msprop:Generator_ColumnPropNameInRow="vlodeixo" msprop:Generator_ColumnPropNameInTable="vlodeixoColumn" msprop:Generator_UserColumnName="vlodeixo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloeeixo" msprop:Generator_ColumnVarNameInTable="columnvloeeixo" msprop:Generator_ColumnPropNameInRow="vloeeixo" msprop:Generator_ColumnPropNameInTable="vloeeixoColumn" msprop:Generator_UserColumnName="vloeeixo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodeixo" msprop:Generator_ColumnVarNameInTable="columnvpodeixo" msprop:Generator_ColumnPropNameInRow="vpodeixo" msprop:Generator_ColumnPropNameInTable="vpodeixoColumn" msprop:Generator_UserColumnName="vpodeixo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoeeixo" msprop:Generator_ColumnVarNameInTable="columnvpoeeixo" msprop:Generator_ColumnPropNameInRow="vpoeeixo" msprop:Generator_ColumnPropNameInTable="vpoeeixoColumn" msprop:Generator_UserColumnName="vpoeeixo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vlodadicao" msprop:Generator_ColumnVarNameInTable="columnvlodadicao" msprop:Generator_ColumnPropNameInRow="vlodadicao" msprop:Generator_ColumnPropNameInTable="vlodadicaoColumn" msprop:Generator_UserColumnName="vlodadicao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloeadicao" msprop:Generator_ColumnVarNameInTable="columnvloeadicao" msprop:Generator_ColumnPropNameInRow="vloeadicao" msprop:Generator_ColumnPropNameInTable="vloeadicaoColumn" msprop:Generator_UserColumnName="vloeadicao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodadicao" msprop:Generator_ColumnVarNameInTable="columnvpodadicao" msprop:Generator_ColumnPropNameInRow="vpodadicao" msprop:Generator_ColumnPropNameInTable="vpodadicaoColumn" msprop:Generator_UserColumnName="vpodadicao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoeadicao" msprop:Generator_ColumnVarNameInTable="columnvpoeadicao" msprop:Generator_ColumnPropNameInRow="vpoeadicao" msprop:Generator_ColumnPropNameInTable="vpoeadicaoColumn" msprop:Generator_UserColumnName="vpoeadicao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vlodprisma" msprop:Generator_ColumnVarNameInTable="columnvlodprisma" msprop:Generator_ColumnPropNameInRow="vlodprisma" msprop:Generator_ColumnPropNameInTable="vlodprismaColumn" msprop:Generator_UserColumnName="vlodprisma" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloeprisma" msprop:Generator_ColumnVarNameInTable="columnvloeprisma" msprop:Generator_ColumnPropNameInRow="vloeprisma" msprop:Generator_ColumnPropNameInTable="vloeprismaColumn" msprop:Generator_UserColumnName="vloeprisma" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodprisma" msprop:Generator_ColumnVarNameInTable="columnvpodprisma" msprop:Generator_ColumnPropNameInRow="vpodprisma" msprop:Generator_ColumnPropNameInTable="vpodprismaColumn" msprop:Generator_UserColumnName="vpodprisma" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoeprisma" msprop:Generator_ColumnVarNameInTable="columnvpoeprisma" msprop:Generator_ColumnPropNameInRow="vpoeprisma" msprop:Generator_ColumnPropNameInTable="vpoeprismaColumn" msprop:Generator_UserColumnName="vpoeprisma" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vlodbase" msprop:Generator_ColumnVarNameInTable="columnvlodbase" msprop:Generator_ColumnPropNameInRow="vlodbase" msprop:Generator_ColumnPropNameInTable="vlodbaseColumn" msprop:Generator_UserColumnName="vlodbase" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vloebase" msprop:Generator_ColumnVarNameInTable="columnvloebase" msprop:Generator_ColumnPropNameInRow="vloebase" msprop:Generator_ColumnPropNameInTable="vloebaseColumn" msprop:Generator_UserColumnName="vloebase" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpodbase" msprop:Generator_ColumnVarNameInTable="columnvpodbase" msprop:Generator_ColumnPropNameInRow="vpodbase" msprop:Generator_ColumnPropNameInTable="vpodbaseColumn" msprop:Generator_UserColumnName="vpodbase" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vpoebase" msprop:Generator_ColumnVarNameInTable="columnvpoebase" msprop:Generator_ColumnPropNameInRow="vpoebase" msprop:Generator_ColumnPropNameInTable="vpoebaseColumn" msprop:Generator_UserColumnName="vpoebase" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="tipolente" msprop:Generator_ColumnVarNameInTable="columntipolente" msprop:Generator_ColumnPropNameInRow="tipolente" msprop:Generator_ColumnPropNameInTable="tipolenteColumn" msprop:Generator_UserColumnName="tipolente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1142,21 +952,7 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="material" msprop:Generator_ColumnVarNameInTable="columnmaterial" msprop:Generator_ColumnPropNameInRow="material" msprop:Generator_ColumnPropNameInTable="materialColumn" msprop:Generator_UserColumnName="material" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="cor" msprop:Generator_ColumnVarNameInTable="columncor" msprop:Generator_ColumnPropNameInRow="cor" msprop:Generator_ColumnPropNameInTable="corColumn" msprop:Generator_UserColumnName="cor" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1274,12 +1070,173 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
               <xs:element name="datacadastro1" msprop:Generator_ColumnVarNameInTable="columndatacadastro1" msprop:Generator_ColumnPropNameInRow="datacadastro1" msprop:Generator_ColumnPropNameInTable="datacadastro1Column" msprop:Generator_UserColumnName="datacadastro1" type="xs:dateTime" minOccurs="0" />
               <xs:element name="horacadastro1" msprop:Generator_ColumnVarNameInTable="columnhoracadastro1" msprop:Generator_ColumnPropNameInRow="horacadastro1" msprop:Generator_ColumnPropNameInTable="horacadastro1Column" msprop:Generator_UserColumnName="horacadastro1" type="xs:duration" minOccurs="0" />
               <xs:element name="observacaoprofissional" msprop:Generator_ColumnVarNameInTable="columnobservacaoprofissional" msprop:Generator_ColumnPropNameInRow="observacaoprofissional" msprop:Generator_ColumnPropNameInTable="observacaoprofissionalColumn" msprop:Generator_UserColumnName="observacaoprofissional" type="xs:string" minOccurs="0" />
-              <xs:element name="deletar3" msprop:Generator_ColumnVarNameInTable="columndeletar3" msprop:Generator_ColumnPropNameInRow="deletar3" msprop:Generator_ColumnPropNameInTable="deletar3Column" msprop:Generator_UserColumnName="deletar3" type="xs:boolean" minOccurs="0" />
               <xs:element name="idusuariodeletar2" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidusuariodeletar2" msprop:Generator_ColumnPropNameInRow="idusuariodeletar2" msprop:Generator_ColumnPropNameInTable="idusuariodeletar2Column" msprop:Generator_UserColumnName="idusuariodeletar2" type="xs:int" />
+              <xs:element name="idconsulta1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidconsulta1" msprop:Generator_ColumnPropNameInRow="idconsulta1" msprop:Generator_ColumnPropNameInTable="idconsulta1Column" msprop:Generator_UserColumnName="idconsulta1" type="xs:int" />
+              <xs:element name="esferavlod" msprop:Generator_ColumnVarNameInTable="columnesferavlod" msprop:Generator_ColumnPropNameInRow="esferavlod" msprop:Generator_ColumnPropNameInTable="esferavlodColumn" msprop:Generator_UserColumnName="esferavlod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="esferavloe" msprop:Generator_ColumnVarNameInTable="columnesferavloe" msprop:Generator_ColumnPropNameInRow="esferavloe" msprop:Generator_ColumnPropNameInTable="esferavloeColumn" msprop:Generator_UserColumnName="esferavloe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="esferavpod" msprop:Generator_ColumnVarNameInTable="columnesferavpod" msprop:Generator_ColumnPropNameInRow="esferavpod" msprop:Generator_ColumnPropNameInTable="esferavpodColumn" msprop:Generator_UserColumnName="esferavpod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="esferavpoe" msprop:Generator_ColumnVarNameInTable="columnesferavpoe" msprop:Generator_ColumnPropNameInRow="esferavpoe" msprop:Generator_ColumnPropNameInTable="esferavpoeColumn" msprop:Generator_UserColumnName="esferavpoe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cilindrovlod" msprop:Generator_ColumnVarNameInTable="columncilindrovlod" msprop:Generator_ColumnPropNameInRow="cilindrovlod" msprop:Generator_ColumnPropNameInTable="cilindrovlodColumn" msprop:Generator_UserColumnName="cilindrovlod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cilindrovloe" msprop:Generator_ColumnVarNameInTable="columncilindrovloe" msprop:Generator_ColumnPropNameInRow="cilindrovloe" msprop:Generator_ColumnPropNameInTable="cilindrovloeColumn" msprop:Generator_UserColumnName="cilindrovloe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cilindrovpod" msprop:Generator_ColumnVarNameInTable="columncilindrovpod" msprop:Generator_ColumnPropNameInRow="cilindrovpod" msprop:Generator_ColumnPropNameInTable="cilindrovpodColumn" msprop:Generator_UserColumnName="cilindrovpod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cilindrovpoe" msprop:Generator_ColumnVarNameInTable="columncilindrovpoe" msprop:Generator_ColumnPropNameInRow="cilindrovpoe" msprop:Generator_ColumnPropNameInTable="cilindrovpoeColumn" msprop:Generator_UserColumnName="cilindrovpoe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eixovlod" msprop:Generator_ColumnVarNameInTable="columneixovlod" msprop:Generator_ColumnPropNameInRow="eixovlod" msprop:Generator_ColumnPropNameInTable="eixovlodColumn" msprop:Generator_UserColumnName="eixovlod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eixovloe" msprop:Generator_ColumnVarNameInTable="columneixovloe" msprop:Generator_ColumnPropNameInRow="eixovloe" msprop:Generator_ColumnPropNameInTable="eixovloeColumn" msprop:Generator_UserColumnName="eixovloe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eixovpod" msprop:Generator_ColumnVarNameInTable="columneixovpod" msprop:Generator_ColumnPropNameInRow="eixovpod" msprop:Generator_ColumnPropNameInTable="eixovpodColumn" msprop:Generator_UserColumnName="eixovpod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eixovpoe" msprop:Generator_ColumnVarNameInTable="columneixovpoe" msprop:Generator_ColumnPropNameInRow="eixovpoe" msprop:Generator_ColumnPropNameInTable="eixovpoeColumn" msprop:Generator_UserColumnName="eixovpoe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="avvlod" msprop:Generator_ColumnVarNameInTable="columnavvlod" msprop:Generator_ColumnPropNameInRow="avvlod" msprop:Generator_ColumnPropNameInTable="avvlodColumn" msprop:Generator_UserColumnName="avvlod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="avvloe" msprop:Generator_ColumnVarNameInTable="columnavvloe" msprop:Generator_ColumnPropNameInRow="avvloe" msprop:Generator_ColumnPropNameInTable="avvloeColumn" msprop:Generator_UserColumnName="avvloe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="avvpod" msprop:Generator_ColumnVarNameInTable="columnavvpod" msprop:Generator_ColumnPropNameInRow="avvpod" msprop:Generator_ColumnPropNameInTable="avvpodColumn" msprop:Generator_UserColumnName="avvpod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="avvpoe" msprop:Generator_ColumnVarNameInTable="columnavvpoe" msprop:Generator_ColumnPropNameInRow="avvpoe" msprop:Generator_ColumnPropNameInTable="avvpoeColumn" msprop:Generator_UserColumnName="avvpoe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adicao" msprop:Generator_ColumnVarNameInTable="columnadicao" msprop:Generator_ColumnPropNameInRow="adicao" msprop:Generator_ColumnPropNameInTable="adicaoColumn" msprop:Generator_UserColumnName="adicao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dp" msprop:Generator_ColumnVarNameInTable="columndp" msprop:Generator_ColumnPropNameInRow="dp" msprop:Generator_ColumnPropNameInTable="dpColumn" msprop:Generator_UserColumnName="dp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipomaterial" msprop:Generator_ColumnVarNameInTable="columntipomaterial" msprop:Generator_ColumnPropNameInRow="tipomaterial" msprop:Generator_ColumnPropNameInTable="tipomaterialColumn" msprop:Generator_UserColumnName="tipomaterial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uso" msprop:Generator_ColumnVarNameInTable="columnuso" msprop:Generator_ColumnPropNameInRow="uso" msprop:Generator_ColumnPropNameInTable="usoColumn" msprop:Generator_UserColumnName="uso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rodapereceita" msprop:Generator_ColumnVarNameInTable="columnrodapereceita" msprop:Generator_ColumnPropNameInRow="rodapereceita" msprop:Generator_ColumnPropNameInTable="rodapereceitaColumn" msprop:Generator_UserColumnName="rodapereceita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dnpod" msprop:Generator_ColumnVarNameInTable="columndnpod" msprop:Generator_ColumnPropNameInRow="dnpod" msprop:Generator_ColumnPropNameInTable="dnpodColumn" msprop:Generator_UserColumnName="dnpod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dnpoe" msprop:Generator_ColumnVarNameInTable="columndnpoe" msprop:Generator_ColumnPropNameInRow="dnpoe" msprop:Generator_ColumnPropNameInTable="dnpoeColumn" msprop:Generator_UserColumnName="dnpoe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ConsultaCompleta" msprop:Generator_TableClassName="ConsultaCompletaDataTable" msprop:Generator_TableVarName="tableConsultaCompleta" msprop:Generator_TablePropName="ConsultaCompleta" msprop:Generator_RowDeletingName="ConsultaCompletaRowDeleting" msprop:Generator_RowChangingName="ConsultaCompletaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaCompletaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaCompletaRowDeleted" msprop:Generator_UserTableName="ConsultaCompleta" msprop:Generator_RowChangedName="ConsultaCompletaRowChanged" msprop:Generator_RowEvArgName="ConsultaCompletaRowChangeEvent" msprop:Generator_RowClassName="ConsultaCompletaRow">
+        <xs:element name="ConsultaCompleta" msprop:Generator_TableClassName="ConsultaCompletaDataTable" msprop:Generator_TableVarName="tableConsultaCompleta" msprop:Generator_RowChangedName="ConsultaCompletaRowChanged" msprop:Generator_TablePropName="ConsultaCompleta" msprop:Generator_RowDeletingName="ConsultaCompletaRowDeleting" msprop:Generator_RowChangingName="ConsultaCompletaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaCompletaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaCompletaRowDeleted" msprop:Generator_RowClassName="ConsultaCompletaRow" msprop:Generator_UserTableName="ConsultaCompleta" msprop:Generator_RowEvArgName="ConsultaCompletaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idconsulta" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidconsulta" msprop:Generator_ColumnPropNameInRow="idconsulta" msprop:Generator_ColumnPropNameInTable="idconsultaColumn" msprop:Generator_UserColumnName="idconsulta" type="xs:int" />
@@ -2316,7 +2273,7 @@ WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.del
     <xs:unique name="ReceitaCompleta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ReceitaCompleta" />
       <xs:field xpath="mstns:idconsulta" />
-      <xs:field xpath="mstns:idrxfinal1" />
+      <xs:field xpath="mstns:idrxfinal" />
       <xs:field xpath="mstns:idpaciente1" />
       <xs:field xpath="mstns:idprofissional1" />
     </xs:unique>

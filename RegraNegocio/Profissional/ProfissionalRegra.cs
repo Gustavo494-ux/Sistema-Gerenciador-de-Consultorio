@@ -9,16 +9,17 @@ namespace RegraNegocio
 	public class ProfissionalRegra
 	{
         DataTable tableVazia = new DataTable();
-		public bool Cadastrar(string idProfissional, string idEndereco, string idContato,string idUsuario , string nomeProfissional, string especialidade,
-            string rg, string cpf, string sexo, string croo,
-			string dataNascimento, string dataCadastro, string horaCadastro, string observacaoProfissional)
+		public bool Cadastrar(string idProfissional, string idEndereco, string idContato,string idUsuario , string nomeProfissional, string especialidade,string rg, string cpf,
+            string sexo, string croo,string dataNascimento, string dataCadastro, string horaCadastro,string rodapeReceita, string observacaoProfissional)
 		{
 			try
 			{
-				if (Verificar(idProfissional,idEndereco,idContato, idUsuario, nomeProfissional,especialidade,rg,cpf, sexo,croo,dataNascimento,dataCadastro,horaCadastro, observacaoProfissional) == true)//Se a verificação der true as informações são inseridas
+				if (Verificar(idProfissional,idEndereco,idContato, idUsuario, nomeProfissional,especialidade,rg,cpf, sexo,croo,dataNascimento,dataCadastro,horaCadastro,
+                    rodapeReceita, observacaoProfissional) == true)//Se a verificação der true as informações são inseridas
 				{
 					ProfissionalAcesso novoProfissional = new ProfissionalAcesso();
-					return novoProfissional.Cadastrar(idProfissional, idEndereco, idContato, idUsuario,nomeProfissional.ToUpper(), especialidade.ToUpper(), rg, cpf, sexo, croo, dataNascimento, dataCadastro, horaCadastro, observacaoProfissional);
+					return novoProfissional.Cadastrar(idProfissional, idEndereco, idContato, idUsuario,nomeProfissional.ToUpper(), especialidade.ToUpper(), rg, cpf, sexo, croo, 
+                        dataNascimento, dataCadastro, horaCadastro, rodapeReceita, observacaoProfissional);
 				}
 				else
 				{
@@ -28,14 +29,14 @@ namespace RegraNegocio
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Erro no método de validação das informações de cadastro do profissional(Classe ProfissionalRegra, método Cadastrar). Error:  " + ex.Message + " Caso o problema persista entre em contato com o suporte!", "Erro na validação",
-				   MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Erro no método de validação das informações de cadastro do profissional(Classe ProfissionalRegra, método Cadastrar). Error:  " + ex.Message + 
+                    " Caso o problema persista entre em contato com o suporte!", "Erro na validação",MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			return false;
 		}
 		public bool Verificar(string idProfissional, string idEndereco, string idContato ,string idUsuario, string nomeProfissional, string especialidade,
             string rg, string cpf, string sexo, string croo,
-			string dataNascimento, string dataCadastro, string horaCadastro, string observacaoProfissional)//Método responsável por validações das informações a serem inseridas
+			string dataNascimento, string dataCadastro, string horaCadastro,string rodapeReceita, string observacaoProfissional)//Método responsável por validações das informações a serem inseridas
 		{
 			try
 			{
@@ -112,6 +113,8 @@ namespace RegraNegocio
 
 				if (Convert.ToDateTime(dataNascimento) > Convert.ToDateTime(DateTime.Now.ToShortDateString()))return false;
 
+                if (rodapeReceita.Length > 200) return false;
+
 				if (observacaoProfissional.GetType() != typeof(string)) return false;
 			}
 			catch (Exception ex)
@@ -121,31 +124,26 @@ namespace RegraNegocio
 			}
 			return true;
 		}
+        public DataTable RetornarDados(string idProfissional)
+        {
+            DataTable tableVazia = new DataTable();
+            try
+            {
+                if (Convert.ToInt32(idProfissional) > 0)
+                {
+                    ProfissionalAcesso Editar = new ProfissionalAcesso();
+                    return Editar.RetornarDados(Convert.ToInt32(idProfissional));
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao atualizar os dados do Profissional(Classe ProfissionalRegra, Método Atualizar)", "Erro de Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return tableVazia;
 
-		public DataTable RetornarDados(string idProfissional)
-		{
-			DataTable tableVazia = new DataTable();
-			DataTable dadosTabela = new DataTable();
-			try
-			{
-				if (Convert.ToInt32(idProfissional) > 0)
-				{
-
-					ProfissionalAcesso Editar = new ProfissionalAcesso();
-					dadosTabela = Editar.RetornarDados(Convert.ToInt32(idProfissional));
-					return dadosTabela;
-
-				}
-			}
-			catch (Exception)
-			{
-				MessageBox.Show("Ocorreu um erro ao atualizar os dados do Profissional(Classe ProfissionalRegra, Método Atualizar)", "Erro de Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			return tableVazia;
-
-		}
-		public bool Atualizar(string idProfissional, string nomeProfissional, string especialidade, string rg, string cpf, string sexo, string croo,
-            string dataNascimento, string observacaoProfissional)
+        }
+        public bool Atualizar(string idProfissional, string nomeProfissional, string especialidade, string rg, string cpf, string sexo, string croo,
+            string dataNascimento,string rodapeReceita, string observacaoProfissional)
 		{
 			try
 			{
@@ -153,12 +151,11 @@ namespace RegraNegocio
 				{
 			        ProfissionalRegra validar = new ProfissionalRegra();
 					//As informações colocadas diretamente são informações que nunca são alteredas então não precisam passar por validação antes da atualização do registro no sistema.
-					if (validar.Verificar("0", "1", "1", "1", nomeProfissional, especialidade, rg, cpf, sexo, croo, dataNascimento, "", "", observacaoProfissional) == true)
+					if (validar.Verificar("0", "1", "1", "1", nomeProfissional, especialidade, rg, cpf, sexo, croo, dataNascimento, "", "", rodapeReceita, observacaoProfissional) == true)
 					{
 						ProfissionalAcesso Editar = new ProfissionalAcesso();
-						return Editar.Atualizar(Convert.ToInt32(idProfissional), nomeProfissional, especialidade, rg, cpf.Replace(".", "").Replace("-", "").Replace(",", ""), sexo, croo, Convert.ToDateTime(dataNascimento),
-							observacaoProfissional);
-
+						return Editar.Atualizar(Convert.ToInt32(idProfissional), nomeProfissional, especialidade, rg, cpf.Replace(".", "").Replace("-", "").Replace(",", ""), sexo, croo,
+                            Convert.ToDateTime(dataNascimento), rodapeReceita,observacaoProfissional);
 					}
 				}
 			}

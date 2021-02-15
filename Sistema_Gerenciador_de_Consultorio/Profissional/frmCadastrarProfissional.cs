@@ -100,7 +100,7 @@ namespace Sistema_Gerenciador_de_Consultorio
 
                 ProfissionalRegra novaVerificacaoProfissionaç = new ProfissionalRegra();
                 novaVerificacaoProfissionaç.Verificar(idProfissional, idEndereco, idContato, idUsuario, txtNomeProfissional.Text, txtEspecialidade.Text,
-                    mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtObservacaoProfissional.Text);
+                    mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtRodapeReceita.Text, txtObservacaoProfissional.Text); ;
 
             }
             catch (Exception ex)
@@ -134,6 +134,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                         cbSexo.Text = dtgIntermediario.Rows[i].Cells["sexo"].Value.ToString();
                         mtxtCROO.Text = dtgIntermediario.Rows[i].Cells["croo"].Value.ToString();
                         dtpDataNascimento.Text = dtgIntermediario.Rows[i].Cells["dataNascimento"].Value.ToString();
+                        txtRodapeReceita.Text = dtgIntermediario.Rows[i].Cells["rodapeReceita"].Value.ToString();
                         txtObservacaoProfissional.Text = dtgIntermediario.Rows[i].Cells["observacaoProfissional"].Value.ToString();
 
                         //Contato
@@ -156,13 +157,11 @@ namespace Sistema_Gerenciador_de_Consultorio
                         txtPontoDeReferencia.Text = dtgIntermediario.Rows[i].Cells["pontoReferencia"].Value.ToString();
                         txtObservacaoEndereco.Text = dtgIntermediario.Rows[i].Cells["observacaoEndereco"].Value.ToString();
                     }
-
                 }
-
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro ao realizar uma pesquisa/Atualização do profissional(Formulario frmCadastrarProfissional, Método EditarProfissional)", "Erro de Pesquisa/Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao realizar uma pesquisa/Atualização do profissional(Formulario frmCadastrarProfissional, Método CarregarProfissionalASerEditado)", "Erro de Pesquisa/Atualização", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void cadastrar()
@@ -183,7 +182,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             idProfissional = "0";
             ProfissionalRegra novoProfissional = new ProfissionalRegra();
             confirm[2] = novoProfissional.Cadastrar(idProfissional, idEndereco, idContato, idUsuario, txtNomeProfissional.Text, txtEspecialidade.Text, mtxRG.Text, mtxtCPF.Text,
-            cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro, txtObservacaoProfissional.Text);
+            cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, dataCadastro, horaCadastro,txtRodapeReceita.Text, txtObservacaoProfissional.Text);
 
             if (confirm[0] == true && confirm[1] == true && confirm[2] == true)
             {
@@ -245,9 +244,14 @@ namespace Sistema_Gerenciador_de_Consultorio
                     ContatoRegra editarContato = new ContatoRegra();
                     EnderecoRegra editarEndereco = new EnderecoRegra();
 
-                    bool profissional = editarProfissional.Atualizar(idProfissional, txtNomeProfissional.Text, txtEspecialidade.Text, mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text, dtpDataNascimento.Text, txtObservacaoProfissional.Text);
-                    bool endereco = editarEndereco.Atualizar(Convert.ToInt32(idEndereco), txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text, txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);
-                    bool contato = editarContato.Atualizar(Convert.ToInt32(idContato), txtEmail.Text, mtxtTelefone1.Text, mtxtTelefone2.Text, mtxtTelefone3.Text, txtOutro.Text, txtObservacaoContato.Text);
+                    bool profissional = editarProfissional.Atualizar(idProfissional, txtNomeProfissional.Text, txtEspecialidade.Text, mtxRG.Text, mtxtCPF.Text, cbSexo.Text, mtxtCROO.Text,
+                        dtpDataNascimento.Text, txtRodapeReceita.Text, txtObservacaoProfissional.Text);
+
+                    bool endereco = editarEndereco.Atualizar(Convert.ToInt32(idEndereco), txtEstado.Text, txtCidade.Text, txtBairro.Text, txtRua.Text, txtNumero.Text, mtxtCEP.Text,
+                        txtPontoDeReferencia.Text, txtObservacaoEndereco.Text);
+
+                    bool contato = editarContato.Atualizar(Convert.ToInt32(idContato), txtEmail.Text, mtxtTelefone1.Text, mtxtTelefone2.Text, mtxtTelefone3.Text, txtOutro.Text,
+                        txtObservacaoContato.Text);
 
                     if (profissional == true && endereco == true && contato == true)
                     {

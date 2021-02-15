@@ -24,6 +24,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         //Dados Paciente
         string idPaciente, idContato, idEndereco, idUsuarioCadastro, nomePaciente, nomeResponsavel,
         RG, CPF, OCUPACAO, IDADE, SEXO, dataNascimento, dataCadastro, horaCadastro, observacaoPaciente;
+        string idUlitmaConsulta;
         DataTable tableVazia = new DataTable();
 
         public frmCadastrarConsulta(string idUsuario, string idNivel, string loginUsuario, string nomeNivel,int idPaciente)
@@ -298,9 +299,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                     ArrayRxFinal[0, 1], ArrayRxFinal[1, 1], ArrayRxFinal[2, 1], ArrayRxFinal[3, 1],//Cilindro
                     ArrayRxFinal[0, 2], ArrayRxFinal[1, 2], ArrayRxFinal[2, 2], ArrayRxFinal[3, 2],//Eixo
 
-                    ArrayRxFinal[0, 3], ArrayRxFinal[1, 3], ArrayRxFinal[2, 3], ArrayRxFinal[3, 3],//Adicao
-                   txtAdicaoRxFinal.Text, txtDpRxFinal.Text, txtTipoMaterialRxFinal.Text, txtCorRxFinal.Text,
-                  txtUsoRxFinal.Text, txtTipoLenteRxFinal.Text, txtObservacaoRxFinal.Text);
+                    ArrayRxFinal[0, 3], ArrayRxFinal[1, 3], ArrayRxFinal[2, 3], ArrayRxFinal[3, 3],//Av
+                     txtDnpOd.Text, txtDnpOe.Text, txtAdicaoRxFinal.Text, txtDpRxFinal.Text, txtTipoMaterialRxFinal.Text,
+                    txtCorRxFinal.Text, txtUsoRxFinal.Text, txtTipoLenteRxFinal.Text, txtObservacaoRxFinal.Text);
                 return rxFinal;
             }
             catch (Exception)
@@ -679,14 +680,15 @@ namespace Sistema_Gerenciador_de_Consultorio
                 "Erro de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        bool RetornarIdProfissional(string idConsulta)
+        bool RetornarIdProfissional(string idUsuario)
         {
             try
             {
                 DataTable dadosProfissional = new DataTable();
 
-                ProfissionalRegra pesquisar = new ProfissionalRegra();
-                dadosProfissional = pesquisar.CodigoProfissional(Convert.ToInt32(idConsulta));
+                UsuarioRegra pesquisar = new UsuarioRegra();
+                dadosProfissional = pesquisar.RetornarIdProfissional(idUsuario);
+
                 if (dadosProfissional.Rows.Count > 0) idProfissional = dadosProfissional.Rows[0]["idProfissional"].ToString();
                 if (Convert.ToInt32(idProfissional) > 0) return true;
             }
@@ -1130,6 +1132,9 @@ namespace Sistema_Gerenciador_de_Consultorio
                     txtUsoRxFinal.Text = Convert.ToString(dtgIntermediario.Rows[0].Cells["uso"].Value);
                     txtTipoLenteRxFinal.Text = Convert.ToString(dtgIntermediario.Rows[0].Cells["tipoLente"].Value);
 
+                    txtDnpOd.Text = Convert.ToString(dtgIntermediario.Rows[0].Cells["DnpOd"].Value);
+                    txtDnpOe.Text = Convert.ToString(dtgIntermediario.Rows[0].Cells["DnpOe"].Value);
+
                     txtObservacaoRxFinal.Text = Convert.ToString(dtgIntermediario.Rows[0].Cells["observacaoRxFinal"].Value);
 
                     dtgRxFinal.Rows.Clear();
@@ -1524,8 +1529,6 @@ namespace Sistema_Gerenciador_de_Consultorio
                     txtMetodoForometria.Text = dadosTabela.Rows[0]["Método"].ToString();
                     txtNivelVisualForometria.Text = dadosTabela.Rows[0]["Nível Visual"].ToString();
                     txtDtForometria.Text = dadosTabela.Rows[0]["DT"].ToString();
-
-
                 }
             }
             catch (Exception)
@@ -1866,8 +1869,8 @@ namespace Sistema_Gerenciador_de_Consultorio
                     ArrayRxFinal[0, 1], ArrayRxFinal[1, 1], ArrayRxFinal[2, 1], ArrayRxFinal[3, 1],//Cilindro
                     ArrayRxFinal[0, 2], ArrayRxFinal[1, 2], ArrayRxFinal[2, 2], ArrayRxFinal[3, 2],//Eixo
                     ArrayRxFinal[0, 3], ArrayRxFinal[1, 3], ArrayRxFinal[2, 3], ArrayRxFinal[3, 3],//Av
-                   txtAdicaoRxFinal.Text, txtDpRxFinal.Text, txtTipoMaterialRxFinal.Text, txtCorRxFinal.Text,
-                  txtUsoRxFinal.Text, txtTipoLenteRxFinal.Text, txtObservacaoRxFinal.Text);
+                    txtDnpOd.Text,txtDnpOe.Text,txtAdicaoRxFinal.Text, txtDpRxFinal.Text, txtTipoMaterialRxFinal.Text,
+                    txtCorRxFinal.Text,txtUsoRxFinal.Text, txtTipoLenteRxFinal.Text, txtObservacaoRxFinal.Text);
                 return rxFinal;
             }
             catch (Exception)
@@ -1994,6 +1997,7 @@ namespace Sistema_Gerenciador_de_Consultorio
             }
             return false;
         }
+
         bool CadastarRetinoscopia(string IDCONSULTA)
         {
             try
@@ -2084,7 +2088,8 @@ namespace Sistema_Gerenciador_de_Consultorio
 
             DataTable dados = new DataTable();
             dados = consultaRegra.PesquisarUltimoId();
-            string idUlitmaConsulta = dados.Rows[0]["idConsulta"].ToString();
+            idUlitmaConsulta = dados.Rows[0]["idConsulta"].ToString();
+            
 
             confirmacao[0] = CadastrarAcuidadeVisual(idUlitmaConsulta);
             confirmacao[1] = CadastrarAnamnese(idUlitmaConsulta);
@@ -2139,11 +2144,12 @@ namespace Sistema_Gerenciador_de_Consultorio
         {
             if (aunteUsuario.NovaConsulta(idNivel) == true)//Verifica se o usuário do sistema tem autorização para realizar consultas.
             {
-                if (RetornarIdProfissional(idUsuarioSistema) == true)//Verifica se o id do profissional é válido(Acima de 0).
+                if (RetornarIdProfissional(idUsuarioSistema) == true)
                 {
                     if (Convert.ToInt32(idPaciente) > 0)//ver
                     {
                         Cadastrar();
+                        receitaToolStripMenuItem.Visible = true;
                     }
                     else
                     {
@@ -2163,9 +2169,15 @@ namespace Sistema_Gerenciador_de_Consultorio
                 MessageBox.Show("Para Salvar uma nova consulta é necessario ser um profissional ou administrador \n Usuario: " + loginUsuario + " Nivel de Acesso: " + nomeNivel, "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void receitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImpressao imprimirReceita = new frmImpressao("6",idUlitmaConsulta);
+            imprimirReceita.WindowState = FormWindowState.Maximized;
+            imprimirReceita.ShowDialog();
+        }
         void limpar()
         {
-
+           
         }
         void CarregarDadosEstaticosDosDtg()
         {

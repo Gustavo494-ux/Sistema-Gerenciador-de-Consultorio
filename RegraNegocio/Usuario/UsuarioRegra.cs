@@ -13,6 +13,7 @@ namespace RegraNegocio
     {
         string senhaEncriptada;
         DataTable tableVazia = new DataTable();
+        UsuarioAcesso usuario = new UsuarioAcesso();
         public bool Cadastrar(string idNivel, string nomeUsuario, string loginUsuario, string senhaUsuario, string confirmacaoSenha, string observacaoUsuario, string statusUsuario)
         {
             try
@@ -224,6 +225,20 @@ namespace RegraNegocio
                 MessageBox.Show("Ocorreu um erro ao deletar o usuario(Classe UsuarioRegra,Método Deletar)", "Erro ao excluir dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
+        }
+        //Função para retornar o idProfissional do usuario,caso ele tenha um registro profissional
+        public DataTable RetornarIdProfissional(string idUsuario)
+        {
+            try
+            {
+                return usuario.RetornarIdProfissional(idUsuario);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro ao retornar o idProfissional do usuário do sistema,caso seja um profissional(Classe UsuarioRegra,Método RetornarIdProfissional", "Erro de Verificação",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return tableVazia;
         }
     }
 }

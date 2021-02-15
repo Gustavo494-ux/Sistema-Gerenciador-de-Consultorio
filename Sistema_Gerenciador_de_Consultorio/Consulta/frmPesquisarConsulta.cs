@@ -226,7 +226,6 @@ namespace Sistema_Gerenciador_de_Consultorio
                     RetornarIdProfissional(idUsuario);
                     if (autenticar.VisualizarEditarConsulta(idProfissional, dtgConsulta.Rows[e.RowIndex].Cells["idProfissionalCadastro"].Value.ToString()))
                     {
-                        
                         frmCadastrarConsulta editar = new frmCadastrarConsulta(idUsuario, idNivel, loginUsuario, nomeNivel, idConsultaEditar);
                         editar.ShowDialog();
                     }
@@ -251,8 +250,11 @@ namespace Sistema_Gerenciador_de_Consultorio
                     }
                     break;
                 case "btnImprimirReceita":
-                    frmImpressao imprimirReceita = new frmImpressao("6",idConsultaEditar);
+                    frmImpressao imprimirReceita = new frmImpressao("6", idConsultaEditar);
+                    imprimirReceita.WindowState = FormWindowState.Maximized;
                     imprimirReceita.ShowDialog();
+                    //frmImprimirDados imprimirReceita = new frmImprimirDados("6",idConsultaEditar);
+                    //imprimirReceita.ShowDialog();
                     break;
                 case "btnImprimirConsulta":
                     RetornarIdProfissional(idUsuario);

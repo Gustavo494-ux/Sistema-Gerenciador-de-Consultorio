@@ -47,9 +47,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.cbNivelAcessoPesquisa = new System.Windows.Forms.ComboBox();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
-            this.dataSetImpressao = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressao();
             this.usuarioCompletoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioCompletoTableAdapter = new Sistema_Gerenciador_de_Consultorio.DataSet.DataSetImpressaoTableAdapters.UsuarioCompletoTableAdapter();
             this.pnlCadastrar = new System.Windows.Forms.Panel();
             this.lblStatusUsuario = new System.Windows.Forms.Label();
             this.lblNivelAcesso = new System.Windows.Forms.Label();
@@ -65,18 +63,17 @@
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.cbStatusUsuario = new System.Windows.Forms.ComboBox();
             this.cbNivelAcesso = new System.Windows.Forms.ComboBox();
-            this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImprimir = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
             this.msMenuSuperior = new System.Windows.Forms.MenuStrip();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnImprimir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioCompletoBindingSource)).BeginInit();
             this.pnlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).BeginInit();
@@ -263,19 +260,9 @@
             this.dtgIntermediario.TabIndex = 7;
             this.dtgIntermediario.Visible = false;
             // 
-            // dataSetImpressao
-            // 
-            this.dataSetImpressao.DataSetName = "DataSetImpressao";
-            this.dataSetImpressao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usuarioCompletoBindingSource
             // 
             this.usuarioCompletoBindingSource.DataMember = "UsuarioCompleto";
-            this.usuarioCompletoBindingSource.DataSource = this.dataSetImpressao;
-            // 
-            // usuarioCompletoTableAdapter
-            // 
-            this.usuarioCompletoTableAdapter.ClearBeforeFill = true;
             // 
             // pnlCadastrar
             // 
@@ -448,27 +435,6 @@
             this.cbNivelAcesso.Size = new System.Drawing.Size(188, 26);
             this.cbNivelAcesso.TabIndex = 5;
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.HeaderText = "Deletar";
-            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.ReadOnly = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "Editar";
-            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.HeaderText = "Imprimir";
-            this.btnImprimir.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.ReadOnly = true;
-            // 
             // dtgUsuario
             // 
             this.dtgUsuario.AllowUserToAddRows = false;
@@ -516,6 +482,7 @@
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
             this.salvarToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Visible = false;
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
             // atualizarToolStripMenuItem
@@ -523,6 +490,7 @@
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
             this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
             this.atualizarToolStripMenuItem.Text = "Atualizar";
+            this.atualizarToolStripMenuItem.Visible = false;
             this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
             // 
             // limparToolStripMenuItem
@@ -539,6 +507,28 @@
             this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.HeaderText = "Imprimir";
+            this.btnImprimir.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.ReadOnly = true;
+            this.btnImprimir.Visible = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "Editar";
+            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.HeaderText = "Deletar";
+            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.ReadOnly = true;
             // 
             // frmUsuario
             // 
@@ -569,7 +559,6 @@
             this.pnlPesquisar.ResumeLayout(false);
             this.pnlPesquisar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermediario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetImpressao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioCompletoBindingSource)).EndInit();
             this.pnlCadastrar.ResumeLayout(false);
             this.pnlCadastrar.PerformLayout();
@@ -586,9 +575,8 @@
         private System.Windows.Forms.RadioButton rbCadastrarUsuario;
         private System.Windows.Forms.Timer repetir;
         private System.Windows.Forms.Label lblUsuario;
-        private DataSet.DataSetImpressao dataSetImpressao;
+
         private System.Windows.Forms.BindingSource usuarioCompletoBindingSource;
-        private DataSet.DataSetImpressaoTableAdapters.UsuarioCompletoTableAdapter usuarioCompletoTableAdapter;
         private System.Windows.Forms.Panel pnlPesquisar;
         private System.Windows.Forms.RadioButton rbTodos;
         private System.Windows.Forms.RadioButton rbNomeUsuario;
@@ -615,14 +603,14 @@
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.ComboBox cbStatusUsuario;
         private System.Windows.Forms.ComboBox cbNivelAcesso;
-        private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
-        private System.Windows.Forms.DataGridViewImageColumn btnEditar;
-        private System.Windows.Forms.DataGridViewImageColumn btnImprimir;
         private System.Windows.Forms.DataGridView dtgUsuario;
         private System.Windows.Forms.MenuStrip msMenuSuperior;
         private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewImageColumn btnImprimir;
+        private System.Windows.Forms.DataGridViewImageColumn btnEditar;
+        private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
     }
 }

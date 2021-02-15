@@ -33,20 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisarConsulta));
             this.atualizar = new System.Windows.Forms.Timer(this.components);
             this.dtgConsulta = new System.Windows.Forms.DataGridView();
-            this.idConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProfissionalCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuarioCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsuarioCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacaoConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnImprimirConsulta = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImprimirReceita = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlPesquisar = new System.Windows.Forms.Panel();
             this.rbIdPaciente = new System.Windows.Forms.RadioButton();
             this.rbTodos = new System.Windows.Forms.RadioButton();
@@ -62,6 +48,20 @@
             this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtgIntermediario = new System.Windows.Forms.DataGridView();
+            this.idConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProfissionalCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuarioCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacaoConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnImprimirConsulta = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImprimirReceita = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnDeletar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).BeginInit();
             this.pnlPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesquisar)).BeginInit();
@@ -110,104 +110,6 @@
             this.dtgConsulta.TabIndex = 2;
             this.dtgConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConsulta_CellClick);
             this.dtgConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConsulta_CellContentClick);
-            // 
-            // idConsulta
-            // 
-            this.idConsulta.HeaderText = "Código";
-            this.idConsulta.Name = "idConsulta";
-            this.idConsulta.ReadOnly = true;
-            // 
-            // nomePaciente
-            // 
-            this.nomePaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomePaciente.HeaderText = "Paciente";
-            this.nomePaciente.Name = "nomePaciente";
-            this.nomePaciente.ReadOnly = true;
-            // 
-            // idProfissionalCadastro
-            // 
-            this.idProfissionalCadastro.HeaderText = "idProfissionalCadastro";
-            this.idProfissionalCadastro.Name = "idProfissionalCadastro";
-            this.idProfissionalCadastro.ReadOnly = true;
-            this.idProfissionalCadastro.Visible = false;
-            // 
-            // nomeProfissional
-            // 
-            this.nomeProfissional.HeaderText = "Profissional";
-            this.nomeProfissional.Name = "nomeProfissional";
-            this.nomeProfissional.ReadOnly = true;
-            this.nomeProfissional.Visible = false;
-            // 
-            // idUsuarioCadastro
-            // 
-            this.idUsuarioCadastro.HeaderText = "idUsuario";
-            this.idUsuarioCadastro.Name = "idUsuarioCadastro";
-            this.idUsuarioCadastro.ReadOnly = true;
-            this.idUsuarioCadastro.Visible = false;
-            // 
-            // UsuarioCadastro
-            // 
-            this.UsuarioCadastro.HeaderText = "Usuario";
-            this.UsuarioCadastro.Name = "UsuarioCadastro";
-            this.UsuarioCadastro.ReadOnly = true;
-            // 
-            // dataConsulta
-            // 
-            this.dataConsulta.HeaderText = "Data";
-            this.dataConsulta.Name = "dataConsulta";
-            this.dataConsulta.ReadOnly = true;
-            // 
-            // horaConsulta
-            // 
-            this.horaConsulta.HeaderText = "Hora";
-            this.horaConsulta.Name = "horaConsulta";
-            this.horaConsulta.ReadOnly = true;
-            // 
-            // statusConsulta
-            // 
-            this.statusConsulta.HeaderText = "Status";
-            this.statusConsulta.Name = "statusConsulta";
-            this.statusConsulta.ReadOnly = true;
-            // 
-            // observacaoConsulta
-            // 
-            this.observacaoConsulta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.observacaoConsulta.HeaderText = "Observação";
-            this.observacaoConsulta.Name = "observacaoConsulta";
-            this.observacaoConsulta.ReadOnly = true;
-            this.observacaoConsulta.Visible = false;
-            // 
-            // btnImprimirConsulta
-            // 
-            this.btnImprimirConsulta.HeaderText = "Imprimir";
-            this.btnImprimirConsulta.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
-            this.btnImprimirConsulta.Name = "btnImprimirConsulta";
-            this.btnImprimirConsulta.ReadOnly = true;
-            this.btnImprimirConsulta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnImprimirConsulta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // btnImprimirReceita
-            // 
-            this.btnImprimirReceita.HeaderText = "Receita";
-            this.btnImprimirReceita.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.receitaimprimiricon;
-            this.btnImprimirReceita.Name = "btnImprimirReceita";
-            this.btnImprimirReceita.ReadOnly = true;
-            this.btnImprimirReceita.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnImprimirReceita.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "Editar";
-            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.HeaderText = "Deletar";
-            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.ReadOnly = true;
             // 
             // pnlPesquisar
             // 
@@ -402,6 +304,105 @@
             this.dtgIntermediario.TabIndex = 10;
             this.dtgIntermediario.Visible = false;
             // 
+            // idConsulta
+            // 
+            this.idConsulta.HeaderText = "Código";
+            this.idConsulta.Name = "idConsulta";
+            this.idConsulta.ReadOnly = true;
+            // 
+            // nomePaciente
+            // 
+            this.nomePaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomePaciente.HeaderText = "Paciente";
+            this.nomePaciente.Name = "nomePaciente";
+            this.nomePaciente.ReadOnly = true;
+            // 
+            // idProfissionalCadastro
+            // 
+            this.idProfissionalCadastro.HeaderText = "idProfissionalCadastro";
+            this.idProfissionalCadastro.Name = "idProfissionalCadastro";
+            this.idProfissionalCadastro.ReadOnly = true;
+            this.idProfissionalCadastro.Visible = false;
+            // 
+            // nomeProfissional
+            // 
+            this.nomeProfissional.HeaderText = "Profissional";
+            this.nomeProfissional.Name = "nomeProfissional";
+            this.nomeProfissional.ReadOnly = true;
+            this.nomeProfissional.Visible = false;
+            // 
+            // idUsuarioCadastro
+            // 
+            this.idUsuarioCadastro.HeaderText = "idUsuario";
+            this.idUsuarioCadastro.Name = "idUsuarioCadastro";
+            this.idUsuarioCadastro.ReadOnly = true;
+            this.idUsuarioCadastro.Visible = false;
+            // 
+            // UsuarioCadastro
+            // 
+            this.UsuarioCadastro.HeaderText = "Usuario";
+            this.UsuarioCadastro.Name = "UsuarioCadastro";
+            this.UsuarioCadastro.ReadOnly = true;
+            // 
+            // dataConsulta
+            // 
+            this.dataConsulta.HeaderText = "Data";
+            this.dataConsulta.Name = "dataConsulta";
+            this.dataConsulta.ReadOnly = true;
+            // 
+            // horaConsulta
+            // 
+            this.horaConsulta.HeaderText = "Hora";
+            this.horaConsulta.Name = "horaConsulta";
+            this.horaConsulta.ReadOnly = true;
+            // 
+            // statusConsulta
+            // 
+            this.statusConsulta.HeaderText = "Status";
+            this.statusConsulta.Name = "statusConsulta";
+            this.statusConsulta.ReadOnly = true;
+            // 
+            // observacaoConsulta
+            // 
+            this.observacaoConsulta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.observacaoConsulta.HeaderText = "Observação";
+            this.observacaoConsulta.Name = "observacaoConsulta";
+            this.observacaoConsulta.ReadOnly = true;
+            this.observacaoConsulta.Visible = false;
+            // 
+            // btnImprimirConsulta
+            // 
+            this.btnImprimirConsulta.HeaderText = "Imprimir";
+            this.btnImprimirConsulta.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.imprimirIcon__1_;
+            this.btnImprimirConsulta.Name = "btnImprimirConsulta";
+            this.btnImprimirConsulta.ReadOnly = true;
+            this.btnImprimirConsulta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnImprimirConsulta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnImprimirConsulta.Visible = false;
+            // 
+            // btnImprimirReceita
+            // 
+            this.btnImprimirReceita.HeaderText = "Receita";
+            this.btnImprimirReceita.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.receitaimprimiricon;
+            this.btnImprimirReceita.Name = "btnImprimirReceita";
+            this.btnImprimirReceita.ReadOnly = true;
+            this.btnImprimirReceita.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnImprimirReceita.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "Editar";
+            this.btnEditar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.EditarIcon__1_;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.HeaderText = "Deletar";
+            this.btnDeletar.Image = global::Sistema_Gerenciador_de_Consultorio.Properties.Resources.deletarIcon__1_;
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.ReadOnly = true;
+            // 
             // frmPesquisarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -448,6 +449,10 @@
         private System.Windows.Forms.RadioButton rbIdPaciente;
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.NumericUpDown nudPesquisar;
+        private System.Windows.Forms.MenuStrip msMenuSuperior;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dtgIntermediario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idConsulta;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomePaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProfissionalCadastro;
@@ -462,9 +467,5 @@
         private System.Windows.Forms.DataGridViewImageColumn btnImprimirReceita;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnDeletar;
-        private System.Windows.Forms.MenuStrip msMenuSuperior;
-        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dtgIntermediario;
     }
 }

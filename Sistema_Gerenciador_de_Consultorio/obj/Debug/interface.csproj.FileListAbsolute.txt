@@ -1321,7 +1321,6 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.Design.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Npgsql.dll
@@ -1357,46 +1356,6 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\System.Text.Json.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\System.ValueTuple.xml
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\interface.csprojAssemblyReference.cache
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.frmAgendamento.resources
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.frmCadastrarConsulta.resources
@@ -1468,43 +1427,58 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\System.Text.Json.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\System.Threading.Tasks.Extensions.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\System.ValueTuple.xml
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\de\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\es\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\fr\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\it\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\pt\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ru\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\de\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\es\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\fr\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\it\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ja\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ko\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\pt\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ru\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\de\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\es\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\fr\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\it\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ja\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ko\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\pt\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\ru\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\Sistema_Gerenciador_de_Consultorio.frmImprimirDados.resources
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\RdlCompile.cache
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\obj\Debug\RdlCompile.compiled
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\Microsoft.ReportViewer.WebDesign.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug 1\EnvDTE80.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug\EnvDTE80.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Sistema_Gerenciador_de_Consultorio.exe.config
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Sistema_Gerenciador_de_Consultorio.exe.manifest
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Sistema_Gerenciador_de_Consultorio.application
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Sistema_Gerenciador_de_Consultorio.exe
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Sistema_Gerenciador_de_Consultorio.pdb
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\AcessoDados.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.Common.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.DataVisualization.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.Design.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.WebDesign.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.ReportViewer.WinForms.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.SqlServer.Types.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Npgsql.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\RegraNegocio.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Buffers.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Memory.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Numerics.Vectors.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Text.Encodings.Web.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Text.Json.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Threading.Tasks.Extensions.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.ValueTuple.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\EnvDTE.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\EnvDTE80.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\stdole.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.MSXML.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\AcessoDados.pdb
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\AcessoDados.dll.config
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\RegraNegocio.pdb
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\RegraNegocio.dll.config
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Npgsql.pdb
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\Npgsql.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Buffers.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Memory.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Numerics.Vectors.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Runtime.CompilerServices.Unsafe.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Text.Encodings.Web.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Text.Json.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.Threading.Tasks.Extensions.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\Sistema_Gerenciador_de_Consultorio\bin\Debug1\System.ValueTuple.xml

@@ -20,8 +20,8 @@ namespace AcessoDados
         StringBuilder sql = new StringBuilder();
         NpgsqlCommand comandoSql = new NpgsqlCommand();
         Banco acessoBanco = new Banco();
-        public bool Cadastrar(string idProfissional, string idEndereco, string idContato, string idUsuario, string nomeProfissional, string especialidade, string rg, string cpf, string sexo, string croo,
-            string dataNascimento, string dataCadastro, string horaCadastro, string observacaoProfissional)
+        public bool Cadastrar(string idProfissional, string idEndereco, string idContato, string idUsuario, string nomeProfissional, string especialidade, string rg, string cpf, 
+            string sexo, string croo,string dataNascimento, string dataCadastro, string horaCadastro,string rodapeReceita, string observacaoProfissional)
         {
             try
             {
@@ -42,10 +42,10 @@ namespace AcessoDados
 
                 //Comando sql responsavel por inserir os dados
                 sql.Append("INSERT INTO profissional(idEndereco, idContato,idUsuario, nomeProfissional, especialidade, rg, cpf");
-                sql.Append(",sexo, croo,dataNascimento, dataCadastro, horaCadastro, observacaoProfissional,deletar)");
+                sql.Append(",sexo, croo,dataNascimento, dataCadastro, horaCadastro,rodapeReceita, observacaoProfissional,deletar)");
 
                 sql.Append("VALUES(@idEndereco,@idContato,@idUsuario,@nomeProfissional,@especialidade,@rg,@cpf");
-                sql.Append(",@sexo,@croo,@dataNascimento,@dataCadastro,@horaCadastro,@observacaoProfissional,false)");
+                sql.Append(",@sexo,@croo,@dataNascimento,@dataCadastro,@horaCadastro,@rodapeReceita,@observacaoProfissional,false)");
 
                 //Relaciona cada valor com seu respectivo parametro.
                 comandoSql.Parameters.Add(new NpgsqlParameter("@idEndereco", endereco));
@@ -60,8 +60,8 @@ namespace AcessoDados
                 comandoSql.Parameters.Add(new NpgsqlParameter("@dataNascimento", nascimento));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@dataCadastro", cadastro));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@horaCadastro", HoraCadastro));
+                comandoSql.Parameters.Add(new NpgsqlParameter("@rodapeReceita", rodapeReceita));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoProfissional", observacaoProfissional));
-
 
                 comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
                 comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
@@ -83,9 +83,9 @@ namespace AcessoDados
                 ConexaoAcesso.Desconectar();
                 ConexaoAcesso.Conectar();
 
-                sql.Append("SELECT profissional.idProfissional,profissional.idEndereco,profissional.idContato,profissional.nomeProfissional,profissional.especialidade,profissional.rg,profissional.cpf,profissional.sexo, ");
-                sql.Append("profissional.croo, profissional.dataNascimento, profissional.observacaoProfissional, contato.email, contato.telefone1, contato.telefone2, contato.telefone3, contato.outro, ");
-                sql.Append("contato.observacaoContato, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, endereco.cep, endereco.pontoReferencia, endereco.observacaoEndereco ");
+                sql.Append("SELECT profissional.idProfissional,profissional.idEndereco,profissional.idContato,profissional.nomeProfissional,profissional.especialidade,profissional.rg,profissional.cpf, ");
+                sql.Append("profissional.sexo,profissional.croo, profissional.dataNascimento,profissional.rodapeReceita, profissional.observacaoProfissional, contato.email, contato.telefone1, contato.telefone2, ");
+                sql.Append("contato.telefone3, contato.outro,contato.observacaoContato, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, endereco.cep, endereco.pontoReferencia, endereco.observacaoEndereco ");
                 sql.Append("FROM profissional INNER JOIN contato on contato.idContato = profissional.idContato INNER JOIN endereco on endereco.idEndereco = profissional.idEndereco ");
                 sql.Append("WHERE profissional.idProfissional = @idProfissional AND profissional.deletar = false order by idProfissional asc");
 
@@ -103,14 +103,15 @@ namespace AcessoDados
             }
             return tableVazia;
         }
-        public bool Atualizar(int idProfissional, string nomeProfissional, string especialidade, string rg, string cpf, string sexo, string croo, DateTime dataNascimento,
+        public bool Atualizar(int idProfissional, string nomeProfissional, string especialidade, string rg, string cpf, string sexo, string croo, DateTime dataNascimento,string rodapeReceita,
             string observacaoProfissional)
         {
             try
             {
                 ConexaoAcesso.Conectar();
+                sql.Clear();
                 sql.Append("update profissional set nomeProfissional =@nomeProfissional,especialidade = @especialidade, rg = @rg, cpf = @cpf, sexo = @sexo, croo = @croo, ");
-                sql.Append("dataNascimento = @dataNascimento, observacaoProfissional = @observacaoProfissional where idProfissional = @idProfissional");
+                sql.Append("dataNascimento = @dataNascimento,rodapeReceita =@rodapeReceita, observacaoProfissional = @observacaoProfissional where idProfissional = @idProfissional");
 
                 comandoSql.Parameters.Add(new NpgsqlParameter("@idProfissional", idProfissional));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@nomeProfissional", nomeProfissional));
@@ -120,6 +121,7 @@ namespace AcessoDados
                 comandoSql.Parameters.Add(new NpgsqlParameter("@sexo", sexo));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@croo", croo));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@dataNascimento", dataNascimento));
+                comandoSql.Parameters.Add(new NpgsqlParameter("@rodapeReceita", rodapeReceita));
                 comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoProfissional", observacaoProfissional));
 
                 comandoSql.Connection = ConexaoAcesso.conn;
