@@ -16,58 +16,31 @@ namespace AcessoDados
         int contato, endereco;
 
         DataTable tableVazia = new DataTable();
-        DataTable dadosTabelaAcesso = new DataTable();
+        DataTable dados = new DataTable();
         StringBuilder sql = new StringBuilder();
-        NpgsqlCommand comandoSql = new NpgsqlCommand();
         Banco acessoBanco = new Banco();
         public bool Cadastrar(string idProfissional, string idEndereco, string idContato, string idUsuario, string nomeProfissional, string especialidade, string rg, string cpf, 
             string sexo, string croo,string dataNascimento, string dataCadastro, string horaCadastro,string rodapeReceita, string observacaoProfissional)
         {
             try
             {
-                ////Chama os métodos que retornam os ultimo id do contato e endereco
                 RetornarUltimoIdContato();
                 RetornarUltimoIdEndereco();
 
-                //Efetua o tratamento de dados para que possam ser inseridos da maneira correta no banco de dados.
-                int usuario = Convert.ToInt32(idUsuario);
-                DateTime nascimento= Convert.ToDateTime(dataNascimento), cadastro= Convert.ToDateTime(dataCadastro), HoraCadastro = Convert.ToDateTime(horaCadastro);
                 string CPF = cpf.Replace("-", "").Replace(",", "").Replace(".","");
 
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-
-                //Comando sql responsavel por inserir os dados
+                sql.Clear();
                 sql.Append("INSERT INTO profissional(idEndereco, idContato,idUsuario, nomeProfissional, especialidade, rg, cpf");
                 sql.Append(",sexo, croo,dataNascimento, dataCadastro, horaCadastro,rodapeReceita, observacaoProfissional,deletar)");
 
-                sql.Append("VALUES(@idEndereco,@idContato,@idUsuario,@nomeProfissional,@especialidade,@rg,@cpf");
-                sql.Append(",@sexo,@croo,@dataNascimento,@dataCadastro,@horaCadastro,@rodapeReceita,@observacaoProfissional,false)");
+                sql.Append("VALUES(\'IDENDERECO\',\'IDCONTATO\',\'IDUSUARIO\',\'NOMEPROFISSIONAL\',\'ESPECIALIDADE\',\'RG\',\'CPF\', ");
+                sql.Append("\'SEXO\',\'CROO\',\'DATANASCIMENTO\',\'DATACADASTRO\',\'HORACADASTRO\',\'RODAPERECEITA\',\'OBSERVACAOPROFISSIONAL\',false)");
 
-                //Relaciona cada valor com seu respectivo parametro.
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idEndereco", endereco));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idContato", contato));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idUsuario", usuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomeProfissional",nomeProfissional ));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@especialidade", especialidade));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rg", rg));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@cpf",CPF ));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@sexo", sexo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@croo", croo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataNascimento", nascimento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataCadastro", cadastro));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@horaCadastro", HoraCadastro));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rodapeReceita", rodapeReceita));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoProfissional", observacaoProfissional));
+                sql = sql.Replace("IDENDERECO", idEndereco.ToString()).Replace("IDCONTATO", idContato).Replace("IDUSUARIO", idUsuario).Replace("NOMEPROFISSIONAL", nomeProfissional);
+                sql = sql.Replace("ESPECIALIDADE", especialidade).Replace("RG", rg).Replace("CPF",CPF ).Replace("SEXO", sexo).Replace("CROO", croo).Replace("DATANASCIMENTO", dataNascimento);
+                sql = sql.Replace("DATACADASTRO", dataCadastro).Replace("HORACADASTRO", horaCadastro).Replace("RODAPERECEITA", rodapeReceita).Replace("OBSERVACAOPROFISSIONAL", observacaoProfissional);
 
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
-                comandoSql.ExecuteNonQuery();//Executa o código sql.
-                ConexaoAcesso.Desconectar();//Fecha a conexão com o banco de dados
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -80,22 +53,17 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                sql.Clear();
 
                 sql.Append("SELECT profissional.idProfissional,profissional.idEndereco,profissional.idContato,profissional.nomeProfissional,profissional.especialidade,profissional.rg,profissional.cpf, ");
                 sql.Append("profissional.sexo,profissional.croo, profissional.dataNascimento,profissional.rodapeReceita, profissional.observacaoProfissional, contato.email, contato.telefone1, contato.telefone2, ");
                 sql.Append("contato.telefone3, contato.outro,contato.observacaoContato, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, endereco.cep, endereco.pontoReferencia, endereco.observacaoEndereco ");
                 sql.Append("FROM profissional INNER JOIN contato on contato.idContato = profissional.idContato INNER JOIN endereco on endereco.idEndereco = profissional.idEndereco ");
-                sql.Append("WHERE profissional.idProfissional = @idProfissional AND profissional.deletar = false order by idProfissional asc");
+                sql.Append("WHERE profissional.idProfissional = \'IDPROFISSIONAL\' AND profissional.deletar = false order by idProfissional asc");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idProfissional", idProfissional));
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                sql = sql.Replace("IDPROFISSIONAL", idProfissional.ToString());
 
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -108,27 +76,14 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Conectar();
                 sql.Clear();
-                sql.Append("update profissional set nomeProfissional =@nomeProfissional,especialidade = @especialidade, rg = @rg, cpf = @cpf, sexo = @sexo, croo = @croo, ");
-                sql.Append("dataNascimento = @dataNascimento,rodapeReceita =@rodapeReceita, observacaoProfissional = @observacaoProfissional where idProfissional = @idProfissional");
+                sql.Append("update profissional set nomeProfissional =\'NOMEPROFISSIONAL\',especialidade = \'ESPECIALIDADE\', rg = \'RG\', cpf = \'CPF\', sexo = \'SEXO\', croo = \'CROO\'  , ");
+                sql.Append("dataNascimento = \'DATANASCIMENTO\',rodapeReceita =\'RODAPERECEITA\', observacaoProfissional = \'OBSERVACAOPROFISSIONAL\' where idProfissional = @idProfissional");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idProfissional", idProfissional));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomeProfissional", nomeProfissional));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@especialidade", especialidade));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rg", rg));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@cpf", cpf));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@sexo", sexo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@croo", croo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataNascimento", dataNascimento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rodapeReceita", rodapeReceita));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoProfissional", observacaoProfissional));
+                sql = sql.Replace("NOMEPROFISSIONAL", nomeProfissional).Replace("ESPECIALIDADE", especialidade).Replace("RG", rg).Replace("CPF", cpf).Replace("SEXO", sexo);
+                sql = sql.Replace("CROO", croo).Replace("DATANASCIMENTO", dataNascimento.ToString()).Replace("RODAPERECEITA", rodapeReceita).Replace("OBSERVACAOPROFISSIONAL", observacaoProfissional);
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -140,18 +95,10 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("SELECT * FROM profissional where deletar = false order by idProfissional asc");
 
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -164,19 +111,12 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
                 sql.Clear();
                 sql.Append("SELECT * FROM profissional WHERE idProfissional = codProfissional and deletar = false order by idProfissional asc");
 
-                sql = sql.Replace("codProfissional", codigo.ToString()) ;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                sql = sql.Replace("codProfissional", codigo.ToString());
+
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -189,17 +129,9 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("select * from profissional where nomeprofissional LIKE '%" + @nome + "%' and deletar = false order by idProfissional asc");
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -213,20 +145,10 @@ namespace AcessoDados
 
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("select * from profissional where cpf LIKE '%" + cpf + "%' and deletar = false order by idProfissional asc");
 
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@cpf", cpf));
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -240,20 +162,10 @@ namespace AcessoDados
 
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("select * from profissional where rg LIKE '" + @rg + "%' and deletar = false order by idProfissional asc");
 
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rg", rg));
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -267,20 +179,10 @@ namespace AcessoDados
 
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("select * from profissional where croo LIKE '" + @croo + "%' and deletar=false order by idProfissional asc");
 
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@croo", croo));
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -293,17 +195,9 @@ namespace AcessoDados
         {
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
                 sql.Append("select * from profissional where especialidade LIKE '%" + especialidade + "%' and deletar = false order by idProfissional asc");
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -318,19 +212,11 @@ namespace AcessoDados
         {
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                //Comando sql responsavel por inserir os dados
+                sql.Clear();
                 sql.Append("select idEndereco from endereco order by idEndereco desc limit 1");
 
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
-
-                endereco = Convert.ToInt32(comandoSql.ExecuteScalar());
-                ConexaoAcesso.Desconectar();
-                return endereco;
+                dados = acessoBanco.Pesquisar(sql.ToString());
+                return endereco = Convert.ToInt32(dados.Rows[0]["idEndereco"]);
             }
             catch (Exception ex)
             {
@@ -343,19 +229,11 @@ namespace AcessoDados
         {
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                //Comando sql responsavel por inserir os dados
+                sql.Clear();
                 sql.Append("select idContato from contato order by idContato desc limit 1");
 
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
-
-                contato = Convert.ToInt32(comandoSql.ExecuteScalar());
-                ConexaoAcesso.Desconectar();
-                return contato;
+                dados = acessoBanco.Pesquisar(sql.ToString());
+                return contato = Convert.ToInt32(dados.Rows[0]["idContato"]);
             }
             catch (Exception ex)
             {
@@ -370,7 +248,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("update profissional set deletar = true,idUsuarioDeletar = codUsuarioSistema where idProfissional = codProfissional");
+                sql.Append("update profissional set deletar = true,idUsuarioDeletar = \'codUsuarioSistema\' where idProfissional = \'codProfissional\'");
                 sql = sql.Replace("codProfissional", idProfissional.ToString()).Replace("codUsuarioSistema", idUsuarioSistema.ToString());
                 return acessoBanco.Executar(sql.ToString());
             }
@@ -385,7 +263,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
-                sql.Append("update profissional set deletar = true,idUsuarioDeletar = codUsuarioDeletar where idUsuario = IDUSUARIO");
+                sql.Append("update profissional set deletar = true,idUsuarioDeletar = \'codUsuarioDeletar\' where idUsuario = \'IDUSUARIO\'");
                 sql = sql.Replace("IDUSUARIO", idUsuario.ToString()).Replace("codUsuarioDeletar", idUsuarioSistema.ToString());
 
                 return acessoBanco.Executar(sql.ToString());

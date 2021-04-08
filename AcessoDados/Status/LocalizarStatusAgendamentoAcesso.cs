@@ -11,28 +11,18 @@ namespace AcessoDados
 {
     public class LocalizarStatusAgendamentoAcesso
     {
-        public DataTable TodosStatus()
+		DataTable dadosTabela = new DataTable();
+		DataTable tableVazia = new DataTable();
+		StringBuilder sql = new StringBuilder();
+		Banco acessoBanco = new Banco();
+		public DataTable TodosStatus()
         {
-			DataTable dadosTabela = new DataTable();
-			DataTable tableVazia = new DataTable();
-
 			try
 			{
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
-
+				sql.Clear();
 				sql.Append("select * from statusAgendamento where deletar = false");
 
-				comandoSql.CommandText = sql.ToString();
-				comandoSql.Connection = ConexaoAcesso.conn;
-
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-
-				return dadosTabela;
+				return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -42,27 +32,13 @@ namespace AcessoDados
         }
 		public DataTable RetornarIdStatus(string status)
 		{
-			DataTable dadosTabela = new DataTable();
-			DataTable tableVazia = new DataTable();
-
 			try
 			{
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
+				sql.Clear();
+				sql.Append("select idStatusAgendamento from statusAgendamento where nomeStatus= \'STATUS\' and deletar = false");
+				sql = sql.Replace("STATUS",status);
 
-				sql.Append("select idStatusAgendamento from statusAgendamento where nomeStatus= @status and deletar = false");
-				comandoSql.Parameters.Add(new NpgsqlParameter("@status",status));
-
-				comandoSql.CommandText = sql.ToString();
-				comandoSql.Connection = ConexaoAcesso.conn;
-
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-
-				return dadosTabela;
+				return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -70,7 +46,5 @@ namespace AcessoDados
 			}
 			return tableVazia;
 		}
-
-
 	}
 }

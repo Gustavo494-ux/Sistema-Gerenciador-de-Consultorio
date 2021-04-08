@@ -11,29 +11,23 @@ namespace AcessoDados
 {
     public class AgendamentosAcesso
     {
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
+
+        DataTable dadosTabela = new DataTable();
+        DataTable tableVazia = new DataTable();
         public bool AgendarConsulta(int idPaciente,int idUsuario, int idStatusAgendamento, DateTime dataConsulta,string observacaoAgendamento)
         {
 			try
 			{
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+              
                 sql.Append("insert into agendamento(idPaciente,idUsuario,idStatusAgendamento,dataConsulta,observacaoAgendamento,deletar) ");
-                sql.Append("VALUES(@idPaciente, @idUsuario, @idStatusAgendamento, @dataConsulta,@observacaoAgendamento,false)");
+                sql.Append("VALUES(\'IDPACIENTE\',\'IDUSUARIO\',\'IDSTATUSAGENDAMENTO\',\'DATACONSULTA\',\'OBSERVACAOAGENDAMENTO\',false)");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idPaciente", idPaciente));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idUsuario", idUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idStatusAgendamento", idStatusAgendamento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataConsulta", dataConsulta));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoAgendamento", observacaoAgendamento));
+                sql = sql.Replace("IDPACIENTE", idPaciente.ToString()).Replace("IDUSUARIO",idUsuario.ToString()).Replace("IDSTATUSAGENDAMENTO",idStatusAgendamento.ToString());
+                sql = sql.Replace("DATACONSULTA", dataConsulta.ToString()).Replace("OBSERVACAOAGENDAMENTO",observacaoAgendamento);
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
 			catch (Exception)
 			{
@@ -47,19 +41,14 @@ namespace AcessoDados
             NpgsqlCommand comandoSql = new NpgsqlCommand();
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                
                 DateTime horaAtual = Convert.ToDateTime(DateTime.Now.ToLongTimeString());
-                sql.Append("update agendamento set horaChegada = @horaAtual,idStatusAgendamento =2 where idAgendamento = @idAgendamento");
+                sql.Clear();
+                sql.Append("update agendamento set horaChegada = \'HORAATUAL\',idStatusAgendamento =2 where idAgendamento = \'IDAGENDAMENTO\'");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idAgendamento", idAgendamento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@horaAtual", horaAtual));
+                sql = sql.Replace("HORAATUAL", horaAtual.ToString()).Replace("IDAGENDAMENTO", idAgendamento.ToString());
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -72,22 +61,11 @@ namespace AcessoDados
         {
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
+                sql.Append("update agendamento set idStatusAgendamento = 3 where idAgendamento = \'ID\'");
+                sql = sql.Replace("ID", id.ToString());
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-
-                sql.Append("update agendamento set idStatusAgendamento = 3 where idAgendamento = @id");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id", id));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -101,22 +79,11 @@ namespace AcessoDados
         {
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
+                sql.Append("update agendamento set idStatusAgendamento = 4 where idAgendamento = \'ID\'  and idStatusAgendamento = 3;");
+                sql = sql.Replace("ID", id.ToString());
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-
-                sql.Append("update agendamento set idStatusAgendamento = 4 where idAgendamento = @id  and idStatusAgendamento = 3;");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id", id));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -130,25 +97,15 @@ namespace AcessoDados
         {
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
+                sql.Append("update agendamento set idStatusAgendamento = \'IDSTATUSAGENDAMENTO\', dataConsulta = \'DATACONSULTA\', observacaoAgendamento = \'OBSERVACAOAGENDAMENTO\' where ");
+                sql.Append("idAgendamento = \'IDAGENDAMENTO\' ");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
 
-                sql.Append("update agendamento set idStatusAgendamento = @idStatusAgendamento, dataConsulta = @dataConsulta, observacaoAgendamento = @observacaoAgendamento where idAgendamento =@idAgendamento ");
+                sql = sql.Replace("IDSTATUSAGENDAMENTO", idStatusAgendamento.ToString()).Replace("DATACONSULTA", dataConsulta.ToString()).Replace("OBSERVACAOAGENDAMENTO", observacaoAgendamento);
+                sql = sql.Replace("IDAGENDAMENTO", idAgendamento.ToString());
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idAgendamento", idAgendamento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idStatusAgendamento", idStatusAgendamento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataConsulta", dataConsulta));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoAgendamento", observacaoAgendamento));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.ExecuteNonQuery();
-
-                ConexaoAcesso.Desconectar();
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -161,32 +118,16 @@ namespace AcessoDados
         //Funções para realizar pesquisas dos agendamentos com diferentes filtros de pesquisa.
         public DataTable TodosAgendamentos()
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento, agendamento.idPaciente, paciente.nomePaciente, paciente.nomeResponsavel, paciente.rg, paciente.cpf, paciente.dataNascimento,");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN ");
                 sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where agendamento.deletar = false AND paciente.deletar = false AND ");
                 sql.Append("usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
 
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -197,32 +138,17 @@ namespace AcessoDados
         }
         public DataTable NomePaciente(string nomePaciente)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
+          
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento, agendamento.idPaciente, paciente.nomePaciente, paciente.nomeResponsavel, paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN ");
                 sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where paciente.nomePaciente like '%" + nomePaciente + "%' AND agendamento.deletar = false ");
                 sql.Append("AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomePaciente", nomePaciente));
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -233,33 +159,17 @@ namespace AcessoDados
         }
         public DataTable RG(string RG)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
+         
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento,agendamento.idPaciente,paciente.nomePaciente,paciente.nomeResponsavel,paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN ");
                 sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where paciente.Rg like '%" + RG + "%' AND agendamento.deletar = false ");
                 sql.Append("AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@RG", RG));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -271,33 +181,16 @@ namespace AcessoDados
         }
         public DataTable CPF(string CPF)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento,agendamento.idPaciente,paciente.nomePaciente,paciente.nomeResponsavel,paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN ");
                 sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where paciente.CPF like '%" + CPF + "%' AND agendamento.deletar = false ");
                 sql.Append("AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@CPF", CPF));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -309,34 +202,17 @@ namespace AcessoDados
         }
         public DataTable DataNascimento(DateTime dataInicial, DateTime dataFinal)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento, agendamento.idPaciente, paciente.nomePaciente, paciente.nomeResponsavel, paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN  ");
-                sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where paciente.dataNascimento > @dataInicial and paciente.dataNascimento ");
-                sql.Append("< @dataFinal AND agendamento.deletar = false AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
+                sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where paciente.dataNascimento > \'DATAINICIAL\' and paciente.dataNascimento ");
+                sql.Append("< \'DATAFINAL\' AND agendamento.deletar = false AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial", dataInicial));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataFinal", dataFinal));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                sql = sql.Replace("DATAINICIAL", dataInicial.ToString()).Replace("DATAFINAL",dataFinal.ToString());
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -347,34 +223,17 @@ namespace AcessoDados
         }
         public DataTable DataConsulta(DateTime dataInicial, DateTime dataFinal)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento, agendamento.idPaciente, paciente.nomePaciente, paciente.nomeResponsavel, paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN  ");
-                sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where agendamento.dataConsulta > @dataInicial and agendamento.dataConsulta ");
-                sql.Append("< @dataFinal AND agendamento.deletar = false AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
+                sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where agendamento.dataConsulta > \'DATAINICIAL\' and agendamento.dataConsulta ");
+                sql.Append("< \'DATAFINAL\' AND agendamento.deletar = false AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial", dataInicial));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataFinal", dataFinal));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                sql = sql.Replace("DATAINICIAL", dataInicial.ToString()).Replace("DATAFINAL", dataFinal.ToString());
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -385,32 +244,15 @@ namespace AcessoDados
         }
         public DataTable StatusAgendamento(string status)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
-            tableVazia = null;
             try
             {
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT agendamento.idAgendamento, agendamento.idPaciente, paciente.nomePaciente, paciente.nomeResponsavel, paciente.rg, paciente.cpf, paciente.dataNascimento, ");
                 sql.Append("agendamento.idAgendamento, agendamento.dataConsulta, agendamento.horaChegada, agendamento.observacaoAgendamento, usuario.loginUsuario, statusAgendamento.nomeStatus ");
                 sql.Append("FROM agendamento INNER JOIN paciente ON paciente.idPaciente = agendamento.idPaciente INNER JOIN usuario ON usuario.idUsuario = agendamento.idUsuario INNER JOIN ");
                 sql.Append("statusAgendamento ON statusAgendamento.idStatusAgendamento = agendamento.idStatusAgendamento where statusAgendamento.nomeStatus  like '%" + status + "%' AND agendamento.deletar = false ");
                 sql.Append("AND paciente.deletar = false AND usuario.deletar = false AND statusAgendamento.deletar = false order by horaChegada,idAgendamento asc");
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@status", status));
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

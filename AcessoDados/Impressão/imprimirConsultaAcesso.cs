@@ -12,17 +12,13 @@ namespace AcessoDados
     public class imprimirConsultaAcesso
     {
         DataTable tableVazia = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable impressaoCompleta(int idConsulta)
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("SELECT * FROM consulta ");
                 sql.Append("INNER JOIN paciente ON paciente.idPaciente = consulta.idPaciente ");
                 sql.Append("INNER JOIN profissional on profissional.idProfissional = consulta.idProfissional ");
@@ -35,18 +31,11 @@ namespace AcessoDados
                 sql.Append("INNER JOIN acuidadeVisual ON acuidadeVisual.idAcuidadeVisual = consulta.idAcuidadeVisual ");
                 sql.Append("INNER JOIN antecedentesGerais ON antecedentesGerais.idAntecedentesGerais = consulta.idAntecedentesGerais ");
                 sql.Append("WHERE consulta.deletar = false AND paciente.deletar = false AND profissional.deletar = false ");
-                sql.Append("AND consulta.idConsulta = @id ");
+                sql.Append("AND consulta.idConsulta = \'ID\' ");
+                
+               sql = sql.Replace("ID",idConsulta.ToString());
 
-
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id",idConsulta));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela; 
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

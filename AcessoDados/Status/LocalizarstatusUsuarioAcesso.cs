@@ -13,20 +13,15 @@ namespace AcessoDados
     {
         DataTable dadosTabelaAcesso = new DataTable();
         DataTable tableVazia = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable TodosStatus()
         {
 			try
 			{
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                sql.Clear();
                 sql.Append("SELECT * from statusUsuario where deletar = false  order by idStatusUsuario asc");
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception ex)
 			{

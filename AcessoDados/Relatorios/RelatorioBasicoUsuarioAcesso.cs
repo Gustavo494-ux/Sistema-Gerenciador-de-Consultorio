@@ -13,27 +13,18 @@ namespace AcessoDados
     public class RelatorioBasicoUsuarioAcesso
     {
         DataTable tableVazia = new DataTable();
+        DataTable dadosTabela = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable TodosUsuarios()
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("select usuario.idUsuario,usuario.nomeUsuario,usuario.loginUsuario,usuario.dataCadastro,usuario.statusUsuario ");
                 sql.Append("from usuario inner join nivelAcesso on nivelAcesso.idNivelAcesso = usuario.idNivel where usuario.deletar = false order by usuario.idUsuario asc");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -46,25 +37,14 @@ namespace AcessoDados
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("select usuario.idUsuario,usuario.nomeUsuario,usuario.loginUsuario,usuario.dataCadastro,usuario.statusUsuario ");
                 sql.Append("from usuario inner join nivelAcesso on nivelAcesso.idNivelAcesso = usuario.idNivel where usuario.deletar = false ");
-                sql.Append("and nivelAcesso.idNivelAcesso = @nivel order by usuario.idUsuario asc ");
+                sql.Append("and nivelAcesso.idNivelAcesso = NIVEL order by usuario.idUsuario asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nivel",idNivel));
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                sql = sql.Replace("NIVEL",idNivel.ToString());
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -77,25 +57,12 @@ namespace AcessoDados
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("select usuario.idUsuario,usuario.nomeUsuario,usuario.loginUsuario,usuario.dataCadastro,usuario.statusUsuario ");
                 sql.Append("from usuario inner join nivelAcesso on nivelAcesso.idNivelAcesso = usuario.idNivel where usuario.deletar = false ");
-                sql.Append("and usuario.statusUsuario = @status order by usuario.idUsuario asc");
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@status",status));
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-
+                sql.Append("and usuario.statusUsuario = \'STATUS\' order by usuario.idUsuario asc");
+                sql = sql.Replace("STATUS", status);
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

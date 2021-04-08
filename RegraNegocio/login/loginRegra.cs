@@ -16,8 +16,6 @@ namespace RegraNegocio
         {
             try
             {
-                
-                
                 if (Verificar(usuario, senha) == true)
                 {
                     loginAcesso logar = new loginAcesso();

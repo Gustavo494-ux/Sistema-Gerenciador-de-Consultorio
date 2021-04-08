@@ -167,7 +167,7 @@ namespace Sistema_Gerenciador_de_Consultorio
         void cadastrar()
         {
             bool[] confirm = new bool[3];
-            dataCadastro = DateTime.Now.ToShortTimeString();
+            dataCadastro = DateTime.Now.ToShortDateString();
             horaCadastro = DateTime.Now.ToLongTimeString();
             //Insere os dados do Contato
             ContatoRegra novaVerificacaoContato = new ContatoRegra();

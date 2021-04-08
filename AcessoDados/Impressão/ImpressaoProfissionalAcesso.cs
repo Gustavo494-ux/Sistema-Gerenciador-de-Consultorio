@@ -13,31 +13,20 @@ namespace AcessoDados.Impressão
     public class ImpressaoProfissionalAcesso
     {
         DataTable tableVazia = new DataTable();
-
+        Banco acessoBanco = new Banco();
+        StringBuilder sql = new StringBuilder();
         public DataTable ImpressaoCompleta(int idProfissional)
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("SELECT * FROM profissional INNER JOIN usuario ON usuario.idUsuario = profissional.idUsuario INNER JOIN contato ON contato.idContato = profissional.idContato ");
                 sql.Append("INNER JOIN endereco ON endereco.idEndereco = profissional.idEndereco WHERE profissional.deletar = false AND usuario.deletar = false AND contato.deletar = false AND ");
-                sql.Append("endereco.deletar = false  AND idProfissional = @id");
+                sql.Append("endereco.deletar = false  AND idProfissional = \'ID\'");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id",idProfissional));
+                sql =sql.Replace("ID",idProfissional.ToString());
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

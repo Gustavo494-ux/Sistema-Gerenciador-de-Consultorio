@@ -13,28 +13,18 @@ namespace AcessoDados
     public class RelatorioProfissionalBasicoAcesso
     {
         DataTable tableVazia = new DataTable();
+        DataTable dadosTabela = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable TodosProfissionais()
         {
 			try
 			{
-                DataTable dadosTabela = new DataTable(); 
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("Select profissional.idProfissional,profissional.nomeProfissional,profissional.especialidade,profissional.croo,usuario.loginUsuario ");
                 sql.Append("from profissional inner join usuario on usuario.idUsuario = profissional.idUsuario where profissional.deletar = false and ");
                 sql.Append(" usuario.deletar = false order by profissional.idProfissional asc ");
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-                
+                return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -48,27 +38,14 @@ namespace AcessoDados
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("Select profissional.idProfissional,profissional.nomeProfissional,profissional.especialidade,profissional.croo,usuario.loginUsuario ");
                 sql.Append("from profissional inner join usuario on usuario.idUsuario = profissional.idUsuario where profissional.deletar = false and ");
-                sql.Append(" usuario.deletar = false and profissional.dataNascimento BETWEEN @dataInicial and @dataFinal order by profissional.idProfissional asc ");
+                sql.Append(" usuario.deletar = false and profissional.dataNascimento BETWEEN \'DATAINICIAL\' and \'DATAFINAL\' order by profissional.idProfissional asc ");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial",dataInicial));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataFinal",dataFinal));
+                sql = sql.Replace("DATAINICIAL",dataInicial.ToString()).Replace("DATAFINAL",dataFinal.ToString());
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -82,28 +59,14 @@ namespace AcessoDados
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("Select profissional.idProfissional,profissional.nomeProfissional,profissional.especialidade,profissional.croo,usuario.loginUsuario ");
                 sql.Append("from profissional inner join usuario on usuario.idUsuario = profissional.idUsuario where profissional.deletar = false and ");
-                sql.Append(" usuario.deletar = false and profissional.dataCadastro BETWEEN @dataInicial and @dataFinal order by profissional.idProfissional asc");
+                sql.Append(" usuario.deletar = false and profissional.dataCadastro BETWEEN \'DATAINICIAL\' and \'DATAFINAL\' order by profissional.idProfissional asc");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial",dataInicial));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataFinal",dataFinal));
+                sql = sql.Replace("DATAINICIAL", dataInicial.ToString()).Replace("DATAFINAL", dataFinal.ToString());
 
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
-
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

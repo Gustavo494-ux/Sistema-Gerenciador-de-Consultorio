@@ -91,26 +91,18 @@ namespace AcessoDados
             StringBuilder listaidConsulta = new StringBuilder();
             try
             {
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                DataTable dadosTabela = new DataTable();
+                dadosTabela.Rows.Clear();
                 sql.Clear();
-                ConexaoAcesso.Conectar();
                 sql.Append("SELECT idConsulta from consulta where deletar = true and idUsuarioDeletar > 0");
-               
 
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                var readerData = comandoSql.ExecuteReader();
-
-                int i = 0;
-                while (readerData.Read())
+                dadosTabela = AcessoBanco.Pesquisar(sql.ToString());
+                for (int i = 0; i < dadosTabela.Rows.Count; i++)
                 {
-                    var valor = Convert.ToString(readerData["idConsulta"]);
+                    var valor = Convert.ToString(dadosTabela.Rows[i]["idConsulta"].ToString());
 
                     listaidConsulta = listaidConsulta.Append(valor + "#");
-                    i++;
                 }
-                ConexaoAcesso.Desconectar();
             }
             catch (Exception)
             {
@@ -128,9 +120,10 @@ namespace AcessoDados
                 {
                     if (i != "" && i != "0")
                     {
-                        if (DeletarIdConsulta(i)) return true;
+                        if (!DeletarIdConsulta(i)) return false;
                     }
                 }
+                return true;
             }
             catch (Exception)
             {
@@ -144,6 +137,7 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
+                sql.Append("delete from retinoscopia where idConsulta = codConsulta ; #");
                 sql.Append("delete from acuidadeVisual where idConsulta = codConsulta ; # ");
                 sql.Append("delete from anamnese where idConsulta = codConsulta; # ");
                 sql.Append("delete from antecedentesGerais where idConsulta = codConsulta; #");
@@ -152,10 +146,18 @@ namespace AcessoDados
                 sql.Append("delete from rxInicial where idConsulta = codConsulta; #");
                 sql.Append("delete from RxFinal where idConsulta = codConsulta; #");
                 sql.Append("delete from sintomasReferidos where idConsulta = codConsulta; #");
+                sql.Append("delete from forometria where idConsulta = codConsulta ; #");
+                sql.Append("delete from visaoCor where idConsulta = codConsulta ; #");
+                sql.Append("delete from amsler where idConsulta = codConsulta ; #");
+                sql.Append("delete from lensometria where idConsulta = codConsulta ; #");
+                sql.Append("delete from estereopsia where idConsulta = codConsulta ; #");
+                sql.Append("delete from motilidadeOcular where idConsulta = codConsulta ; #");
+                sql.Append("delete from biomicroscopia where idConsulta = codConsulta ; #");
+                sql.Append("delete from ceratometria where idConsulta = codConsulta ; #");
                 sql.Append("delete from Consulta where idConsulta = codConsulta; ");
 
-
-                return AcessoBanco.ExecutarLista(sql.Replace("codConsulta",idConsulta).ToString());
+                sql = sql.Replace("codConsulta", idConsulta);
+                return AcessoBanco.ExecutarLista(sql.ToString());
             }
             catch (Exception)
             {
@@ -196,4 +198,37 @@ namespace AcessoDados
             return false;
         }
     }
+    //public string RetornarConsultasDeletadas()
+    //{//Método utilizado para retornar o idConsulta de todas as consultas que foram deletadas. Recomendavél utilizar somente para deletar todas as consultas.
+    //    StringBuilder listaidConsulta = new StringBuilder();
+    //    try
+    //    {
+    //        NpgsqlCommand comandoSql = new NpgsqlCommand();
+
+    //        sql.Clear();
+    //        ConexaoAcesso.Conectar();
+    //        sql.Append("SELECT idConsulta from consulta where deletar = true and idUsuarioDeletar > 0");
+
+
+    //        comandoSql.CommandText = sql.ToString();
+    //        comandoSql.Connection = ConexaoAcesso.conn;
+    //        var readerData = comandoSql.ExecuteReader();
+
+    //        int i = 0;
+    //        while (readerData.Read())
+    //        {
+    //            var valor = Convert.ToString(readerData["idConsulta"]);
+
+    //            listaidConsulta = listaidConsulta.Append(valor + "#");
+    //            i++;
+    //        }
+    //        ConexaoAcesso.Desconectar();
+    //    }
+    //    catch (Exception)
+    //    {
+    //        MessageBox.Show("Ocorreu algum erro ao deletar fisicamente a consulta!Classes ConsultasDeletadasAcesso, Método RetornarConsultasDeletadas",
+    //             "Erro de exclusão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    //    }
+    //    return listaidConsulta.ToString();
+    //}
 }

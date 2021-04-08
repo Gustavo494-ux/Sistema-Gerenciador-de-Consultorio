@@ -11,25 +11,16 @@ namespace AcessoDados
 {
     public class localizarNivelAcesso
     {
-       
+        DataTable tableVazia = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable TodosNiveis()
         {
-            DataTable dadosTabelaAcesso = new DataTable();
-            DataTable tableVazia = new DataTable();
             try
             {
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("SELECT * FROM nivelAcesso where deletar = false order by idNivelAcesso asc");
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso;
+                return acessoBanco.Pesquisar(sql.ToString());
                 
             }
 			catch (Exception ex)
@@ -41,22 +32,12 @@ namespace AcessoDados
         }
         public DataTable retornaridNivel(string nomeNivel)
         {
-            DataTable dadosTabelaAcesso = new DataTable();
-            DataTable tableVazia = new DataTable();
-            
             try
             {
-                ConexaoAcesso.Conectar();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
-                sql.Append("SELECT idNivelAcesso from nivelAcesso where nomeNivel = @nome and deletar = false");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nome",nomeNivel));
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabelaAcesso.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabelaAcesso; 
+                sql.Clear();
+                sql.Append("SELECT idNivelAcesso from nivelAcesso where nomeNivel = NAME and deletar = false");
+                sql = sql.Replace("NAME", nomeNivel);
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception ex)
             {

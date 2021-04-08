@@ -457,7 +457,6 @@
             this.dataNascimento.MaxInputLength = 10;
             this.dataNascimento.Name = "dataNascimento";
             this.dataNascimento.ReadOnly = true;
-            this.dataNascimento.Visible = false;
             this.dataNascimento.Width = 168;
             // 
             // dataDeCadastro
@@ -467,6 +466,7 @@
             this.dataDeCadastro.HeaderText = "D. Cadastro";
             this.dataDeCadastro.Name = "dataDeCadastro";
             this.dataDeCadastro.ReadOnly = true;
+            this.dataDeCadastro.Visible = false;
             this.dataDeCadastro.Width = 120;
             // 
             // horaDeCadastro

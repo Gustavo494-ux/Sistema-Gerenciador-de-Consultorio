@@ -12,28 +12,19 @@ namespace AcessoDados
     public class RelatoriosPacienteAcesso
 	{
 		DataTable tableVazia = new DataTable();
-        public DataTable TodosPacientesCadastroSimples()
+		DataTable dadosTabela = new DataTable();
+		StringBuilder sql = new StringBuilder();
+		Banco acessoBanco = new Banco();
+		public DataTable TodosPacientesCadastroSimples()
 		{ 
 			try
 			{
-				DataTable dadosTabela = new DataTable();
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+				sql.Clear();
 				sql.Append("SELECT paciente.idPaciente,paciente.nomePaciente,paciente.cpf,paciente.dataNascimento,usuario.loginUsuario FROM paciente ");
 				sql.Append("INNER JOIN usuario ON usuario.idUsuario = paciente.idUsuario ");
 				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false order by paciente.idPaciente asc ");
 
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
-
-				comandoSql.Connection = ConexaoAcesso.conn;
-				comandoSql.CommandText = sql.ToString();
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-				return dadosTabela;
-				
+				return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -42,33 +33,18 @@ namespace AcessoDados
 			}
 			return tableVazia;
         }
-
 		public DataTable DataNascimentoPacientesCadastroSimples(DateTime dataInicial, DateTime dataFinal)
 		{
 			try
 			{
-				DataTable dadosTabela = new DataTable();
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+				sql.Clear();
 				sql.Append("SELECT paciente.idPaciente,paciente.nomePaciente,paciente.cpf,paciente.dataNascimento,usuario.loginUsuario FROM paciente ");
 				sql.Append("INNER JOIN usuario ON usuario.idUsuario = paciente.idUsuario ");
-				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.dataNascimento BETWEEN @dataInicial and @dataFinal ");
+				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.dataNascimento BETWEEN \'DATAINICIAL\' and \'DATAFINAL\' ");
 				sql.Append("order by paciente.idPaciente asc");
-
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
-
-				comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial",dataInicial));
-				comandoSql.Parameters.Add(new NpgsqlParameter("@DataFinal",dataFinal));
-
-				comandoSql.Connection = ConexaoAcesso.conn;
-				comandoSql.CommandText = sql.ToString();
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-				return dadosTabela;
-
+				
+				sql = sql.Replace("DATAINICIAL",dataInicial.ToString()).Replace("DATAFINAL",dataFinal.ToString());
+				return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -77,33 +53,18 @@ namespace AcessoDados
 			}
 			return tableVazia;
 		}
-
 		public DataTable DataCadastroPacientesCadastroSimples(DateTime dataInicial, DateTime dataFinal)
 		{
 			try
 			{
-				DataTable dadosTabela = new DataTable();
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+				sql.Clear();
 				sql.Append("SELECT paciente.idPaciente,paciente.nomePaciente,paciente.cpf,paciente.dataNascimento,usuario.loginUsuario FROM paciente ");
 				sql.Append("INNER JOIN usuario ON usuario.idUsuario = paciente.idUsuario ");
-				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.dataCadastro BETWEEN @dataInicial and @dataFinal ");
+				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.dataCadastro BETWEEN \'DATAINICIAL\' and \'DATAFINAL\' ");
 				sql.Append("order by paciente.idPaciente asc");
 
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
-
-				comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial", dataInicial));
-				comandoSql.Parameters.Add(new NpgsqlParameter("@DataFinal", dataFinal));
-
-				comandoSql.Connection = ConexaoAcesso.conn;
-				comandoSql.CommandText = sql.ToString();
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-				return dadosTabela;
-
+				sql = sql.Replace("DATAINICIAL", dataInicial.ToString()).Replace("DATAFINAL", dataFinal.ToString());
+				return acessoBanco.Pesquisar(sql.ToString());
 			}
 			catch (Exception)
 			{
@@ -118,27 +79,14 @@ namespace AcessoDados
 		{
 			try
 			{
-				DataTable dadosTabela = new DataTable();
-				StringBuilder sql = new StringBuilder();
-				NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+				sql.Clear();
 				sql.Append("SELECT paciente.idPaciente,paciente.nomePaciente,paciente.cpf,paciente.dataNascimento,usuario.loginUsuario FROM paciente ");
 				sql.Append("INNER JOIN usuario ON usuario.idUsuario = paciente.idUsuario ");
-				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.idade BETWEEN @idadeInicial and @idadeFinal ");
+				sql.Append("WHERE paciente.deletar = false and usuario.deletar = false and paciente.idade BETWEEN \'IDADEINICIAL\' and \'IDADEFINAL\' ");
 				sql.Append("order by paciente.idPaciente asc ");
 
-				comandoSql.Parameters.Add(new NpgsqlParameter("@idadeInicial", idadeInicial));
-				comandoSql.Parameters.Add(new NpgsqlParameter("@idadeFinal", idadeFinal));
-
-				ConexaoAcesso.Desconectar();
-				ConexaoAcesso.Conectar();
-
-				comandoSql.Connection = ConexaoAcesso.conn;
-				comandoSql.CommandText = sql.ToString();
-				dadosTabela.Load(comandoSql.ExecuteReader());
-
-				ConexaoAcesso.Desconectar();
-				return dadosTabela;
+				sql = sql.Replace("IDADEINICIAL", idadeInicial.ToString()).Replace("IDADEFINAL", idadeFinal.ToString());
+				return acessoBanco.Pesquisar(sql.ToString());
 
 			}
 			catch (Exception)

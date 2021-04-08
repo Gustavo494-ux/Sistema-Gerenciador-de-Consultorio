@@ -14,10 +14,10 @@ namespace AcessoDados
     {
         int contato;
         int endereco;
+
         DataTable tableVazia = new DataTable();
-        DataTable dadosTabela = new DataTable();
+        DataTable dados = new DataTable();
         StringBuilder sql = new StringBuilder();
-        NpgsqlCommand comandoSql = new NpgsqlCommand();
         Banco acessoBanco = new Banco();
         public bool Cadastrar(string idPaciente, string idContato, string idEndereco ,string idUsuario, string nomePaciente, string nomeResponsavel, string rg, string cpf, string ocupacao, string idade,
             string sexo, string dataNascimento, string dataCadastro, string horaCadastro, string observacaoPaciente)
@@ -26,47 +26,24 @@ namespace AcessoDados
             {
                 RetornarUltimoIdContato();
                 RetornarUltimoIdEndereco();
-                int usuario = Convert.ToInt32(idUsuario);
                 string CPF = cpf.Replace("-", "").Replace(",", "").Replace(".", "");
                
-                DateTime nascimento = Convert.ToDateTime(dataNascimento), cadastro = Convert.ToDateTime(DateTime.Now.ToShortDateString()),HoraCadastro = Convert.ToDateTime(DateTime.Now.ToLongTimeString());
+                DateTime cadastro = Convert.ToDateTime(DateTime.Now.ToShortDateString()),HoraCadastro = Convert.ToDateTime(DateTime.Now.ToLongTimeString());
 
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-
-                //Comando sql responsavel por inserir os dados
-                sql.Append("INSERT INTO paciente(idContato,idEndereco,idUsuario,nomePaciente,nomeResponsavel,rg,cpf,");
-                sql.Append(" ocupacao,idade,sexo,dataNascimento,dataCadastro,horaCadastro,observacaoPaciente,deletar,idUsuarioDeletar)");
+                sql.Append("INSERT INTO paciente(idContato,idEndereco,idUsuario,nomePaciente,nomeResponsavel,rg,cpf, ");
+                sql.Append("ocupacao,idade,sexo,dataNascimento,dataCadastro,horaCadastro,observacaoPaciente,deletar,idUsuarioDeletar)");
                 
-                sql.Append("VALUES(@idContato,@idEndereco,@idUsuario,@nomePaciente,@nomeResponsavel,@rg,@cpf,");
-                sql.Append("@ocupacao,@idade,@sexo,@dataNascimento,@dataCadastro,@horaCadastro,@observacaoPaciente,false,0)");
+                sql.Append("VALUES(\'IDCONTATO\',\'IDENDERECO\',\'IDUSUARIO\',\'NOMEPACIENTE\',\'NOMERESPONSAVEL\',RG\',\'CPF\', ");
+                sql.Append("\'OCUPACAO\',\'IDADE\',\'SEXO\',\'DATANASCIMENTO\',\'DATACADASTRO\',\'HORACADASTRO\',\'OBSERVACAOPACIENTE\',false,0)");
 
-                //Relaciona cada valor com seu respectivo parametro.
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idContato", contato));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idEndereco",endereco));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idUsuario", usuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomePaciente",nomePaciente.ToUpper()));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomeResponsavel",nomeResponsavel.ToUpper()));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rg",rg));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@cpf", CPF));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@ocupacao",ocupacao));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idade",idade));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@sexo",sexo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataNascimento", nascimento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataCadastro", cadastro));
-                comandoSql.Parameters.Add(new NpgsqlParameter("horaCadastro", HoraCadastro));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoPaciente", observacaoPaciente));
+                sql = sql.Replace("IDCONTATO", contato.ToString()).Replace("IDENDERECO", endereco.ToString()).Replace("IDUSUARIO", idUsuario).Replace("NOMEPACIENTE", nomePaciente.ToUpper());
+                sql = sql.Replace("NOMERESPONSAVEL", nomeResponsavel.ToUpper()).Replace("RG", rg).Replace("CPF", CPF).Replace("OCUPACAO", ocupacao).Replace("IDADE", idade).Replace("SEXO", sexo);
+                sql = sql.Replace("DATANASCIMENTO", dataNascimento).Replace("DATACADASTRO", cadastro.ToString()).Replace("HORACADASTRO", HoraCadastro.ToString());
+                sql = sql.Replace("OBSERVACAOPACIENTE", observacaoPaciente);
 
-
-
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
-                comandoSql.ExecuteNonQuery();//Executa o código sql.
-                ConexaoAcesso.Desconectar();//Fecha a conexão com o banco de dados
-                return true;
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception ex)
             {
@@ -75,21 +52,17 @@ namespace AcessoDados
                 return false;
             }
         }
-        public DataTable RetornarDadosConsulta(int idConslta)
+        public DataTable RetornarDadosConsulta(int idConsulta)
         {
             try
             {
-                ConexaoAcesso.Conectar();
                 sql.Clear();
                 sql.Append("SELECT * FROM paciente INNER JOIN endereco on endereco.idEndereco = ");
                 sql.Append("paciente.idEndereco INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario INNER JOIN contato on contato.idContato = paciente.idContato ");
-                sql.Append("INNER JOIN consulta on consulta.idpaciente = paciente.idpaciente and consulta.idConsulta = @codigo and paciente.deletar = false");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@codigo", idConslta));
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                sql.Append("INNER JOIN consulta on consulta.idpaciente = paciente.idpaciente and consulta.idConsulta = \'CODIGO\' and paciente.deletar = false");
+                sql = sql.Replace("CODIGO", idConsulta.ToString());
+
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -97,31 +70,22 @@ namespace AcessoDados
             }
             return tableVazia;
         }
-        public bool Atualizar(int codigo, string paciente, string responsavel, string rg, string cpf, string ocupacao, string idade, string sexo, string dataNascimento, string observacao)
+        public bool Atualizar(int codigo, string nomePaciente, string nomeResponsavel, string rg, string CPF, string ocupacao, string idade, string sexo, string dataNascimento, string observacaoPaciente)
         {
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                
                 DateTime nascimento = Convert.ToDateTime(dataNascimento);
+
+                sql.Clear();
                 sql.Append("UPDATE paciente SET nomePaciente = @paciente, nomeResponsavel = @responsavel,rg = @rg, cpf= @cpf,ocupacao = @ocupacao, idade = @idade,");
                 sql.Append("sexo = @sexo,datanascimento = @nascimento, observacaoPaciente = @observacao WHERE  idPaciente = @codigo");
-                comandoSql.Parameters.Add(new NpgsqlParameter("@codigo", codigo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@paciente", paciente));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@responsavel", responsavel));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@rg", rg));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@cpf", cpf));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@ocupacao", ocupacao));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idade", idade));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@sexo", sexo));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nascimento", nascimento));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacao", observacao));
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                sql = sql.Replace("IDCONTATO", contato.ToString()).Replace("IDENDERECO", endereco.ToString()).Replace("NOMEPACIENTE", nomePaciente.ToUpper());
+                sql = sql.Replace("NOMERESPONSAVEL", nomeResponsavel.ToUpper()).Replace("RG", rg).Replace("CPF", CPF).Replace("OCUPACAO", ocupacao).Replace("IDADE", idade).Replace("SEXO", sexo);
+                sql = sql.Replace("DATANASCIMENTO", dataNascimento).Replace("OBSERVACAOPACIENTE", observacaoPaciente);
+
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -157,7 +121,9 @@ namespace AcessoDados
                 sql.Append("paciente.idEndereco INNER JOIN usuario on usuario.idUsuario = paciente.idUsuario INNER JOIN contato on contato.idContato = paciente.idContato ");
                 sql.Append("and paciente.idPaciente = \'CODIGO\' and paciente.deletar = false  order by idPaciente asc");
 
-                return acessoBanco.Pesquisar(sql.Replace("\'CODIGO\'", Convert.ToString(codigo)).ToString());
+                sql.Replace("\'CODIGO\'", codigo.ToString());
+
+                return acessoBanco.Pesquisar(sql.ToString());
 
             }
             catch (Exception ex)
@@ -228,25 +194,12 @@ namespace AcessoDados
             try
             {
                 int idPaciente = 0;
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear(); 
                 sql.Append("select idPaciente from paciente order by idPaciente desc limit 1");
 
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                var readerData = comandoSql.ExecuteReader();
+                dados = acessoBanco.Pesquisar(sql.ToString());
 
-
-                while (readerData.Read())
-                {
-                    idPaciente = Convert.ToInt32(readerData["idPaciente"].ToString());
-                }
-                ConexaoAcesso.Desconectar();
-                return idPaciente;
+                return idPaciente = Convert.ToInt32(dados.Rows[0]["idPaciente"]);
             }
             catch (Exception ex)
             {
@@ -260,10 +213,11 @@ namespace AcessoDados
             try
             {
                 sql.Clear();
+
                 sql.Append("update paciente set deletar = true, idUsuarioDeletar = idUsuarioSistema where idPaciente = codPaciente");
                 sql = sql.Replace("codPaciente", idPaciente).Replace("idUsuarioSistema", idUsuarioSistema);
-                return acessoBanco.Executar(sql.ToString());
 
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {
@@ -279,6 +233,7 @@ namespace AcessoDados
                 sql.Append("update paciente set deletar = true,idUsuarioDeletar = idUsuarioSistema where idUsuario = idUsuarioCadastro");
 
                 sql = sql.Replace("idUsuarioCadastro", idUsuarioCadastro).Replace("idUsuarioSistema", idUsuarioSistema);
+
                 return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
@@ -292,17 +247,12 @@ namespace AcessoDados
         {
             try
             {
-                //Comando sql responsavel por inserir os dados
                 sql.Clear();
                 sql.Append("select idEndereco from endereco order by idEndereco desc limit 1");
 
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
+                dados = acessoBanco.Pesquisar(sql.ToString());
 
-                endereco = Convert.ToInt32(comandoSql.ExecuteScalar());
-                ConexaoAcesso.Desconectar();
-                return endereco;
+                return endereco = Convert.ToInt32(dados.Rows[0]["idEndereco"]);
             }
             catch (Exception ex)
             {
@@ -315,17 +265,12 @@ namespace AcessoDados
         {
             try
             {
-                //Comando sql responsavel por inserir os dados
                 sql.Clear();
                 sql.Append("select idContato from contato order by idContato desc limit 1");
 
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
+                dados = acessoBanco.Pesquisar(sql.ToString());
 
-                contato = Convert.ToInt32(comandoSql.ExecuteScalar());
-                ConexaoAcesso.Desconectar();
-                return contato;
+                return contato = Convert.ToInt32(dados.Rows[0]["idContato"]);
             }
             catch (Exception ex)
             {

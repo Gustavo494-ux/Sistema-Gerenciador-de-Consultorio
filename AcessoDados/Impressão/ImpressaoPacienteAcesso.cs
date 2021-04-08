@@ -12,31 +12,18 @@ namespace AcessoDados
     public class imprimirPacienteAcesso
     {
         DataTable tableVazia = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable impressaoCompleta(int idPaciente)
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
+                sql.Append("SELECT * FROM paciente INNER JOIN endereco ON endereco.idEndereco = paciente.idEndereco INNER JOIN contato ON contato.idContato = paciente.idContato ");
+                sql.Append("WHERE paciente.deletar = false AND contato.deletar = false AND  endereco.deletar = false and paciente.idPaciente = \'ID\' ");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                sql.Append("SELECT  * FROM paciente INNER JOIN endereco ON endereco.idEndereco = paciente.idEndereco INNER JOIN contato ON contato.idContato = paciente.idContato ");
-                sql.Append("WHERE paciente.deletar = false AND contato.deletar = false AND  endereco.deletar = false and paciente.idPaciente = @id");
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id",idPaciente));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-
-                return dadosTabela;
-
+                sql = sql.Replace("id", idPaciente.ToString());
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

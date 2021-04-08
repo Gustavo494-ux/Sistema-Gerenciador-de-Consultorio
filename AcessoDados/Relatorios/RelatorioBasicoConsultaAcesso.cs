@@ -14,27 +14,19 @@ namespace AcessoDados
     public class RelatorioBasicoConsultaAcesso
     {
         DataTable tableVazia = new DataTable();
+        DataTable dadosTabela = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable TodasConsultas()
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("select consulta.idConsulta, paciente.nomePaciente,consulta.dataConsulta,consulta.statusConsulta,usuario.loginUsuario from consulta inner join paciente on ");
                 sql.Append("paciente.idPaciente = consulta.idPaciente inner join usuario on usuario.idUsuario = consulta.idUsuario inner join profissional on profissional.idProfissional = consulta.idProfissional ");
                 sql.Append("where consulta.deletar = false and profissional.deletar = false and  paciente.deletar = false and usuario.deletar = false order by consulta.idConsulta asc");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -48,27 +40,15 @@ namespace AcessoDados
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
-
+                sql.Clear();
                 sql.Append("select consulta.idConsulta, paciente.nomePaciente,consulta.dataConsulta,consulta.statusConsulta,usuario.loginUsuario from consulta inner join paciente on ");
                 sql.Append("paciente.idPaciente = consulta.idPaciente inner join usuario on usuario.idUsuario = consulta.idUsuario inner join profissional on profissional.idProfissional = consulta.idProfissional ");
                 sql.Append("where consulta.deletar = false and profissional.deletar = false and  paciente.deletar = false and usuario.deletar = false ");
-                sql.Append("and consulta.dataConsulta BETWEEN @dataInicial and @dataFinal order by consulta.idConsulta asc");
+                sql.Append("and consulta.dataConsulta BETWEEN \'DATAINICIAL\' and \'DATAFINAL\' order by consulta.idConsulta asc");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                sql = sql.Replace("DATAINICIAL",dataInicial.ToString()).Replace("DATAFINAL",dataFinal.ToString());
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataInicial",dataInicial));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataFinal",dataFinal));
-
-                comandoSql.CommandText = sql.ToString();
-                comandoSql.Connection = ConexaoAcesso.conn;
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

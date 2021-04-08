@@ -661,3 +661,12 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\obj\Debug\AcessoDados.csproj.CopyComplete
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EnvDTE80.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\SQLitePCLRaw.core.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\System.Data.SQLite.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\System.Data.SQLite.xml

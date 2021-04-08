@@ -9,72 +9,44 @@ using Npgsql;
 
 namespace AcessoDados
 {
-   public class UsuarioAcesso
-   {
+    public class UsuarioAcesso
+    {
         StringBuilder sql = new StringBuilder();
-        NpgsqlCommand comandoSql = new NpgsqlCommand();
         DataTable tableVazia = new DataTable();
         Banco acessoBanco = new Banco();
-        public bool Cadastrar(string idNivel, string nomeUsuario, string loginUsuario, string senhaUsuario, string observacaoUsaurio, string statusUsuario)
+        DataTable dadosTabela = new DataTable();
+        public bool Cadastrar(string idNivel, string nomeUsuario, string loginUsuario, string senhaUsuario, string observacaoUsuario, string statusUsuario)
         {
-			try
-			{
-                //Efetua o tratamento de dados para que possam ser inseridos da maneira correta no banco de dados.
-                int nivel = Convert.ToInt32(idNivel);
-                DateTime data = Convert.ToDateTime(DateTime.Now.ToShortDateString()), HoraCadastro = Convert.ToDateTime(DateTime.Now.ToLongTimeString());
-
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();//Abre a conexão com o banco de dados.
-
-                //Comando sql responsavel por inserir os dados
+            try
+            {
+                string data = DateTime.Now.ToShortDateString(), HoraCadastro = DateTime.Now.ToLongTimeString();
+                sql.Clear();
                 sql.Append("INSERT INTO usuario(idNivel,nomeUsuario, loginUsuario, senhaUsuario, dataCadastro,horaCadastro, observacaoUsuario, statusUsuario,deletar)");
+                sql.Append("VALUES(\'IDNIVEL\',\'NOMEUSUARIO\',\'LOGINUSUARIO\',\'SENHAUSUARIO\',\'DATACADASTRO\',\'HORACADASTRO\',\'OBSERVACAO\',\'STATUSUSUARIO\',false)");
 
-                sql.Append("VALUES(@idNivel,@nomeUsuario,@loginUsuario,@senhaUsuario,@dataCadastro,@horaCadastro,@observacao,@statusUsuario,false)");
-
-                //Relaciona cada valor com seu respectivo parametro.
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idNivel", nivel));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomeUsuario", nomeUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@loginUsuario", loginUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@senhaUsuario", senhaUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@dataCadastro", data));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@HoraCadastro", HoraCadastro));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacao", observacaoUsaurio));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@statusUsuario", statusUsuario));
-                
-
-                comandoSql.CommandText = sql.ToString();// Indica o código sql que vai ser executado.
-                comandoSql.Connection = ConexaoAcesso.conn;//Indica a conexão que os comando vão usar.
-                comandoSql.ExecuteNonQuery();//Executa o código sql.
-                ConexaoAcesso.Desconectar();//Fecha a conexão com o banco de dados
-                return true;
+                sql = sql.Replace("IDNIVEL", idNivel).Replace("NOMEUSUARIO", nomeUsuario).Replace("LOGINUSUARIO", loginUsuario).Replace("SENHAUSUARIO", senhaUsuario).Replace("DATACADASTRO", data);
+                sql = sql.Replace("HORACADASTRO", HoraCadastro).Replace("OBSERVACAO", observacaoUsuario).Replace("STATUSUSUARIO", statusUsuario);
+                return acessoBanco.Executar(sql.ToString());
             }
-			catch (Exception ex)
-			{
+            catch (Exception ex)
+            {
                 MessageBox.Show("Ocorreu um erro ao tentar inserir os dados do Usuario. Error: " + ex.Message + " ,Caso o problema persista entre em contato com o suporte!", "Erro na Inserção",
                                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
+            return false;
         }
         public DataTable retornarDados(int idUsuario)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
+
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
+                sql.Clear();
                 sql.Append("select usuario.idUsuario,usuario.nomeUsuario,usuario.loginUsuario,usuario.senhaUsuario,nivelAcesso.nomeNivel,usuario.statusUsuario,usuario.observacaoUsuario from usuario ");
-                sql.Append("inner join nivelAcesso on nivelAcesso.idNivelAcesso = usuario.idNivel where idUsuario = @idUsuario and usuario.deletar = false");
+                sql.Append("inner join nivelAcesso on nivelAcesso.idNivelAcesso = usuario.idNivel where idUsuario = \'IDUSUARIO\' and usuario.deletar = false");
 
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idUsuario", idUsuario));
+                sql = sql.Replace("IDUSUARIO", idUsuario.ToString());
 
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                dadosTabela.Load(comandoSql.ExecuteReader());
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {
@@ -84,30 +56,15 @@ namespace AcessoDados
         }
         public bool Atualizar(int idUsuario, string nomeUsuario, string loginUsuario, string senhaUsuario, int idNivel, string statusUsuario, string observacaoUsuario)
         {
-            DataTable dadosTabela = new DataTable();
-            DataTable tableVazia = new DataTable();
             try
             {
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
+                sql.Clear();
+                sql.Append("update usuario set nomeUsuario = \'NOMEUSUARIO\', loginUsuario= \'LOGINUSUARIO\', senhaUsuario = \'SENHAUSUARIO\', idNivel = \'IDNIVEL\', statusUsuario = \'STATUSUSUARIO\', ");
+                sql.Append("observacaoUsuario = \'OBSERVACAO\' where idUsuario = \'IDUSUARIO\'; ");
 
-                sql.Append("update usuario set nomeUsuario = @nomeUsuario, loginUsuario= @loginUsuario, senhaUsuario = @senhaUsuario, idNivel = @idNivel, statusUsuario = @statusUsuario,");
-                sql.Append("observacaoUsuario = @observacaoUsuario where idUsuario = @idUsuario");
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idUsuario", idUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@nomeUsuario", nomeUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@loginUsuario", loginUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@senhaUsuario", senhaUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@idNivel", idNivel + 1));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@statusUsuario", statusUsuario));
-                comandoSql.Parameters.Add(new NpgsqlParameter("@observacaoUsuario", observacaoUsuario));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-
-                comandoSql.ExecuteNonQuery();
-                ConexaoAcesso.Desconectar();
-                return true;
+                sql = sql.Replace("IDUSUARIO", idUsuario.ToString()).Replace("IDNIVEL", idNivel.ToString()).Replace("NOMEUSUARIO", nomeUsuario).Replace("LOGINUSUARIO", loginUsuario).Replace("SENHAUSUARIO", senhaUsuario);
+                sql = sql.Replace("OBSERVACAO", observacaoUsuario).Replace("STATUSUSUARIO", statusUsuario);
+                return acessoBanco.Executar(sql.ToString());
             }
             catch (Exception)
             {

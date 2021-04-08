@@ -12,27 +12,17 @@ namespace AcessoDados
     public class ImprimirUsuarioAcesso
     {
         DataTable tableVazia = new DataTable();
+        StringBuilder sql = new StringBuilder();
+        Banco acessoBanco = new Banco();
         public DataTable impressaoCompleta(int idUsuario)
         {
             try
             {
-                DataTable dadosTabela = new DataTable();
-                StringBuilder sql = new StringBuilder();
-                NpgsqlCommand comandoSql = new NpgsqlCommand();
+                sql.Clear();
+                sql.Append("SELECT * FROM usuario INNER JOIN nivelAcesso ON nivelAcesso.idNivelAcesso = usuario.idNivel WHERE usuario.deletar= false AND idUsuario = \'ID\' ");
 
-                ConexaoAcesso.Desconectar();
-                ConexaoAcesso.Conectar();
-
-                sql.Append("SELECT * FROM usuario INNER JOIN nivelAcesso ON nivelAcesso.idNivelAcesso = usuario.idNivel WHERE usuario.deletar= false AND idUsuario = @id ");
-
-                comandoSql.Parameters.Add(new NpgsqlParameter("@id",idUsuario));
-
-                comandoSql.Connection = ConexaoAcesso.conn;
-                comandoSql.CommandText = sql.ToString();
-                dadosTabela.Load(comandoSql.ExecuteReader());
-
-                ConexaoAcesso.Desconectar();
-                return dadosTabela;
+                sql =sql.Replace("\'ID\'",idUsuario.ToString());
+                return acessoBanco.Pesquisar(sql.ToString());
             }
             catch (Exception)
             {

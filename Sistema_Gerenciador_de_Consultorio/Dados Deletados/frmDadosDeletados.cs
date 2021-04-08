@@ -737,7 +737,6 @@ namespace Sistema_Gerenciador_de_Consultorio
                     {
                         MessageBox.Show("Os Registros só de Consultas não foram encontrados!",
                                        "Registros não Encontrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dtgConsulta.Rows.Clear();
                     }
                 }
                dtgConsulta.AutoResizeColumns();//Ajusta a largura da coluna automaticamente.

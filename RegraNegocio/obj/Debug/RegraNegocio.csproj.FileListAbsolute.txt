@@ -628,3 +628,11 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.xml

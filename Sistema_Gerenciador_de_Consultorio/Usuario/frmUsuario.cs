@@ -456,7 +456,7 @@ namespace Sistema_Gerenciador_de_Consultorio
                 UsuarioRegra editar = new UsuarioRegra();
 
 
-                if (editar.Atualizar(Convert.ToInt32(idUsuarioEditar), Convert.ToInt32(cbNivelAcesso.SelectedIndex), txtNomeUsuario.Text, txtLoginUsuario.Text,
+                if (editar.Atualizar(Convert.ToInt32(idUsuarioEditar), Convert.ToInt32(cbNivelAcesso.SelectedIndex+1), txtNomeUsuario.Text, txtLoginUsuario.Text,
                     txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text) == true)
                 //if(editar.Atualizar(Convert.ToInt32(idUsuarioEditar),Convert.ToInt32(cbIntermediario.Text), txtNomeUsuario.Text,txtLoginUsuario.Text,
                 //    txtSenha.Text, txtConfirmacaoSenha.Text, txtObservacao.Text, cbStatusUsuario.Text) == true)
