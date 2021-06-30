@@ -13,8 +13,8 @@ namespace AcessoDados
 {
     public class ConexaoAcessoPostegreSql
     {
-        public static NpgsqlConnection connPostegreSql = new NpgsqlConnection("Server=localHost;Port=5432;User Id=postgres;Password=679-6951;Database=Sistema_Gerenciador_de_Consultorio");
-        //public static NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1;Port=5432;User Id=postgres;Password=679-6951;Database=Sistema_Gerenciador_de_Consultorio");
+       //  public static NpgsqlConnection connPostegreSql = new NpgsqlConnection("Server=localHost;Port=5432;User Id=postgres;Password=679-6951;Database=Sistema_Gerenciador_de_Consultorio");
+       public static NpgsqlConnection connPostegreSql = new NpgsqlConnection("Server=ec2-18-214-140-149.compute-1.amazonaws.com;Port=5432;User Id=qoovgnxbjrryeu;Password=ffe380d14baa0b1f5c0241957254f8f3b7b6f7ff047106baee9b3348432c6f9e;Database=d84o5di64m9nm3");
         public static string stringConectPostegreSql = Convert.ToString(connPostegreSql);
         public static void Conectar()
         {

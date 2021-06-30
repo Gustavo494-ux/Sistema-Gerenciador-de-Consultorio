@@ -670,3 +670,4 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\bin\Debug\System.Data.SQLite.xml
+D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
