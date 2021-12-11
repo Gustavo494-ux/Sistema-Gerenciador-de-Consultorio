@@ -636,3 +636,47 @@ D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-d
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projetos\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\RegraNegocio.dll.config
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\RegraNegocio.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\RegraNegocio.pdb
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\AcessoDados.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.SqlServer.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.Design.DLL
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Buffers.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Memory.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Numerics.Vectors.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.ValueTuple.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EnvDTE.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EnvDTE80.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\stdole.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\Microsoft.MSXML.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\AcessoDados.pdb
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\AcessoDados.dll.config
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\EntityFramework.SqlServer.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Data.SQLite.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.Numerics.Vectors.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\bin\Debug\System.ValueTuple.xml
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.AssemblyReference.cache
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\Sistema_Gerenciador_de_Consultorio.frmUsuario.resources
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.GenerateResource.cache
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.CoreCompileInputs.cache
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.csproj.CopyComplete
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.dll
+D:\Arquivos SSD\Projetos\C#\Repositorio Sistema Gerenciador de Consultorio\Sistema-Gerenciador-de-Consultorio\RegraNegocio\obj\Debug\RegraNegocio.pdb

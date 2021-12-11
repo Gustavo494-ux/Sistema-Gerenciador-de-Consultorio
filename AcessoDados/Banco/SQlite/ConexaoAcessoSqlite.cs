@@ -12,9 +12,9 @@ namespace AcessoDados
 {
     public class ConexaoAcessoSQlite
     {
-        //private static string stringConect = "Data Source=Databases/Sistema_Gerenciador_de_Consultorio.db";
+        private static string stringConect = "Data Source=Databases/Sistema_Gerenciador_de_Consultorio.db";
         //C:\Databases\Sistema_Gerenciador_de_Consultorio
-            private static string stringConect = "Data Source=Sistema_Gerenciador_de_Consultorio.db";
+            //private static string stringConect = "Data Source=Sistema_Gerenciador_de_Consultorio.db";
 
         SQLiteConnection conn = new SQLiteConnection(stringConect.ToString());
         public string GetStringConectSqlite()

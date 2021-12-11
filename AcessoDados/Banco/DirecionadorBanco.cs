@@ -12,7 +12,7 @@ namespace AcessoDados
 {
     public class Banco
     {
-        bool banco = true;// false para usar o banco sqlite e true para usar o banco postgresql
+        bool banco = false;// false para usar o banco sqlite e true para usar o banco postgresql
 
         DataTable tabelaVazia = new DataTable();
         AcessoBancoPostgreSql bancoPostgreSql = new AcessoBancoPostgreSql();
